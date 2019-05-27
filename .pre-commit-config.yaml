@@ -1,0 +1,16 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.2.3 # Use the ref you want to point at
+    hooks:
+      - id: trailing-whitespace
+      - id: check-merge-conflict
+  - repo: https://github.com/prettier/prettier
+    rev: 1.17.1
+    hooks:
+      - id: prettier
+  - repo: https://github.com/andykenward/commitlint-pre-commit-hook
+    rev: e3bebb96bcaf0b0f4821f5d50b0be517f5502a44
+    hooks:
+      - id: commitlint
+        stages: [commit-msg]
+        additional_dependencies: ["@commitlint/config-conventional"]
