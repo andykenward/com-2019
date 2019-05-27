@@ -1,11 +1,11 @@
 {
-    "version": 2,
-    "name": "com-2019",
-    "builds": [
-      {
-        "src": "package.json",
-        "use": "@now/static-build",
-        "config": { "distDir": "public" }
-      }
-    ]
-  }
+  "version": 2,
+  "name": "com-2019",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@now/static-build",
+      "config": { "distDir": "public" }
+    }
+  ]
+}
