@@ -1,5 +1,6 @@
 workflow "Deploy to Now" {
   resolves = [
+    "type-check",
     "release"
   ]
   on = "push"
@@ -7,15 +8,15 @@ workflow "Deploy to Now" {
 
 # NPM install packages
 action "install" {
-  uses = "actions/npm@59b64a598378f31e49cb76f27d6f3312b582f680"
-  args = "install"
+  uses = "actions/npm@master"
+  runs = "npm ci"
 }
 
 # NPM run type-check
 action "type-check" {
-  uses = "actions/npm@59b64a598378f31e49cb76f27d6f3312b582f680"
+  uses = "actions/npm@master"
   needs = "install"
-  args = "run type-check"
+  runs = "npm run type-check"
 }
 
 # Deploy, and write deployment to file
