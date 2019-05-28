@@ -1,7 +1,8 @@
 workflow "lint / test / typings" {
   resolves = [
     "type-check",
-    "lint"
+    "lint",
+    "test"
   ]
   on = "push"
 }
@@ -23,4 +24,10 @@ action "lint" {
   uses = "actions/npm@master"
   needs = ["install"]
   runs = "npm run lint"
+}
+
+action "test" {
+  uses = "actions/npm@master"
+  needs = ["install"]
+  runs = "npm test"
 }
