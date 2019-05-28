@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "com-2019",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "2019 andykenward.com",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Andy Kenward <hello@andykenward.com>",
   "dependencies": {
     "gatsby": "^2.7.3",
     "gatsby-image": "^2.1.1",
@@ -24,6 +24,7 @@
     "@graphql-codegen/cli": "^1.2.0",
     "@graphql-codegen/typescript": "^1.2.0",
     "@graphql-codegen/typescript-operations": "^1.2.0",
+    "@types/jest": "^24.0.13",
     "@types/node": "^12.0.2",
     "@types/react": "^16.8.18",
     "@types/react-dom": "^16.8.4",
@@ -31,18 +32,27 @@
     "@typescript-eslint/eslint-plugin": "^1.9.0",
     "@typescript-eslint/parser": "^1.9.0",
     "babel-eslint": "^9.0.0",
+    "babel-jest": "^24.8.0",
+    "babel-preset-gatsby": "^0.1.11",
     "eslint": "^5.16.0",
     "eslint-config-react-app": "^4.0.1",
     "eslint-plugin-flowtype": "^2.50.3",
     "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-jest": "^22.6.4",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.13.0",
     "eslint-plugin-react-hooks": "^1.6.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.8.0",
     "prettier": "^1.17.1",
+    "react-testing-library": "^7.0.1",
+    "ts-jest": "^24.0.2",
     "typescript": "^3.4.5"
   },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "typescript",
+    "jest"
   ],
   "license": "MIT",
   "scripts": {
@@ -52,7 +62,8 @@
     "format": "prettier --write src/**/*.{css,js,jsx,ts,tsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "test": "jest",
+    "test:watch": "npm run test -- --watch",
     "now-build": "npm run build",
     "type-check": "tsc --noEmit",
     "type-check:watch": "npm run type-check -- --watch",
@@ -62,9 +73,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/andykenward/com-2019"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/andykenward/com-2019/issues"
   }
 }

@@ -2,5 +2,6 @@ module.exports = {
   globals: {
     __PATH_PREFIX__: true,
   },
-  extends: "react-app",
+  plugins: ["jest"],
+  extends: ["react-app", "plugin:jest/recommended"],
 }
