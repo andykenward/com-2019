@@ -1,7 +1,7 @@
 {
   "version": 2,
   "name": "com-2019",
-  "alias": ["com-2019.andykenward"],
+  "alias": ["com-2019"],
   "scope": "andykenward",
   "regions": ["lhr"],
   "builds": [
