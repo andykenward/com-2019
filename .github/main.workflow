@@ -1,6 +1,6 @@
 workflow "Deploy to Now" {
   resolves = [
-    "alias"
+    "deploy"
   ]
   on = "push"
 }
@@ -30,12 +30,17 @@ action "deploy" {
   ]
 }
 
-action "alias" {
-  needs = ["deploy"]
-  uses = "actions/zeit-now@master"
-  args = "alias `cat $HOME/deploy.txt`"
-  secrets = [
-    "ZEIT_TOKEN"
-  ]
-}
+# action "filter-out-master-branch" {
+#   uses = "actions/bin/filter@master"
+#   needs = ["deploy"]
+#   args = "branch master"
+# }
+
+# # Always create an alias using the SHA
+# action "alias" {
+#   needs = ["filter-out-master-branch"]
+#   uses = "actions/zeit-now@master"
+#   args = "alias `cat /github/home/deploy.txt` $GITHUB_SHA"
+#   secrets = ["ZEIT_TOKEN"]
+# }
     
