@@ -1,6 +1,6 @@
 workflow "Deploy to Now" {
   resolves = [
-    "deploy"
+    "alias"
   ]
   on = "push"
 }
