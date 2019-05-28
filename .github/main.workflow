@@ -3,6 +3,7 @@ workflow "Deploy to Now" {
     "Alias",
     "Filter out master branch",
     "TypeScript Typings Check",
+    "Install",
   ]
   on = "push"
 }
@@ -28,5 +29,11 @@ action "Filter out master branch" {
 
 action "TypeScript Typings Check" {
   uses = "actions/npm@59b64a598378f31e49cb76f27d6f3312b582f680"
+  needs = ["Install"]
   args = "run type-check"
+}
+
+action "Install" {
+  uses = "actions/npm@59b64a598378f31e49cb76f27d6f3312b582f680"
+  args = "install"
 }
