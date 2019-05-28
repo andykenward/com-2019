@@ -1,6 +1,9 @@
 {
   "version": 2,
   "name": "com-2019",
+  "alias": "com-2019.andykenward.now.sh",
+  "scope": "andykenward",
+  "regions": ["lhr"],
   "builds": [
     {
       "src": "package.json",
