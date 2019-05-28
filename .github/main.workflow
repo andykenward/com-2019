@@ -20,13 +20,22 @@ action "type-check" {
 
 # deploys to now
 action "deploy" {
-  uses = "primer/deploy@master"
+  uses = "actions/zeit-now@master"
   needs = [
     "install",
     "type-check"
   ]
   secrets = [
-    "GITHUB_TOKEN",
-    "NOW_TOKEN",
+     "ZEIT_TOKEN"
   ]
 }
+
+action "alias" {
+  needs = ["deploy"]
+  uses = "actions/zeit-now@master"
+  args = "alias `cat $HOME/deploy.txt`"
+  secrets = [
+    "ZEIT_TOKEN
+  ]
+}
+    
