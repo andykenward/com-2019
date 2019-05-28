@@ -35,7 +35,7 @@ action "alias" {
   uses = "actions/zeit-now@master"
   args = "alias `cat $HOME/deploy.txt`"
   secrets = [
-    "ZEIT_TOKEN
+    "ZEIT_TOKEN"
   ]
 }
     
