@@ -1,6 +1,8 @@
 {
   "version": 2,
   "name": "com-2019",
+  "scope": "andykenward",
+  "regions": ["lhr"],
   "builds": [
     {
       "src": "package.json",
