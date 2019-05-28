@@ -22,7 +22,7 @@ action "type-check" {
 action "deploy" {
   needs = "type-check"
   uses = "actions/zeit-now@master"
-  args = "--public --no-clipboard deploy ./site > $HOME/$GITHUB_ACTION.txt"
+  args = "--public --no-clipboard deploy $HOME/$GITHUB_ACTION.txt"
   secrets = ["ZEIT_TOKEN"]
 }
 
