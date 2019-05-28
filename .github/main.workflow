@@ -1,13 +1,15 @@
 workflow "Deploy to Now" {
-  on = "push"
   resolves = [
     "Alias",
     "Filter out master branch",
+    "TypeScript Typings Check",
   ]
+  on = "push"
 }
 
 action "Deploy" {
   uses = "actions/zeit-now@master"
+  needs = ["TypeScript Typings Check"]
   secrets = ["ZEIT_TOKEN"]
 }
 
@@ -22,4 +24,9 @@ action "Filter out master branch" {
   uses = "actions/bin/filter@master"
   needs = ["Deploy"]
   args = "branch master"
+}
+
+action "TypeScript Typings Check" {
+  uses = "actions/npm@59b64a598378f31e49cb76f27d6f3312b582f680"
+  args = "run type-check"
 }
