@@ -1312,6 +1312,7 @@ export type QuerySitePluginArgs = {
   version?: Maybe<StringQueryOperatorInput>
   pluginOptions?: Maybe<SitePluginPluginOptionsFilterInput>
   nodeAPIs?: Maybe<StringQueryOperatorInput>
+  browserAPIs?: Maybe<StringQueryOperatorInput>
   ssrAPIs?: Maybe<StringQueryOperatorInput>
   pluginFilepath?: Maybe<StringQueryOperatorInput>
   packageJson?: Maybe<SitePluginPackageJsonFilterInput>
@@ -1767,6 +1768,7 @@ export enum SitePageFieldsEnum {
   pluginCreator___pluginOptions___icon = "pluginCreator___pluginOptions___icon",
   pluginCreator___pluginOptions___pathCheck = "pluginCreator___pluginOptions___pathCheck",
   pluginCreator___nodeAPIs = "pluginCreator___nodeAPIs",
+  pluginCreator___browserAPIs = "pluginCreator___browserAPIs",
   pluginCreator___ssrAPIs = "pluginCreator___ssrAPIs",
   pluginCreator___pluginFilepath = "pluginCreator___pluginFilepath",
   pluginCreator___packageJson___name = "pluginCreator___packageJson___name",
@@ -1830,6 +1832,7 @@ export type SitePlugin = Node & {
   version?: Maybe<Scalars["String"]>
   pluginOptions?: Maybe<SitePluginPluginOptions>
   nodeAPIs?: Maybe<Array<Maybe<Scalars["String"]>>>
+  browserAPIs?: Maybe<Array<Maybe<Scalars["String"]>>>
   ssrAPIs?: Maybe<Array<Maybe<Scalars["String"]>>>
   pluginFilepath?: Maybe<Scalars["String"]>
   packageJson?: Maybe<SitePluginPackageJson>
@@ -1962,6 +1965,7 @@ export enum SitePluginFieldsEnum {
   pluginOptions___icon = "pluginOptions___icon",
   pluginOptions___pathCheck = "pluginOptions___pathCheck",
   nodeAPIs = "nodeAPIs",
+  browserAPIs = "browserAPIs",
   ssrAPIs = "ssrAPIs",
   pluginFilepath = "pluginFilepath",
   packageJson___name = "packageJson___name",
@@ -1991,6 +1995,7 @@ export type SitePluginFilterInput = {
   version?: Maybe<StringQueryOperatorInput>
   pluginOptions?: Maybe<SitePluginPluginOptionsFilterInput>
   nodeAPIs?: Maybe<StringQueryOperatorInput>
+  browserAPIs?: Maybe<StringQueryOperatorInput>
   ssrAPIs?: Maybe<StringQueryOperatorInput>
   pluginFilepath?: Maybe<StringQueryOperatorInput>
   packageJson?: Maybe<SitePluginPackageJsonFilterInput>

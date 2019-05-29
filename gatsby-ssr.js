@@ -1,7 +1,32 @@
-/**
- * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/ssr-apis/
- */
+import { ThemeProvider } from "emotion-theming"
+import { css, Global } from "@emotion/core"
+import React from "react"
+import emotionNormalize from "emotion-normalize"
 
-// You can delete this file if you're not using it
+import { theme } from "./src/theme"
+
+export const wrapRootElement = ({ element }) => (
+  <ThemeProvider theme={theme}>
+    <Global
+      styles={css`
+        html {
+          box-sizing: border-box;
+          font-family: sans-serif;
+          -ms-text-size-adjust: 100%;
+          -webkit-text-size-adjust: 100%;
+        }
+        *,
+        *:before,
+        *:after {
+          box-sizing: inherit;
+        }
+        body {
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+        ${emotionNormalize}
+      `}
+    />
+    {element}
+  </ThemeProvider>
+)

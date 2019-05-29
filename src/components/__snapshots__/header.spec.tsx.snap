@@ -2,18 +2,26 @@
 
 exports[`Header renders correctly 1`] = `
 <DocumentFragment>
-  <header
-    style="background: rebeccapurple; margin-bottom: 1.45rem;"
+  .emotion-3 {
+  background: rebeccapurple;
+}
+
+.emotion-0 {
+  color: #fff;
+}
+
+<header
+    class="emotion-3"
   >
     <div
-      style="margin: 0px auto; max-width: 960px; padding: 1.45rem 1.0875rem;"
+      class="emotion-1"
     >
       <h1
-        style="margin: 0px;"
+        class="emotion-1"
       >
         <a
+          class="emotion-0"
           href="/"
-          style="color: white; text-decoration: none;"
         >
           Default Starter
         </a>

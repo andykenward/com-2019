@@ -8,9 +8,11 @@
 import { graphql, useStaticQuery } from "gatsby"
 import React, { ReactNode } from "react"
 import { oc } from "ts-optchain"
+
 import { SiteTitleQueryQuery } from "../graphqlTypes"
+
 import Header from "./header"
-import "./layout.css"
+import { Box } from "./box"
 
 interface Props {
   children: ReactNode
@@ -37,8 +39,8 @@ const Layout: React.FC<Props> = ({ children }) => {
   return (
     <>
       <Header siteTitle={title} />
-      <div
-        style={{
+      <Box
+        css={{
           margin: `0 auto`,
           maxWidth: 960,
           padding: `0px 1.0875rem 1.45rem`,
@@ -51,7 +53,7 @@ const Layout: React.FC<Props> = ({ children }) => {
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer>
-      </div>
+      </Box>
     </>
   )
 }

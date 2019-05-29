@@ -1,10 +1,14 @@
 import React from "react"
-import { render } from "react-testing-library"
+
+import { renderWithTheme } from "../utils"
+
 import Header from "./header"
 
 describe("Header", () => {
   it("renders correctly", () => {
-    const { asFragment } = render(<Header siteTitle="Default Starter" />)
+    const { asFragment } = renderWithTheme(
+      <Header siteTitle="Default Starter" />
+    )
     expect(asFragment()).toMatchSnapshot()
   })
 })
