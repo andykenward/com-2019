@@ -2,13 +2,11 @@ import React from "react"
 
 import { renderWithTheme } from "../utils"
 
-import Header from "./header"
+import { Link } from "./link"
 
-describe("<Header />", () => {
+describe("<Link />", () => {
   it("renders correctly", () => {
-    const { asFragment } = renderWithTheme(
-      <Header siteTitle="Default Starter" />
-    )
+    const { asFragment } = renderWithTheme(<Link to="/">Link</Link>)
     expect(asFragment()).toMatchSnapshot()
   })
 })

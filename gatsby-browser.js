@@ -11,7 +11,7 @@ export const wrapRootElement = ({ element }) => (
       styles={css`
         html {
           box-sizing: border-box;
-          font-family: sans-serif;
+          font-family: "Open Sans", "serif";
           -ms-text-size-adjust: 100%;
           -webkit-text-size-adjust: 100%;
         }

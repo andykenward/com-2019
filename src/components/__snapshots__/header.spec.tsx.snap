@@ -1,9 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Header renders correctly 1`] = `
+exports[`<Header /> renders correctly 1`] = `
 <DocumentFragment>
   .emotion-3 {
-  background: rebeccapurple;
+  background-color: rebeccapurple;
+}
+
+.emotion-2 {
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .emotion-0 {
@@ -14,7 +22,7 @@ exports[`Header renders correctly 1`] = `
     class="emotion-3"
   >
     <div
-      class="emotion-1"
+      class="emotion-2"
     >
       <h1
         class="emotion-1"

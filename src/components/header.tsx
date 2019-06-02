@@ -9,11 +9,13 @@ interface Props {
 }
 
 const Header: React.FC<Props> = ({ siteTitle }) => (
-  <Box as="header" ssBg="purple" css={{ marginBottom: "1.45rem" }}>
+  <Box as="header" bg="purple" css={{ marginBottom: "1.45rem" }}>
     <Box
       as="div"
+      fs={14}
+      my={0}
+      mx="auto"
       css={{
-        margin: "0 auto",
         maxWidth: "960px",
         padding: "1.45rem 1.0875rem",
       }}
@@ -24,7 +26,7 @@ const Header: React.FC<Props> = ({ siteTitle }) => (
           margin: 0;
         `}
       >
-        <Link ssColor="white" to="/" css={{ textDecoration: "none" }}>
+        <Link c="white" to="/" css={{ textDecoration: "none" }}>
           {siteTitle}
         </Link>
       </Box>

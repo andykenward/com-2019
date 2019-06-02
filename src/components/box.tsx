@@ -1,15 +1,18 @@
-import styled, { StyledProps } from "../styled"
 import {
-  BgProps,
+  color,
   ColorProps,
-  filterSsProps,
-  ssBackgroundColor,
-  ssColor,
+  filterProps,
+  fontSize,
+  FontSizeProps,
+  space,
+  SpaceProps,
 } from "../styled-system"
+import styled, { StyledProps } from "../utils/styled"
 
-export const Box = styled("div", { shouldForwardProp: filterSsProps })<
-  StyledProps & ColorProps & BgProps
+export const Box = styled("div", { shouldForwardProp: filterProps })<
+  StyledProps & ColorProps & FontSizeProps & SpaceProps
 >`
-  ${ssColor}
-  ${ssBackgroundColor}
+  ${color}
+  ${fontSize}
+  ${space}
 `

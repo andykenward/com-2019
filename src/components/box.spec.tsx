@@ -2,13 +2,11 @@ import React from "react"
 
 import { renderWithTheme } from "../utils"
 
-import Header from "./header"
+import { Box } from "./box"
 
-describe("<Header />", () => {
+describe("<Box />", () => {
   it("renders correctly", () => {
-    const { asFragment } = renderWithTheme(
-      <Header siteTitle="Default Starter" />
-    )
+    const { asFragment } = renderWithTheme(<Box />)
     expect(asFragment()).toMatchSnapshot()
   })
 })
