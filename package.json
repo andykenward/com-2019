@@ -76,6 +76,7 @@
     "format": "prettier --write src/**/*.{css,js,jsx,ts,tsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
+    "serve:build": "npm run clean && npm run build && npm run serve",
     "test": "jest",
     "test:watch": "npm run test -- --watch",
     "now-build": "npm run build",
