@@ -10,7 +10,7 @@ import React from "react"
 import Helmet from "react-helmet"
 import { oc } from "ts-optchain"
 
-import { SiteMetadataQueryQuery } from "../types/graphqlTypes"
+import { SiteMetadataQueryQuery } from "../types/graphqlTypes.d"
 
 type MetaProps = JSX.IntrinsicElements["meta"]
 
