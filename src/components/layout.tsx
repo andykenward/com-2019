@@ -9,7 +9,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import React, { ReactNode } from "react"
 import { oc } from "ts-optchain"
 
-import { SiteTitleQueryQuery } from "../graphqlTypes"
+import { SiteTitleQueryQuery } from "../types/graphqlTypes"
 
 import Header from "./header"
 import { Box } from "./box"
