@@ -8,6 +8,7 @@
     "@emotion/core": "^10.0.10",
     "@emotion/styled": "^10.0.11",
     "@styled-system/should-forward-prop": "^1.0.0",
+    "csstype": "^2.6.5",
     "emotion-normalize": "^10.0.0",
     "emotion-theming": "^10.0.10",
     "gatsby": "^2.7.3",
@@ -71,6 +72,7 @@
     "jest-emotion": "^10.0.11",
     "prettier": "^1.17.1",
     "react-testing-library": "^7.0.1",
+    "storybook-addon-emotion-theme": "^2.1.0",
     "ts-jest": "^24.0.2",
     "typescript": "^3.4.5"
   },

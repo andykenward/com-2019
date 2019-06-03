@@ -1,4 +1,7 @@
-import { configure } from "@storybook/react"
+import { configure, addDecorator } from "@storybook/react"
+import { withThemesProvider } from "storybook-addon-emotion-theme"
+
+import { theme } from "../src/theme"
 
 // automatically import all files ending in *.stories.js
 const req = require.context("../src", true, /\.stories\.(ts|tsx)$/)
@@ -19,3 +22,6 @@ window.___navigate = pathname => {
   action("NavigateTo:")(pathname)
 }
 configure(loadStories, module)
+
+const themes = [theme]
+addDecorator(withThemesProvider(themes))
