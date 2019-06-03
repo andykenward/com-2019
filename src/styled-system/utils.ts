@@ -2,7 +2,7 @@ import shouldForwardProp from "@styled-system/should-forward-prop"
 import { equals, indexOf } from "ramda"
 
 import { colorPropsKeys } from "./colors"
-import { fontSizePropsKeys } from "./fonts"
+import { fontSizePropsKeys } from "./typography"
 
 const propKeys = [...colorPropsKeys, ...fontSizePropsKeys]
 
