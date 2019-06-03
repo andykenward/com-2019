@@ -1,9 +1,10 @@
 import { breakpoints } from "./breakpoints"
 import { colors } from "./colors"
-import { fonts, fontSizes, fontWeights, lineHeights } from "./fonts"
+import { fonts, fontSizes, fontWeights, lineHeights } from "./typography"
 import { space } from "./space"
 
 export const theme = {
+  name: "com-2019",
   breakpoints,
   colors,
   fonts,
