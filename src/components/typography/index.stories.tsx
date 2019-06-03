@@ -8,6 +8,7 @@ import {
   HeadingOne,
   HeadingThree,
   HeadingTwo,
+  Label,
 } from "."
 
 storiesOf("Typography", module).add("all", () => (
@@ -18,5 +19,6 @@ storiesOf("Typography", module).add("all", () => (
     <HeadingFour>Heading Four</HeadingFour>
     <BodyBold>Body Bold</BodyBold>
     <Body>Body</Body>
+    <Label>Label</Label>
   </>
 ))

@@ -10,6 +10,7 @@ import {
   HeadingFour,
   BodyBold,
   Body,
+  Label,
 } from "."
 
 // Add the custom matchers provided by 'jest-emotion'
@@ -116,6 +117,22 @@ describe("Typography", () => {
         `"Open Sans",serif`
       )
       expect(container.firstChild).toHaveStyleRule("font-size", "16px")
+      expect(container.firstChild).toHaveStyleRule("font-weight", "400")
+      expect(container.firstChild).toHaveStyleRule("line-height", "1.5")
+      expect(container.firstChild).toHaveStyleRule("color", "rgb(36,28,21)")
+      expect(container.firstChild).toHaveStyleRule("margin", "0")
+      expect(asFragment()).toMatchSnapshot()
+    })
+  })
+
+  describe("<Label />", () => {
+    it("renders correctly", () => {
+      const { asFragment, container } = renderWithTheme(<Label>Label</Label>)
+      expect(container.firstChild).toHaveStyleRule(
+        "font-family",
+        `"Open Sans",serif`
+      )
+      expect(container.firstChild).toHaveStyleRule("font-size", "14px")
       expect(container.firstChild).toHaveStyleRule("font-weight", "400")
       expect(container.firstChild).toHaveStyleRule("line-height", "1.5")
       expect(container.firstChild).toHaveStyleRule("color", "rgb(36,28,21)")

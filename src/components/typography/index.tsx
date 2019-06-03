@@ -103,3 +103,17 @@ export const HeadingOne: React.FC = ({ children }) => (
     {children}
   </Text>
 )
+
+export const Label: React.FC = ({ children }) => (
+  <Text
+    as="span"
+    c="black"
+    fontFamily="regular"
+    fontWeight="regular"
+    fs={14}
+    lineHeight="default"
+    m={0}
+  >
+    {children}
+  </Text>
+)
