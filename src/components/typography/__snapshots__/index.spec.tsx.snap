@@ -1,0 +1,123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Typography <Body /> renders correctly 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  font-family: "Open Sans",serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: rgb(36,28,21);
+  margin: 0;
+}
+
+<p
+    class="emotion-0"
+  >
+    Body
+  </p>
+</DocumentFragment>
+`;
+
+exports[`Typography <BodyBold /> renders correctly 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  font-family: "Open Sans",serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: rgb(36,28,21);
+  margin: 0;
+}
+
+<p
+    class="emotion-0"
+  >
+    Body Bold
+  </p>
+</DocumentFragment>
+`;
+
+exports[`Typography <HeadingFour /> renders correctly 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  font-family: "Open Sans",serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: rgb(36,28,21);
+  margin: 0;
+}
+
+<h4
+    class="emotion-0"
+  >
+    Heading Four
+  </h4>
+</DocumentFragment>
+`;
+
+exports[`Typography <HeadingOne /> renders correctly 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  font-family: Merriweather,sans-serif;
+  font-size: 44px;
+  font-weight: 300;
+  line-height: 1.090909091;
+  color: rgb(36,28,21);
+  margin: 0;
+}
+
+<h1
+    class="emotion-0"
+  >
+    Heading One
+  </h1>
+</DocumentFragment>
+`;
+
+exports[`Typography <HeadingThree /> renders correctly 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  font-family: "Open Sans",serif;
+  font-size: 28px;
+  font-weight: 400;
+  -webkit-letter-spacing: -0.2px;
+  -moz-letter-spacing: -0.2px;
+  -ms-letter-spacing: -0.2px;
+  letter-spacing: -0.2px;
+  line-height: 1.25;
+  color: rgb(36,28,21);
+  margin: 0;
+}
+
+<h3
+    class="emotion-0"
+  >
+    Heading Three
+  </h3>
+</DocumentFragment>
+`;
+
+exports[`Typography <HeadingTwo /> renders correctly 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  font-family: "Open Sans",serif;
+  font-size: 36px;
+  font-weight: 400;
+  -webkit-letter-spacing: -0.5px;
+  -moz-letter-spacing: -0.5px;
+  -ms-letter-spacing: -0.5px;
+  letter-spacing: -0.5px;
+  line-height: 1.25;
+  color: rgb(36,28,21);
+  margin: 0;
+}
+
+<h2
+    class="emotion-0"
+  >
+    Heading Two
+  </h2>
+</DocumentFragment>
+`;
