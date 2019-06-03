@@ -18,7 +18,6 @@ module.exports = ({ config }) => {
     // use babel-plugin-remove-graphql-queries to remove static queries from components when rendering in storybook
     require.resolve("babel-plugin-remove-graphql-queries"),
   ]
-  console.log("config == ", config.module.rules[0])
 
   config.module.rules[0].test = /\.(mjs|jsx|ts|tsx?)$/
 
