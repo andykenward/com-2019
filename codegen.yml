@@ -7,7 +7,7 @@ config:
   namingConvention:
     enumValues: keep
 generates:
-  ./src/types/graphqlTypes.ts:
+  ./src/types/graphqlTypes.d.ts:
     plugins:
       - typescript
       - typescript-operations
