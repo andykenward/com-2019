@@ -1,5 +1,6 @@
 import { configure, addDecorator } from "@storybook/react"
 import { withThemesProvider } from "storybook-addon-emotion-theme"
+import { withKnobs } from "@storybook/addon-knobs"
 
 import { theme } from "../src/theme"
 
