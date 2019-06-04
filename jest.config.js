@@ -17,6 +17,6 @@ module.exports = {
   },
   testURL: "http://localhost",
   setupFiles: ["<rootDir>/loadershim.js"],
-  setupFilesAfterEnv: ["react-testing-library/cleanup-after-each"],
+  setupFilesAfterEnv: ["@testing-library/react/cleanup-after-each"],
   snapshotSerializers: ["jest-emotion"],
 }

@@ -2,7 +2,7 @@ import shouldForwardProp from "@styled-system/should-forward-prop"
 import { ThemeProvider } from "emotion-theming"
 import { equals, indexOf } from "ramda"
 import React from "react"
-import { render } from "react-testing-library"
+import { render } from "@testing-library/react"
 
 import { theme } from "./theme"
 
