@@ -74,7 +74,7 @@
     "react-testing-library": "^7.0.1",
     "storybook-addon-emotion-theme": "^2.1.0",
     "ts-jest": "^24.0.2",
-    "typescript": "^3.4.5"
+    "typescript": "^3.5.1"
   },
   "keywords": [
     "gatsby",
