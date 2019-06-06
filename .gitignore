@@ -70,4 +70,4 @@ yarn-error.log
 /.vscode/tasks.json
 
 # Storybook
-.storybook/public
+storybook-static

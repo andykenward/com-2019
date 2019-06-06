@@ -2,4 +2,4 @@
 .vscode
 public
 *.snap
-.storybook/public
+storybook-static
