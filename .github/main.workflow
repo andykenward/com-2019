@@ -1,5 +1,6 @@
 workflow "lint / test / typings" {
   resolves = [
+    "install",
     "type-check",
     "lint",
     "test",
@@ -34,7 +35,12 @@ action "test" {
 
 workflow "Deploy Storybook" {
   on = "push"
-  resolves = ["build-storybook", "deploy-storybook"]
+  resolves = [
+    "master-branch-filter",
+    "install-storybook",
+    "build-storybook",
+    "deploy-storybook",
+   ]
 }
 
 action "master-branch-filter" {
@@ -42,15 +48,28 @@ action "master-branch-filter" {
   args = "branch master"
 }
 
+action "install-storybook" {
+  needs = ["master-branch-filter"]
+  uses = "actions/npm@master"
+  runs = "npm ci"
+}
+
 action "build-storybook" {
-  needs = ["master-branch-filter","install"]
+  needs = [
+    "master-branch-filter",
+    "install-storybook",
+  ]
   uses = "actions/npm@master"
   runs = "npm run build-storybook"
 }
 
 action "deploy-storybook" {
-  needs = ["master-branch-filter","install", "build-storybook"]
+  needs = [
+    "master-branch-filter",
+    "install-storybook",
+    "build-storybook",
+   ]
   uses = "actions/zeit-now@master"
   secrets = ["ZEIT_TOKEN"]
-  args = "deploy --local-config=./.storybook/now.json"
+  args = "deploy --target production --local-config=./.storybook/now.json"
 }
