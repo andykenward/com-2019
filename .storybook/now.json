@@ -6,9 +6,9 @@
   "regions": ["lhr"],
   "builds": [
     {
-      "src": "../storybook-static/**",
+      "src": "./public/**",
       "use": "@now/static"
     }
   ],
-  "routes": [{ "src": "/(.*)", "dest": "storybook-static/$1" }]
+  "routes": [{ "src": "/(.*)", "dest": "public/$1" }]
 }

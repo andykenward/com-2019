@@ -4,4 +4,4 @@ public
 package.json
 package-lock.json
 *.snap
-storybook-static
+.storybook/public
