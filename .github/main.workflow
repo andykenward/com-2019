@@ -33,16 +33,13 @@ action "test" {
   runs = "npm test"
 }
 
-workflow "Master Deploy Storybook" {
+workflow "Deploy Storybook" {
   on = "push"
   resolves = [
     "install-storybook",
     "build-storybook",
-    "not-master-branch-filter",
     "deploy-storybook",
-    "master-branch-filter",
     "master-deploy-storybook",
-
    ]
 }
 
