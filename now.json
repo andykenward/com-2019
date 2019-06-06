@@ -3,7 +3,7 @@
   "name": "com-2019",
   "alias": "2019.andykenward.com",
   "scope": "andykenward",
-  "regions": ["lhr"],
+  "regions": ["lhr1"],
   "builds": [
     {
       "src": "package.json",
