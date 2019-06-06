@@ -21,7 +21,7 @@ storiesOf("Typography", module)
     const headingFour = text("HeadingFour", "Heading Four")
     const bodyBold = text("BodyBold", "Body Bold")
     const body = text("Body", "Body")
-    const label = text("Label", "Label")
+    const label = text("Label", "Label Master")
     return (
       <>
         <HeadingOne>{headingOne}</HeadingOne>
