@@ -33,14 +33,46 @@ action "test" {
   runs = "npm test"
 }
 
-workflow "Deploy Storybook" {
+workflow "Master Deploy Storybook" {
   on = "push"
   resolves = [
-    "master-branch-filter",
     "install-storybook",
     "build-storybook",
+    "not-master-branch-filter",
     "deploy-storybook",
+    "master-branch-filter",
+    "master-deploy-storybook",
+
    ]
+}
+
+action "install-storybook" {
+  uses = "actions/npm@master"
+  runs = "npm ci"
+}
+
+action "build-storybook" {
+  needs = [
+    "install-storybook",
+  ]
+  uses = "actions/npm@master"
+  runs = "npm run build-storybook"
+}
+
+action "not-master-branch-filter" {
+  uses = "actions/bin/filter@master"
+  args = "not branch master"
+}
+
+action "deploy-storybook" {
+  needs = [
+    "not-master-branch-filter",
+    "install-storybook",
+    "build-storybook",
+   ]
+  uses = "actions/zeit-now@master"
+  secrets = ["ZEIT_TOKEN"]
+  args = "deploy --local-config=./.storybook/now.json"
 }
 
 action "master-branch-filter" {
@@ -48,22 +80,8 @@ action "master-branch-filter" {
   args = "branch master"
 }
 
-action "install-storybook" {
-  needs = ["master-branch-filter"]
-  uses = "actions/npm@master"
-  runs = "npm ci"
-}
 
-action "build-storybook" {
-  needs = [
-    "master-branch-filter",
-    "install-storybook",
-  ]
-  uses = "actions/npm@master"
-  runs = "npm run build-storybook"
-}
-
-action "deploy-storybook" {
+action "master-deploy-storybook" {
   needs = [
     "master-branch-filter",
     "install-storybook",
@@ -73,3 +91,5 @@ action "deploy-storybook" {
   secrets = ["ZEIT_TOKEN"]
   args = "deploy --target production --local-config=./.storybook/now.json"
 }
+
+
