@@ -6,8 +6,6 @@ __mocks__
 node_modules
 .gitignore
 .pre-commit-config.yaml
-.prettierignore
-.prettierrc
 codegen.yml
 jest-preprocess.js
 jest.config.js
