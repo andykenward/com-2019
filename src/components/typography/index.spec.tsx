@@ -24,9 +24,9 @@ describe("Typography", () => {
       )
       expect(container.firstChild).toHaveStyleRule(
         "font-family",
-        "Merriweather,sans-serif"
+        `"Cooper Light",Georgia,Times,"Times New Roman",serif`
       )
-      expect(container.firstChild).toHaveStyleRule("font-size", "44px")
+      expect(container.firstChild).toHaveStyleRule("font-size", "40px")
       expect(container.firstChild).toHaveStyleRule("font-weight", "300")
       expect(container.firstChild).toHaveStyleRule("line-height", "1.090909091")
       expect(container.firstChild).toHaveStyleRule("color", "rgb(36,28,21)")
@@ -42,9 +42,9 @@ describe("Typography", () => {
       )
       expect(container.firstChild).toHaveStyleRule(
         "font-family",
-        `"Open Sans",serif`
+        `Graphik,"Helvetica Neue",Helvetica,Arial,Verdana,sans-serif`
       )
-      expect(container.firstChild).toHaveStyleRule("font-size", "36px")
+      expect(container.firstChild).toHaveStyleRule("font-size", "28px")
       expect(container.firstChild).toHaveStyleRule("font-weight", "400")
       expect(container.firstChild).toHaveStyleRule("letter-spacing", "-0.5px")
       expect(container.firstChild).toHaveStyleRule("line-height", "1.25")
@@ -61,7 +61,7 @@ describe("Typography", () => {
       )
       expect(container.firstChild).toHaveStyleRule(
         "font-family",
-        `"Open Sans",serif`
+        `Graphik,"Helvetica Neue",Helvetica,Arial,Verdana,sans-serif`
       )
       expect(container.firstChild).toHaveStyleRule("font-size", "28px")
       expect(container.firstChild).toHaveStyleRule("font-weight", "400")
@@ -80,7 +80,7 @@ describe("Typography", () => {
       )
       expect(container.firstChild).toHaveStyleRule(
         "font-family",
-        `"Open Sans",serif`
+        `Graphik,"Helvetica Neue",Helvetica,Arial,Verdana,sans-serif`
       )
       expect(container.firstChild).toHaveStyleRule("font-size", "20px")
       expect(container.firstChild).toHaveStyleRule("font-weight", "400")
@@ -98,10 +98,10 @@ describe("Typography", () => {
       )
       expect(container.firstChild).toHaveStyleRule(
         "font-family",
-        `"Open Sans",serif`
+        `Graphik,"Helvetica Neue",Helvetica,Arial,Verdana,sans-serif`
       )
       expect(container.firstChild).toHaveStyleRule("font-size", "16px")
-      expect(container.firstChild).toHaveStyleRule("font-weight", "600")
+      expect(container.firstChild).toHaveStyleRule("font-weight", "500")
       expect(container.firstChild).toHaveStyleRule("line-height", "1.5")
       expect(container.firstChild).toHaveStyleRule("color", "rgb(36,28,21)")
       expect(container.firstChild).toHaveStyleRule("margin", "0")
@@ -114,7 +114,7 @@ describe("Typography", () => {
       const { asFragment, container } = renderWithTheme(<Body>Body</Body>)
       expect(container.firstChild).toHaveStyleRule(
         "font-family",
-        `"Open Sans",serif`
+        `Graphik,"Helvetica Neue",Helvetica,Arial,Verdana,sans-serif`
       )
       expect(container.firstChild).toHaveStyleRule("font-size", "16px")
       expect(container.firstChild).toHaveStyleRule("font-weight", "400")
@@ -130,10 +130,10 @@ describe("Typography", () => {
       const { asFragment, container } = renderWithTheme(<Label>Label</Label>)
       expect(container.firstChild).toHaveStyleRule(
         "font-family",
-        `"Open Sans",serif`
+        `Graphik,"Helvetica Neue",Helvetica,Arial,Verdana,sans-serif`
       )
       expect(container.firstChild).toHaveStyleRule("font-size", "14px")
-      expect(container.firstChild).toHaveStyleRule("font-weight", "400")
+      expect(container.firstChild).toHaveStyleRule("font-weight", "500")
       expect(container.firstChild).toHaveStyleRule("line-height", "1.5")
       expect(container.firstChild).toHaveStyleRule("color", "rgb(36,28,21)")
       expect(container.firstChild).toHaveStyleRule("margin", "0")

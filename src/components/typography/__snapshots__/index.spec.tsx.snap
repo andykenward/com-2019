@@ -3,7 +3,7 @@
 exports[`Typography <Body /> renders correctly 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  font-family: "Open Sans",serif;
+  font-family: Graphik,"Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
@@ -22,9 +22,9 @@ exports[`Typography <Body /> renders correctly 1`] = `
 exports[`Typography <BodyBold /> renders correctly 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  font-family: "Open Sans",serif;
+  font-family: Graphik,"Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.5;
   color: rgb(36,28,21);
   margin: 0;
@@ -41,7 +41,7 @@ exports[`Typography <BodyBold /> renders correctly 1`] = `
 exports[`Typography <HeadingFour /> renders correctly 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  font-family: "Open Sans",serif;
+  font-family: Graphik,"Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
   font-size: 20px;
   font-weight: 400;
   line-height: 1.25;
@@ -60,12 +60,24 @@ exports[`Typography <HeadingFour /> renders correctly 1`] = `
 exports[`Typography <HeadingOne /> renders correctly 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  font-family: Merriweather,sans-serif;
-  font-size: 44px;
+  font-family: "Cooper Light",Georgia,Times,"Times New Roman",serif;
+  font-size: 40px;
   font-weight: 300;
   line-height: 1.090909091;
   color: rgb(36,28,21);
   margin: 0;
+}
+
+@media screen and (min-width:40em) {
+  .emotion-0 {
+    font-size: 50px;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .emotion-0 {
+    font-size: 54px;
+  }
 }
 
 <h1
@@ -79,7 +91,7 @@ exports[`Typography <HeadingOne /> renders correctly 1`] = `
 exports[`Typography <HeadingThree /> renders correctly 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  font-family: "Open Sans",serif;
+  font-family: Graphik,"Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
   font-size: 28px;
   font-weight: 400;
   -webkit-letter-spacing: -0.2px;
@@ -102,8 +114,8 @@ exports[`Typography <HeadingThree /> renders correctly 1`] = `
 exports[`Typography <HeadingTwo /> renders correctly 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  font-family: "Open Sans",serif;
-  font-size: 36px;
+  font-family: Graphik,"Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
+  font-size: 28px;
   font-weight: 400;
   -webkit-letter-spacing: -0.5px;
   -moz-letter-spacing: -0.5px;
@@ -112,6 +124,18 @@ exports[`Typography <HeadingTwo /> renders correctly 1`] = `
   line-height: 1.25;
   color: rgb(36,28,21);
   margin: 0;
+}
+
+@media screen and (min-width:40em) {
+  .emotion-0 {
+    font-size: 36px;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .emotion-0 {
+    font-size: 44px;
+  }
 }
 
 <h2
@@ -125,9 +149,9 @@ exports[`Typography <HeadingTwo /> renders correctly 1`] = `
 exports[`Typography <Label /> renders correctly 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  font-family: "Open Sans",serif;
+  font-family: Graphik,"Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.5;
   color: rgb(36,28,21);
   margin: 0;

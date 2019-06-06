@@ -12,7 +12,8 @@ import { oc } from "ts-optchain"
 import { SiteTitleQueryQuery } from "../types/graphqlTypes.d"
 
 import Header from "./header"
-import { Box } from "./box"
+import { Footer } from "./footer"
+import { useContact } from "./contact"
 
 interface Props {
   children: ReactNode
@@ -39,21 +40,8 @@ const Layout: React.FC<Props> = ({ children }) => {
   return (
     <>
       <Header siteTitle={title} />
-      <Box
-        css={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0px 1.0875rem 1.45rem`,
-          paddingTop: 0,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </Box>
+      <main>{children}</main>
+      <Footer data={useContact()} />
     </>
   )
 }

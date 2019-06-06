@@ -1,10 +1,8 @@
 export const colors = {
-  primary: "hotpink",
-  purple: "rebeccapurple",
+  primary: "rgb(249, 224, 259)",
   black: "rgb(36, 28, 21)",
   white: "#fff",
-  blue: "#007ce0",
-  navy: "#004175",
+  green: "#007c89",
 } as const
 
 export type ColorKeys = keyof typeof colors

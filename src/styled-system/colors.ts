@@ -1,6 +1,5 @@
 import {
   backgroundColor,
-  BackgroundColorProps,
   compose,
   ResponsiveValue,
   style,
@@ -9,14 +8,19 @@ import {
 
 import { ColorKeys } from "../theme/colors"
 
-export interface ColorProps extends BackgroundColorProps<ColorKeys> {
-  readonly color?: ResponsiveValue<ColorKeys>
+interface BackgroundColorProps {
+  readonly bg?: ResponsiveValue<ColorKeys>
+  readonly backgroundColor?: ResponsiveValue<ColorKeys>
+}
+
+export interface ColorProps extends BackgroundColorProps {
   readonly c?: ResponsiveValue<ColorKeys>
 }
 
 const colorProps: ColorProps = {
-  color: "primary",
-  c: "primary",
+  c: undefined,
+  bg: undefined,
+  backgroundColor: undefined,
 }
 
 export const colorPropsKeys = Object.keys(colorProps)

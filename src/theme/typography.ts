@@ -4,13 +4,26 @@ const fontStack = (fonts: string[]): string =>
   fonts.map(font => (font.includes(" ") ? `"${font}"` : font)).join(", ")
 
 export const fonts = {
-  regular: fontStack(["Open Sans", "serif"]),
-  brand: fontStack(["Merriweather", "sans-serif"]),
+  regular: fontStack([
+    "Graphik",
+    "Helvetica Neue",
+    "Helvetica",
+    "Arial",
+    "Verdana",
+    "sans-serif",
+  ]),
+  brand: fontStack([
+    "Cooper Light",
+    "Georgia",
+    "Times",
+    "Times New Roman",
+    "serif",
+  ]),
 } as const
 
 export type FontsKeys = keyof typeof fonts
 
-export const fontSizes = [14, 16, 20, 28, 36, 44] as const
+export const fontSizes = [14, 16, 20, 28, 36, 40, 44, 50, 54] as const
 
 export type FontSizeKeys = typeof fontSizes[number]
 
@@ -18,7 +31,7 @@ export type FontSizeKeys = typeof fontSizes[number]
 export const fontWeights = {
   light: 300,
   regular: 400,
-  medium: 600,
+  medium: 500,
 } as const
 
 export type FontWeightKeys = keyof typeof fontWeights

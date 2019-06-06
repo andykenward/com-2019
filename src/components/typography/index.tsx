@@ -20,7 +20,9 @@ const Text = styled("p", { shouldForwardProp: filterProps })<
   ${space}
 `
 
-export const Body: React.FC = ({ children }) => (
+interface Props extends StyledProps {}
+
+export const Body: React.FC<Props> = ({ children, ...props }) => (
   <Text
     c="black"
     fontFamily="regular"
@@ -28,12 +30,13 @@ export const Body: React.FC = ({ children }) => (
     fs={16}
     lineHeight="default"
     m={0}
+    {...props}
   >
     {children}
   </Text>
 )
 
-export const BodyBold: React.FC = ({ children }) => (
+export const BodyBold: React.FC<Props> = ({ children, ...props }) => (
   <Text
     c="black"
     fontFamily="regular"
@@ -41,12 +44,13 @@ export const BodyBold: React.FC = ({ children }) => (
     fs={16}
     lineHeight="default"
     m={0}
+    {...props}
   >
     {children}
   </Text>
 )
 
-export const HeadingFour: React.FC = ({ children }) => (
+export const HeadingFour: React.FC<Props> = ({ children, ...props }) => (
   <Text
     as="h4"
     c="black"
@@ -55,12 +59,13 @@ export const HeadingFour: React.FC = ({ children }) => (
     fs={20}
     lineHeight="condensed"
     m={0}
+    {...props}
   >
     {children}
   </Text>
 )
 
-export const HeadingThree: React.FC = ({ children }) => (
+export const HeadingThree: React.FC<Props> = ({ children, ...props }) => (
   <Text
     as="h3"
     c="black"
@@ -70,49 +75,53 @@ export const HeadingThree: React.FC = ({ children }) => (
     letterSpacing="-0.2px"
     lineHeight="condensed"
     m={0}
+    {...props}
   >
     {children}
   </Text>
 )
 
-export const HeadingTwo: React.FC = ({ children }) => (
+export const HeadingTwo: React.FC<Props> = ({ children, ...props }) => (
   <Text
     as="h2"
     c="black"
     fontFamily="regular"
     fontWeight="regular"
-    fs={36}
+    fs={[28, 36, 44]}
     letterSpacing="-0.5px"
     lineHeight="condensed"
     m={0}
+    {...props}
   >
     {children}
   </Text>
 )
 
-export const HeadingOne: React.FC = ({ children }) => (
+export const HeadingOne: React.FC<Props> = ({ children, ...props }) => (
   <Text
     as="h1"
     c="black"
     fontFamily="brand"
     fontWeight="light"
-    fs={44}
+    fs={[40, 50, 54]}
     lineHeight={1.090909091}
     m={0}
+    {...props}
   >
     {children}
   </Text>
 )
 
-export const Label: React.FC = ({ children }) => (
+export const Label: React.FC<Props> = ({ children, ...props }) => (
   <Text
     as="span"
     c="black"
     fontFamily="regular"
-    fontWeight="regular"
+    fontWeight="medium"
     fs={14}
     lineHeight="default"
     m={0}
+    {...props}
   >
     {children}
   </Text>
