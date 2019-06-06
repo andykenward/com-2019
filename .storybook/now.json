@@ -6,7 +6,7 @@
   "regions": ["lhr"],
   "builds": [
     {
-      "src": "../storybook-static/**",
+      "src": "./storybook-static/**",
       "use": "@now/static"
     }
   ],
