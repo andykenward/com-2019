@@ -37,9 +37,7 @@ workflow "Deploy Storybook" {
   on = "push"
   resolves = [
     "install-storybook",
-    "build-storybook",
-    "deploy-storybook",
-    "master-deploy-storybook",
+    "build-storybook"
    ]
 }
 
