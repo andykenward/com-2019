@@ -36,22 +36,8 @@ action "test" {
 workflow "Deploy Storybook" {
   on = "push"
   resolves = [
-    "install-storybook",
-    "build-storybook"
+    "deploy-storybook"
    ]
-}
-
-action "install-storybook" {
-  uses = "actions/npm@master"
-  runs = "npm ci"
-}
-
-action "build-storybook" {
-  needs = [
-    "install-storybook",
-  ]
-  uses = "actions/npm@master"
-  runs = "npm run build-storybook"
 }
 
 action "not-master-branch-filter" {
@@ -59,10 +45,18 @@ action "not-master-branch-filter" {
   args = "not branch master"
 }
 
+action "build-storybook" {
+  needs = [
+    "install",
+  ]
+  uses = "actions/npm@master"
+  runs = "npm run build-storybook"
+}
+
 action "deploy-storybook" {
   needs = [
     "not-master-branch-filter",
-    "install-storybook",
+    "install",
     "build-storybook",
    ]
   uses = "actions/zeit-now@master"
@@ -70,16 +64,23 @@ action "deploy-storybook" {
   args = "deploy --local-config=./.storybook/now.json"
 }
 
+# MASTER
+workflow "Master - Deploy Storybook" {
+  on = "push"
+  resolves = [
+    "master-deploy-storybook"
+   ]
+}
+
 action "master-branch-filter" {
   uses = "actions/bin/filter@master"
   args = "branch master"
 }
 
-
 action "master-deploy-storybook" {
   needs = [
     "master-branch-filter",
-    "install-storybook",
+    "install",
     "build-storybook",
    ]
   uses = "actions/zeit-now@master"
