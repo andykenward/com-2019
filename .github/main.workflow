@@ -55,7 +55,7 @@ action "deploy-storybook" {
   needs = [
     "build-storybook",
   ]
-  uses = "./action-deploy/"
+  uses = "andykenward/deploy-now@master"
   secrets = [
     "GITHUB_TOKEN",
     "NOW_TOKEN",
