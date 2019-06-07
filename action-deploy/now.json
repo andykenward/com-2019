@@ -1,6 +1,0 @@
-{
-  "name": "primer-deploy",
-  "alias": "deploy.andykenward.com",
-  "type": "static",
-  "files": ["index.html"]
-}
