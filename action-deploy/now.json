@@ -1,6 +1,6 @@
 {
   "name": "primer-deploy",
-  "alias": "primer-deploy.now.sh",
+  "alias": "deploy.andykenward.com",
   "type": "static",
   "files": ["index.html"]
 }
