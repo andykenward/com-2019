@@ -4,6 +4,10 @@
   "alias": "2019.andykenward.com",
   "scope": "andykenward",
   "regions": ["lhr1"],
+  "github": {
+    "enabled": false,
+    "autoAlias": false
+  },
   "builds": [
     {
       "src": "package.json",

@@ -3,7 +3,11 @@
   "name": "com-2019-storybook",
   "alias": "2019-storybook.andykenward.com",
   "scope": "andykenward",
-  "regions": ["lhr"],
+  "regions": ["lhr1"],
+  "github": {
+    "enabled": false,
+    "autoAlias": false
+  },
   "builds": [
     {
       "src": "./storybook-static/**",
