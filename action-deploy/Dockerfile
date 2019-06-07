@@ -11,7 +11,7 @@ LABEL homepage="http://github.com/andykenward/com-2019/tree/master"
 LABEL maintainer="GitHub Design Systems <design-systems@github.com>"
 
 # WORKDIR /primer-deploy
-# COPY . .
+COPY . .
 RUN ["npm", "ci"]
 
 ENTRYPOINT ["/entrypoint.js"]
