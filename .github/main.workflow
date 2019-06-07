@@ -1,16 +1,8 @@
-# workflow "lint / test / typings" {
-#   resolves = [
-#     "install",
-#     "type-check",
-#     "lint",
-#     "test",
-#   ]
-#   on = "push"
-# }
-workflow "Deploy Storybook" {
+workflow "Deploy" {
   on = "push"
   resolves = [
-    "deploy-storybook"
+    "deploy-storybook",
+    "deploy"
    ]
 }
 # NPM install packages
@@ -63,44 +55,16 @@ action "deploy-storybook" {
   args= "-- --local-config=./.storybook/now.json"
 }
 
-# MASTER
-# workflow "Master - Deploy Storybook" {
-#   on = "push"
-#   resolves = [
-#     "master-deploy-storybook"
-#    ]
-# }
-
-# action "master-branch-filter" {
-#   uses = "actions/bin/filter@master"
-#   args = "branch master"
-# }
-
-# action "master-deploy-storybook" {
-#   needs = [
-#     "master-branch-filter",
-#     "install",
-#     "build-storybook",
-#    ]
-#   uses = "actions/zeit-now@master"
-#   secrets = ["ZEIT_TOKEN"]
-#   args = "deploy --target production --local-config=./.storybook/now.json"
-# }
-
-
-# action "not-master-branch-filter" {
-#   uses = "actions/bin/filter@master"
-#   args = "not branch master"
-# }
-
-# action "deploy-storybook" {
-#   needs = [
-#     "not-master-branch-filter",
-#     "install",
-#     "build-storybook",
-#    ]
-#   uses = "actions/zeit-now@master"
-#   secrets = ["ZEIT_TOKEN"]
-#   args = "deploy --local-config=./.storybook/now.json"
-# }
+action "deploy" {
+  needs = [
+    "type-check",
+    "lint",
+    "test",
+  ]
+  uses = "andykenward/deploy-now@master"
+  secrets = [
+    "GITHUB_TOKEN",
+    "NOW_TOKEN",
+  ]
+}
 
