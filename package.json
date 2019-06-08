@@ -86,7 +86,6 @@
   ],
   "license": "MIT",
   "scripts": {
-    "prebuild": "npm run type-check && npm run lint",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{css,js,jsx,ts,tsx}",
