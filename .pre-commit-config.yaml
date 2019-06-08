@@ -5,7 +5,7 @@ repos:
       - id: trailing-whitespace
       - id: check-merge-conflict
   - repo: https://github.com/prettier/prettier
-    rev: 1.17.1
+    rev: 1.18.2
     hooks:
       - id: prettier
   - repo: https://github.com/andykenward/commitlint-pre-commit-hook
@@ -33,6 +33,6 @@ repos:
             eslint-plugin-prettier@3.1.0,
             eslint-plugin-react@7.13.0,
             eslint-plugin-react-hooks@1.6.0,
-            prettier@1.17.1,
-            typescript@3.4.5,
+            prettier@1.18.2,
+            typescript@3.5.1,
           ]
