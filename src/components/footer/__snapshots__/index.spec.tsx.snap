@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Footer /> renders null with empty array 1`] = `null`;
+
+exports[`<Footer /> renders with 2 items 1`] = `
+.emotion-2 {
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-0 {
+  color: rgb(36,28,21);
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Graphik,"Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.emotion-0:hover {
+  color: #007c89;
+}
+
+<footer
+  class="emotion-3"
+>
+  <ul
+    class="emotion-2"
+  >
+    <li>
+      <a
+        class="emotion-0"
+        font-family="regular"
+        font-weight="regular"
+        href="url one"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        title one
+      </a>
+    </li>
+    <li>
+      <a
+        class="emotion-0"
+        font-family="regular"
+        font-weight="regular"
+        href="url two"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        title two
+      </a>
+    </li>
+  </ul>
+</footer>
+`;

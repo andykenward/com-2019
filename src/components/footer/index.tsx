@@ -2,18 +2,18 @@ import React from "react"
 
 import { oc } from "ts-optchain"
 
-import { SiteSiteMetadataContact, Maybe } from "../types/graphqlTypes.d"
+import { SiteSiteMetadataContact, Maybe } from "../../types/graphqlTypes.d"
 
-import { Box } from "./box"
-import { List } from "./list"
-import { LinkFooter } from "./link"
+import { Box } from "../box"
+import { List } from "../list"
+import { LinkFooter } from "../link"
 
 interface Props {
   data: Maybe<SiteSiteMetadataContact>[]
 }
 
 export const Footer: React.FC<Props> = ({ data }) => {
-  return (
+  return data && data.length > 0 ? (
     <Box as="footer">
       <List>
         {data.map((item, index) => {
@@ -31,5 +31,5 @@ export const Footer: React.FC<Props> = ({ data }) => {
         })}
       </List>
     </Box>
-  )
+  ) : null
 }
