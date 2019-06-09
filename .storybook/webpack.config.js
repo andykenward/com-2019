@@ -10,6 +10,7 @@ module.exports = ({ config }) => {
     require.resolve("@babel/preset-react"),
     require.resolve("@babel/preset-env"),
     require.resolve("@babel/preset-typescript"),
+    require.resolve("@emotion/babel-preset-css-prop"),
   ]
 
   config.module.rules[0].use[0].options.plugins = [
