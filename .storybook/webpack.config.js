@@ -19,7 +19,7 @@ module.exports = ({ config }) => {
     require.resolve("babel-plugin-remove-graphql-queries"),
   ]
 
-  config.module.rules[0].test = /\.(mjs|jsx|ts|tsx?)$/
+  config.module.rules[0].test = /\.(mjs|jsx|js|ts|tsx?)$/
 
   config.resolve.extensions.push(".ts", ".tsx")
 
