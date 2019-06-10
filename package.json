@@ -33,7 +33,7 @@
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "@babel/preset-typescript": "^7.3.3",
-    "@graphql-codegen/cli": "^1.2.0",
+    "@graphql-codegen/cli": "^1.2.1",
     "@graphql-codegen/typescript": "^1.2.0",
     "@graphql-codegen/typescript-operations": "^1.2.0",
     "@storybook/addon-actions": "^5.1.3",
