@@ -17,17 +17,20 @@ module.exports = {
       name: "Andy Kenward",
       role: "Senior Front-End Engineer",
       email: "hello@andykenward.com",
+      github: "https://github.com/andykenward",
     },
     projects: [
       {
         title: "Ray-Ban site redesign",
         client: "Ray-Ban",
-        tags: ["React", "GraphQL", "Jest", "Cypress"],
+        role: "Lead Front-End Developer",
+        tags: ["React", "GraphQL", "Jest", "Cypress", "StoryBook"],
         caseUrl: "https://www.stinkstudios.com/work/rayban-raybancom-redesign",
       },
       {
         title: "The Hidden Worlds Of The National Parks",
         client: "Google",
+        role: "Lead Front-End Developer",
         siteUrl: "https://g.co/nationalparks",
         tags: ["React", "Redux"],
         caseUrl:
@@ -36,18 +39,21 @@ module.exports = {
       {
         title: "Inside Abbey Road",
         client: "Google",
+        role: "Senior Front-End Developer",
         tags: ["Backbone", "Marionette"],
         caseUrl: "https://www.stinkstudios.com/work/inside-abbey-road",
       },
       {
         title: "Switchboard",
         client: "Stink Studios",
+        role: "Lead Front-End Developer",
         tags: ["TypeScript", "React", "GraphQL", "Jest", "Cypress"],
         siteUrl: "https://switchboard.stink.co",
       },
       {
         title: "Performing Arts",
         client: "Google",
+        role: "Lead Front-End Developer",
         tags: ["Backbone", "Marionette"],
         siteUrl: "https://performingarts.withgoogle.com/",
         caseUrl: "https://www.stinkstudios.com/work/performing-arts",
@@ -55,7 +61,8 @@ module.exports = {
       {
         title: "35th Anniversary",
         client: "I.D.",
-        tags: ["React", "Flux", "ImmutableJS"],
+        role: "Sole Developer",
+        tags: ["React", "SSR", "Flux", "ImmutableJS", "Node"],
         siteUrl: "http://covers.i-d.co/",
         caseUrl: "https://www.stinkstudios.com/work/35th-anniversary",
       },
@@ -97,11 +104,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Andy Kenward - Front-End Engineer`,
+        short_name: `Andy Kenward`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `rgb(216,234,204)`,
+        theme_color: `rgb(216,234,204)`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
