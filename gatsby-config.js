@@ -21,11 +21,18 @@ module.exports = {
     },
     projects: [
       {
-        title: "Ray-Ban site redesign",
+        title: "Ray-Ban Site Redesign",
         client: "Ray-Ban",
         role: "Lead Front-End Developer",
         tags: ["React", "GraphQL", "Jest", "Cypress", "StoryBook"],
         caseUrl: "https://www.stinkstudios.com/work/rayban-raybancom-redesign",
+      },
+      {
+        title: "Switchboard",
+        client: "Stink Studios",
+        role: "Lead Front-End Developer",
+        tags: ["TypeScript", "React", "GraphQL", "Jest", "Cypress"],
+        siteUrl: "https://switchboard.stink.co",
       },
       {
         title: "The Hidden Worlds Of The National Parks",
@@ -37,18 +44,19 @@ module.exports = {
           "https://www.stinkstudios.com/work/google-the-hidden-worlds-of-the-national-parks",
       },
       {
+        title: "35th Anniversary",
+        client: "i-D",
+        role: "Sole Developer",
+        tags: ["React", "SSR", "Flux", "ImmutableJS", "Node"],
+        siteUrl: "http://covers.i-d.co/",
+        caseUrl: "https://www.stinkstudios.com/work/35th-anniversary",
+      },
+      {
         title: "Inside Abbey Road",
         client: "Google",
         role: "Senior Front-End Developer",
         tags: ["Backbone", "Marionette"],
         caseUrl: "https://www.stinkstudios.com/work/inside-abbey-road",
-      },
-      {
-        title: "Switchboard",
-        client: "Stink Studios",
-        role: "Lead Front-End Developer",
-        tags: ["TypeScript", "React", "GraphQL", "Jest", "Cypress"],
-        siteUrl: "https://switchboard.stink.co",
       },
       {
         title: "Performing Arts",
@@ -57,14 +65,6 @@ module.exports = {
         tags: ["Backbone", "Marionette"],
         siteUrl: "https://performingarts.withgoogle.com/",
         caseUrl: "https://www.stinkstudios.com/work/performing-arts",
-      },
-      {
-        title: "35th Anniversary",
-        client: "i-D",
-        role: "Sole Developer",
-        tags: ["React", "SSR", "Flux", "ImmutableJS", "Node"],
-        siteUrl: "http://covers.i-d.co/",
-        caseUrl: "https://www.stinkstudios.com/work/35th-anniversary",
       },
     ],
     contact: [
