@@ -16,7 +16,7 @@ module.exports = {
     heading: {
       name: "Andy Kenward",
       role: "Senior Front-End Engineer",
-      email: "hello@andykenward.com",
+      email: "mailto:hello@andykenward.com",
       github: "https://github.com/andykenward",
     },
     projects: [
