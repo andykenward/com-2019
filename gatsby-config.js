@@ -60,7 +60,7 @@ module.exports = {
       },
       {
         title: "35th Anniversary",
-        client: "I.D.",
+        client: "i-D",
         role: "Sole Developer",
         tags: ["React", "SSR", "Flux", "ImmutableJS", "Node"],
         siteUrl: "http://covers.i-d.co/",
