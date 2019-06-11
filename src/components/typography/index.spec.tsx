@@ -26,7 +26,7 @@ describe("Typography", () => {
         "font-family",
         `"Cooper Light",Georgia,Times,"Times New Roman",serif`
       )
-      expect(container.firstChild).toHaveStyleRule("font-size", "40px")
+      expect(container.firstChild).toHaveStyleRule("font-size", "44px")
       expect(container.firstChild).toHaveStyleRule("font-weight", "300")
       expect(container.firstChild).toHaveStyleRule("line-height", "1.090909091")
       expect(container.firstChild).toHaveStyleRule("color", "rgb(36,28,21)")
@@ -44,7 +44,7 @@ describe("Typography", () => {
         "font-family",
         `Graphik,"Helvetica Neue",Helvetica,Arial,Verdana,sans-serif`
       )
-      expect(container.firstChild).toHaveStyleRule("font-size", "28px")
+      expect(container.firstChild).toHaveStyleRule("font-size", "36px")
       expect(container.firstChild).toHaveStyleRule("font-weight", "400")
       expect(container.firstChild).toHaveStyleRule("letter-spacing", "-0.5px")
       expect(container.firstChild).toHaveStyleRule("line-height", "1.25")

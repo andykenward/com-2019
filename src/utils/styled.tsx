@@ -1,5 +1,4 @@
-import { SerializedStyles } from "@emotion/css"
-import styled, { CreateStyled, CSSObject } from "@emotion/styled"
+import styled, { CreateStyled } from "@emotion/styled"
 import React from "react"
 
 import { Theme } from "../theme"
@@ -9,7 +8,6 @@ import { Theme } from "../theme"
  */
 export interface StyledProps {
   as?: keyof JSX.IntrinsicElements | React.ComponentType<any>
-  css?: CSSObject | SerializedStyles
 }
 
 export default styled as CreateStyled<Theme>

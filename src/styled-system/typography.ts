@@ -57,6 +57,16 @@ interface FontWeightProps {
   fontWeight?: ResponsiveValue<FontWeightKeys>
 }
 
+export const textTransform = style({
+  key: "textTransform",
+  prop: "textTransform",
+  alias: "tt",
+})
+interface TextTransform {
+  textTransform?: CSS.TextTransformProperty
+  tt?: CSS.TextTransformProperty
+}
+
 export interface TypographyProps
   extends FontFamilyProps,
     FontSizeProps,
@@ -64,7 +74,8 @@ export interface TypographyProps
     FontWeightProps,
     LetterSpacingProps,
     LineHeightProps<LineHeightKeys>,
-    TextAlignProps {}
+    TextAlignProps,
+    TextTransform {}
 
 export const typography = compose(
   fontFamily,
@@ -73,7 +84,8 @@ export const typography = compose(
   fontWeight,
   letterSpacing,
   lineHeight,
-  textAlign
+  textAlign,
+  (textTransform as unknown) as styleFn
 )
 // import {
 //     compose,

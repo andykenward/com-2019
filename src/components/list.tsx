@@ -10,10 +10,14 @@ export const List: React.FC = ({ children }) => (
     p={0}
     css={css`
       list-style: none;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(186px, 1fr));
     `}
   >
+    {children}
+  </Box>
+)
+
+export const ListItem: React.FC = ({ children }) => (
+  <Box as="li" m={0} mb={16} p={0} display="list-item">
     {children}
   </Box>
 )

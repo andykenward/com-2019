@@ -23,7 +23,22 @@ export const fonts = {
 
 export type FontsKeys = keyof typeof fonts
 
-export const fontSizes = [14, 16, 20, 28, 36, 40, 44, 50, 54] as const
+export const fontSizes = [
+  14,
+  16,
+  20,
+  28,
+  36,
+  38,
+  40,
+  44,
+  46,
+  48,
+  50,
+  54,
+  64,
+  80,
+] as const
 
 export type FontSizeKeys = typeof fontSizes[number]
 

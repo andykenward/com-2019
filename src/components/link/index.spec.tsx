@@ -1,8 +1,8 @@
 import React from "react"
 
-import { renderWithTheme } from "../utils"
+import { renderWithTheme } from "../../utils"
 
-import { Link } from "./link"
+import { Link } from "."
 
 describe("<Link />", () => {
   it("renders correctly", () => {

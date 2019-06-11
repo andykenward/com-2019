@@ -1,8 +1,8 @@
 import React from "react"
 
-import { renderWithTheme } from "../utils"
+import { renderWithTheme } from "../../utils"
 
-import { Box } from "./box"
+import { Box } from "."
 
 describe("<Box />", () => {
   it("renders correctly", () => {

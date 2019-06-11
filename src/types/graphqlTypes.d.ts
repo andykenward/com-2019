@@ -1562,9 +1562,13 @@ export enum SiteFieldsEnum {
   siteMetadata___description = "siteMetadata___description",
   siteMetadata___author = "siteMetadata___author",
   siteMetadata___tags = "siteMetadata___tags",
+  siteMetadata___heading___name = "siteMetadata___heading___name",
+  siteMetadata___heading___role = "siteMetadata___heading___role",
+  siteMetadata___heading___email = "siteMetadata___heading___email",
   siteMetadata___projects = "siteMetadata___projects",
   siteMetadata___projects___title = "siteMetadata___projects___title",
   siteMetadata___projects___client = "siteMetadata___projects___client",
+  siteMetadata___projects___tags = "siteMetadata___projects___tags",
   siteMetadata___projects___caseUrl = "siteMetadata___projects___caseUrl",
   siteMetadata___projects___siteUrl = "siteMetadata___projects___siteUrl",
   siteMetadata___contact = "siteMetadata___contact",
@@ -2137,6 +2141,7 @@ export type SiteSiteMetadata = {
   description?: Maybe<Scalars["String"]>
   author?: Maybe<Scalars["String"]>
   tags?: Maybe<Array<Maybe<Scalars["String"]>>>
+  heading?: Maybe<SiteSiteMetadataHeading>
   projects?: Maybe<Array<Maybe<SiteSiteMetadataProjects>>>
   contact?: Maybe<Array<Maybe<SiteSiteMetadataContact>>>
 }
@@ -2161,14 +2166,29 @@ export type SiteSiteMetadataFilterInput = {
   description?: Maybe<StringQueryOperatorInput>
   author?: Maybe<StringQueryOperatorInput>
   tags?: Maybe<StringQueryOperatorInput>
+  heading?: Maybe<SiteSiteMetadataHeadingFilterInput>
   projects?: Maybe<SiteSiteMetadataProjectsFilterListInput>
   contact?: Maybe<SiteSiteMetadataContactFilterListInput>
+}
+
+export type SiteSiteMetadataHeading = {
+  __typename?: "SiteSiteMetadataHeading"
+  name?: Maybe<Scalars["String"]>
+  role?: Maybe<Scalars["String"]>
+  email?: Maybe<Scalars["String"]>
+}
+
+export type SiteSiteMetadataHeadingFilterInput = {
+  name?: Maybe<StringQueryOperatorInput>
+  role?: Maybe<StringQueryOperatorInput>
+  email?: Maybe<StringQueryOperatorInput>
 }
 
 export type SiteSiteMetadataProjects = {
   __typename?: "SiteSiteMetadataProjects"
   title?: Maybe<Scalars["String"]>
   client?: Maybe<Scalars["String"]>
+  tags?: Maybe<Array<Maybe<Scalars["String"]>>>
   caseUrl?: Maybe<Scalars["String"]>
   siteUrl?: Maybe<Scalars["String"]>
 }
@@ -2176,6 +2196,7 @@ export type SiteSiteMetadataProjects = {
 export type SiteSiteMetadataProjectsFilterInput = {
   title?: Maybe<StringQueryOperatorInput>
   client?: Maybe<StringQueryOperatorInput>
+  tags?: Maybe<StringQueryOperatorInput>
   caseUrl?: Maybe<StringQueryOperatorInput>
   siteUrl?: Maybe<StringQueryOperatorInput>
 }
@@ -2225,6 +2246,25 @@ export type ContactQuery = { __typename?: "Query" } & {
   >
 }
 
+export type HeaderQueryVariables = {}
+
+export type HeaderQuery = { __typename?: "Query" } & {
+  site: Maybe<
+    { __typename?: "Site" } & {
+      siteMetadata: Maybe<
+        { __typename?: "SiteSiteMetadata" } & {
+          heading: Maybe<
+            { __typename?: "SiteSiteMetadataHeading" } & Pick<
+              SiteSiteMetadataHeading,
+              "name" | "role" | "email"
+            >
+          >
+        }
+      >
+    }
+  >
+}
+
 export type ImageQueryQueryVariables = {}
 
 export type ImageQueryQuery = { __typename?: "Query" } & {
@@ -2241,13 +2281,24 @@ export type ImageQueryQuery = { __typename?: "Query" } & {
   >
 }
 
-export type SiteTitleQueryQueryVariables = {}
+export type ProjectsQueryVariables = {}
 
-export type SiteTitleQueryQuery = { __typename?: "Query" } & {
+export type ProjectsQuery = { __typename?: "Query" } & {
   site: Maybe<
     { __typename?: "Site" } & {
       siteMetadata: Maybe<
-        { __typename?: "SiteSiteMetadata" } & Pick<SiteSiteMetadata, "title">
+        { __typename?: "SiteSiteMetadata" } & {
+          projects: Maybe<
+            Array<
+              Maybe<
+                { __typename?: "SiteSiteMetadataProjects" } & Pick<
+                  SiteSiteMetadataProjects,
+                  "title" | "client" | "siteUrl" | "caseUrl" | "tags"
+                >
+              >
+            >
+          >
+        }
       >
     }
   >

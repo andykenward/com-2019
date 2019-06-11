@@ -13,30 +13,49 @@ module.exports = {
       "Jest",
       "Cypress",
     ],
+    heading: {
+      name: "Andy Kenward",
+      role: "Senior Front-End Engineer",
+      email: "hello@andykenward.com",
+    },
     projects: [
       {
         title: "Ray-Ban site redesign",
         client: "Ray-Ban",
+        tags: ["React", "GraphQL", "Jest", "Cypress"],
         caseUrl: "https://www.stinkstudios.com/work/rayban-raybancom-redesign",
       },
       {
         title: "The Hidden Worlds Of The National Parks",
         client: "Google",
         siteUrl: "https://g.co/nationalparks",
+        tags: ["React", "Redux"],
         caseUrl:
           "https://www.stinkstudios.com/work/google-the-hidden-worlds-of-the-national-parks",
       },
       {
         title: "Inside Abbey Road",
+        client: "Google",
+        tags: ["Backbone", "Marionette"],
         caseUrl: "https://www.stinkstudios.com/work/inside-abbey-road",
       },
       {
+        title: "Switchboard",
+        client: "Stink Studios",
+        tags: ["TypeScript", "React", "GraphQL", "Jest", "Cypress"],
+        siteUrl: "https://switchboard.stink.co",
+      },
+      {
         title: "Performing Arts",
+        client: "Google",
+        tags: ["Backbone", "Marionette"],
         siteUrl: "https://performingarts.withgoogle.com/",
         caseUrl: "https://www.stinkstudios.com/work/performing-arts",
       },
       {
         title: "35th Anniversary",
+        client: "I.D.",
+        tags: ["React", "Flux", "ImmutableJS"],
         siteUrl: "http://covers.i-d.co/",
         caseUrl: "https://www.stinkstudios.com/work/35th-anniversary",
       },

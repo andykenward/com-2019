@@ -25,16 +25,20 @@ exports[`Typography <BodyBold /> renders correctly 1`] = `
   font-family: Graphik,"Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
   font-size: 16px;
   font-weight: 500;
+  -webkit-letter-spacing: -0.2px;
+  -moz-letter-spacing: -0.2px;
+  -ms-letter-spacing: -0.2px;
+  letter-spacing: -0.2px;
   line-height: 1.5;
   color: rgb(36,28,21);
   margin: 0;
 }
 
-<p
+<strong
     class="emotion-0"
   >
     Body Bold
-  </p>
+  </strong>
 </DocumentFragment>
 `;
 
@@ -61,20 +65,15 @@ exports[`Typography <HeadingOne /> renders correctly 1`] = `
 <DocumentFragment>
   .emotion-0 {
   font-family: "Cooper Light",Georgia,Times,"Times New Roman",serif;
-  font-size: 40px;
+  font-size: 44px;
   font-weight: 300;
   line-height: 1.090909091;
+  text-transform: capitalize;
   color: rgb(36,28,21);
   margin: 0;
 }
 
 @media screen and (min-width:40em) {
-  .emotion-0 {
-    font-size: 50px;
-  }
-}
-
-@media screen and (min-width:52em) {
   .emotion-0 {
     font-size: 54px;
   }
@@ -99,8 +98,15 @@ exports[`Typography <HeadingThree /> renders correctly 1`] = `
   -ms-letter-spacing: -0.2px;
   letter-spacing: -0.2px;
   line-height: 1.25;
+  text-transform: capitalize;
   color: rgb(36,28,21);
   margin: 0;
+}
+
+@media screen and (min-width:40em) {
+  .emotion-0 {
+    font-size: 38px;
+  }
 }
 
 <h3
@@ -115,26 +121,21 @@ exports[`Typography <HeadingTwo /> renders correctly 1`] = `
 <DocumentFragment>
   .emotion-0 {
   font-family: Graphik,"Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
-  font-size: 28px;
+  font-size: 36px;
   font-weight: 400;
   -webkit-letter-spacing: -0.5px;
   -moz-letter-spacing: -0.5px;
   -ms-letter-spacing: -0.5px;
   letter-spacing: -0.5px;
   line-height: 1.25;
+  text-transform: capitalize;
   color: rgb(36,28,21);
   margin: 0;
 }
 
 @media screen and (min-width:40em) {
   .emotion-0 {
-    font-size: 36px;
-  }
-}
-
-@media screen and (min-width:52em) {
-  .emotion-0 {
-    font-size: 44px;
+    font-size: 46px;
   }
 }
 
