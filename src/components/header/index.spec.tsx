@@ -31,7 +31,12 @@ describe("<Header />", () => {
     expect(container.firstChild).toMatchSnapshot()
   })
   it("renders correctly", () => {
-    const mockData = { name: "Andy Kenward", role: "Senior Front-End Engineer" }
+    const mockData = {
+      name: "Andy Kenward",
+      role: "Senior Front-End Engineer",
+      email: "a@a.com",
+      github: "github",
+    }
     const { container } = renderWithTheme(<Header data={mockData} />)
     expect(container.firstChild).toMatchSnapshot()
   })

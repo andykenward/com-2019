@@ -5,6 +5,7 @@ import { oc } from "ts-optchain"
 import { Box } from "../box"
 import { HeadingOne, HeadingTwo } from "../typography"
 import { Maybe, SiteSiteMetadataHeading } from "../../types/graphqlTypes.d"
+import { ButtonExternal } from "../button"
 
 interface Props {
   data?: Maybe<SiteSiteMetadataHeading>
@@ -15,7 +16,11 @@ const Header: React.FC<Props> = ({ data }) =>
     <Box py={[64, 128]} as="header" bg="primary">
       <Box px={32} mx={[null, "auto"]} width={[null, 3 / 4]}>
         <HeadingOne fs={[48, 64, 80]}>{oc(data).name("")}</HeadingOne>
-        <HeadingTwo>{oc(data).role("")}</HeadingTwo>
+        <HeadingTwo mb={8}>{oc(data).role("")}</HeadingTwo>
+        <Box>
+          <ButtonExternal href={oc(data).email("")}>Email</ButtonExternal>
+          <ButtonExternal href={oc(data).github("")}>GitHub</ButtonExternal>
+        </Box>
       </Box>
     </Box>
   ) : null

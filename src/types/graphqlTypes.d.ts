@@ -1296,6 +1296,7 @@ export type QuerySitePageArgs = {
   children?: Maybe<NodeFilterListInput>
   internal?: Maybe<InternalFilterInput>
   path?: Maybe<StringQueryOperatorInput>
+  jsonName?: Maybe<StringQueryOperatorInput>
   internalComponentName?: Maybe<StringQueryOperatorInput>
   component?: Maybe<StringQueryOperatorInput>
   componentChunkName?: Maybe<StringQueryOperatorInput>
@@ -1564,9 +1565,11 @@ export enum SiteFieldsEnum {
   siteMetadata___heading___name = "siteMetadata___heading___name",
   siteMetadata___heading___role = "siteMetadata___heading___role",
   siteMetadata___heading___email = "siteMetadata___heading___email",
+  siteMetadata___heading___github = "siteMetadata___heading___github",
   siteMetadata___projects = "siteMetadata___projects",
   siteMetadata___projects___title = "siteMetadata___projects___title",
   siteMetadata___projects___client = "siteMetadata___projects___client",
+  siteMetadata___projects___role = "siteMetadata___projects___role",
   siteMetadata___projects___tags = "siteMetadata___projects___tags",
   siteMetadata___projects___caseUrl = "siteMetadata___projects___caseUrl",
   siteMetadata___projects___siteUrl = "siteMetadata___projects___siteUrl",
@@ -1610,6 +1613,7 @@ export type SitePage = Node & {
   children: Array<Node>
   internal: Internal
   path?: Maybe<Scalars["String"]>
+  jsonName?: Maybe<Scalars["String"]>
   internalComponentName?: Maybe<Scalars["String"]>
   component?: Maybe<Scalars["String"]>
   componentChunkName?: Maybe<Scalars["String"]>
@@ -1734,6 +1738,7 @@ export enum SitePageFieldsEnum {
   internal___owner = "internal___owner",
   internal___type = "internal___type",
   path = "path",
+  jsonName = "jsonName",
   internalComponentName = "internalComponentName",
   component = "component",
   componentChunkName = "componentChunkName",
@@ -1817,6 +1822,7 @@ export type SitePageFilterInput = {
   children?: Maybe<NodeFilterListInput>
   internal?: Maybe<InternalFilterInput>
   path?: Maybe<StringQueryOperatorInput>
+  jsonName?: Maybe<StringQueryOperatorInput>
   internalComponentName?: Maybe<StringQueryOperatorInput>
   component?: Maybe<StringQueryOperatorInput>
   componentChunkName?: Maybe<StringQueryOperatorInput>
@@ -2172,18 +2178,21 @@ export type SiteSiteMetadataHeading = {
   name?: Maybe<Scalars["String"]>
   role?: Maybe<Scalars["String"]>
   email?: Maybe<Scalars["String"]>
+  github?: Maybe<Scalars["String"]>
 }
 
 export type SiteSiteMetadataHeadingFilterInput = {
   name?: Maybe<StringQueryOperatorInput>
   role?: Maybe<StringQueryOperatorInput>
   email?: Maybe<StringQueryOperatorInput>
+  github?: Maybe<StringQueryOperatorInput>
 }
 
 export type SiteSiteMetadataProjects = {
   __typename?: "SiteSiteMetadataProjects"
   title?: Maybe<Scalars["String"]>
   client?: Maybe<Scalars["String"]>
+  role?: Maybe<Scalars["String"]>
   tags?: Maybe<Array<Maybe<Scalars["String"]>>>
   caseUrl?: Maybe<Scalars["String"]>
   siteUrl?: Maybe<Scalars["String"]>
@@ -2192,6 +2201,7 @@ export type SiteSiteMetadataProjects = {
 export type SiteSiteMetadataProjectsFilterInput = {
   title?: Maybe<StringQueryOperatorInput>
   client?: Maybe<StringQueryOperatorInput>
+  role?: Maybe<StringQueryOperatorInput>
   tags?: Maybe<StringQueryOperatorInput>
   caseUrl?: Maybe<StringQueryOperatorInput>
   siteUrl?: Maybe<StringQueryOperatorInput>
@@ -2252,7 +2262,7 @@ export type HeaderQuery = { __typename?: "Query" } & {
           heading: Maybe<
             { __typename?: "SiteSiteMetadataHeading" } & Pick<
               SiteSiteMetadataHeading,
-              "name" | "role" | "email"
+              "name" | "role" | "email" | "github"
             >
           >
         }
@@ -2289,7 +2299,7 @@ export type ProjectsQuery = { __typename?: "Query" } & {
               Maybe<
                 { __typename?: "SiteSiteMetadataProjects" } & Pick<
                   SiteSiteMetadataProjects,
-                  "title" | "client" | "siteUrl" | "caseUrl" | "tags"
+                  "title" | "client" | "siteUrl" | "caseUrl" | "tags" | "role"
                 >
               >
             >

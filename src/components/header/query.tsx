@@ -16,6 +16,7 @@ export const useHeader = (): Maybe<SiteSiteMetadataHeading> => {
             name
             role
             email
+            github
           }
         }
       }

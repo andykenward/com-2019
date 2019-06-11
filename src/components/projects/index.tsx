@@ -5,7 +5,8 @@ import { oc } from "ts-optchain"
 import { Maybe, SiteSiteMetadataProjects } from "../../types/graphqlTypes.d"
 import { Box } from "../box"
 import { Tags } from "../tags"
-import { BodyBold, HeadingOne, HeadingThree, Label } from "../typography"
+import { BodyBold, HeadingOne, HeadingThree, HeadingFour } from "../typography"
+import { ButtonExternal } from "../button"
 
 interface Props {
   data: Maybe<SiteSiteMetadataProjects>[]
@@ -29,6 +30,7 @@ export const Projects: React.FC<Props> = ({ data }) =>
           siteUrl={oc(item).siteUrl()}
           caseUrl={oc(item).caseUrl()}
           tags={oc(item).tags()}
+          role={oc(item).role()}
         />
       ))}
     </Box>
@@ -40,6 +42,7 @@ export const ProjectsItem: React.FC<SiteSiteMetadataProjects> = ({
   siteUrl,
   caseUrl,
   tags,
+  role,
 }) => (
   <Box as="article" mb={64}>
     <BodyBold
@@ -50,10 +53,11 @@ export const ProjectsItem: React.FC<SiteSiteMetadataProjects> = ({
       {client}
     </BodyBold>
     <HeadingThree mb={8}>{title}</HeadingThree>
+    <HeadingFour mb={8}>{role}</HeadingFour>
     <Tags data={tags} />
     <Box>
-      {siteUrl && <Label>Site</Label>}
-      {caseUrl && <Label>Case Study</Label>}
+      {siteUrl && <ButtonExternal href={siteUrl}>Site</ButtonExternal>}
+      {caseUrl && <ButtonExternal href={caseUrl}>Case Study</ButtonExternal>}
     </Box>
   </Box>
 )
