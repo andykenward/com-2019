@@ -18,10 +18,15 @@ interface Props {
   description?: string
   lang?: string
   meta?: MetaProps[]
-  title: string
+  title?: string
 }
 
-const SEO: React.FC<Props> = ({ description, lang, meta, title }) => {
+const SEO: React.FC<Props> = ({
+  description,
+  lang = "en",
+  meta,
+  title = "",
+}) => {
   const { site }: SiteMetadataQueryQuery = useStaticQuery(
     graphql`
       query SiteMetadataQuery {
@@ -43,8 +48,7 @@ const SEO: React.FC<Props> = ({ description, lang, meta, title }) => {
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={`%s | ${oc(site).siteMetadata.title("")}`}
+      title={oc(site).siteMetadata.title("")}
       meta={[
         {
           name: `description`,

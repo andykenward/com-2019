@@ -7,7 +7,7 @@ import { useProjects } from "../components/projects/query"
 
 const IndexPage: React.FC = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO />
     <Projects data={useProjects()} />
   </Layout>
 )
