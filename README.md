@@ -1,10 +1,7 @@
 [https://com-2019.andykenward.now.sh](https://com-2019.andykenward.now.sh)
-
-[https://andykenward-2019.netlify.com](https://andykenward-2019.netlify.com)
-
+[https://com-2019-storybook.andykenward.now.sh](https://com-2019-storybook.andykenward.now.sh)
 
 ## 🚀 Development
-
 
 1.  **Start local server**
 
@@ -23,8 +20,17 @@
     ```sh
     npm run generate:watch
     ```
-1. **Check TypeScript Typings & Watch**
+
+1.  **Check TypeScript Typings & Watch**
 
     ```sh
     npm run type-check:watch
     ```
+
+1.  **Start Storybook**
+
+    ```sh
+    npm run storybook
+    ```
+
+    Storybook is now running at [`http://localhost:6006`](http://localhost:6006)
