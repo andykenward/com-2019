@@ -17,10 +17,12 @@ interface LinkExternalProps extends SpaceProps {
   rel?: string
   target?: string
   href: string
+  noHover?: boolean
 }
 
 export const LinkExternal: React.FC<LinkExternalProps> = ({
   children,
+  noHover,
   ...props
 }) => (
   <Body
@@ -29,9 +31,10 @@ export const LinkExternal: React.FC<LinkExternalProps> = ({
     as="a"
     css={theme =>
       css`
+        transition: all 0.15s linear;
         text-decoration: none;
         &:hover {
-          color: ${theme.colors.green};
+          color: ${noHover ? "inherit" : theme.colors.green};
         }
       `
     }
