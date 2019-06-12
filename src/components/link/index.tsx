@@ -33,7 +33,8 @@ export const LinkExternal: React.FC<LinkExternalProps> = ({
       css`
         transition: all 0.15s linear;
         text-decoration: none;
-        &:hover {
+        &:hover,
+        &:focus {
           color: ${noHover ? "inherit" : theme.colors.green};
         }
       `
