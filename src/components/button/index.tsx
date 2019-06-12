@@ -20,6 +20,7 @@ export const ButtonExternal: React.FC<Props> = ({ children, fill, href }) => (
       box-shadow: inset 0 0 0 0.0625rem
         ${fill ? theme.colors.primary : `rgba(36, 28, 21, 0.4)`};
       justify-content: center;
+      background-color: ${fill ? theme.colors.primary : "transparent"};
       text-align: center;
       align-items: center;
       vertical-align: middle;
@@ -27,7 +28,7 @@ export const ButtonExternal: React.FC<Props> = ({ children, fill, href }) => (
       &:focus {
         color: ${fill ? theme.colors.oyster : theme.colors.oyster};
         box-shadow: inset 0 0 0 0.0625rem
-          ${fill ? theme.colors.green : theme.colors.primary};
+          ${fill ? `rgba(36, 28, 21, 0.4)` : theme.colors.primary};
         background-color: ${fill ? "transparent" : theme.colors.primary};
       }
     `}

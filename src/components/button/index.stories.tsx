@@ -3,6 +3,22 @@ import React from "react"
 
 import { ButtonExternal } from "."
 
-storiesOf("Button", module).add("ButtonExternal", () => {
-  return <ButtonExternal href="test">Button External</ButtonExternal>
-})
+storiesOf("Button", module)
+  .add("all", () => {
+    return (
+      <>
+        <ButtonExternal href="https://google.com">Standard</ButtonExternal>
+        <ButtonExternal fill href="https://google.com">
+          Standard Fill
+        </ButtonExternal>
+      </>
+    )
+  })
+  .add("standard", () => (
+    <ButtonExternal href="https://google.com">Standard</ButtonExternal>
+  ))
+  .add("fill", () => (
+    <ButtonExternal fill href="https://google.com">
+      Standard Fill
+    </ButtonExternal>
+  ))
