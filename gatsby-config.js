@@ -4,14 +4,23 @@ module.exports = {
     description: `Andy Kenward, Senior Front-End Engineer in London, England`,
     author: `@andykenward`,
     tags: [
-      "TypeScript",
-      "JavaScript",
-      "React",
-      "GraphQL",
-      "Redux",
-      "Apollo",
-      "Jest",
-      "Cypress",
+      { title: "TypeScript", url: "https://www.typescriptlang.org" },
+      {
+        title: "JavaScript",
+        url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+      },
+      {
+        title: "React",
+        url: "https://reactjs.org",
+      },
+      { title: "GraphQL", url: "https://graphql.org" },
+      {
+        title: "Redux",
+        url: "https://redux.js.org",
+      },
+      { title: "Apollo", url: "https://www.apollographql.com" },
+      { title: "Jest", url: "https://jestjs.io" },
+      { title: "Cypress", url: "https://cypress.io" },
     ],
     heading: {
       name: "Andy Kenward",
@@ -24,14 +33,34 @@ module.exports = {
         title: "Ray-Ban Site Redesign",
         client: "Ray-Ban",
         role: "Lead Front-End Developer",
-        tags: ["React", "GraphQL", "Jest", "Cypress", "StoryBook"],
+        tags: [
+          {
+            title: "React",
+            url: "https://reactjs.org",
+          },
+          { title: "GraphQL", url: "https://graphql.org" },
+          { title: "Apollo", url: "https://www.apollographql.com" },
+          { title: "Jest", url: "https://jestjs.io" },
+          { title: "Cypress", url: "https://cypress.io" },
+          { title: "StoryBook", url: "https://storybook.js.org" },
+        ],
         caseUrl: "https://www.stinkstudios.com/work/rayban-raybancom-redesign",
       },
       {
         title: "Switchboard",
         client: "Stink Studios",
         role: "Lead Front-End Developer",
-        tags: ["TypeScript", "React", "GraphQL", "Jest", "Cypress"],
+        tags: [
+          { title: "TypeScript", url: "https://www.typescriptlang.org" },
+          {
+            title: "React",
+            url: "https://reactjs.org",
+          },
+          { title: "GraphQL", url: "https://graphql.org" },
+          { title: "Apollo", url: "https://www.apollographql.com" },
+          { title: "Jest", url: "https://jestjs.io" },
+          { title: "Cypress", url: "https://cypress.io" },
+        ],
         siteUrl: "https://switchboard.stink.co",
       },
       {
@@ -39,7 +68,18 @@ module.exports = {
         client: "Google",
         role: "Lead Front-End Developer",
         siteUrl: "https://g.co/nationalparks",
-        tags: ["React", "Redux"],
+        tags: [
+          {
+            title: "React",
+            url: "https://reactjs.org",
+          },
+
+          {
+            title: "Redux",
+            url: "https://redux.js.org",
+          },
+          { title: "Three.js", url: "https://threejs.org" },
+        ],
         caseUrl:
           "https://www.stinkstudios.com/work/google-the-hidden-worlds-of-the-national-parks",
       },
@@ -47,7 +87,19 @@ module.exports = {
         title: "35th Anniversary",
         client: "i-D",
         role: "Sole Developer",
-        tags: ["React", "SSR", "Flux", "ImmutableJS", "Node"],
+        tags: [
+          {
+            title: "React",
+            url: "https://reactjs.org",
+          },
+          { title: "SSR" },
+          { title: "Flux", url: "https://facebook.github.io/flux/" },
+          {
+            title: "ImmutableJS",
+            url: "https://immutable-js.github.io/immutable-js/",
+          },
+          { title: "Node", url: "https://nodejs.org/en/" },
+        ],
         siteUrl: "http://covers.i-d.co/",
         caseUrl: "https://www.stinkstudios.com/work/35th-anniversary",
       },
@@ -55,14 +107,22 @@ module.exports = {
         title: "Inside Abbey Road",
         client: "Google",
         role: "Senior Front-End Developer",
-        tags: ["Backbone", "Marionette"],
+        tags: [
+          { title: "Backbone", url: "https://backbonejs.org" },
+          { title: "Marionette", url: "https://marionettejs.com" },
+          { title: "Three.js", url: "https://threejs.org" },
+        ],
         caseUrl: "https://www.stinkstudios.com/work/inside-abbey-road",
       },
       {
         title: "Performing Arts",
         client: "Google",
         role: "Lead Front-End Developer",
-        tags: ["Backbone", "Marionette"],
+        tags: [
+          { title: "Backbone", url: "https://backbonejs.org" },
+          { title: "Marionette", url: "https://marionettejs.com" },
+          { title: "Three.js", url: "https://threejs.org" },
+        ],
         siteUrl: "https://performingarts.withgoogle.com/",
         caseUrl: "https://www.stinkstudios.com/work/performing-arts",
       },

@@ -1562,6 +1562,8 @@ export enum SiteFieldsEnum {
   siteMetadata___description = "siteMetadata___description",
   siteMetadata___author = "siteMetadata___author",
   siteMetadata___tags = "siteMetadata___tags",
+  siteMetadata___tags___title = "siteMetadata___tags___title",
+  siteMetadata___tags___url = "siteMetadata___tags___url",
   siteMetadata___heading___name = "siteMetadata___heading___name",
   siteMetadata___heading___role = "siteMetadata___heading___role",
   siteMetadata___heading___email = "siteMetadata___heading___email",
@@ -1571,6 +1573,9 @@ export enum SiteFieldsEnum {
   siteMetadata___projects___client = "siteMetadata___projects___client",
   siteMetadata___projects___role = "siteMetadata___projects___role",
   siteMetadata___projects___tags = "siteMetadata___projects___tags",
+  siteMetadata___projects___tags___title = "siteMetadata___projects___tags___title",
+  siteMetadata___projects___tags___url = "siteMetadata___projects___tags___url",
+  siteMetadata___projects___tags___name = "siteMetadata___projects___tags___name",
   siteMetadata___projects___caseUrl = "siteMetadata___projects___caseUrl",
   siteMetadata___projects___siteUrl = "siteMetadata___projects___siteUrl",
   siteMetadata___contact = "siteMetadata___contact",
@@ -2142,7 +2147,7 @@ export type SiteSiteMetadata = {
   title?: Maybe<Scalars["String"]>
   description?: Maybe<Scalars["String"]>
   author?: Maybe<Scalars["String"]>
-  tags?: Maybe<Array<Maybe<Scalars["String"]>>>
+  tags?: Maybe<Array<Maybe<SiteSiteMetadataTags>>>
   heading?: Maybe<SiteSiteMetadataHeading>
   projects?: Maybe<Array<Maybe<SiteSiteMetadataProjects>>>
   contact?: Maybe<Array<Maybe<SiteSiteMetadataContact>>>
@@ -2167,7 +2172,7 @@ export type SiteSiteMetadataFilterInput = {
   title?: Maybe<StringQueryOperatorInput>
   description?: Maybe<StringQueryOperatorInput>
   author?: Maybe<StringQueryOperatorInput>
-  tags?: Maybe<StringQueryOperatorInput>
+  tags?: Maybe<SiteSiteMetadataTagsFilterListInput>
   heading?: Maybe<SiteSiteMetadataHeadingFilterInput>
   projects?: Maybe<SiteSiteMetadataProjectsFilterListInput>
   contact?: Maybe<SiteSiteMetadataContactFilterListInput>
@@ -2193,7 +2198,7 @@ export type SiteSiteMetadataProjects = {
   title?: Maybe<Scalars["String"]>
   client?: Maybe<Scalars["String"]>
   role?: Maybe<Scalars["String"]>
-  tags?: Maybe<Array<Maybe<Scalars["String"]>>>
+  tags?: Maybe<Array<Maybe<SiteSiteMetadataProjectsTags>>>
   caseUrl?: Maybe<Scalars["String"]>
   siteUrl?: Maybe<Scalars["String"]>
 }
@@ -2202,13 +2207,45 @@ export type SiteSiteMetadataProjectsFilterInput = {
   title?: Maybe<StringQueryOperatorInput>
   client?: Maybe<StringQueryOperatorInput>
   role?: Maybe<StringQueryOperatorInput>
-  tags?: Maybe<StringQueryOperatorInput>
+  tags?: Maybe<SiteSiteMetadataProjectsTagsFilterListInput>
   caseUrl?: Maybe<StringQueryOperatorInput>
   siteUrl?: Maybe<StringQueryOperatorInput>
 }
 
 export type SiteSiteMetadataProjectsFilterListInput = {
   elemMatch?: Maybe<SiteSiteMetadataProjectsFilterInput>
+}
+
+export type SiteSiteMetadataProjectsTags = {
+  __typename?: "SiteSiteMetadataProjectsTags"
+  title?: Maybe<Scalars["String"]>
+  url?: Maybe<Scalars["String"]>
+  name?: Maybe<Scalars["String"]>
+}
+
+export type SiteSiteMetadataProjectsTagsFilterInput = {
+  title?: Maybe<StringQueryOperatorInput>
+  url?: Maybe<StringQueryOperatorInput>
+  name?: Maybe<StringQueryOperatorInput>
+}
+
+export type SiteSiteMetadataProjectsTagsFilterListInput = {
+  elemMatch?: Maybe<SiteSiteMetadataProjectsTagsFilterInput>
+}
+
+export type SiteSiteMetadataTags = {
+  __typename?: "SiteSiteMetadataTags"
+  title?: Maybe<Scalars["String"]>
+  url?: Maybe<Scalars["String"]>
+}
+
+export type SiteSiteMetadataTagsFilterInput = {
+  title?: Maybe<StringQueryOperatorInput>
+  url?: Maybe<StringQueryOperatorInput>
+}
+
+export type SiteSiteMetadataTagsFilterListInput = {
+  elemMatch?: Maybe<SiteSiteMetadataTagsFilterInput>
 }
 
 export type SiteSortInput = {
@@ -2299,8 +2336,21 @@ export type ProjectsQuery = { __typename?: "Query" } & {
               Maybe<
                 { __typename?: "SiteSiteMetadataProjects" } & Pick<
                   SiteSiteMetadataProjects,
-                  "title" | "client" | "siteUrl" | "caseUrl" | "tags" | "role"
-                >
+                  "title" | "client" | "siteUrl" | "caseUrl" | "role"
+                > & {
+                    tags: Maybe<
+                      Array<
+                        Maybe<
+                          {
+                            __typename?: "SiteSiteMetadataProjectsTags"
+                          } & Pick<
+                            SiteSiteMetadataProjectsTags,
+                            "title" | "url"
+                          >
+                        >
+                      >
+                    >
+                  }
               >
             >
           >
@@ -2331,7 +2381,18 @@ export type TagsQueryQuery = { __typename?: "Query" } & {
   site: Maybe<
     { __typename?: "Site" } & {
       siteMetadata: Maybe<
-        { __typename?: "SiteSiteMetadata" } & Pick<SiteSiteMetadata, "tags">
+        { __typename?: "SiteSiteMetadata" } & {
+          tags: Maybe<
+            Array<
+              Maybe<
+                { __typename?: "SiteSiteMetadataTags" } & Pick<
+                  SiteSiteMetadataTags,
+                  "title" | "url"
+                >
+              >
+            >
+          >
+        }
       >
     }
   >
