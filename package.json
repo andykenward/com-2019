@@ -88,6 +88,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
+    "build:deploy": "npm run lint && npm run test && npm run type-check && npm run build && npm run build-storybook",
     "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.{css,js,jsx,ts,tsx}'",
     "start": "npm run develop",
