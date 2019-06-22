@@ -7,6 +7,7 @@ import { Box } from "../box"
 import { Tags } from "../tags"
 import { BodyBold, HeadingOne, HeadingThree, HeadingFour } from "../typography"
 import { ButtonExternal } from "../button"
+import { ColumnsCenter } from "../columns"
 
 interface Props {
   data: Maybe<SiteSiteMetadataProjects>[]
@@ -14,18 +15,9 @@ interface Props {
 
 export const Projects: React.FC<Props> = ({ data }) =>
   data && data.length > 0 ? (
-    <Box
-      as="section"
-      display="grid"
-      gridTemplateColumns={[
-        "32px 1fr 32px",
-        "minmax(32px,15%) 1fr minmax(32px,15%)",
-      ]}
-    >
-      <HeadingOne gridColumn="2/3" mb={32}>
-        Projects
-      </HeadingOne>
-      <Box display="grid" gridColumn="2/3" gridRowGap={64}>
+    <ColumnsCenter as="section">
+      <HeadingOne mb={32}>Projects</HeadingOne>
+      <Box display="grid" gridRowGap={64}>
         {data.map((item, index) => (
           <ProjectsItem
             key={index}
@@ -38,7 +30,7 @@ export const Projects: React.FC<Props> = ({ data }) =>
           />
         ))}
       </Box>
-    </Box>
+    </ColumnsCenter>
   ) : null
 
 export const ProjectsItem: React.FC<SiteSiteMetadataProjects> = ({

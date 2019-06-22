@@ -26,19 +26,20 @@ import {
 } from "../../styled-system"
 import styled, { StyledProps } from "../../utils/styled"
 
-export const Box = styled("div", { shouldForwardProp: filterProps })<
-  StyledProps &
-    ColorProps &
-    FontSizeProps &
-    SpaceProps &
-    WidthProps &
-    DisplayProps &
-    FlexWrapProps &
-    GridColumnProps &
-    GridGapProps &
-    GridRowGapProps &
-    GridTemplateColumnsProps
->`
+export interface BoxProps
+  extends StyledProps,
+    ColorProps,
+    FontSizeProps,
+    SpaceProps,
+    WidthProps,
+    DisplayProps,
+    FlexWrapProps,
+    GridColumnProps,
+    GridGapProps,
+    GridRowGapProps,
+    GridTemplateColumnsProps {}
+
+export const Box = styled("div", { shouldForwardProp: filterProps })<BoxProps>`
   ${color}
   ${fontSize}
   ${space}
