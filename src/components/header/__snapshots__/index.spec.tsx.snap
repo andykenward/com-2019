@@ -1,34 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Header /> renders correctly 1`] = `
-.emotion-6 {
+.emotion-5 {
   background-color: rgb(216,234,204);
   padding-top: 64px;
   padding-bottom: 64px;
+  display: grid;
+  grid-template-columns: 32px 1fr 32px;
 }
 
 @media screen and (min-width:40em) {
-  .emotion-6 {
+  .emotion-5 {
     padding-top: 128px;
     padding-bottom: 128px;
   }
 }
 
-.emotion-5 {
-  padding-left: 32px;
-  padding-right: 32px;
-}
-
 @media screen and (min-width:40em) {
   .emotion-5 {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-@media screen and (min-width:40em) {
-  .emotion-5 {
-    width: 75%;
+    grid-template-columns: minmax(32px,15%) 1fr minmax(32px,15%);
   }
 }
 
@@ -40,6 +30,7 @@ exports[`<Header /> renders correctly 1`] = `
   text-transform: capitalize;
   color: rgb(36,28,21);
   margin: 0;
+  grid-column: 2/3;
 }
 
 @media screen and (min-width:40em) {
@@ -67,12 +58,17 @@ exports[`<Header /> renders correctly 1`] = `
   color: rgb(36,28,21);
   margin: 0;
   margin-bottom: 8px;
+  grid-column: 2/3;
 }
 
 @media screen and (min-width:40em) {
   .emotion-1 {
     font-size: 46px;
   }
+}
+
+.emotion-4 {
+  grid-column: 2/3;
 }
 
 .emotion-2 {
@@ -90,41 +86,37 @@ exports[`<Header /> renders correctly 1`] = `
 }
 
 <header
-  class="emotion-6"
+  class="emotion-5"
 >
-  <div
-    class="emotion-5"
+  <h1
+    class="emotion-0"
   >
-    <h1
-      class="emotion-0"
+    Andy Kenward
+  </h1>
+  <h2
+    class="emotion-1"
+  >
+    Senior Front-End Engineer
+  </h2>
+  <div
+    class="emotion-4"
+  >
+    <a
+      class="emotion-2"
+      href="a@a.com"
+      rel="noopener noreferrer"
+      target="_blank"
     >
-      Andy Kenward
-    </h1>
-    <h2
-      class="emotion-1"
+      Email
+    </a>
+    <a
+      class="emotion-2"
+      href="github"
+      rel="noopener noreferrer"
+      target="_blank"
     >
-      Senior Front-End Engineer
-    </h2>
-    <div
-      class="emotion-4"
-    >
-      <a
-        class="emotion-2"
-        href="a@a.com"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        Email
-      </a>
-      <a
-        class="emotion-2"
-        href="github"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        GitHub
-      </a>
-    </div>
+      GitHub
+    </a>
   </div>
 </header>
 `;
@@ -134,34 +126,24 @@ exports[`<Header /> renders null when data is null 1`] = `null`;
 exports[`<Header /> renders null when data is undefined 1`] = `null`;
 
 exports[`<Header /> renders when name is \`null\` 1`] = `
-.emotion-6 {
+.emotion-5 {
   background-color: rgb(216,234,204);
   padding-top: 64px;
   padding-bottom: 64px;
+  display: grid;
+  grid-template-columns: 32px 1fr 32px;
 }
 
 @media screen and (min-width:40em) {
-  .emotion-6 {
+  .emotion-5 {
     padding-top: 128px;
     padding-bottom: 128px;
   }
 }
 
-.emotion-5 {
-  padding-left: 32px;
-  padding-right: 32px;
-}
-
 @media screen and (min-width:40em) {
   .emotion-5 {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-@media screen and (min-width:40em) {
-  .emotion-5 {
-    width: 75%;
+    grid-template-columns: minmax(32px,15%) 1fr minmax(32px,15%);
   }
 }
 
@@ -173,6 +155,7 @@ exports[`<Header /> renders when name is \`null\` 1`] = `
   text-transform: capitalize;
   color: rgb(36,28,21);
   margin: 0;
+  grid-column: 2/3;
 }
 
 @media screen and (min-width:40em) {
@@ -200,12 +183,17 @@ exports[`<Header /> renders when name is \`null\` 1`] = `
   color: rgb(36,28,21);
   margin: 0;
   margin-bottom: 8px;
+  grid-column: 2/3;
 }
 
 @media screen and (min-width:40em) {
   .emotion-1 {
     font-size: 46px;
   }
+}
+
+.emotion-4 {
+  grid-column: 2/3;
 }
 
 .emotion-2 {
@@ -223,72 +211,58 @@ exports[`<Header /> renders when name is \`null\` 1`] = `
 }
 
 <header
-  class="emotion-6"
+  class="emotion-5"
 >
-  <div
-    class="emotion-5"
+  <h1
+    class="emotion-0"
+  />
+  <h2
+    class="emotion-1"
   >
-    <h1
-      class="emotion-0"
-    />
-    <h2
-      class="emotion-1"
+    Role
+  </h2>
+  <div
+    class="emotion-4"
+  >
+    <a
+      class="emotion-2"
+      href=""
+      rel="noopener noreferrer"
+      target="_blank"
     >
-      Role
-    </h2>
-    <div
-      class="emotion-4"
+      Email
+    </a>
+    <a
+      class="emotion-2"
+      href=""
+      rel="noopener noreferrer"
+      target="_blank"
     >
-      <a
-        class="emotion-2"
-        href=""
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        Email
-      </a>
-      <a
-        class="emotion-2"
-        href=""
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        GitHub
-      </a>
-    </div>
+      GitHub
+    </a>
   </div>
 </header>
 `;
 
 exports[`<Header /> renders when role is \`null\` 1`] = `
-.emotion-6 {
+.emotion-5 {
   background-color: rgb(216,234,204);
   padding-top: 64px;
   padding-bottom: 64px;
+  display: grid;
+  grid-template-columns: 32px 1fr 32px;
 }
 
 @media screen and (min-width:40em) {
-  .emotion-6 {
+  .emotion-5 {
     padding-top: 128px;
     padding-bottom: 128px;
   }
 }
 
-.emotion-5 {
-  padding-left: 32px;
-  padding-right: 32px;
-}
-
 @media screen and (min-width:40em) {
   .emotion-5 {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-@media screen and (min-width:40em) {
-  .emotion-5 {
-    width: 75%;
+    grid-template-columns: minmax(32px,15%) 1fr minmax(32px,15%);
   }
 }
 
@@ -300,6 +274,7 @@ exports[`<Header /> renders when role is \`null\` 1`] = `
   text-transform: capitalize;
   color: rgb(36,28,21);
   margin: 0;
+  grid-column: 2/3;
 }
 
 @media screen and (min-width:40em) {
@@ -327,12 +302,17 @@ exports[`<Header /> renders when role is \`null\` 1`] = `
   color: rgb(36,28,21);
   margin: 0;
   margin-bottom: 8px;
+  grid-column: 2/3;
 }
 
 @media screen and (min-width:40em) {
   .emotion-1 {
     font-size: 46px;
   }
+}
+
+.emotion-4 {
+  grid-column: 2/3;
 }
 
 .emotion-2 {
@@ -350,39 +330,35 @@ exports[`<Header /> renders when role is \`null\` 1`] = `
 }
 
 <header
-  class="emotion-6"
+  class="emotion-5"
 >
-  <div
-    class="emotion-5"
+  <h1
+    class="emotion-0"
   >
-    <h1
-      class="emotion-0"
+    Name
+  </h1>
+  <h2
+    class="emotion-1"
+  />
+  <div
+    class="emotion-4"
+  >
+    <a
+      class="emotion-2"
+      href=""
+      rel="noopener noreferrer"
+      target="_blank"
     >
-      Name
-    </h1>
-    <h2
-      class="emotion-1"
-    />
-    <div
-      class="emotion-4"
+      Email
+    </a>
+    <a
+      class="emotion-2"
+      href=""
+      rel="noopener noreferrer"
+      target="_blank"
     >
-      <a
-        class="emotion-2"
-        href=""
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        Email
-      </a>
-      <a
-        class="emotion-2"
-        href=""
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        GitHub
-      </a>
-    </div>
+      GitHub
+    </a>
   </div>
 </header>
 `;

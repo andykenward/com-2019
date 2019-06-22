@@ -1,4 +1,5 @@
 import React from "react"
+import { gridColumn, GridColumnProps } from "styled-system"
 
 import "../../fonts/index.css"
 import {
@@ -14,14 +15,15 @@ import {
 import styled, { StyledProps } from "../../utils/styled"
 
 export const Text = styled("p", { shouldForwardProp: filterProps })<
-  StyledProps & TypographyProps & ColorProps & SpaceProps
+  StyledProps & TypographyProps & ColorProps & SpaceProps & GridColumnProps
 >`
   ${typography}
   ${color}
   ${space}
+  ${gridColumn}
 `
 
-interface Props extends StyledProps, SpaceProps, ColorProps {}
+interface Props extends StyledProps, SpaceProps, ColorProps, GridColumnProps {}
 
 export const Body: React.FC<Props> = ({ children, ...props }) => (
   <Text

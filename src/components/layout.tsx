@@ -1,10 +1,3 @@
-/**
- * Layout component that queries for data
- * with Gatsby's StaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/static-query/
- */
-
 import React, { ReactNode } from "react"
 
 import Header from "./header"
@@ -18,7 +11,7 @@ interface Props {
 }
 
 const Layout: React.FC<Props> = ({ children }) => (
-  <Box>
+  <Box display="grid" gridRowGap={[32, 64]}>
     <Header data={useHeader()} />
     <main>{children}</main>
     <Footer data={useContact()} />

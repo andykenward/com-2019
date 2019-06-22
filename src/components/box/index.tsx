@@ -8,6 +8,9 @@ import {
   gridTemplateColumns,
   gridGap,
   GridTemplateColumnsProps,
+  gridRowGap,
+  gridColumn,
+  GridColumnProps,
 } from "styled-system"
 
 import {
@@ -19,6 +22,7 @@ import {
   space,
   SpaceProps,
   GridGapProps,
+  GridRowGapProps,
 } from "../../styled-system"
 import styled, { StyledProps } from "../../utils/styled"
 
@@ -30,7 +34,9 @@ export const Box = styled("div", { shouldForwardProp: filterProps })<
     WidthProps &
     DisplayProps &
     FlexWrapProps &
+    GridColumnProps &
     GridGapProps &
+    GridRowGapProps &
     GridTemplateColumnsProps
 >`
   ${color}
@@ -41,4 +47,6 @@ export const Box = styled("div", { shouldForwardProp: filterProps })<
   ${flexWrap}
   ${gridTemplateColumns}
   ${gridGap}
+  ${gridRowGap}
+  ${gridColumn}
 `

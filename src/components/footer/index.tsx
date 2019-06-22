@@ -2,10 +2,11 @@ import React from "react"
 
 import { oc } from "ts-optchain"
 
+import css from "@emotion/css"
+
 import { SiteSiteMetadataContact, Maybe } from "../../types/graphqlTypes.d"
 
 import { Box } from "../box"
-import { List, ListItem } from "../list"
 import { LinkExternal } from "../link"
 
 interface Props {
@@ -14,8 +15,26 @@ interface Props {
 
 export const Footer: React.FC<Props> = ({ data }) =>
   data && data.length > 0 ? (
-    <Box as="footer" px={32} py={32} mx={[null, "auto"]} width={[null, 3 / 4]}>
-      <List>
+    <Box
+      as="footer"
+      py={32}
+      display="grid"
+      gridTemplateColumns={[
+        "32px 1fr 32px",
+        "minmax(32px,15%) 1fr minmax(32px,15%)",
+      ]}
+    >
+      <Box
+        as="ul"
+        display="grid"
+        gridRowGap={16}
+        gridColumn="2/3"
+        m={0}
+        p={0}
+        css={css`
+          list-style: none;
+        `}
+      >
         {data.map((item, index) => {
           const title = oc(item).title()
           const url = oc(item).url()
@@ -23,12 +42,12 @@ export const Footer: React.FC<Props> = ({ data }) =>
           return (
             title &&
             url && (
-              <ListItem key={index}>
+              <Box as="li" m={0} p={0} display="list-item" key={index}>
                 <LinkExternal href={url}>{title}</LinkExternal>
-              </ListItem>
+              </Box>
             )
           )
         })}
-      </List>
+      </Box>
     </Box>
   ) : null

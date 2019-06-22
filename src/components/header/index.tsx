@@ -13,14 +13,25 @@ interface Props {
 
 const Header: React.FC<Props> = ({ data }) =>
   data ? (
-    <Box py={[64, 128]} as="header" bg="primary">
-      <Box px={32} mx={[null, "auto"]} width={[null, 3 / 4]}>
-        <HeadingOne fs={[48, 64, 80]}>{oc(data).name("")}</HeadingOne>
-        <HeadingTwo mb={8}>{oc(data).role("")}</HeadingTwo>
-        <Box>
-          <ButtonExternal href={oc(data).email("")}>Email</ButtonExternal>
-          <ButtonExternal href={oc(data).github("")}>GitHub</ButtonExternal>
-        </Box>
+    <Box
+      py={[64, 128]}
+      as="header"
+      bg="primary"
+      display="grid"
+      gridTemplateColumns={[
+        "32px 1fr 32px",
+        "minmax(32px,15%) 1fr minmax(32px,15%)",
+      ]}
+    >
+      <HeadingOne gridColumn="2/3" fs={[48, 64, 80]}>
+        {oc(data).name("")}
+      </HeadingOne>
+      <HeadingTwo gridColumn="2/3" mb={8}>
+        {oc(data).role("")}
+      </HeadingTwo>
+      <Box gridColumn="2/3">
+        <ButtonExternal href={oc(data).email("")}>Email</ButtonExternal>
+        <ButtonExternal href={oc(data).github("")}>GitHub</ButtonExternal>
       </Box>
     </Box>
   ) : null

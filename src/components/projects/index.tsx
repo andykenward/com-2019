@@ -16,23 +16,28 @@ export const Projects: React.FC<Props> = ({ data }) =>
   data && data.length > 0 ? (
     <Box
       as="section"
-      width={[null, 3 / 4]}
-      mx={[null, "auto"]}
-      my={[32, 64]}
-      px={32}
+      display="grid"
+      gridTemplateColumns={[
+        "32px 1fr 32px",
+        "minmax(32px,15%) 1fr minmax(32px,15%)",
+      ]}
     >
-      <HeadingOne mb={32}>Projects</HeadingOne>
-      {data.map((item, index) => (
-        <ProjectsItem
-          key={index}
-          title={oc(item).title()}
-          client={oc(item).client()}
-          siteUrl={oc(item).siteUrl()}
-          caseUrl={oc(item).caseUrl()}
-          tags={oc(item).tags()}
-          role={oc(item).role()}
-        />
-      ))}
+      <HeadingOne gridColumn="2/3" mb={32}>
+        Projects
+      </HeadingOne>
+      <Box display="grid" gridColumn="2/3" gridRowGap={64}>
+        {data.map((item, index) => (
+          <ProjectsItem
+            key={index}
+            title={oc(item).title()}
+            client={oc(item).client()}
+            siteUrl={oc(item).siteUrl()}
+            caseUrl={oc(item).caseUrl()}
+            tags={oc(item).tags()}
+            role={oc(item).role()}
+          />
+        ))}
+      </Box>
     </Box>
   ) : null
 
@@ -44,7 +49,7 @@ export const ProjectsItem: React.FC<SiteSiteMetadataProjects> = ({
   tags,
   role,
 }) => (
-  <Box as="article" mb={64}>
+  <Box as="article">
     <BodyBold
       css={css`
         text-transform: uppercase;
