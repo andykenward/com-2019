@@ -18,6 +18,8 @@ repos:
     rev: v5.16.0
     hooks:
       - id: eslint
+        types: [file]
+        files: \.(mjs|jsx|js|ts|tsx?)$
         additional_dependencies:
           [
             "@typescript-eslint/eslint-plugin@1.10.2",
