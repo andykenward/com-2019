@@ -78,6 +78,10 @@ module.exports = {
             title: "Redux",
             url: "https://redux.js.org",
           },
+          {
+            title: "Redux-Saga",
+            url: "https://redux-saga.js.org",
+          },
           { title: "Three.js", url: "https://threejs.org" },
         ],
         caseUrl:
