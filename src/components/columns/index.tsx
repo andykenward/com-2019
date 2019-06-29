@@ -11,8 +11,8 @@ export const ColumnsCenter: React.FC<ColumnsCenterProps> = ({
   <Box
     display="grid"
     gridTemplateColumns={[
-      "32px 1fr 32px",
-      "minmax(32px,15%) 1fr minmax(32px,15%)",
+      "32px [center-start] 1fr [center-end] 32px",
+      "minmax(32px,15%) [center-start] 1fr [center-end] minmax(32px,15%)",
     ]}
     {...props}
   >
@@ -20,7 +20,7 @@ export const ColumnsCenter: React.FC<ColumnsCenterProps> = ({
       children,
       child =>
         React.isValidElement(child) &&
-        React.cloneElement(child, { gridColumn: "2/3" })
+        React.cloneElement(child, { gridColumn: "center-start/center-end" })
     )}
   </Box>
 )
