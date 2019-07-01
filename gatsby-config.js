@@ -41,7 +41,6 @@ module.exports = {
           { title: "GraphQL", url: "https://graphql.org" },
           { title: "Apollo", url: "https://www.apollographql.com" },
           { title: "Jest", url: "https://jestjs.io" },
-          { title: "Cypress", url: "https://cypress.io" },
           { title: "StoryBook", url: "https://storybook.js.org" },
         ],
         caseUrl: "https://www.stinkstudios.com/work/rayban-raybancom-redesign",
