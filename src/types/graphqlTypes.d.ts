@@ -686,114 +686,114 @@ export enum ImageFormat {
 export type ImageSharp = Node & {
   __typename?: "ImageSharp"
   id: Scalars["ID"]
-  parent?: Maybe<Node>
-  children: Array<Node>
-  internal: Internal
   fixed?: Maybe<ImageSharpFixed>
   resolutions?: Maybe<ImageSharpResolutions>
   fluid?: Maybe<ImageSharpFluid>
   sizes?: Maybe<ImageSharpSizes>
   original?: Maybe<ImageSharpOriginal>
   resize?: Maybe<ImageSharpResize>
+  parent?: Maybe<Node>
+  children: Array<Node>
+  internal: Internal
 }
 
 export type ImageSharpFixedArgs = {
   width?: Maybe<Scalars["Int"]>
   height?: Maybe<Scalars["Int"]>
   base64Width?: Maybe<Scalars["Int"]>
-  jpegProgressive: Scalars["Boolean"]
-  pngCompressionSpeed: Scalars["Int"]
-  grayscale: Scalars["Boolean"]
+  jpegProgressive?: Maybe<Scalars["Boolean"]>
+  pngCompressionSpeed?: Maybe<Scalars["Int"]>
+  grayscale?: Maybe<Scalars["Boolean"]>
   duotone?: Maybe<DuotoneGradient>
   traceSVG?: Maybe<Potrace>
   quality?: Maybe<Scalars["Int"]>
-  toFormat: ImageFormat
-  toFormatBase64: ImageFormat
-  cropFocus: ImageCropFocus
-  fit: ImageFit
-  background: Scalars["String"]
-  rotate: Scalars["Int"]
-  trim: Scalars["Float"]
+  toFormat?: Maybe<ImageFormat>
+  toFormatBase64?: Maybe<ImageFormat>
+  cropFocus?: Maybe<ImageCropFocus>
+  fit?: Maybe<ImageFit>
+  background?: Maybe<Scalars["String"]>
+  rotate?: Maybe<Scalars["Int"]>
+  trim?: Maybe<Scalars["Float"]>
 }
 
 export type ImageSharpResolutionsArgs = {
   width?: Maybe<Scalars["Int"]>
   height?: Maybe<Scalars["Int"]>
   base64Width?: Maybe<Scalars["Int"]>
-  jpegProgressive: Scalars["Boolean"]
-  pngCompressionSpeed: Scalars["Int"]
-  grayscale: Scalars["Boolean"]
+  jpegProgressive?: Maybe<Scalars["Boolean"]>
+  pngCompressionSpeed?: Maybe<Scalars["Int"]>
+  grayscale?: Maybe<Scalars["Boolean"]>
   duotone?: Maybe<DuotoneGradient>
   traceSVG?: Maybe<Potrace>
   quality?: Maybe<Scalars["Int"]>
-  toFormat: ImageFormat
-  toFormatBase64: ImageFormat
-  cropFocus: ImageCropFocus
-  fit: ImageFit
-  background: Scalars["String"]
-  rotate: Scalars["Int"]
-  trim: Scalars["Float"]
+  toFormat?: Maybe<ImageFormat>
+  toFormatBase64?: Maybe<ImageFormat>
+  cropFocus?: Maybe<ImageCropFocus>
+  fit?: Maybe<ImageFit>
+  background?: Maybe<Scalars["String"]>
+  rotate?: Maybe<Scalars["Int"]>
+  trim?: Maybe<Scalars["Float"]>
 }
 
 export type ImageSharpFluidArgs = {
   maxWidth?: Maybe<Scalars["Int"]>
   maxHeight?: Maybe<Scalars["Int"]>
   base64Width?: Maybe<Scalars["Int"]>
-  grayscale: Scalars["Boolean"]
-  jpegProgressive: Scalars["Boolean"]
-  pngCompressionSpeed: Scalars["Int"]
+  grayscale?: Maybe<Scalars["Boolean"]>
+  jpegProgressive?: Maybe<Scalars["Boolean"]>
+  pngCompressionSpeed?: Maybe<Scalars["Int"]>
   duotone?: Maybe<DuotoneGradient>
   traceSVG?: Maybe<Potrace>
   quality?: Maybe<Scalars["Int"]>
-  toFormat: ImageFormat
-  toFormatBase64: ImageFormat
-  cropFocus: ImageCropFocus
-  fit: ImageFit
-  background: Scalars["String"]
-  rotate: Scalars["Int"]
-  trim: Scalars["Float"]
-  sizes: Scalars["String"]
-  srcSetBreakpoints: Array<Maybe<Scalars["Int"]>>
+  toFormat?: Maybe<ImageFormat>
+  toFormatBase64?: Maybe<ImageFormat>
+  cropFocus?: Maybe<ImageCropFocus>
+  fit?: Maybe<ImageFit>
+  background?: Maybe<Scalars["String"]>
+  rotate?: Maybe<Scalars["Int"]>
+  trim?: Maybe<Scalars["Float"]>
+  sizes?: Maybe<Scalars["String"]>
+  srcSetBreakpoints?: Maybe<Array<Maybe<Scalars["Int"]>>>
 }
 
 export type ImageSharpSizesArgs = {
   maxWidth?: Maybe<Scalars["Int"]>
   maxHeight?: Maybe<Scalars["Int"]>
   base64Width?: Maybe<Scalars["Int"]>
-  grayscale: Scalars["Boolean"]
-  jpegProgressive: Scalars["Boolean"]
-  pngCompressionSpeed: Scalars["Int"]
+  grayscale?: Maybe<Scalars["Boolean"]>
+  jpegProgressive?: Maybe<Scalars["Boolean"]>
+  pngCompressionSpeed?: Maybe<Scalars["Int"]>
   duotone?: Maybe<DuotoneGradient>
   traceSVG?: Maybe<Potrace>
   quality?: Maybe<Scalars["Int"]>
-  toFormat: ImageFormat
-  toFormatBase64: ImageFormat
-  cropFocus: ImageCropFocus
-  fit: ImageFit
-  background: Scalars["String"]
-  rotate: Scalars["Int"]
-  trim: Scalars["Float"]
-  sizes: Scalars["String"]
-  srcSetBreakpoints: Array<Maybe<Scalars["Int"]>>
+  toFormat?: Maybe<ImageFormat>
+  toFormatBase64?: Maybe<ImageFormat>
+  cropFocus?: Maybe<ImageCropFocus>
+  fit?: Maybe<ImageFit>
+  background?: Maybe<Scalars["String"]>
+  rotate?: Maybe<Scalars["Int"]>
+  trim?: Maybe<Scalars["Float"]>
+  sizes?: Maybe<Scalars["String"]>
+  srcSetBreakpoints?: Maybe<Array<Maybe<Scalars["Int"]>>>
 }
 
 export type ImageSharpResizeArgs = {
   width?: Maybe<Scalars["Int"]>
   height?: Maybe<Scalars["Int"]>
   quality?: Maybe<Scalars["Int"]>
-  jpegProgressive: Scalars["Boolean"]
-  pngCompressionLevel: Scalars["Int"]
-  pngCompressionSpeed: Scalars["Int"]
-  grayscale: Scalars["Boolean"]
+  jpegProgressive?: Maybe<Scalars["Boolean"]>
+  pngCompressionLevel?: Maybe<Scalars["Int"]>
+  pngCompressionSpeed?: Maybe<Scalars["Int"]>
+  grayscale?: Maybe<Scalars["Boolean"]>
   duotone?: Maybe<DuotoneGradient>
-  base64: Scalars["Boolean"]
+  base64?: Maybe<Scalars["Boolean"]>
   traceSVG?: Maybe<Potrace>
-  toFormat: ImageFormat
-  cropFocus: ImageCropFocus
-  fit: ImageFit
-  background: Scalars["String"]
-  rotate: Scalars["Int"]
-  trim: Scalars["Float"]
+  toFormat?: Maybe<ImageFormat>
+  cropFocus?: Maybe<ImageCropFocus>
+  fit?: Maybe<ImageFit>
+  background?: Maybe<Scalars["String"]>
+  rotate?: Maybe<Scalars["Int"]>
+  trim?: Maybe<Scalars["Float"]>
 }
 
 export type ImageSharpConnection = {
@@ -825,6 +825,59 @@ export type ImageSharpEdge = {
 
 export enum ImageSharpFieldsEnum {
   id = "id",
+  fixed___base64 = "fixed___base64",
+  fixed___tracedSVG = "fixed___tracedSVG",
+  fixed___aspectRatio = "fixed___aspectRatio",
+  fixed___width = "fixed___width",
+  fixed___height = "fixed___height",
+  fixed___src = "fixed___src",
+  fixed___srcSet = "fixed___srcSet",
+  fixed___srcWebp = "fixed___srcWebp",
+  fixed___srcSetWebp = "fixed___srcSetWebp",
+  fixed___originalName = "fixed___originalName",
+  resolutions___base64 = "resolutions___base64",
+  resolutions___tracedSVG = "resolutions___tracedSVG",
+  resolutions___aspectRatio = "resolutions___aspectRatio",
+  resolutions___width = "resolutions___width",
+  resolutions___height = "resolutions___height",
+  resolutions___src = "resolutions___src",
+  resolutions___srcSet = "resolutions___srcSet",
+  resolutions___srcWebp = "resolutions___srcWebp",
+  resolutions___srcSetWebp = "resolutions___srcSetWebp",
+  resolutions___originalName = "resolutions___originalName",
+  fluid___base64 = "fluid___base64",
+  fluid___tracedSVG = "fluid___tracedSVG",
+  fluid___aspectRatio = "fluid___aspectRatio",
+  fluid___src = "fluid___src",
+  fluid___srcSet = "fluid___srcSet",
+  fluid___srcWebp = "fluid___srcWebp",
+  fluid___srcSetWebp = "fluid___srcSetWebp",
+  fluid___sizes = "fluid___sizes",
+  fluid___originalImg = "fluid___originalImg",
+  fluid___originalName = "fluid___originalName",
+  fluid___presentationWidth = "fluid___presentationWidth",
+  fluid___presentationHeight = "fluid___presentationHeight",
+  sizes___base64 = "sizes___base64",
+  sizes___tracedSVG = "sizes___tracedSVG",
+  sizes___aspectRatio = "sizes___aspectRatio",
+  sizes___src = "sizes___src",
+  sizes___srcSet = "sizes___srcSet",
+  sizes___srcWebp = "sizes___srcWebp",
+  sizes___srcSetWebp = "sizes___srcSetWebp",
+  sizes___sizes = "sizes___sizes",
+  sizes___originalImg = "sizes___originalImg",
+  sizes___originalName = "sizes___originalName",
+  sizes___presentationWidth = "sizes___presentationWidth",
+  sizes___presentationHeight = "sizes___presentationHeight",
+  original___width = "original___width",
+  original___height = "original___height",
+  original___src = "original___src",
+  resize___src = "resize___src",
+  resize___tracedSVG = "resize___tracedSVG",
+  resize___width = "resize___width",
+  resize___height = "resize___height",
+  resize___aspectRatio = "resize___aspectRatio",
+  resize___originalName = "resize___originalName",
   parent___id = "parent___id",
   parent___parent___id = "parent___parent___id",
   parent___parent___parent___id = "parent___parent___parent___id",
@@ -910,72 +963,19 @@ export enum ImageSharpFieldsEnum {
   internal___mediaType = "internal___mediaType",
   internal___owner = "internal___owner",
   internal___type = "internal___type",
-  fixed___base64 = "fixed___base64",
-  fixed___tracedSVG = "fixed___tracedSVG",
-  fixed___aspectRatio = "fixed___aspectRatio",
-  fixed___width = "fixed___width",
-  fixed___height = "fixed___height",
-  fixed___src = "fixed___src",
-  fixed___srcSet = "fixed___srcSet",
-  fixed___srcWebp = "fixed___srcWebp",
-  fixed___srcSetWebp = "fixed___srcSetWebp",
-  fixed___originalName = "fixed___originalName",
-  resolutions___base64 = "resolutions___base64",
-  resolutions___tracedSVG = "resolutions___tracedSVG",
-  resolutions___aspectRatio = "resolutions___aspectRatio",
-  resolutions___width = "resolutions___width",
-  resolutions___height = "resolutions___height",
-  resolutions___src = "resolutions___src",
-  resolutions___srcSet = "resolutions___srcSet",
-  resolutions___srcWebp = "resolutions___srcWebp",
-  resolutions___srcSetWebp = "resolutions___srcSetWebp",
-  resolutions___originalName = "resolutions___originalName",
-  fluid___base64 = "fluid___base64",
-  fluid___tracedSVG = "fluid___tracedSVG",
-  fluid___aspectRatio = "fluid___aspectRatio",
-  fluid___src = "fluid___src",
-  fluid___srcSet = "fluid___srcSet",
-  fluid___srcWebp = "fluid___srcWebp",
-  fluid___srcSetWebp = "fluid___srcSetWebp",
-  fluid___sizes = "fluid___sizes",
-  fluid___originalImg = "fluid___originalImg",
-  fluid___originalName = "fluid___originalName",
-  fluid___presentationWidth = "fluid___presentationWidth",
-  fluid___presentationHeight = "fluid___presentationHeight",
-  sizes___base64 = "sizes___base64",
-  sizes___tracedSVG = "sizes___tracedSVG",
-  sizes___aspectRatio = "sizes___aspectRatio",
-  sizes___src = "sizes___src",
-  sizes___srcSet = "sizes___srcSet",
-  sizes___srcWebp = "sizes___srcWebp",
-  sizes___srcSetWebp = "sizes___srcSetWebp",
-  sizes___sizes = "sizes___sizes",
-  sizes___originalImg = "sizes___originalImg",
-  sizes___originalName = "sizes___originalName",
-  sizes___presentationWidth = "sizes___presentationWidth",
-  sizes___presentationHeight = "sizes___presentationHeight",
-  original___width = "original___width",
-  original___height = "original___height",
-  original___src = "original___src",
-  resize___src = "resize___src",
-  resize___tracedSVG = "resize___tracedSVG",
-  resize___width = "resize___width",
-  resize___height = "resize___height",
-  resize___aspectRatio = "resize___aspectRatio",
-  resize___originalName = "resize___originalName",
 }
 
 export type ImageSharpFilterInput = {
   id?: Maybe<StringQueryOperatorInput>
-  parent?: Maybe<NodeFilterInput>
-  children?: Maybe<NodeFilterListInput>
-  internal?: Maybe<InternalFilterInput>
   fixed?: Maybe<ImageSharpFixedFilterInput>
   resolutions?: Maybe<ImageSharpResolutionsFilterInput>
   fluid?: Maybe<ImageSharpFluidFilterInput>
   sizes?: Maybe<ImageSharpSizesFilterInput>
   original?: Maybe<ImageSharpOriginalFilterInput>
   resize?: Maybe<ImageSharpResizeFilterInput>
+  parent?: Maybe<NodeFilterInput>
+  children?: Maybe<NodeFilterListInput>
+  internal?: Maybe<InternalFilterInput>
 }
 
 export type ImageSharpFixed = {
@@ -1177,7 +1177,6 @@ export type IntQueryOperatorInput = {
 
 /** Node Interface */
 export type Node = {
-  __typename?: "Node"
   id: Scalars["ID"]
   parent?: Maybe<Node>
   children: Array<Node>
@@ -1228,6 +1227,8 @@ export enum PotraceTurnPolicy {
 
 export type Query = {
   __typename?: "Query"
+  imageSharp?: Maybe<ImageSharp>
+  allImageSharp?: Maybe<ImageSharpConnection>
   file?: Maybe<File>
   allFile?: Maybe<FileConnection>
   sitePage?: Maybe<SitePage>
@@ -1238,8 +1239,26 @@ export type Query = {
   allSite?: Maybe<SiteConnection>
   directory?: Maybe<Directory>
   allDirectory?: Maybe<DirectoryConnection>
-  imageSharp?: Maybe<ImageSharp>
-  allImageSharp?: Maybe<ImageSharpConnection>
+}
+
+export type QueryImageSharpArgs = {
+  id?: Maybe<StringQueryOperatorInput>
+  fixed?: Maybe<ImageSharpFixedFilterInput>
+  resolutions?: Maybe<ImageSharpResolutionsFilterInput>
+  fluid?: Maybe<ImageSharpFluidFilterInput>
+  sizes?: Maybe<ImageSharpSizesFilterInput>
+  original?: Maybe<ImageSharpOriginalFilterInput>
+  resize?: Maybe<ImageSharpResizeFilterInput>
+  parent?: Maybe<NodeFilterInput>
+  children?: Maybe<NodeFilterListInput>
+  internal?: Maybe<InternalFilterInput>
+}
+
+export type QueryAllImageSharpArgs = {
+  filter?: Maybe<ImageSharpFilterInput>
+  sort?: Maybe<ImageSharpSortInput>
+  skip?: Maybe<Scalars["Int"]>
+  limit?: Maybe<Scalars["Int"]>
 }
 
 export type QueryFileArgs = {
@@ -1398,26 +1417,6 @@ export type QueryDirectoryArgs = {
 export type QueryAllDirectoryArgs = {
   filter?: Maybe<DirectoryFilterInput>
   sort?: Maybe<DirectorySortInput>
-  skip?: Maybe<Scalars["Int"]>
-  limit?: Maybe<Scalars["Int"]>
-}
-
-export type QueryImageSharpArgs = {
-  id?: Maybe<StringQueryOperatorInput>
-  parent?: Maybe<NodeFilterInput>
-  children?: Maybe<NodeFilterListInput>
-  internal?: Maybe<InternalFilterInput>
-  fixed?: Maybe<ImageSharpFixedFilterInput>
-  resolutions?: Maybe<ImageSharpResolutionsFilterInput>
-  fluid?: Maybe<ImageSharpFluidFilterInput>
-  sizes?: Maybe<ImageSharpSizesFilterInput>
-  original?: Maybe<ImageSharpOriginalFilterInput>
-  resize?: Maybe<ImageSharpResizeFilterInput>
-}
-
-export type QueryAllImageSharpArgs = {
-  filter?: Maybe<ImageSharpFilterInput>
-  sort?: Maybe<ImageSharpSortInput>
   skip?: Maybe<Scalars["Int"]>
   limit?: Maybe<Scalars["Int"]>
 }
@@ -1785,6 +1784,7 @@ export enum SitePageFieldsEnum {
   pluginCreator___resolve = "pluginCreator___resolve",
   pluginCreator___name = "pluginCreator___name",
   pluginCreator___version = "pluginCreator___version",
+  pluginCreator___pluginOptions___trackingId = "pluginCreator___pluginOptions___trackingId",
   pluginCreator___pluginOptions___name = "pluginCreator___pluginOptions___name",
   pluginCreator___pluginOptions___path = "pluginCreator___pluginOptions___path",
   pluginCreator___pluginOptions___short_name = "pluginCreator___pluginOptions___short_name",
@@ -1981,6 +1981,7 @@ export enum SitePluginFieldsEnum {
   resolve = "resolve",
   name = "name",
   version = "version",
+  pluginOptions___trackingId = "pluginOptions___trackingId",
   pluginOptions___name = "pluginOptions___name",
   pluginOptions___path = "pluginOptions___path",
   pluginOptions___short_name = "pluginOptions___short_name",
@@ -2109,6 +2110,7 @@ export type SitePluginPackageJsonPeerDependenciesFilterListInput = {
 
 export type SitePluginPluginOptions = {
   __typename?: "SitePluginPluginOptions"
+  trackingId?: Maybe<Scalars["String"]>
   name?: Maybe<Scalars["String"]>
   path?: Maybe<Scalars["String"]>
   short_name?: Maybe<Scalars["String"]>
@@ -2121,6 +2123,7 @@ export type SitePluginPluginOptions = {
 }
 
 export type SitePluginPluginOptionsFilterInput = {
+  trackingId?: Maybe<StringQueryOperatorInput>
   name?: Maybe<StringQueryOperatorInput>
   path?: Maybe<StringQueryOperatorInput>
   short_name?: Maybe<StringQueryOperatorInput>
