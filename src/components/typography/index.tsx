@@ -70,7 +70,10 @@ export const HeadingFour: React.FC<Props> = ({ children, ...props }) => (
   </Text>
 )
 
-export const HeadingThree: React.FC<Props> = ({ children, ...props }) => (
+export const HeadingThree: React.FC<Props & FontSizeProps> = ({
+  children,
+  ...props
+}) => (
   <Text
     as="h3"
     c="black"

@@ -1564,6 +1564,7 @@ export enum SiteFieldsEnum {
   siteMetadata___tags___url = "siteMetadata___tags___url",
   siteMetadata___heading___name = "siteMetadata___heading___name",
   siteMetadata___heading___role = "siteMetadata___heading___role",
+  siteMetadata___heading___status = "siteMetadata___heading___status",
   siteMetadata___heading___email = "siteMetadata___heading___email",
   siteMetadata___heading___github = "siteMetadata___heading___github",
   siteMetadata___projects = "siteMetadata___projects",
@@ -2180,6 +2181,7 @@ export type SiteSiteMetadataHeading = {
   __typename?: "SiteSiteMetadataHeading"
   name?: Maybe<Scalars["String"]>
   role?: Maybe<Scalars["String"]>
+  status?: Maybe<Scalars["String"]>
   email?: Maybe<Scalars["String"]>
   github?: Maybe<Scalars["String"]>
 }
@@ -2187,6 +2189,7 @@ export type SiteSiteMetadataHeading = {
 export type SiteSiteMetadataHeadingFilterInput = {
   name?: Maybe<StringQueryOperatorInput>
   role?: Maybe<StringQueryOperatorInput>
+  status?: Maybe<StringQueryOperatorInput>
   email?: Maybe<StringQueryOperatorInput>
   github?: Maybe<StringQueryOperatorInput>
 }
@@ -2295,7 +2298,7 @@ export type HeaderQuery = { __typename?: "Query" } & {
           heading: Maybe<
             { __typename?: "SiteSiteMetadataHeading" } & Pick<
               SiteSiteMetadataHeading,
-              "name" | "role" | "email" | "github"
+              "name" | "role" | "status" | "email" | "github"
             >
           >
         }
