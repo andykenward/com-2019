@@ -1,7 +1,5 @@
 import React from "react"
 
-import { oc } from "ts-optchain"
-
 import { Box } from "../box"
 import { HeadingOne, HeadingTwo, HeadingThree } from "../typography"
 import { Maybe, SiteSiteMetadataHeading } from "../../types/graphqlTypes.d"
