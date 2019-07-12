@@ -42,13 +42,14 @@ const SEO: React.FC<Props> = ({
   )
 
   const metaDescription = description || oc(site).siteMetadata.description("")
+  const metaTitle = title || oc(site).siteMetadata.title("")
 
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title={oc(site).siteMetadata.title("")}
+      title={title}
       meta={[
         {
           name: `description`,
@@ -56,7 +57,7 @@ const SEO: React.FC<Props> = ({
         },
         {
           property: `og:title`,
-          content: title,
+          content: metaTitle,
         },
         {
           property: `og:description`,
@@ -76,7 +77,7 @@ const SEO: React.FC<Props> = ({
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: metaTitle,
         },
         {
           name: `twitter:description`,
