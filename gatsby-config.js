@@ -31,37 +31,15 @@ module.exports = {
     },
     projects: [
       {
-        title: "Ray-Ban Site Redesign",
-        client: "Ray-Ban",
-        role: "Lead Front-End Developer",
+        title: "Inside Abbey Road",
+        client: "Google",
+        role: "Senior Front-End Developer",
         tags: [
-          {
-            title: "React",
-            url: "https://reactjs.org",
-          },
-          { title: "GraphQL", url: "https://graphql.org" },
-          { title: "Apollo", url: "https://www.apollographql.com" },
-          { title: "Jest", url: "https://jestjs.io" },
-          { title: "StoryBook", url: "https://storybook.js.org" },
+          { title: "Backbone", url: "https://backbonejs.org" },
+          { title: "Marionette", url: "https://marionettejs.com" },
+          { title: "Three.js", url: "https://threejs.org" },
         ],
-        caseUrl: "https://www.stinkstudios.com/work/rayban-raybancom-redesign",
-      },
-      {
-        title: "Switchboard",
-        client: "Stink Studios",
-        role: "Lead Front-End Developer",
-        tags: [
-          { title: "TypeScript", url: "https://www.typescriptlang.org" },
-          {
-            title: "React",
-            url: "https://reactjs.org",
-          },
-          { title: "GraphQL", url: "https://graphql.org" },
-          { title: "Apollo", url: "https://www.apollographql.com" },
-          { title: "Jest", url: "https://jestjs.io" },
-          { title: "Cypress", url: "https://cypress.io" },
-        ],
-        siteUrl: "https://switchboard.stink.co",
+        caseUrl: "https://www.stinkstudios.com/work/inside-abbey-road",
       },
       {
         title: "The Hidden Worlds Of The National Parks",
@@ -88,6 +66,22 @@ module.exports = {
           "https://www.stinkstudios.com/work/google-the-hidden-worlds-of-the-national-parks",
       },
       {
+        title: "Ray-Ban Site Redesign",
+        client: "Ray-Ban",
+        role: "Lead Front-End Developer",
+        tags: [
+          {
+            title: "React",
+            url: "https://reactjs.org",
+          },
+          { title: "GraphQL", url: "https://graphql.org" },
+          { title: "Apollo", url: "https://www.apollographql.com" },
+          { title: "Jest", url: "https://jestjs.io" },
+          { title: "StoryBook", url: "https://storybook.js.org" },
+        ],
+        caseUrl: "https://www.stinkstudios.com/work/rayban-raybancom-redesign",
+      },
+      {
         title: "35th Anniversary",
         client: "i-D",
         role: "Sole Developer",
@@ -108,17 +102,6 @@ module.exports = {
         caseUrl: "https://www.stinkstudios.com/work/35th-anniversary",
       },
       {
-        title: "Inside Abbey Road",
-        client: "Google",
-        role: "Senior Front-End Developer",
-        tags: [
-          { title: "Backbone", url: "https://backbonejs.org" },
-          { title: "Marionette", url: "https://marionettejs.com" },
-          { title: "Three.js", url: "https://threejs.org" },
-        ],
-        caseUrl: "https://www.stinkstudios.com/work/inside-abbey-road",
-      },
-      {
         title: "Performing Arts",
         client: "Google",
         role: "Lead Front-End Developer",
@@ -129,6 +112,23 @@ module.exports = {
         ],
         siteUrl: "https://performingarts.withgoogle.com/",
         caseUrl: "https://www.stinkstudios.com/work/performing-arts",
+      },
+      {
+        title: "Switchboard",
+        client: "Stink Studios",
+        role: "Lead Front-End Developer",
+        tags: [
+          { title: "TypeScript", url: "https://www.typescriptlang.org" },
+          {
+            title: "React",
+            url: "https://reactjs.org",
+          },
+          { title: "GraphQL", url: "https://graphql.org" },
+          { title: "Apollo", url: "https://www.apollographql.com" },
+          { title: "Jest", url: "https://jestjs.io" },
+          { title: "Cypress", url: "https://cypress.io" },
+        ],
+        siteUrl: "https://switchboard.stink.co",
       },
     ],
     contact: [
