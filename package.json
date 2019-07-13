@@ -8,7 +8,7 @@
     "@emotion/core": "10.0.14",
     "@emotion/styled": "10.0.14",
     "@styled-system/should-forward-prop": "1.0.0",
-    "csstype": "2.6.5",
+    "csstype": "2.6.6",
     "emotion": "10.0.14",
     "emotion-normalize": "10.0.0",
     "emotion-theming": "10.0.14",
