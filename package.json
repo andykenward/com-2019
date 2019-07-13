@@ -22,7 +22,7 @@
     "gatsby-plugin-sharp": "2.2.3",
     "gatsby-plugin-typescript": "2.1.0",
     "gatsby-source-filesystem": "2.1.2",
-    "gatsby-transformer-sharp": "2.2.1",
+    "gatsby-transformer-sharp": "2.2.3",
     "graphql": "14.4.2",
     "prop-types": "15.7.2",
     "ramda": "0.26.1",
