@@ -341,10 +341,8 @@ export type DuotoneGradient = {
 
 export type File = Node & {
   __typename?: "File"
-  id: Scalars["ID"]
-  parent?: Maybe<Node>
-  children: Array<Node>
-  internal: Internal
+  birthtime?: Maybe<Scalars["Date"]>
+  birthtimeMs?: Maybe<Scalars["Float"]>
   sourceInstanceName?: Maybe<Scalars["String"]>
   absolutePath?: Maybe<Scalars["String"]>
   relativePath?: Maybe<Scalars["String"]>
@@ -373,13 +371,15 @@ export type File = Node & {
   atimeMs?: Maybe<Scalars["Float"]>
   mtimeMs?: Maybe<Scalars["Float"]>
   ctimeMs?: Maybe<Scalars["Float"]>
-  birthtimeMs?: Maybe<Scalars["Float"]>
   atime?: Maybe<Scalars["Date"]>
   mtime?: Maybe<Scalars["Date"]>
   ctime?: Maybe<Scalars["Date"]>
-  birthtime?: Maybe<Scalars["Date"]>
   /** Copy file to static directory and return public url to it */
   publicURL?: Maybe<Scalars["String"]>
+  id: Scalars["ID"]
+  parent?: Maybe<Node>
+  children: Array<Node>
+  internal: Internal
   childImageSharp?: Maybe<ImageSharp>
 }
 
@@ -432,13 +432,6 @@ export type FileCtimeArgs = {
   locale?: Maybe<Scalars["String"]>
 }
 
-export type FileBirthtimeArgs = {
-  formatString?: Maybe<Scalars["String"]>
-  fromNow?: Maybe<Scalars["Boolean"]>
-  difference?: Maybe<Scalars["String"]>
-  locale?: Maybe<Scalars["String"]>
-}
-
 export type FileConnection = {
   __typename?: "FileConnection"
   totalCount: Scalars["Int"]
@@ -467,6 +460,40 @@ export type FileEdge = {
 }
 
 export enum FileFieldsEnum {
+  birthtime = "birthtime",
+  birthtimeMs = "birthtimeMs",
+  sourceInstanceName = "sourceInstanceName",
+  absolutePath = "absolutePath",
+  relativePath = "relativePath",
+  extension = "extension",
+  size = "size",
+  prettySize = "prettySize",
+  modifiedTime = "modifiedTime",
+  accessTime = "accessTime",
+  changeTime = "changeTime",
+  birthTime = "birthTime",
+  root = "root",
+  dir = "dir",
+  base = "base",
+  ext = "ext",
+  name = "name",
+  relativeDirectory = "relativeDirectory",
+  dev = "dev",
+  mode = "mode",
+  nlink = "nlink",
+  uid = "uid",
+  gid = "gid",
+  rdev = "rdev",
+  blksize = "blksize",
+  ino = "ino",
+  blocks = "blocks",
+  atimeMs = "atimeMs",
+  mtimeMs = "mtimeMs",
+  ctimeMs = "ctimeMs",
+  atime = "atime",
+  mtime = "mtime",
+  ctime = "ctime",
+  publicURL = "publicURL",
   id = "id",
   parent___id = "parent___id",
   parent___parent___id = "parent___parent___id",
@@ -553,47 +580,11 @@ export enum FileFieldsEnum {
   internal___mediaType = "internal___mediaType",
   internal___owner = "internal___owner",
   internal___type = "internal___type",
-  sourceInstanceName = "sourceInstanceName",
-  absolutePath = "absolutePath",
-  relativePath = "relativePath",
-  extension = "extension",
-  size = "size",
-  prettySize = "prettySize",
-  modifiedTime = "modifiedTime",
-  accessTime = "accessTime",
-  changeTime = "changeTime",
-  birthTime = "birthTime",
-  root = "root",
-  dir = "dir",
-  base = "base",
-  ext = "ext",
-  name = "name",
-  relativeDirectory = "relativeDirectory",
-  dev = "dev",
-  mode = "mode",
-  nlink = "nlink",
-  uid = "uid",
-  gid = "gid",
-  rdev = "rdev",
-  blksize = "blksize",
-  ino = "ino",
-  blocks = "blocks",
-  atimeMs = "atimeMs",
-  mtimeMs = "mtimeMs",
-  ctimeMs = "ctimeMs",
-  birthtimeMs = "birthtimeMs",
-  atime = "atime",
-  mtime = "mtime",
-  ctime = "ctime",
-  birthtime = "birthtime",
-  publicURL = "publicURL",
 }
 
 export type FileFilterInput = {
-  id?: Maybe<StringQueryOperatorInput>
-  parent?: Maybe<NodeFilterInput>
-  children?: Maybe<NodeFilterListInput>
-  internal?: Maybe<InternalFilterInput>
+  birthtime?: Maybe<DateQueryOperatorInput>
+  birthtimeMs?: Maybe<FloatQueryOperatorInput>
   sourceInstanceName?: Maybe<StringQueryOperatorInput>
   absolutePath?: Maybe<StringQueryOperatorInput>
   relativePath?: Maybe<StringQueryOperatorInput>
@@ -622,12 +613,14 @@ export type FileFilterInput = {
   atimeMs?: Maybe<FloatQueryOperatorInput>
   mtimeMs?: Maybe<FloatQueryOperatorInput>
   ctimeMs?: Maybe<FloatQueryOperatorInput>
-  birthtimeMs?: Maybe<FloatQueryOperatorInput>
   atime?: Maybe<DateQueryOperatorInput>
   mtime?: Maybe<DateQueryOperatorInput>
   ctime?: Maybe<DateQueryOperatorInput>
-  birthtime?: Maybe<DateQueryOperatorInput>
   publicURL?: Maybe<StringQueryOperatorInput>
+  id?: Maybe<StringQueryOperatorInput>
+  parent?: Maybe<NodeFilterInput>
+  children?: Maybe<NodeFilterListInput>
+  internal?: Maybe<InternalFilterInput>
 }
 
 export type FileGroupConnection = {
@@ -1262,10 +1255,8 @@ export type QueryAllImageSharpArgs = {
 }
 
 export type QueryFileArgs = {
-  id?: Maybe<StringQueryOperatorInput>
-  parent?: Maybe<NodeFilterInput>
-  children?: Maybe<NodeFilterListInput>
-  internal?: Maybe<InternalFilterInput>
+  birthtime?: Maybe<DateQueryOperatorInput>
+  birthtimeMs?: Maybe<FloatQueryOperatorInput>
   sourceInstanceName?: Maybe<StringQueryOperatorInput>
   absolutePath?: Maybe<StringQueryOperatorInput>
   relativePath?: Maybe<StringQueryOperatorInput>
@@ -1294,12 +1285,14 @@ export type QueryFileArgs = {
   atimeMs?: Maybe<FloatQueryOperatorInput>
   mtimeMs?: Maybe<FloatQueryOperatorInput>
   ctimeMs?: Maybe<FloatQueryOperatorInput>
-  birthtimeMs?: Maybe<FloatQueryOperatorInput>
   atime?: Maybe<DateQueryOperatorInput>
   mtime?: Maybe<DateQueryOperatorInput>
   ctime?: Maybe<DateQueryOperatorInput>
-  birthtime?: Maybe<DateQueryOperatorInput>
   publicURL?: Maybe<StringQueryOperatorInput>
+  id?: Maybe<StringQueryOperatorInput>
+  parent?: Maybe<NodeFilterInput>
+  children?: Maybe<NodeFilterListInput>
+  internal?: Maybe<InternalFilterInput>
 }
 
 export type QueryAllFileArgs = {
