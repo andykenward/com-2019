@@ -1,6 +1,6 @@
 import { configure, addDecorator } from "@storybook/react"
-import { withThemesProvider } from "storybook-addon-emotion-theme"
-import { withKnobs } from "@storybook/addon-knobs"
+import { ThemeProvider } from "emotion-theming"
+// import { withKnobs } from "@storybook/addon-knobs"
 
 import { theme } from "../src/theme"
 
@@ -24,5 +24,6 @@ window.___navigate = pathname => {
 }
 configure(loadStories, module)
 
-const themes = [theme]
-addDecorator(withThemesProvider(themes))
+addDecorator(storyFn => (
+  <ThemeProvider theme={theme}>{storyFn()}</ThemeProvider>
+))
