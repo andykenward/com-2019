@@ -152,6 +152,10 @@ module.exports = {
         title: "Stack Overflow",
         url: "https://stackoverflow.com/story/andykenward",
       },
+      {
+        title: "CodePen",
+        url: "https://codepen.io/andykenward/",
+      },
     ],
   },
   plugins: [
