@@ -31,11 +31,16 @@ export const LinkExternal: React.FC<LinkExternalProps> = ({
     as="a"
     css={theme =>
       css`
+        display: inline-flex;
         transition: all 0.15s linear;
         text-decoration: none;
-        &:hover,
-        &:focus {
+        :visited:hover,
+        :hover,
+        :focus {
           color: ${noHover ? "inherit" : theme.colors.green};
+        }
+        :visited {
+          color: ${noHover ? "inherit" : theme.colors.visited};
         }
       `
     }

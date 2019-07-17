@@ -7,6 +7,7 @@ export const colors = {
   squash: "rgb(251,238,202)",
   cucumber: "rgb(216,234,204)",
   radish: "rgb(249,224,250)",
+  visited: "#808080",
 } as const
 
 export type ColorKeys = keyof typeof colors

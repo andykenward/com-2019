@@ -1563,6 +1563,8 @@ export enum SiteFieldsEnum {
   siteMetadata___projects = "siteMetadata___projects",
   siteMetadata___projects___title = "siteMetadata___projects___title",
   siteMetadata___projects___client = "siteMetadata___projects___client",
+  siteMetadata___projects___studio___title = "siteMetadata___projects___studio___title",
+  siteMetadata___projects___studio___url = "siteMetadata___projects___studio___url",
   siteMetadata___projects___role = "siteMetadata___projects___role",
   siteMetadata___projects___tags = "siteMetadata___projects___tags",
   siteMetadata___projects___tags___title = "siteMetadata___projects___tags___title",
@@ -2191,6 +2193,7 @@ export type SiteSiteMetadataProjects = {
   __typename?: "SiteSiteMetadataProjects"
   title?: Maybe<Scalars["String"]>
   client?: Maybe<Scalars["String"]>
+  studio?: Maybe<SiteSiteMetadataProjectsStudio>
   role?: Maybe<Scalars["String"]>
   tags?: Maybe<Array<Maybe<SiteSiteMetadataProjectsTags>>>
   caseUrl?: Maybe<Scalars["String"]>
@@ -2200,6 +2203,7 @@ export type SiteSiteMetadataProjects = {
 export type SiteSiteMetadataProjectsFilterInput = {
   title?: Maybe<StringQueryOperatorInput>
   client?: Maybe<StringQueryOperatorInput>
+  studio?: Maybe<SiteSiteMetadataProjectsStudioFilterInput>
   role?: Maybe<StringQueryOperatorInput>
   tags?: Maybe<SiteSiteMetadataProjectsTagsFilterListInput>
   caseUrl?: Maybe<StringQueryOperatorInput>
@@ -2208,6 +2212,17 @@ export type SiteSiteMetadataProjectsFilterInput = {
 
 export type SiteSiteMetadataProjectsFilterListInput = {
   elemMatch?: Maybe<SiteSiteMetadataProjectsFilterInput>
+}
+
+export type SiteSiteMetadataProjectsStudio = {
+  __typename?: "SiteSiteMetadataProjectsStudio"
+  title?: Maybe<Scalars["String"]>
+  url?: Maybe<Scalars["String"]>
+}
+
+export type SiteSiteMetadataProjectsStudioFilterInput = {
+  title?: Maybe<StringQueryOperatorInput>
+  url?: Maybe<StringQueryOperatorInput>
 }
 
 export type SiteSiteMetadataProjectsTags = {
@@ -2330,6 +2345,12 @@ export type ProjectsQuery = { __typename?: "Query" } & {
                   SiteSiteMetadataProjects,
                   "title" | "client" | "siteUrl" | "caseUrl" | "role"
                 > & {
+                    studio: Maybe<
+                      { __typename?: "SiteSiteMetadataProjectsStudio" } & Pick<
+                        SiteSiteMetadataProjectsStudio,
+                        "title" | "url"
+                      >
+                    >
                     tags: Maybe<
                       Array<
                         Maybe<

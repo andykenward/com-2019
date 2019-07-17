@@ -33,6 +33,7 @@ module.exports = {
       {
         title: "Inside Abbey Road",
         client: "Google",
+        studio: { title: "Stink Studios", url: "https://www.stinkstudios.com" },
         role: "Senior Front-End Developer",
         tags: [
           { title: "Backbone", url: "https://backbonejs.org" },
@@ -44,6 +45,7 @@ module.exports = {
       {
         title: "The Hidden Worlds Of The National Parks",
         client: "Google",
+        studio: { title: "Stink Studios", url: "https://www.stinkstudios.com" },
         role: "Lead Front-End Developer",
         siteUrl: "https://g.co/nationalparks",
         tags: [
@@ -68,6 +70,7 @@ module.exports = {
       {
         title: "Ray-Ban Site Redesign",
         client: "Ray-Ban",
+        studio: { title: "Stink Studios", url: "https://www.stinkstudios.com" },
         role: "Lead Front-End Developer",
         tags: [
           {
@@ -84,6 +87,7 @@ module.exports = {
       {
         title: "35th Anniversary",
         client: "i-D",
+        studio: { title: "Stink Studios", url: "https://www.stinkstudios.com" },
         role: "Sole Developer",
         tags: [
           {
@@ -104,6 +108,7 @@ module.exports = {
       {
         title: "Performing Arts",
         client: "Google",
+        studio: { title: "Stink Studios", url: "https://www.stinkstudios.com" },
         role: "Lead Front-End Developer",
         tags: [
           { title: "Backbone", url: "https://backbonejs.org" },
@@ -116,6 +121,7 @@ module.exports = {
       {
         title: "Switchboard",
         client: "Stink Studios",
+        studio: { title: "Stink Studios", url: "https://www.stinkstudios.com" },
         role: "Lead Front-End Developer",
         tags: [
           { title: "TypeScript", url: "https://www.typescriptlang.org" },

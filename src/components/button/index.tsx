@@ -24,9 +24,9 @@ export const ButtonExternal: React.FC<Props> = ({ children, fill, href }) => (
       text-align: center;
       align-items: center;
       vertical-align: middle;
-      &:hover,
-      &:focus {
-        color: ${fill ? theme.colors.oyster : theme.colors.oyster};
+      :hover,
+      :focus {
+        color: ${theme.colors.oyster};
         box-shadow: inset 0 0 0 0.0625rem
           ${fill ? `rgba(36, 28, 21, 0.4)` : theme.colors.primary};
         background-color: ${fill ? "transparent" : theme.colors.primary};

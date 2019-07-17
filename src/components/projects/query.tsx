@@ -16,6 +16,10 @@ export const useProjects = (): Maybe<SiteSiteMetadataProjects>[] => {
             projects {
               title
               client
+              studio {
+                title
+                url
+              }
               siteUrl
               caseUrl
               tags {
