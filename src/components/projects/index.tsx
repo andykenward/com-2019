@@ -4,7 +4,13 @@ import React from "react"
 import { Maybe, SiteSiteMetadataProjects } from "../../types/graphqlTypes.d"
 import { Box } from "../box"
 import { Tags } from "../tags"
-import { BodyBold, HeadingOne, HeadingThree, HeadingFour } from "../typography"
+import {
+  BodyBold,
+  HeadingOne,
+  HeadingThree,
+  HeadingFour,
+  Body,
+} from "../typography"
 import { ButtonExternal } from "../button"
 import { ColumnsCenter } from "../columns"
 import { LinkExternal } from "../link"
@@ -27,7 +33,9 @@ export const Projects: React.FC<Props> = ({ data }) =>
 
 export const ProjectsItem: React.FC<{
   data: SiteSiteMetadataProjects
-}> = ({ data: { title, client, siteUrl, caseUrl, tags, role, studio } }) => (
+}> = ({
+  data: { title, description, client, siteUrl, caseUrl, tags, role, studio },
+}) => (
   <Box as="article">
     {client && (
       <BodyBold
@@ -38,10 +46,13 @@ export const ProjectsItem: React.FC<{
         {client}
       </BodyBold>
     )}
-    {title && <HeadingThree mb={8}>{title}</HeadingThree>}
-    {role && <HeadingFour>{role}</HeadingFour>}
+    {title && (
+      <HeadingThree mb={!description ? 8 : undefined}>{title}</HeadingThree>
+    )}
+    {description && <Body mb={8}>{description}</Body>}
+    {role && <HeadingFour mb={!studio ? 8 : undefined}>{role}</HeadingFour>}
     {studio && studio.url && studio.title && (
-      <LinkExternal mt={"-8px"} mb={8} href={studio.url}>
+      <LinkExternal mb={8} href={studio.url}>
         {studio.title}
       </LinkExternal>
     )}

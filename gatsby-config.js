@@ -32,6 +32,7 @@ module.exports = {
     projects: [
       {
         title: "Inside Abbey Road",
+        description: "Explore the world’s most legendary recording studio.",
         client: "Google",
         studio: { title: "Stink Studios", url: "https://www.stinkstudios.com" },
         role: "Senior Front-End Developer",
@@ -44,6 +45,8 @@ module.exports = {
       },
       {
         title: "The Hidden Worlds Of The National Parks",
+        description:
+          "An interactive tour of America’s most beautiful national parks.",
         client: "Google",
         studio: { title: "Stink Studios", url: "https://www.stinkstudios.com" },
         role: "Lead Front-End Developer",
@@ -69,6 +72,8 @@ module.exports = {
       },
       {
         title: "Ray-Ban Site Redesign",
+        description:
+          "A reimagining of Ray-Ban.com designed to change the way you buy sunglasses.",
         client: "Ray-Ban",
         studio: { title: "Stink Studios", url: "https://www.stinkstudios.com" },
         role: "Lead Front-End Developer",
@@ -86,6 +91,8 @@ module.exports = {
       },
       {
         title: "35th Anniversary",
+        description:
+          "A mobile optimised archive of i-D covers from the last 35 years.",
         client: "i-D",
         studio: { title: "Stink Studios", url: "https://www.stinkstudios.com" },
         role: "Sole Developer",
@@ -107,6 +114,8 @@ module.exports = {
       },
       {
         title: "Performing Arts",
+        description:
+          "Watch the world’s greatest performers come to life in 360 degrees.",
         client: "Google",
         studio: { title: "Stink Studios", url: "https://www.stinkstudios.com" },
         role: "Lead Front-End Developer",
@@ -120,6 +129,7 @@ module.exports = {
       },
       {
         title: "Switchboard",
+        description: "Omni-channel content management platform.",
         client: "Stink Studios",
         studio: { title: "Stink Studios", url: "https://www.stinkstudios.com" },
         role: "Lead Front-End Developer",

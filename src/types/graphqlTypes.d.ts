@@ -1562,6 +1562,7 @@ export enum SiteFieldsEnum {
   siteMetadata___heading___github = "siteMetadata___heading___github",
   siteMetadata___projects = "siteMetadata___projects",
   siteMetadata___projects___title = "siteMetadata___projects___title",
+  siteMetadata___projects___description = "siteMetadata___projects___description",
   siteMetadata___projects___client = "siteMetadata___projects___client",
   siteMetadata___projects___studio___title = "siteMetadata___projects___studio___title",
   siteMetadata___projects___studio___url = "siteMetadata___projects___studio___url",
@@ -2192,6 +2193,7 @@ export type SiteSiteMetadataHeadingFilterInput = {
 export type SiteSiteMetadataProjects = {
   __typename?: "SiteSiteMetadataProjects"
   title?: Maybe<Scalars["String"]>
+  description?: Maybe<Scalars["String"]>
   client?: Maybe<Scalars["String"]>
   studio?: Maybe<SiteSiteMetadataProjectsStudio>
   role?: Maybe<Scalars["String"]>
@@ -2202,6 +2204,7 @@ export type SiteSiteMetadataProjects = {
 
 export type SiteSiteMetadataProjectsFilterInput = {
   title?: Maybe<StringQueryOperatorInput>
+  description?: Maybe<StringQueryOperatorInput>
   client?: Maybe<StringQueryOperatorInput>
   studio?: Maybe<SiteSiteMetadataProjectsStudioFilterInput>
   role?: Maybe<StringQueryOperatorInput>
@@ -2343,7 +2346,12 @@ export type ProjectsQuery = { __typename?: "Query" } & {
               Maybe<
                 { __typename?: "SiteSiteMetadataProjects" } & Pick<
                   SiteSiteMetadataProjects,
-                  "title" | "client" | "siteUrl" | "caseUrl" | "role"
+                  | "title"
+                  | "description"
+                  | "client"
+                  | "siteUrl"
+                  | "caseUrl"
+                  | "role"
                 > & {
                     studio: Maybe<
                       { __typename?: "SiteSiteMetadataProjectsStudio" } & Pick<
