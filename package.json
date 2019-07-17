@@ -7,7 +7,7 @@
   "dependencies": {
     "@emotion/core": "10.0.14",
     "@emotion/styled": "10.0.14",
-    "@styled-system/should-forward-prop": "1.0.0",
+    "@styled-system/should-forward-prop": "5.0.15",
     "csstype": "2.6.6",
     "emotion": "10.0.14",
     "emotion-normalize": "10.1.0",
