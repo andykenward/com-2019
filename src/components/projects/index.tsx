@@ -23,7 +23,7 @@ export const Projects: React.FC<Props> = ({ data }) =>
   data && data.length > 0 ? (
     <ColumnsCenter as="section">
       <HeadingOne mb={32}>Projects</HeadingOne>
-      <Box display="grid" gridRowGap={64}>
+      <Box display="grid" gridRowGap={56}>
         {data.map(
           (item, index) => item && <ProjectsItem key={index} data={item} />
         )}

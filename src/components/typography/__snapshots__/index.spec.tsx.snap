@@ -4,11 +4,16 @@ exports[`Typography <Body /> renders correctly 1`] = `
 <DocumentFragment>
   .emotion-0 {
   font-family: Graphik,"Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
   color: rgb(36,28,21);
   margin: 0;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
 }
 
 <p
@@ -23,15 +28,20 @@ exports[`Typography <BodyBold /> renders correctly 1`] = `
 <DocumentFragment>
   .emotion-0 {
   font-family: Graphik,"Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 500;
-  -webkit-letter-spacing: -0.2px;
-  -moz-letter-spacing: -0.2px;
-  -ms-letter-spacing: -0.2px;
-  letter-spacing: -0.2px;
+  -webkit-letter-spacing: -0.0125rem;
+  -moz-letter-spacing: -0.0125rem;
+  -ms-letter-spacing: -0.0125rem;
+  letter-spacing: -0.0125rem;
   line-height: 1.5;
   color: rgb(36,28,21);
   margin: 0;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
 }
 
 <strong
@@ -46,11 +56,16 @@ exports[`Typography <HeadingFour /> renders correctly 1`] = `
 <DocumentFragment>
   .emotion-0 {
   font-family: Graphik,"Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.25;
   color: rgb(36,28,21);
   margin: 0;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
 }
 
 <h4
@@ -65,17 +80,22 @@ exports[`Typography <HeadingOne /> renders correctly 1`] = `
 <DocumentFragment>
   .emotion-0 {
   font-family: "Cooper Light",Georgia,Times,"Times New Roman",serif;
-  font-size: 44px;
+  font-size: 2.75rem;
   font-weight: 300;
   line-height: 1.090909091;
   text-transform: capitalize;
   color: rgb(36,28,21);
   margin: 0;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
 }
 
 @media screen and (min-width:40em) {
   .emotion-0 {
-    font-size: 54px;
+    font-size: 3.375rem;
   }
 }
 
@@ -91,21 +111,26 @@ exports[`Typography <HeadingThree /> renders correctly 1`] = `
 <DocumentFragment>
   .emotion-0 {
   font-family: Graphik,"Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
-  font-size: 28px;
+  font-size: 1.75rem;
   font-weight: 400;
-  -webkit-letter-spacing: -0.2px;
-  -moz-letter-spacing: -0.2px;
-  -ms-letter-spacing: -0.2px;
-  letter-spacing: -0.2px;
+  -webkit-letter-spacing: -0.0125rem;
+  -moz-letter-spacing: -0.0125rem;
+  -ms-letter-spacing: -0.0125rem;
+  letter-spacing: -0.0125rem;
   line-height: 1.25;
   text-transform: capitalize;
   color: rgb(36,28,21);
   margin: 0;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
 }
 
 @media screen and (min-width:40em) {
   .emotion-0 {
-    font-size: 38px;
+    font-size: 2.375rem;
   }
 }
 
@@ -121,21 +146,26 @@ exports[`Typography <HeadingTwo /> renders correctly 1`] = `
 <DocumentFragment>
   .emotion-0 {
   font-family: Graphik,"Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
-  font-size: 36px;
+  font-size: 2.25rem;
   font-weight: 400;
-  -webkit-letter-spacing: -0.5px;
-  -moz-letter-spacing: -0.5px;
-  -ms-letter-spacing: -0.5px;
-  letter-spacing: -0.5px;
+  -webkit-letter-spacing: -0.03125rem;
+  -moz-letter-spacing: -0.03125rem;
+  -ms-letter-spacing: -0.03125rem;
+  letter-spacing: -0.03125rem;
   line-height: 1.25;
   text-transform: capitalize;
   color: rgb(36,28,21);
   margin: 0;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
 }
 
 @media screen and (min-width:40em) {
   .emotion-0 {
-    font-size: 46px;
+    font-size: 2.875rem;
   }
 }
 
@@ -151,11 +181,16 @@ exports[`Typography <Label /> renders correctly 1`] = `
 <DocumentFragment>
   .emotion-0 {
   font-family: Graphik,"Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 500;
   line-height: 1.5;
   color: rgb(36,28,21);
   margin: 0;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
 }
 
 <span

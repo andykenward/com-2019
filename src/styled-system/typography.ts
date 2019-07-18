@@ -1,6 +1,6 @@
 import * as CSS from "csstype" // eslint-disable-line import/no-unresolved
 import {
-  getPx,
+  num,
   LineHeightProps,
   ResponsiveValue,
   style,
@@ -34,10 +34,13 @@ const fontSizeProps: FontSizeProps = {
 }
 export const fontSizePropsKeys = Object.keys(fontSizeProps)
 
+export const convertToRem = (n: number | string): string | number =>
+  num(n) ? `${(n as number) / 16}rem` : n
+
 export const fontSize = style({
   key: "fontSizes",
   prop: "fontSize",
-  transformValue: getPx,
+  transformValue: convertToRem,
   scale: [12, 14, 16, 20, 24, 32, 48, 64, 72],
   alias: "fs",
 })

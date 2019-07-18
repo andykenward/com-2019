@@ -7,6 +7,7 @@ import { Maybe, SiteSiteMetadataProjectsTags } from "../../types/graphqlTypes.d"
 import { Box } from "../box"
 import { Body } from "../typography"
 import { LinkExternal } from "../link"
+import { convertToRem } from "../../styled-system"
 
 interface Props {
   data: Maybe<Array<Maybe<SiteSiteMetadataProjectsTags>>> | undefined | null
@@ -37,8 +38,8 @@ export const Tags: React.FC<Props> = ({ data }) =>
               }
               :after {
                 content: "•";
-                margin: 0 9px;
-                font-size: 12px;
+                margin: 0 ${convertToRem(9)};
+                font-size: ${convertToRem(12)};
                 color: #959595;
               }
             `}

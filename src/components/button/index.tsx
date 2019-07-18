@@ -14,6 +14,7 @@ export const ButtonExternal: React.FC<Props> = ({ children, fill, href }) => (
     px={16}
     py={8}
     mr={8}
+    mb={8}
     href={href}
     css={theme => css`
       display: inline-flex;

@@ -11,6 +11,7 @@ import {
   typography,
   TypographyProps,
   FontSizeProps,
+  convertToRem,
 } from "../../styled-system"
 import styled, { StyledProps } from "../../utils/styled"
 
@@ -21,6 +22,8 @@ export const Text = styled("p", { shouldForwardProp: filterProps })<
   ${color}
   ${space}
   ${gridColumn}
+  word-break: break-word;
+  hyphens: auto;
 `
 
 interface Props extends StyledProps, SpaceProps, ColorProps, GridColumnProps {}
@@ -47,7 +50,7 @@ export const BodyBold: React.FC<Props> = ({ children, ...props }) => (
     fontWeight="medium"
     fs={16}
     lineHeight="default"
-    letterSpacing="-0.2px"
+    letterSpacing={convertToRem(-0.2)}
     m={0}
     {...props}
   >
@@ -80,7 +83,7 @@ export const HeadingThree: React.FC<Props & FontSizeProps> = ({
     fontFamily="regular"
     fontWeight="regular"
     fs={[28, 38]}
-    letterSpacing="-0.2px"
+    letterSpacing={convertToRem(-0.2)}
     lineHeight="condensed"
     m={0}
     textTransform="capitalize"
@@ -97,7 +100,7 @@ export const HeadingTwo: React.FC<Props> = ({ children, ...props }) => (
     fontFamily="regular"
     fontWeight="regular"
     fs={[36, 46]}
-    letterSpacing="-0.5px"
+    letterSpacing={convertToRem(-0.5)}
     lineHeight="condensed"
     m={0}
     textTransform="capitalize"
