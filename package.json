@@ -33,7 +33,7 @@
     "ts-optchain": "0.1.7"
   },
   "devDependencies": {
-    "@babel/core": "7.5.4",
+    "@babel/core": "7.5.5",
     "@babel/preset-typescript": "7.3.3",
     "@graphql-codegen/cli": "1.4.0",
     "@graphql-codegen/typescript": "1.4.0",
