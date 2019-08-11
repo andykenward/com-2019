@@ -4,10 +4,6 @@
   "alias": "andykenward.com",
   "scope": "andykenward",
   "regions": ["lhr1"],
-  "github": {
-    "enabled": false,
-    "autoAlias": false
-  },
   "builds": [
     {
       "src": "package.json",
@@ -16,6 +12,7 @@
     }
   ],
   "routes": [
+    { "handle": "filesystem" },
     {
       "src": "^/(.*).html",
       "headers": { "cache-control": "public,max-age=0,must-revalidate" },
