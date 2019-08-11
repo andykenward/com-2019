@@ -99,7 +99,7 @@
     "generate:watch": "graphql-codegen --watch",
     "generate": "graphql-codegen",
     "lint": "eslint --cache --ext .js,.ts,.tsx  src/",
-    "now-build": "npm run storybook:build && npm run build",
+    "now-build": "npm run build && npm run storybook:build",
     "serve:build": "npm run clean && npm run build && npm run serve",
     "serve": "gatsby serve",
     "start": "npm run develop",
