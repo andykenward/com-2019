@@ -1,0 +1,38 @@
+name: Check Pull Request
+on: [pull_request]
+
+jobs:
+  checks:
+    name: checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+
+      - name: setup node
+        uses: actions/setup-node@master
+        with:
+          version: '10.16.0'
+
+      - name: install
+        run: npm ci
+
+      - name: typecheck
+        run: npm run type-check
+        env:
+          REACT_APP_API: ${{ secrets.REACT_APP_API }}
+          SCHEMA_PATH: ${{ secrets.SCHEMA_PATH }}
+
+      - name: lint
+        run: npm run lint
+        env:
+          REACT_APP_API: ${{ secrets.REACT_APP_API }}
+          SCHEMA_PATH: ${{ secrets.SCHEMA_PATH }}
+
+      - name: test
+        run: npm test
+        env:
+          CI: ${{ secrets.CI }}
+          REACT_APP_API: ${{ secrets.REACT_APP_API }}
+          SCHEMA_PATH: ${{ secrets.SCHEMA_PATH }}
+
+

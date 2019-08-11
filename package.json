@@ -4,6 +4,10 @@
   "description": "2019 andykenward.com",
   "version": "0.1.0",
   "author": "Andy Kenward <hello@andykenward.com>",
+  "engines": {
+    "node": "^10.x",
+    "npm": "^6.10.1"
+  },
   "dependencies": {
     "@emotion/core": "10.0.14",
     "@emotion/styled": "10.0.14",
