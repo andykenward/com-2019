@@ -6,9 +6,10 @@ export type Scalars = {
   Boolean: boolean
   Int: number
   Float: number
-  /** A date string, such as 2007-12-03, compliant with the ISO 8601 standard for
+  /**
+   * A date string, such as 2007-12-03, compliant with the ISO 8601 standard for
    * representation of dates and times using the Gregorian calendar.
-   */
+   **/
   Date: any
   /** The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf). */
   JSON: any
@@ -2392,6 +2393,37 @@ export type ContactQuery = { __typename?: "Query" } & {
   >
 }
 
+export type ImageQueryQueryVariables = {}
+
+export type ImageQueryQuery = { __typename?: "Query" } & {
+  placeholderImage: Maybe<
+    { __typename?: "File" } & {
+      childImageSharp: Maybe<
+        { __typename?: "ImageSharp" } & {
+          fluid: Maybe<
+            { __typename?: "ImageSharpFluid" } & GatsbyImageSharpFluidFragment
+          >
+        }
+      >
+    }
+  >
+}
+
+export type SiteMetadataQueryQueryVariables = {}
+
+export type SiteMetadataQueryQuery = { __typename?: "Query" } & {
+  site: Maybe<
+    { __typename?: "Site" } & {
+      siteMetadata: Maybe<
+        { __typename?: "SiteSiteMetadata" } & Pick<
+          SiteSiteMetadata,
+          "title" | "description" | "author"
+        >
+      >
+    }
+  >
+}
+
 export type HeaderQueryVariables = {}
 
 export type HeaderQuery = { __typename?: "Query" } & {
@@ -2404,22 +2436,6 @@ export type HeaderQuery = { __typename?: "Query" } & {
               SiteSiteMetadataHeading,
               "name" | "role" | "status" | "email" | "github"
             >
-          >
-        }
-      >
-    }
-  >
-}
-
-export type ImageQueryQueryVariables = {}
-
-export type ImageQueryQuery = { __typename?: "Query" } & {
-  placeholderImage: Maybe<
-    { __typename?: "File" } & {
-      childImageSharp: Maybe<
-        { __typename?: "ImageSharp" } & {
-          fluid: Maybe<
-            { __typename?: "ImageSharpFluid" } & GatsbyImageSharpFluidFragment
           >
         }
       >
@@ -2469,21 +2485,6 @@ export type ProjectsQuery = { __typename?: "Query" } & {
             >
           >
         }
-      >
-    }
-  >
-}
-
-export type SiteMetadataQueryQueryVariables = {}
-
-export type SiteMetadataQueryQuery = { __typename?: "Query" } & {
-  site: Maybe<
-    { __typename?: "Site" } & {
-      siteMetadata: Maybe<
-        { __typename?: "SiteSiteMetadata" } & Pick<
-          SiteSiteMetadata,
-          "title" | "description" | "author"
-        >
       >
     }
   >
