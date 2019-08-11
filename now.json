@@ -14,6 +14,10 @@
   "routes": [
     { "handle": "filesystem" },
     {
+      "src": "/sb/(.*).html",
+      "headers": { "cache-control": "public,max-age=0,must-revalidate" }
+    },
+    {
       "src": "^/(.*).html",
       "headers": { "cache-control": "public,max-age=0,must-revalidate" },
       "dest": "$1.html"
