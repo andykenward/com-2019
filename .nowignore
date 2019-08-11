@@ -1,7 +1,6 @@
 __mocks__
 .cache
 .github
-.storybook
 .vscode
 node_modules
 .gitignore
