@@ -1,0 +1,20 @@
+overwrite: true
+schema: ${SCHEMA_PATH}
+documents: './components/**/*.{ts,tsx}'
+generates:
+  generated/graphql.tsx:
+    plugins:
+      - 'typescript'
+      - 'typescript-operations'
+      - 'typescript-react-apollo'
+    config:
+      withHooks: true
+      withHOC: false
+      withComponent: false
+      hooksImportFrom: '@apollo/react-hooks'
+  generated/introspection-result.ts:
+    plugins:
+      - fragment-matcher
+config:
+  namingConvention:
+    enumValues: keep

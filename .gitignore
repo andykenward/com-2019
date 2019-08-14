@@ -1,3 +1,14 @@
 node_modules
+
+# env 
 .envrc
+.env
+.env.build
+
+# next
 /.next
+/out
+
+# graphql
+/generated
+.DS_Store

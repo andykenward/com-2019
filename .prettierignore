@@ -1,0 +1,5 @@
+.next
+out
+.env
+package.json
+package-lock.json

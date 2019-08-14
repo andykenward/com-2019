@@ -3,11 +3,21 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "^10.16.0"
+  },
   "scripts": {
     "dev": "next",
+    "dev:now": "now dev",
+    "prebuild": "npm run codegen",
     "build": "next build",
+    "export": "next export",
     "start": "next start",
-    "now-build": "npm run build"
+    "now-build": "npm run build && npm run export",
+    "now-dev": "npm run dev",
+    "codegen": "graphql-codegen -r dotenv/config --config codegen.yml",
+    "codegen:watch": "npm run codegen -- --watch",
+    "format": "prettier --write '**/*.{css,js,jsx,ts,tsx}'"
   },
   "repository": {
     "type": "git",
@@ -21,14 +31,30 @@
   },
   "homepage": "https://github.com/andykenward/com-2019#readme",
   "dependencies": {
+    "@apollo/react-hooks": "3.0.0",
+    "@apollo/react-ssr": "3.0.0",
+    "apollo-boost": "0.4.4",
+    "graphql": "14.4.2",
+    "graphql-tag": "2.10.1",
+    "isomorphic-unfetch": "3.0.0",
     "next": "9.0.3",
-    "react": "16.8.6",
-    "react-dom": "16.8.6"
+    "react": "16.9.0",
+    "react-dom": "16.9.0"
   },
   "devDependencies": {
-    "@types/node": "12.6.9",
-    "@types/react": "16.8.24",
+    "@graphql-codegen/cli": "1.5.0",
+    "@graphql-codegen/fragment-matcher": "1.5.0",
+    "@graphql-codegen/introspection": "1.5.0",
+    "@graphql-codegen/typescript": "1.5.0",
+    "@graphql-codegen/typescript-operations": "1.5.0",
+    "@graphql-codegen/typescript-react-apollo": "1.5.0",
+    "@types/graphql": "14.2.3",
+    "@types/node": "10.14.15",
+    "@types/react": "16.9.1",
     "@types/react-dom": "16.8.5",
+    "dotenv": "8.0.0",
+    "now": "16.1.1",
+    "prettier": "1.18.2",
     "typescript": "3.5.3"
   }
 }

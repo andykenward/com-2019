@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "name": "com-2019",
+  "alias": "andykenward.com",
+  "scope": "andykenward",
+  "regions": ["lhr1"],
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@now/static-build",
+      "config": { "distDir": "out" }
+    }
+  ],
+  "build": {
+    "env": {
+      "SCHEMA_PATH": "@andykenward_com_schema_path"
+    }
+  },
+  "routes": [
+    { "handle": "filesystem" },
+    {
+      "src": "^/(.*).html",
+      "headers": { "cache-control": "public,max-age=0,must-revalidate" },
+      "dest": "$1.html"
+    }
+  ]
+}
