@@ -5,6 +5,7 @@ import { ApolloProvider } from "@apollo/react-hooks"
 
 import { AppPropsType } from "next-server/dist/lib/utils"
 
+export const config = { amp: `hybrid` }
 class MyApp extends React.Component<
   IApolloProps & AppInitialProps & AppPropsType
 > {

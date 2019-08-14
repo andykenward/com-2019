@@ -6,6 +6,8 @@ export const Project: React.FC<{ slug: string }> = ({ slug }) => {
     variables: { slug },
   })
 
+  console.log("--project ", loading)
+
   if (error) {
     return <div>error</div>
   }
