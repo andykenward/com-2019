@@ -18,7 +18,9 @@
     "now-dev": "npm run dev",
     "codegen": "graphql-codegen -r dotenv/config --config codegen.yml",
     "codegen:watch": "npm run codegen -- --watch",
-    "format": "prettier --write '**/*.{css,js,jsx,ts,tsx}'"
+    "format": "prettier --write '**/*.{css,js,jsx,ts,tsx}'",
+    "type-check:watch": "npm run type-check -- --watch",
+    "type-check": "tsc --noEmit"
   },
   "repository": {
     "type": "git",
