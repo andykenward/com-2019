@@ -1,7 +1,8 @@
 import { NextPage } from "next"
 import React from "react"
+import { ProjectsMenu } from "../components/projects"
 
-import { Projects, ProjectsMenu } from "../components/projects"
+export const config = { amp: `hybrid` }
 
 const Home: NextPage = () => {
   return (

@@ -1,7 +1,7 @@
 import {
   ApolloClient,
-  InMemoryCache,
   HttpLink,
+  InMemoryCache,
   NormalizedCacheObject,
 } from "apollo-boost"
 import isoFetch from "isomorphic-unfetch"

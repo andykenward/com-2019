@@ -1,7 +1,6 @@
-import { useRouter, withRouter } from "next/router"
-import { Project } from "../../components/project"
 import { NextPage } from "next"
-import { WithRouterProps } from "next/dist/client/with-router"
+import { useRouter } from "next/router"
+import { Project } from "../../components/project"
 import { ProjectsMenu } from "../../components/projects"
 
 export const config = { amp: `hybrid` }

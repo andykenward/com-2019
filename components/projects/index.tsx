@@ -1,6 +1,7 @@
-import React from "react"
 import Link from "next/link"
-import { useProjectsQuery, useProjectsNavQuery } from "../../generated/graphql"
+import React from "react"
+import { useProjectsNavQuery, useProjectsQuery } from "../../generated/graphql"
+import { ProjectItem } from "../project"
 
 export const Projects: React.FC = () => {
   const { loading, error, data } = useProjectsQuery()
@@ -25,24 +26,30 @@ export const Projects: React.FC = () => {
 }
 
 export const ProjectsMenu: React.FC = () => {
-  const { loading, error, data } = useProjectsNavQuery()
+  const { data } = useProjectsNavQuery()
 
   const projects = data ? data.projects : []
 
   return (
-    <nav>
+    <>
+      <nav>
+        {(projects || []).map(project =>
+          project ? (
+            <Link
+              prefetch
+              key={project.id}
+              href="/project/[slug]"
+              as={`/project/${project.slug}`}
+            >
+              <a>{project.title}</a>
+            </Link>
+          ) : null
+        )}
+      </nav>
+
       {(projects || []).map(project =>
-        project ? (
-          <Link
-            prefetch
-            key={project.id}
-            href="/project/[slug]"
-            as={`/project/${project.slug}`}
-          >
-            <a>{project.title}</a>
-          </Link>
-        ) : null
+        project ? <ProjectItem key={project.id} {...project} /> : null
       )}
-    </nav>
+    </>
   )
 }

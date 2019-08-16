@@ -1,14 +1,14 @@
-import initApollo from "./init-apollo"
-import React from "react"
-import Head from "next/head"
 import { getDataFromTree } from "@apollo/react-ssr"
-import { AppProps, AppInitialProps, AppContext } from "next/app"
 import { ApolloClient, NormalizedCacheObject } from "apollo-boost"
 import {
   AppContextType,
   AppPropsType,
   NextComponentType,
 } from "next-server/dist/lib/utils"
+import { AppContext, AppInitialProps, AppProps } from "next/app"
+import Head from "next/head"
+import React from "react"
+import initApollo from "./init-apollo"
 
 export interface IApolloProps {
   apolloState?: NormalizedCacheObject
