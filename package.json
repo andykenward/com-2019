@@ -42,7 +42,7 @@
     "@graphql-codegen/cli": "1.5.0",
     "@graphql-codegen/typescript": "1.5.0",
     "@graphql-codegen/typescript-operations": "1.5.0",
-    "@storybook/addon-actions": "5.1.10",
+    "@storybook/addon-actions": "5.1.11",
     "@storybook/addon-info": "5.1.10",
     "@storybook/addon-knobs": "5.1.10",
     "@storybook/addon-links": "5.1.10",
