@@ -50,5 +50,12 @@
         "typescript",
         "typescriptreact"
     ],
-    "editor.wordWrap": "on"
+    "editor.wordWrap": "on",
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/node_modules/*/**": true,
+        "**/.cache": true,
+        "**/.next": true,
+    }
 }

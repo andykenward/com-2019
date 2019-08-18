@@ -20,18 +20,6 @@ export const Projects: React.FC = () => {
 
   return (
     <div>
-      {(projects || []).map(project => (project ? project.title : null))}
-    </div>
-  )
-}
-
-export const ProjectsMenu: React.FC = () => {
-  const { data } = useProjectsNavQuery()
-
-  const projects = data ? data.projects : []
-
-  return (
-    <>
       <nav>
         {(projects || []).map(project =>
           project ? (
@@ -46,7 +34,17 @@ export const ProjectsMenu: React.FC = () => {
           ) : null
         )}
       </nav>
+    </div>
+  )
+}
 
+export const ProjectsMenu: React.FC = () => {
+  const { data } = useProjectsNavQuery()
+
+  const projects = data ? data.projects : []
+
+  return (
+    <>
       {(projects || []).map(project =>
         project ? <ProjectItem key={project.id} {...project} /> : null
       )}

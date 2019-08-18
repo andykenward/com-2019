@@ -1,15 +1,18 @@
+import css from "@emotion/css"
+import { isEmpty } from "ramda"
 import React from "react"
 import {
   ProjectNavItemFragment,
   useProjectQuery,
 } from "../../generated/graphql"
+import { Body, BodyBold, HeadingFour, HeadingThree } from "../typography"
 
 export const Project: React.FC<{ slug: string }> = ({ slug }) => {
   const { loading, error, data, networkStatus } = useProjectQuery({
     variables: { slug },
   })
   console.log("- networkStatus", networkStatus)
-  console.log("data", data)
+  console.log("data", isEmpty(data))
   if (error) {
     return <div>error</div>
   }
@@ -18,7 +21,7 @@ export const Project: React.FC<{ slug: string }> = ({ slug }) => {
   //   return <div>loading</div>
   // }
 
-  if (!data) return null
+  if (!data || isEmpty(data)) return null
 
   const { project } = data
 
@@ -40,12 +43,19 @@ export const ProjectItem: React.FC<Item> = ({
 }) => (
   <article>
     {(clients || []).map(client => (
-      <strong key={client.id}>{client.title}</strong>
+      <BodyBold
+        key={client.id}
+        css={css`
+          text-transform: uppercase;
+        `}
+      >
+        {client.title}
+      </BodyBold>
     ))}
 
-    <h3>{title}</h3>
-    <p>{description}</p>
-    <h4>{role}</h4>
+    <HeadingThree mb={!description ? 8 : undefined}>{title}</HeadingThree>
+    <Body mb={8}>{description}</Body>
+    <HeadingFour mb={!studio ? 8 : undefined}>{role}</HeadingFour>
     {studio && (
       <a rel="noopener noreferrer" target="_blank" href={studio.url as string}>
         {studio.title}

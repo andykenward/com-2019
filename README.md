@@ -2,7 +2,7 @@
 
 - npm run build
 - npm run export
-- npx serve -s out -l 4000
+- cd out && npx serve -p 3000
 
 
 ## Environment Variables
