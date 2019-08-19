@@ -1,25 +1,23 @@
 import css from "@emotion/css"
 import { isEmpty } from "ramda"
-import React from "react"
 import {
   ProjectNavItemFragment,
   useProjectQuery,
 } from "../../generated/graphql"
+import { Box } from "../box"
+import { ButtonExternal } from "../button"
+import { LinkExternal } from "../link"
+import { Tags } from "../tags"
 import { Body, BodyBold, HeadingFour, HeadingThree } from "../typography"
 
 export const Project: React.FC<{ slug: string }> = ({ slug }) => {
   const { loading, error, data, networkStatus } = useProjectQuery({
     variables: { slug },
   })
-  console.log("- networkStatus", networkStatus)
-  console.log("data", isEmpty(data))
+
   if (error) {
     return <div>error</div>
   }
-
-  // if (loading) {
-  //   return <div>loading</div>
-  // }
 
   if (!data || isEmpty(data)) return null
 
@@ -56,25 +54,20 @@ export const ProjectItem: React.FC<Item> = ({
     <HeadingThree mb={!description ? 8 : undefined}>{title}</HeadingThree>
     <Body mb={8}>{description}</Body>
     <HeadingFour mb={!studio ? 8 : undefined}>{role}</HeadingFour>
-    {studio && (
-      <a rel="noopener noreferrer" target="_blank" href={studio.url as string}>
+    {studio && studio.url && (
+      <LinkExternal mb={8} href={studio.url}>
         {studio.title}
-      </a>
+      </LinkExternal>
     )}
-    <ul>
-      {(tags || []).map(tag => (
-        <li key={tag.id}>{tag.title}</li>
-      ))}
-    </ul>
-    {url && (
-      <a rel="noopener noreferrer" target="_blank" href={url}>
-        Site
-      </a>
-    )}
-    {urlCaseStudy && (
-      <a rel="noopener noreferrer" target="_blank" href={urlCaseStudy}>
-        Case Study
-      </a>
+    {tags && <Tags data={tags} />}
+
+    {(url || urlCaseStudy) && (
+      <Box>
+        {url && <ButtonExternal href={url}>Site</ButtonExternal>}
+        {urlCaseStudy && (
+          <ButtonExternal href={urlCaseStudy}>Case Study</ButtonExternal>
+        )}
+      </Box>
     )}
   </article>
 )

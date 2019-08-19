@@ -1,5 +1,4 @@
 import Link from "next/link"
-import React from "react"
 import { useProjectsNavQuery, useProjectsQuery } from "../../generated/graphql"
 import { ProjectItem } from "../project"
 

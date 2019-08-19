@@ -1,12 +1,5 @@
-import {
-  CSSObject,
-  InterpolationWithTheme,
-  SerializedStyles,
-} from "@emotion/core"
 import styled from "@emotion/styled"
 import {
-  colorStyle,
-  ColorStyleProps,
   FontSizeProps,
   gridColumn,
   GridColumnProps,
@@ -14,36 +7,38 @@ import {
   SpaceProps,
   TypographyProps,
 } from "styled-system"
-import { convertToRem, TextTransform, theme, typography } from "../../lib/theme"
+import {
+  colors,
+  ColorsProps,
+  convertToRem,
+  StyledProps,
+  TextTransformProps,
+  typography,
+} from "../../lib/styled-system"
+import { theme } from "../../lib/theme"
+import { filterProps } from "../../lib/utils"
 
-export interface StyledProps {
-  as?: keyof JSX.IntrinsicElements | React.ComponentType<any>
-  css?: CSSObject | SerializedStyles | InterpolationWithTheme<any>
-}
-const Text = styled("p")<
+const Text = styled("p", { shouldForwardProp: filterProps })<
   StyledProps &
     TypographyProps &
-    ColorStyleProps &
+    ColorsProps &
     SpaceProps &
     GridColumnProps &
-    TextTransform
+    TextTransformProps
 >`
   ${typography}
-  ${colorStyle}
+  ${colors}
   ${space}
   ${gridColumn}
   word-break: break-word;
   hyphens: auto;
 `
 
-interface Props
-  extends StyledProps,
-    SpaceProps,
-    ColorStyleProps,
-    GridColumnProps {}
+interface Props extends StyledProps, SpaceProps, ColorsProps, GridColumnProps {}
+
 export const Body: React.FC<Props> = ({ children, ...props }) => (
   <Text
-    color="black"
+    c="black"
     fontFamily={theme.fonts.regular}
     fontWeight={theme.fontWeights.regular}
     fontSize={16}
@@ -58,7 +53,8 @@ export const Body: React.FC<Props> = ({ children, ...props }) => (
 export const BodyBold: React.FC<Props> = ({ children, ...props }) => (
   <Text
     as="strong"
-    color="black"
+    c="black"
+    color="yellow"
     fontFamily={theme.fonts.regular}
     fontWeight={theme.fontWeights.medium}
     fontSize={16}
@@ -74,7 +70,7 @@ export const BodyBold: React.FC<Props> = ({ children, ...props }) => (
 export const HeadingFour: React.FC<Props> = ({ children, ...props }) => (
   <Text
     as="h4"
-    color="black"
+    c="black"
     fontFamily={theme.fonts.regular}
     fontWeight={theme.fontWeights.regular}
     fontSize={20}
@@ -92,7 +88,7 @@ export const HeadingThree: React.FC<Props & FontSizeProps> = ({
 }) => (
   <Text
     as="h3"
-    color="black"
+    c="black"
     fontFamily={theme.fonts.regular}
     fontWeight={theme.fontWeights.regular}
     fontSize={[28, 38]}
@@ -109,7 +105,7 @@ export const HeadingThree: React.FC<Props & FontSizeProps> = ({
 export const HeadingTwo: React.FC<Props> = ({ children, ...props }) => (
   <Text
     as="h2"
-    color="black"
+    c="black"
     fontFamily={theme.fonts.regular}
     fontWeight={theme.fontWeights.regular}
     fontSize={[36, 46]}
@@ -130,7 +126,7 @@ export const HeadingOne: React.FC<HeadingOneProps> = ({
 }) => (
   <Text
     as="h1"
-    color="black"
+    c="black"
     fontFamily={theme.fonts.brand}
     fontWeight={theme.fontWeights.light}
     fontSize={[44, 54]}
@@ -146,7 +142,7 @@ export const HeadingOne: React.FC<HeadingOneProps> = ({
 export const Label: React.FC<Props> = ({ children, ...props }) => (
   <Text
     as="span"
-    color="black"
+    c="black"
     fontFamily={theme.fonts.regular}
     fontWeight={theme.fontWeights.medium}
     fontSize={14}

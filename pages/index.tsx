@@ -9,7 +9,6 @@ const Home: NextPage = () => {
   return (
     <>
       <Head />
-      <h1>Hello world! change</h1>
       <ProjectsMenu />
     </>
   )

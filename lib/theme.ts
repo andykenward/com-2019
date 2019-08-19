@@ -1,52 +1,6 @@
-import * as CSS from "csstype"
-import { is } from "ramda"
-import {
-  compose,
-  fontFamily,
-  fontStyle,
-  fontWeight,
-  letterSpacing,
-  lineHeight,
-  style,
-  system,
-  textAlign,
-} from "styled-system"
-
-const fontStack = (fonts: string[]): string =>
-  fonts.map(font => (font.includes(" ") ? `"${font}"` : font)).join(", ")
-
-export const convertToRem = (n: number | string): string | number =>
-  is(Number, n) ? `${(n as number) / 16}rem` : n
+import { convertToRem, fontStack } from "./styled-system"
 
 const fontSizes = [14, 16, 20, 28, 36, 38, 40, 44, 46, 48, 50, 54, 64, 80]
-
-const textTransform = style({
-  prop: "textTransform",
-  cssProperty: "textTransform",
-})
-
-export interface TextTransform {
-  textTransform?: CSS.TextTransformProperty
-}
-
-const customFontSize = system({
-  fontSize: {
-    property: "fontSize",
-    scale: "fontSizes",
-    transform: convertToRem,
-  },
-  ...textTransform,
-})
-
-export const typography = compose(
-  fontFamily,
-  customFontSize,
-  fontWeight,
-  lineHeight,
-  letterSpacing,
-  textAlign,
-  fontStyle
-)
 
 const fonts = {
   regular: fontStack([
@@ -93,10 +47,23 @@ const space = {
   128: convertToRem(128),
 } as const
 
+const colors = {
+  primary: "rgb(216,234,204)",
+  black: "rgb(36, 28, 21)",
+  oyster: "rgb(64,59,59)",
+  white: "#fff",
+  green: "#007c89",
+  squash: "rgb(251,238,202)",
+  cucumber: "rgb(216,234,204)",
+  radish: "rgb(249,224,250)",
+  visited: "#808080",
+} as const
+
 export const theme = {
+  colors: colors,
   fonts: fonts,
-  fontWeights: fontWeights,
   fontSizes: fontSizes,
+  fontWeights: fontWeights,
   lineHeights: lineHeights,
   space: space,
 } as const
