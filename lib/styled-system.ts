@@ -12,7 +12,6 @@ import {
   fontWeight,
   letterSpacing,
   lineHeight,
-  ResponsiveValue,
   style,
   textAlign,
 } from "styled-system"
@@ -29,14 +28,6 @@ export interface TextTransformProps {
   textTransform?: CSS.TextTransformProperty
 }
 
-interface BackgroundColorProps {
-  readonly bg?: ResponsiveValue<CSS.BackgroundColorProperty>
-  readonly backgroundColor?: ResponsiveValue<CSS.BackgroundColorProperty>
-}
-
-export interface ColorsProps extends BackgroundColorProps {
-  readonly c?: ResponsiveValue<CSS.ColorProperty>
-}
 /**
  *
  * UTILS
@@ -56,15 +47,6 @@ const textTransform = style({
   prop: "textTransform",
   cssProperty: "textTransform",
 })
-const textColor = style({
-  prop: "c",
-  cssProperty: "color",
-})
-const backgroundColor = style({
-  prop: "backgroundColor",
-  cssProperty: "background-color",
-  alias: "bc",
-})
 
 export const fontSize = style({
   prop: "fontSize",
@@ -72,28 +54,10 @@ export const fontSize = style({
   transformValue: convertToRem,
 })
 
-// export const fontSize = system({
-//   fontSize: {
-//     property: "fontSize",
-//     scale: "fontSizes",
-//     transform: convertToRem,
-//   },
-//   ...textTransform,
-// })
-
-// const sColors = system({
-//   prop: "c",
-//   cssProperty: "color",
-// })
-
 /**
  * COMPOSED STYLES
  */
-export const colors = compose(
-  //@ts-ignore
-  textColor,
-  backgroundColor
-)
+
 export const typography = compose(
   fontFamily,
   //@ts-ignore

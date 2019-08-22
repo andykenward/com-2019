@@ -12,19 +12,10 @@ export const QUERY_PROJECTS: DocumentNode = gql`
 `
 
 gql`
-  fragment Tags on Tag {
-    id
-    title
-    url
-  }
-`
-
-gql`
   fragment ProjectNavItem on Project {
     id
     clients {
-      id
-      title
+      ...Clients
     }
     slug
     title

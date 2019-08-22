@@ -27,7 +27,7 @@ export const Tags: React.FC<Props> = ({ data }) =>
         const url = tag.url
         return title != null ? (
           <Body
-            c="oyster"
+            color="oyster"
             css={css`
               :last-child:after {
                 display: none;

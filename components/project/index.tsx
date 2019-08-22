@@ -1,4 +1,3 @@
-import css from "@emotion/css"
 import { isEmpty } from "ramda"
 import {
   ProjectNavItemFragment,
@@ -6,9 +5,10 @@ import {
 } from "../../generated/graphql"
 import { Box } from "../box"
 import { ButtonExternal } from "../button"
+import { Clients } from "../clients"
 import { LinkExternal } from "../link"
 import { Tags } from "../tags"
-import { Body, BodyBold, HeadingFour, HeadingThree } from "../typography"
+import { Body, HeadingFour, HeadingThree } from "../typography"
 
 export const Project: React.FC<{ slug: string }> = ({ slug }) => {
   const { loading, error, data, networkStatus } = useProjectQuery({
@@ -39,18 +39,8 @@ export const ProjectItem: React.FC<Item> = ({
   urlCaseStudy,
   studio,
 }) => (
-  <article>
-    {(clients || []).map(client => (
-      <BodyBold
-        key={client.id}
-        css={css`
-          text-transform: uppercase;
-        `}
-      >
-        {client.title}
-      </BodyBold>
-    ))}
-
+  <Box as="article">
+    <Clients data={clients} />
     <HeadingThree mb={!description ? 8 : undefined}>{title}</HeadingThree>
     <Body mb={8}>{description}</Body>
     <HeadingFour mb={!studio ? 8 : undefined}>{role}</HeadingFour>
@@ -69,5 +59,5 @@ export const ProjectItem: React.FC<Item> = ({
         )}
       </Box>
     )}
-  </article>
+  </Box>
 )
