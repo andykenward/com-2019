@@ -1,6 +1,6 @@
 overwrite: true
 schema: ${SCHEMA_PATH}
-documents: './components/**/*.{ts,tsx}'
+documents: './components/**/*.{ts}'
 generates:
   generated/graphql.tsx:
     plugins:
