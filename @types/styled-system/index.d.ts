@@ -253,7 +253,7 @@ declare module "styled-system" {
    * Color
    */
 
-  export interface TextColorProps {
+  export interface TextColorProps<TLength = TLengthStyledSystem> {
     /**
      * The color utility parses a component's `color` and `bg` props and converts them into CSS declarations.
      * By default the raw value of the prop is returned.
@@ -263,7 +263,7 @@ declare module "styled-system" {
      *
      * [MDN reference](https://developer.mozilla.org/en-US/docs/Web/CSS/color)
      */
-    color?: ResponsiveValue<CSS.ColorProperty>
+    color?: ResponsiveValue<CSS.ColorProperty<TLength>>
   }
 
   export const textColor: styleFn
