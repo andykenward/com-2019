@@ -2,7 +2,9 @@ import { ApolloProvider } from "@apollo/react-hooks"
 import { ThemeProvider } from "emotion-theming"
 import { AppPropsType } from "next-server/dist/lib/utils"
 import { AppInitialProps, Container } from "next/app"
+import Router from "next/router"
 import * as React from "react"
+import { pageview } from "../lib/gtag"
 import { theme } from "../lib/theme"
 import withApolloClient, { ApolloProps } from "../lib/with-apollo-client"
 
@@ -25,3 +27,5 @@ class MyApp extends React.Component<
 }
 
 export default withApolloClient(MyApp)
+
+Router.events.on("routeChangeComplete", url => pageview(url))

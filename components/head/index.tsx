@@ -1,6 +1,16 @@
 import { css, Global } from "@emotion/core"
 import emotionNormalize from "emotion-normalize"
-export const Head: React.FC = () => (
+import NextHead from "next/head"
+
+interface Props {
+  title?: string
+  description?: string
+}
+
+export const Head: React.FC<Props> = ({
+  title = "Andy Kenward - Senior Front-End Engineer",
+  description = "Andy Kenward, Senior Front-End Engineer in London, England",
+}) => (
   <>
     <Global
       styles={css`
@@ -23,5 +33,15 @@ export const Head: React.FC = () => (
         }
       `}
     />
+    <NextHead>
+      <title>{title}</title>
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      ></meta>
+      <meta name="description" content={description} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+    </NextHead>
   </>
 )
