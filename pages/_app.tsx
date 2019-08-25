@@ -4,11 +4,11 @@ import { AppPropsType } from "next-server/dist/lib/utils"
 import { AppInitialProps, Container } from "next/app"
 import * as React from "react"
 import { theme } from "../lib/theme"
-import withApolloClient, { IApolloProps } from "../lib/with-apollo-client"
+import withApolloClient, { ApolloProps } from "../lib/with-apollo-client"
 
 export const config = { amp: `hybrid` }
 class MyApp extends React.Component<
-  IApolloProps & AppInitialProps & AppPropsType
+  ApolloProps & AppInitialProps & AppPropsType
 > {
   render() {
     const { Component, pageProps, apolloClient, ...others } = this.props

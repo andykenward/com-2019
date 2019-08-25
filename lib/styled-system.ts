@@ -20,8 +20,8 @@ import {
  * INTERFACES
  */
 export interface StyledProps {
-  as?: keyof JSX.IntrinsicElements | React.ComponentType<any>
-  css?: CSSObject | SerializedStyles | InterpolationWithTheme<any>
+  as?: keyof JSX.IntrinsicElements | React.ComponentType<any> // eslint-disable-line
+  css?: CSSObject | SerializedStyles | InterpolationWithTheme<any> // eslint-disable-line @typescript-eslint/no-explicit-any
 }
 
 export interface TextTransformProps {
@@ -60,6 +60,7 @@ export const fontSize = style({
 
 export const typography = compose(
   fontFamily,
+  // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
   //@ts-ignore
   fontSize,
   fontWeight,

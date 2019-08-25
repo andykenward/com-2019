@@ -10,7 +10,7 @@ import Head from "next/head"
 import React from "react"
 import initApollo from "./init-apollo"
 
-export interface IApolloProps {
+export interface ApolloProps {
   apolloState?: NormalizedCacheObject
   apolloClient: ApolloClient<NormalizedCacheObject>
 }
@@ -21,11 +21,11 @@ export default (
   MyApp: NextComponentType<
     AppContextType,
     AppInitialProps,
-    AppPropsType & IApolloProps
+    AppPropsType & ApolloProps
   >
 ) => {
   return class Apollo extends React.Component<
-    IApolloProps & AppInitialProps & AppProps
+    ApolloProps & AppInitialProps & AppProps
   > {
     public apolloClient: ApolloClient<NormalizedCacheObject>
     static displayName = "withApollo(App)"
@@ -44,6 +44,7 @@ export default (
         try {
           // Run all GraphQL queries
           await getDataFromTree(
+            // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
             // @ts-ignore
             <AppTree {...appProps} apolloClient={apollo} />
           )
@@ -68,7 +69,7 @@ export default (
       }
     }
 
-    constructor(props: IApolloProps & AppInitialProps & AppProps) {
+    constructor(props: ApolloProps & AppInitialProps & AppProps) {
       super(props)
       this.apolloClient = initApollo(props.apolloState)
     }

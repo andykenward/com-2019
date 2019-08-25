@@ -11,7 +11,7 @@ import { Tags } from "../tags"
 import { Body, HeadingFour, HeadingThree } from "../typography"
 
 export const Project: React.FC<{ slug: string }> = ({ slug }) => {
-  const { loading, error, data, networkStatus } = useProjectQuery({
+  const { error, data } = useProjectQuery({
     variables: { slug },
   })
 

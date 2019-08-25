@@ -21,11 +21,15 @@ export const Header: React.FC = () => {
         </HeadingThree>
       )}
       <Box>
-        {(links || []).map(item => (
-          <ButtonExternal key={item.id} href={item.url!}>
-            {item.title}
-          </ButtonExternal>
-        ))}
+        {(links || []).map(
+          item =>
+            item &&
+            item.url && (
+              <ButtonExternal key={item.id} href={item.url}>
+                {item.title}
+              </ButtonExternal>
+            )
+        )}
       </Box>
     </ColumnsCenter>
   )
