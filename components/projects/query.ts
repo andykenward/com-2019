@@ -3,7 +3,7 @@ import gql from "graphql-tag"
 
 export const QUERY_PROJECTS: DocumentNode = gql`
   query Projects {
-    projects {
+    projects(orderBy: date_DESC) {
       id
       slug
       title
@@ -36,7 +36,7 @@ gql`
 
 export const QUERY_PROJECTS_NAV: DocumentNode = gql`
   query ProjectsNav {
-    projects {
+    projects(orderBy: date_DESC) {
       ...ProjectNavItem
     }
   }
