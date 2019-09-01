@@ -21,7 +21,8 @@
     "format": "prettier --write '**/*.{css,js,jsx,ts,tsx}'",
     "type-check:watch": "npm run type-check -- --watch",
     "type-check": "tsc --noEmit",
-    "lint": "eslint --ext .js,.ts,.tsx .; exit 0",
+    "lint": "eslint --ext .js,.ts,.tsx .",
+    "eslint:fix": "npm run lint -- --fix",
     "test": "jest"
   },
   "repository": {
@@ -75,9 +76,11 @@
     "eslint": "6.2.2",
     "eslint-config-prettier": "6.1.0",
     "eslint-plugin-emotion": "10.0.14",
+    "eslint-plugin-import": "2.18.2",
     "eslint-plugin-jest": "22.16.0",
     "eslint-plugin-prettier": "3.1.0",
     "eslint-plugin-react": "7.14.3",
+    "eslint-plugin-simple-import-sort": "4.0.0",
     "jest": "24.9.0",
     "jest-emotion": "10.0.17",
     "now": "16.1.2",
