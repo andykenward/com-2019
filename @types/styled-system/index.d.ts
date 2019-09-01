@@ -19,9 +19,8 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 2.8
 
-
 declare module "styled-system" {
-  import * as CSS from "csstype";
+  import * as CSS from "csstype"
   export function get(obj: any, ...paths: Array<string | number>): any
 
   export type ObjectOrArray<T> = T[] | { [K: string]: T | ObjectOrArray<T> }
@@ -77,7 +76,10 @@ declare module "styled-system" {
 
   export interface Config {
     /** Property name exposed for use in components */
-    [customStyleName: string]: ConfigStyle | LowLevelStyleFunctionArguments | boolean
+    [customStyleName: string]:
+      | ConfigStyle
+      | LowLevelStyleFunctionArguments
+      | boolean
   }
 
   export function compose(...parsers: styleFn[]): styleFn

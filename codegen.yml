@@ -1,18 +1,24 @@
 overwrite: true
 schema: ${SCHEMA_PATH}
-documents: './components/**/*.{ts}'
+documents: "./components/**/*.{ts}"
 generates:
   generated/graphql.tsx:
+    hooks:
+      afterOneFileWrite:
+        - prettier --write
     plugins:
-      - 'typescript'
-      - 'typescript-operations'
-      - 'typescript-react-apollo'
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-react-apollo"
     config:
       withHooks: true
       withHOC: false
       withComponent: false
-      hooksImportFrom: '@apollo/react-hooks'
+      hooksImportFrom: "@apollo/react-hooks"
   generated/introspection-result.ts:
+    hooks:
+      afterOneFileWrite:
+        - prettier --write
     plugins:
       - fragment-matcher
 config:
