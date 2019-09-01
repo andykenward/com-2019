@@ -4,3 +4,6 @@ out
 package.json
 package-lock.json
 /generated
+coverage
+.github
+*.snap
