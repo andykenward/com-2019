@@ -1,4 +1,5 @@
 import React from "react"
+
 import { Box, BoxProps } from "../box"
 
 type ColumnsCenterProps = Omit<BoxProps, "display" | "gridTemplateColumns">

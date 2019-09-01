@@ -1,4 +1,5 @@
 import Link from "next/link"
+
 import { useProjectsNavQuery, useProjectsQuery } from "../../generated/graphql"
 import { Box } from "../box"
 import { ColumnsCenter } from "../columns"

@@ -1,5 +1,6 @@
 import { NextPage } from "next"
 import React from "react"
+
 import { Box } from "../components/box"
 import { Footer } from "../components/footer"
 import { Head } from "../components/head"

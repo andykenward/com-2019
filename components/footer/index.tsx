@@ -1,4 +1,5 @@
 import css from "@emotion/css"
+
 import { useFooterQuery } from "../../generated/graphql"
 import { Box } from "../box"
 import { ColumnsCenter } from "../columns"
