@@ -1,0 +1,26 @@
+name: Check Pull Request
+on: [pull_request]
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Setup Node 10.16.x
+      uses: actions/setup-node@v1
+      with:
+        version: "10.16.x"
+    - name: install
+      run: npm ci
+    - name: codegen
+      run: npm run codegen
+      env:
+        SCHEMA_PATH: ${{ secrets.SCHEMA_PATH }}
+    - name: typecheck
+      run: npm run type-check
+      env:
+        SCHEMA_PATH: ${{ secrets.SCHEMA_PATH }}
+    - name: lint
+      run: npm run lint
+      env:
+        SCHEMA_PATH: ${{ secrets.SCHEMA_PATH }}
