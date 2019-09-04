@@ -46,7 +46,7 @@ export const Body: React.FC<Props> = ({ children, ...props }) => (
     color="black"
     fontFamily={theme.fonts.regular}
     fontWeight={theme.fontWeights.regular}
-    fontSize={16}
+    fontSize={20}
     lineHeight={theme.lineHeights.default}
     m={0}
     {...props}
