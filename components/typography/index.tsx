@@ -77,7 +77,7 @@ export const HeadingFour: React.FC<Props> = ({ children, ...props }) => (
     color="black"
     fontFamily={theme.fonts.regular}
     fontWeight={theme.fontWeights.regular}
-    fontSize={20}
+    fontSize={28}
     lineHeight={theme.lineHeights.condensed}
     m={0}
     {...props}
