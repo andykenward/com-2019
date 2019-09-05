@@ -1,7 +1,7 @@
 import { isEmpty } from "ramda"
 
 import {
-  ProjectNavItemFragment,
+  FragmentProjectNavFragment,
   useProjectQuery,
 } from "../../generated/graphql"
 import { Box } from "../box"
@@ -29,7 +29,7 @@ export const Project: React.FC<{ slug: string }> = ({ slug }) => {
   return <ProjectItem {...project} />
 }
 
-type Item = ProjectNavItemFragment
+type Item = FragmentProjectNavFragment
 export const ProjectItem: React.FC<Item> = ({
   clients,
   title,

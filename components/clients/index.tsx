@@ -1,8 +1,8 @@
-import { ClientsFragment, Maybe } from "../../generated/graphql"
+import { FragmentClientFragment, Maybe } from "../../generated/graphql"
 import { BodyBold } from "../typography"
 
 interface Props {
-  data: Maybe<Array<{ __typename?: "Client" } & ClientsFragment>>
+  data: Maybe<Array<{ __typename?: "Client" } & FragmentClientFragment>>
 }
 
 export const Clients: React.FC<Props> = ({ data }) => (

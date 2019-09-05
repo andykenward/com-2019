@@ -1,5 +1,8 @@
-import { DocumentNode } from "graphql"
+import { DocumentNode, FragmentSpreadNode } from "graphql"
 import gql from "graphql-tag"
+
+import { FRAGMENT_CLIENT } from "../clients/query"
+import { FRAGMENT_TAG } from "../tags/query"
 
 export const QUERY_PROJECTS: DocumentNode = gql`
   query Projects {
@@ -11,11 +14,11 @@ export const QUERY_PROJECTS: DocumentNode = gql`
   }
 `
 
-gql`
-  fragment ProjectNavItem on Project {
+export const FRAGMENT_PROJECTNAV: FragmentSpreadNode = gql`
+  fragment FragmentProjectNav on Project {
     id
     clients {
-      ...Clients
+      ...FragmentClient
     }
     slug
     title
@@ -27,17 +30,19 @@ gql`
       url
     }
     tags {
-      ...Tags
+      ...FragmentTag
     }
     urlCaseStudy
     url
   }
+  ${FRAGMENT_CLIENT}
+  ${FRAGMENT_TAG}
 `
 
 export const QUERY_PROJECTS_NAV: DocumentNode = gql`
   query ProjectsNav {
     projects(orderBy: date_DESC) {
-      ...ProjectNavItem
+      ...FragmentProjectNav
     }
   }
 `

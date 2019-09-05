@@ -1,24 +1,26 @@
-import { DocumentNode } from "graphql"
+import { DocumentNode, FragmentSpreadNode } from "graphql"
 import gql from "graphql-tag"
 
-// cjzkx8reiebu10941932j2b3x
+import { FRAGMENT_LINK } from "../link/query"
 
-gql`
-  fragment Me on Me {
+export const FRAGMENT_ME: FragmentSpreadNode = gql`
+  fragment FragmentMe on Me {
     id
     name
     role
     update
     links {
-      ...Link
+      ...FragmentLink
     }
   }
+  ${FRAGMENT_LINK}
 `
 
 export const QUERY_ME: DocumentNode = gql`
   query Me {
     me(where: { id: "cjzkx8reiebu10941932j2b3x" }) {
-      ...Me
+      ...FragmentMe
     }
   }
+  ${FRAGMENT_ME}
 `
