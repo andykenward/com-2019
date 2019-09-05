@@ -10,7 +10,9 @@ node_modules
 /out
 
 # graphql
-/generated
+/generated/graphql.tsx
+/generated/introspection-result.ts
+
 .DS_Store
 
 .cache
