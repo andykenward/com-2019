@@ -75,6 +75,7 @@
     "@typescript-eslint/parser": "2.0.0",
     "apollo": "2.18.0",
     "babel-jest": "24.9.0",
+    "babel-plugin-react-remove-properties": "0.3.0",
     "dotenv": "8.1.0",
     "eslint": "6.2.2",
     "eslint-config-prettier": "6.1.0",

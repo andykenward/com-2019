@@ -28,8 +28,17 @@ export const Footer: React.FC = () => {
           return (
             item.title &&
             item.url && (
-              <Box as="li" m={0} p={0} display="list-item" key={item.id}>
-                <LinkExternal href={item.url}>{item.title}</LinkExternal>
+              <Box
+                data-testid="footer-item"
+                as="li"
+                m={0}
+                p={0}
+                display="list-item"
+                key={item.id}
+              >
+                <LinkExternal data-testid="footer-item-a" href={item.url}>
+                  {item.title}
+                </LinkExternal>
               </Box>
             )
           )

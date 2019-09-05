@@ -15,7 +15,7 @@ module.exports = {
   // cacheDirectory: "/private/var/folders/3k/9vswzxld5gd1b17hbl4x_gh40000gn/T/jest_dx",
 
   // Automatically clear mock calls and instances between every test
-  clearMocks: true,
+  // clearMocks: true,
 
   // Indicates whether the coverage information should be collected while executing the test
   // collectCoverage: false,
@@ -152,6 +152,7 @@ module.exports = {
     "<rootDir>/node_modules/",
     "<rootDir>/out/",
     "<rootDir>/coverage/",
+    "__fixtures",
   ],
 
   // The regexp pattern or array of patterns that Jest uses to detect test files

@@ -8,5 +8,12 @@
         "labelFormat": "[local]"
       }
     ]
-  ]
+  ],
+  "env": {
+    "production": {
+      "plugins": [
+        ["react-remove-properties", { "properties": ["data-testid"] }]
+      ]
+    }
+  }
 }
