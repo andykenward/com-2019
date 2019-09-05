@@ -58,6 +58,7 @@
     "styled-system": "5.1.1"
   },
   "devDependencies": {
+    "@apollo/react-testing": "3.0.1",
     "@graphql-codegen/cli": "1.7.0",
     "@graphql-codegen/fragment-matcher": "1.7.0",
     "@graphql-codegen/introspection": "1.7.0",

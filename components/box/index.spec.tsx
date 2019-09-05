@@ -1,4 +1,4 @@
-import { renderWithTheme } from "../../lib/testing"
+import { renderWithTheme } from "../../lib/test-utils"
 import { Box } from "."
 
 describe("<Box />", () => {

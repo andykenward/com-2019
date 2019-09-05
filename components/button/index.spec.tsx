@@ -1,6 +1,6 @@
 import React from "react"
 
-import { renderWithTheme } from "../../lib/testing"
+import { renderWithTheme } from "../../lib/test-utils"
 import { ButtonExternal } from "."
 
 describe("<ButtonExternal />", () => {
