@@ -23,6 +23,6 @@ jobs:
     - name: test
       run: npm run test
     - name: coverage
-      run:
-        - npm install codecov -g
-        - codecov
+    - run: |
+        npm install codecov -g
+        codecov
