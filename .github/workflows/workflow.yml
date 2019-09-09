@@ -22,3 +22,7 @@ jobs:
       run: npm run lint
     - name: test
       run: npm run test
+    - name: coverage
+      run:
+        - npm install codecov -g
+        - codecov
