@@ -47,6 +47,30 @@ describe("<Footer />", () => {
     })
   })
 
+  it("renders null on error", async () => {
+    const MOCKS: MockedResponse[] = [
+      {
+        request: { query: QUERY_FOOTER },
+        error: new Error("error from server"),
+      },
+    ]
+    let root: RenderResult
+
+    act(() => {
+      root = renderWithApp(<Footer />, MOCKS)
+    })
+
+    await act(async () => {
+      await wait(0)
+    })
+
+    act(() => {
+      const { container } = root
+      expect(container.firstChild).toBeNull()
+      expect(container.firstChild).toMatchSnapshot()
+    })
+  })
+
   it("renders with 5 items", async () => {
     let root: RenderResult
     await act(async () => {

@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<Footer /> renders null on error 1`] = `null`;
+
 exports[`<Footer /> renders null on loading 1`] = `null`;
 
 exports[`<Footer /> renders with 5 items 1`] = `
