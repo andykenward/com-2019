@@ -24,7 +24,7 @@
     "lint": "eslint --ext .js,.ts,.tsx .",
     "eslint:fix": "npm run lint -- --fix",
     "test": "jest",
-    "schema": "apollo client:download-schema --config=./apollo.config.js generated/schema.json"
+    "schema": "apollo service:download --config=./apollo.config.prod.js generated/schema.json"
   },
   "repository": {
     "type": "git",
