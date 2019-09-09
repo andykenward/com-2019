@@ -5,7 +5,8 @@ module.exports = {
     name: "andykenward.com",
     includes: ["./components/**/*.ts"],
     service: {
-      localSchemaFile: process.env.SCHEMA_LOCAL,
+      name: "graphcms",
+      url: process.env.ENDPOINT,
     },
   },
 }

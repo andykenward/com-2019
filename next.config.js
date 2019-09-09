@@ -18,7 +18,7 @@ module.exports = {
           }
         }
       `
-      const res = await fetch(process.env.SCHEMA_PATH, {
+      const res = await fetch(process.env.ENDPOINT, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -40,6 +40,6 @@ module.exports = {
     }
   },
   env: {
-    SCHEMA_PATH: process.env.SCHEMA_PATH,
+    ENDPOINT: process.env.ENDPOINT,
   },
 }

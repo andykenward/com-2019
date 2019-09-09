@@ -16,8 +16,7 @@ function create(initialState: NormalizedCacheObject | undefined) {
     connectToDevTools: isBrowser,
     ssrMode: !isBrowser, // Disables forceFetch on the server (so queries are only run once)
     link: new HttpLink({
-      uri:
-        "https://api-euwest.graphcms.com/v1/cjywu05hg0ysg01dj8nkna8ma/master", // Server URL (must be absolute)
+      uri: `${process.env.ENDPOINT}`, // Server URL (must be absolute)
       credentials: "same-origin", // Additional fetch() options like `credentials` or `headers`
       // Use fetch() polyfill on the server
       fetch: !isBrowser ? isoFetch : fetch,
