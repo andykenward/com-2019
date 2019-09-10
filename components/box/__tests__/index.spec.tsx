@@ -1,5 +1,5 @@
-import { renderWithTheme } from "../../lib/test-utils"
-import { Box } from "."
+import { Box } from ".."
+import { renderWithTheme } from "../../../lib/test-utils"
 
 describe("<Box />", () => {
   it("renders correctly", () => {
