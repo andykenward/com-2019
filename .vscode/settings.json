@@ -55,5 +55,6 @@
     "**/.next": true
   },
 
-  "stylelint.enable": false
+  "stylelint.enable": false,
+  "jest.autoEnable": false
 }
