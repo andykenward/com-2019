@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> renders null on error 1`] = `null`;
+
+exports[`<Header /> renders null on loading 1`] = `null`;
