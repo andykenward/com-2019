@@ -1,6 +1,15 @@
-import { MockedProvider, MockedResponse } from "@apollo/react-testing"
+import {
+  MockedProvider,
+  MockedResponse,
+  ResultFunction,
+} from "@apollo/react-testing"
 import { render } from "@testing-library/react"
-import { InMemoryCache, IntrospectionFragmentMatcher } from "apollo-boost"
+import {
+  DocumentNode,
+  FetchResult,
+  InMemoryCache,
+  IntrospectionFragmentMatcher,
+} from "apollo-boost"
 import { ThemeProvider } from "emotion-theming"
 
 import result from "../generated/introspection-result"
@@ -24,3 +33,21 @@ export const renderWithApp = (
     </MockedProvider>
   )
 }
+
+// TODO: fix response typings
+export const getMocks = (
+  query: DocumentNode,
+  response?: unknown,
+  error = false
+): MockedResponse[] => [
+  {
+    request: { query: query },
+    result: response
+      ? ({ data: response } as FetchResult | ResultFunction<FetchResult>)
+      : undefined,
+    error: error ? new Error("error from server") : undefined,
+  },
+]
+
+export const getMocksError = (query: DocumentNode) =>
+  getMocks(query, undefined, true)

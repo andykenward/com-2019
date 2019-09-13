@@ -3,9 +3,13 @@ import { MockedResponse, wait } from "@apollo/react-testing"
 import { act, RenderResult } from "@testing-library/react"
 
 import { Header } from ".."
-import { renderWithApp } from "../../../lib/test-utils"
+import { getMocks, getMocksError, renderWithApp } from "../../../lib/test-utils"
 import { QUERY_ME } from "../query"
-import { HEADER_RESULT_DATA } from "./__fixtures__"
+import {
+  HEADER_RESULT_DATA,
+  HEADER_RESULT_DATA_NO_NAME,
+  HEADER_RESULT_DATA_NO_ROLE,
+} from "./__fixtures__"
 
 describe("<Header />", () => {
   const MOCKS: MockedResponse[] = [
@@ -47,12 +51,7 @@ describe("<Header />", () => {
   })
 
   it("renders null on error", async () => {
-    const MOCKS: MockedResponse[] = [
-      {
-        request: { query: QUERY_ME },
-        error: new Error("error from server"),
-      },
-    ]
+    const MOCKS = getMocksError(QUERY_ME)
     let root: RenderResult
 
     act(() => {
@@ -69,4 +68,56 @@ describe("<Header />", () => {
       expect(container.firstChild).toMatchSnapshot()
     })
   })
+
+  it("renders null on undefined data", async () => {
+    const MOCKS = getMocks(QUERY_ME)
+    let root: RenderResult
+    await act(async () => {
+      root = renderWithApp(<Header />, MOCKS)
+    })
+    await act(async () => {
+      await wait(0)
+    })
+    act(() => {
+      const { container } = root
+      expect(container.firstChild).toBeNull()
+      expect(container.firstChild).toMatchSnapshot()
+    })
+  })
+
+  it("should render when `name` is `null`", async () => {
+    const MOCKS = getMocks(QUERY_ME, HEADER_RESULT_DATA_NO_NAME)
+    let root: RenderResult
+    await act(async () => {
+      root = renderWithApp(<Header />, MOCKS)
+    })
+    await act(async () => {
+      await wait(0)
+    })
+    act(() => {
+      const { container, queryByTestId } = root
+      expect(queryByTestId("name")).toBeNull()
+      expect(container.firstChild).toMatchSnapshot()
+    })
+  })
+
+  it("should render when `role` is `null`", async () => {
+    const MOCKS = getMocks(QUERY_ME, HEADER_RESULT_DATA_NO_ROLE)
+    let root: RenderResult
+    await act(async () => {
+      root = renderWithApp(<Header />, MOCKS)
+    })
+    await act(async () => {
+      await wait(0)
+    })
+    act(() => {
+      const { container, queryByTestId } = root
+      expect(queryByTestId("role")).toBeNull()
+      expect(container.firstChild).toMatchSnapshot()
+    })
+  })
+
+  // it("should render when `update` is `null`", () => {})
+
+  // it("should render when `links` is `null`", () => {})
 })
