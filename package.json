@@ -59,7 +59,7 @@
     "@graphql-codegen/fragment-matcher": "1.6.1",
     "@graphql-codegen/introspection": "1.6.1",
     "@graphql-codegen/typescript": "1.6.1",
-    "@graphql-codegen/typescript-operations": "1.6.1",
+    "@graphql-codegen/typescript-operations": "1.7.0",
     "@graphql-codegen/typescript-react-apollo": "1.6.1",
     "@types/node": "10.14.15",
     "@types/ramda": "0.26.21",
