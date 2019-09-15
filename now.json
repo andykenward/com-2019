@@ -20,7 +20,7 @@
   "routes": [
     {
       "src": "/static/(.*)",
-      "headers": { "cache-control": "s-maxage=604800" },
+      "headers": { "cache-control": "public,max-age=31557600,must-revalidate" },
       "dest": "/static/$1"
     },
     { "handle": "filesystem" },
