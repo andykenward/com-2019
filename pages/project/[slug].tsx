@@ -15,7 +15,7 @@ const Slug: NextPage = () => {
       <Head />
       <ProjectsMenu />
       <h1>{router.query.slug}</h1>
-      <Project slug="inside-abbey-road" />
+      <Project slug={router.query.slug as string} />
     </>
   )
 }
