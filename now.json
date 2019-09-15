@@ -18,6 +18,11 @@
     }
   },
   "routes": [
+    {
+      "src": "/static/(.*)",
+      "headers": { "cache-control": "s-maxage=604800" },
+      "dest": "/static/$1"
+    },
     { "handle": "filesystem" },
     {
       "src": "^/(.*).html",
