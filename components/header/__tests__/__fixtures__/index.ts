@@ -1,7 +1,3 @@
-import { ResultFunction } from "@apollo/react-testing"
-import { FetchResult } from "apollo-link"
-import { omit } from "ramda"
-
 import {
   FragmentMeFragment,
   Maybe,

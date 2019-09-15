@@ -35,7 +35,7 @@ export const renderWithApp = (
 }
 
 // TODO: fix response typings
-export const getMocks = (
+export const getMock = (
   query: DocumentNode,
   response?: unknown,
   error = false
@@ -50,4 +50,4 @@ export const getMocks = (
 ]
 
 export const getMocksError = (query: DocumentNode) =>
-  getMocks(query, undefined, true)
+  getMock(query, undefined, true)
