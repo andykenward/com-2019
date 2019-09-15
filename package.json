@@ -25,7 +25,7 @@
     "eslint:fix": "npm run lint -- --fix",
     "test": "jest",
     "schema": "apollo service:download --config=./apollo.config.prod.js generated/schema.json",
-    "normalizecss": "cp ./node_modules/normalize.css/normalize.css ./static/normalize.css"
+    "normalizecss": "curl https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css  -o ./static/normalize.css"
   },
   "repository": {
     "type": "git",
