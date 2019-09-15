@@ -8,16 +8,10 @@
     "editor.formatOnSave": true
   },
   "[typescript]": {
-    "editor.formatOnSave": true,
-    "editor.codeActionsOnSave": {
-      "source.organizeImports": true
-    }
+    "editor.formatOnSave": true
   },
   "[typescriptreact]": {
-    "editor.formatOnSave": true,
-    "editor.codeActionsOnSave": {
-      "source.organizeImports": true
-    }
+    "editor.formatOnSave": true
   },
 
   "search.exclude": {
@@ -40,22 +34,17 @@
     "**/public": true,
     "**/storybook-static": true
   },
-  "prettier.eslintIntegration": false,
-  "prettier.tslintIntegration": false,
-  //   "eslint.workingDirectories": [
-  //     { "directory": "./components", "changeProcessCWD": true }
-  //   ],
+
   "eslint.codeAction.disableRuleComment": {
     "enable": true,
     "location": "sameLine"
   },
-
   "eslint.autoFixOnSave": true,
   "eslint.validate": [
     "javascript",
     "javascriptreact",
-    "typescript",
-    "typescriptreact"
+    { "language": "typescript", "autoFix": true },
+    { "language": "typescriptreact", "autoFix": true }
   ],
   "editor.wordWrap": "on",
   "files.watcherExclude": {
@@ -64,5 +53,8 @@
     "**/node_modules/*/**": true,
     "**/.cache": true,
     "**/.next": true
-  }
+  },
+
+  "stylelint.enable": false
+  // "jest.autoEnable": false
 }

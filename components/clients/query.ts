@@ -1,7 +1,8 @@
+import { FragmentSpreadNode } from "graphql"
 import gql from "graphql-tag"
 
-gql`
-  fragment Clients on Client {
+export const FRAGMENT_CLIENT: FragmentSpreadNode = gql`
+  fragment FragmentClient on Client {
     id
     title
     url

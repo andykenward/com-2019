@@ -1,5 +1,6 @@
 import css from "@emotion/css"
 import { SpaceProps } from "styled-system"
+
 import { Body } from "../typography"
 
 interface LinkExternalProps extends SpaceProps {

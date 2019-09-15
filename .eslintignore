@@ -2,3 +2,6 @@ generated
 out
 .next
 @types
+coverage
+.github
+*.snap

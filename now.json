@@ -13,10 +13,16 @@
   ],
   "build": {
     "env": {
-      "SCHEMA_PATH": "@andykenward_com_schema_path"
+      "SCHEMA_PATH": "@andykenward_com_schema_path",
+      "ENDPOINT": "@andykenward_com_endpoint"
     }
   },
   "routes": [
+    {
+      "src": "/static/(.*)",
+      "headers": { "cache-control": "s-maxage=604800" },
+      "dest": "/static/$1"
+    },
     { "handle": "filesystem" },
     {
       "src": "^/(.*).html",

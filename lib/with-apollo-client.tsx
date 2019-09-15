@@ -8,6 +8,7 @@ import {
 import { AppContext, AppInitialProps, AppProps } from "next/app"
 import Head from "next/head"
 import React from "react"
+
 import initApollo from "./init-apollo"
 
 export interface ApolloProps {

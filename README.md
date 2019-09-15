@@ -4,7 +4,6 @@
 - npm run export
 - cd out && npx serve -p 3000
 
-
 ## Environment Variables
 
 Don't forget to set these up on the CI if changing environments or API.
@@ -12,7 +11,8 @@ Don't forget to set these up on the CI if changing environments or API.
 **There are defaults used in the codebase if not set in the environment**
 
 ```
-SCHEMA_PATH=https://graphql.endpoint
+ENDPOINT=your-graphql-endpoint-url
+SCHEMA_PATH=path-to-graphql-schema-json-or-graphql
 ```
 
 For `now` deployment you need to add secrets to your account via now-cli.
