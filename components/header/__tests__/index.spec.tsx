@@ -78,6 +78,12 @@ describe("<Header />", () => {
     })
   })
 
+  const TEST_ID_NAME = "name"
+  const TEST_ID_ROLE = "role"
+  const TEST_ID_UPDATE = "update"
+  const TEST_ID_LINKS = "links"
+  const TEST_ID_LINK = "link"
+
   it("should render correctly", async () => {
     let root: RenderResult
     const MOCKS = getMock(QUERY_ME, HEADER_RESULT_DATA)
@@ -88,20 +94,20 @@ describe("<Header />", () => {
       await wait(0)
     })
     act(() => {
-      const { container, getByTestId } = root
-      expect(getByTestId("name").tagName).toEqual("H1")
-      expect(getByTestId("name")).toHaveTextContent("Andy Kenward")
-      expect(getByTestId("role").tagName).toEqual("H2")
-      expect(getByTestId("role")).toHaveTextContent("Senior Front-End Engineer")
-      expect(getByTestId("update").tagName).toEqual("H3")
-      expect(getByTestId("update")).toHaveTextContent("Hire Me")
-      const links = getByTestId("links")
-      expect(links).not.toBeNull()
-      expect(links.getElementsByTagName("a").length).toEqual(1)
-      expect(links.getElementsByTagName("a")[0].getAttribute("href")).toEqual(
-        "/link"
+      const { container, getByTestId, getAllByTestId } = root
+      expect(getByTestId(TEST_ID_NAME).tagName).toEqual("H1")
+      expect(getByTestId(TEST_ID_NAME)).toHaveTextContent("Andy Kenward")
+      expect(getByTestId(TEST_ID_ROLE).tagName).toEqual("H2")
+      expect(getByTestId(TEST_ID_ROLE)).toHaveTextContent(
+        "Senior Front-End Engineer"
       )
-      expect(links.getElementsByTagName("a")[0].textContent).toEqual("Github")
+      expect(getByTestId(TEST_ID_UPDATE).tagName).toEqual("H3")
+      expect(getByTestId(TEST_ID_UPDATE)).toHaveTextContent("Hire Me")
+      const links = getByTestId(TEST_ID_LINKS)
+      expect(links).not.toBeNull()
+      expect(getAllByTestId(TEST_ID_LINK).length).toEqual(1)
+      expect(getByTestId(TEST_ID_LINK).getAttribute("href")).toEqual("/link")
+      expect(getByTestId(TEST_ID_LINK)).toHaveTextContent("Github")
 
       expect(container.firstChild).toMatchSnapshot()
     })
@@ -117,12 +123,14 @@ describe("<Header />", () => {
       await wait(0)
     })
     act(() => {
-      const { container, queryByTestId, getByTestId } = root
-      expect(queryByTestId("name")).toBeNull()
-      expect(getByTestId("role")).toHaveTextContent("Senior Front-End Engineer")
-      expect(getByTestId("update")).toHaveTextContent("Hire Me")
-      expect(getByTestId("links")).not.toBeNull()
-      expect(getByTestId("links").getElementsByTagName("a").length).toEqual(1)
+      const { container, queryByTestId, getByTestId, getAllByTestId } = root
+      expect(queryByTestId(TEST_ID_NAME)).toBeNull()
+      expect(getByTestId(TEST_ID_ROLE)).toHaveTextContent(
+        "Senior Front-End Engineer"
+      )
+      expect(getByTestId(TEST_ID_UPDATE)).toHaveTextContent("Hire Me")
+      expect(getByTestId(TEST_ID_LINKS)).not.toBeNull()
+      expect(getAllByTestId(TEST_ID_LINK).length).toEqual(1)
 
       expect(container.firstChild).toMatchSnapshot()
     })
@@ -138,12 +146,12 @@ describe("<Header />", () => {
       await wait(0)
     })
     act(() => {
-      const { container, queryByTestId, getByTestId } = root
-      expect(getByTestId("name")).toHaveTextContent("Andy Kenward")
-      expect(queryByTestId("role")).toBeNull()
-      expect(getByTestId("update")).toHaveTextContent("Hire Me")
-      expect(getByTestId("links")).not.toBeNull()
-      expect(getByTestId("links").getElementsByTagName("a").length).toEqual(1)
+      const { container, queryByTestId, getByTestId, getAllByTestId } = root
+      expect(getByTestId(TEST_ID_NAME)).toHaveTextContent("Andy Kenward")
+      expect(queryByTestId(TEST_ID_ROLE)).toBeNull()
+      expect(getByTestId(TEST_ID_UPDATE)).toHaveTextContent("Hire Me")
+      expect(getByTestId(TEST_ID_LINKS)).not.toBeNull()
+      expect(getAllByTestId(TEST_ID_LINK).length).toEqual(1)
 
       expect(container.firstChild).toMatchSnapshot()
     })
@@ -159,12 +167,14 @@ describe("<Header />", () => {
       await wait(0)
     })
     act(() => {
-      const { container, queryByTestId, getByTestId } = root
-      expect(queryByTestId("update")).toBeNull()
-      expect(getByTestId("name")).toHaveTextContent("Andy Kenward")
-      expect(getByTestId("role")).toHaveTextContent("Senior Front-End Engineer")
-      expect(getByTestId("links")).not.toBeNull()
-      expect(getByTestId("links").getElementsByTagName("a").length).toEqual(1)
+      const { container, queryByTestId, getByTestId, getAllByTestId } = root
+      expect(queryByTestId(TEST_ID_UPDATE)).toBeNull()
+      expect(getByTestId(TEST_ID_NAME)).toHaveTextContent("Andy Kenward")
+      expect(getByTestId(TEST_ID_ROLE)).toHaveTextContent(
+        "Senior Front-End Engineer"
+      )
+      expect(getByTestId(TEST_ID_LINKS)).not.toBeNull()
+      expect(getAllByTestId(TEST_ID_LINK).length).toEqual(1)
 
       expect(container.firstChild).toMatchSnapshot()
     })
@@ -181,10 +191,13 @@ describe("<Header />", () => {
     })
     act(() => {
       const { container, queryByTestId, getByTestId } = root
-      expect(getByTestId("name")).toHaveTextContent("Andy Kenward")
-      expect(getByTestId("role")).toHaveTextContent("Senior Front-End Engineer")
-      expect(getByTestId("update")).toHaveTextContent("Hire Me")
-      expect(queryByTestId("links")).toBeNull()
+      expect(getByTestId(TEST_ID_NAME)).toHaveTextContent("Andy Kenward")
+      expect(getByTestId(TEST_ID_ROLE)).toHaveTextContent(
+        "Senior Front-End Engineer"
+      )
+      expect(getByTestId(TEST_ID_UPDATE)).toHaveTextContent("Hire Me")
+      expect(queryByTestId(TEST_ID_LINKS)).toBeNull()
+      expect(queryByTestId(TEST_ID_LINK)).toBeNull()
       expect(container.firstChild).toMatchSnapshot()
     })
   })
