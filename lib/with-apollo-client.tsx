@@ -1,11 +1,8 @@
 import { getDataFromTree } from "@apollo/react-ssr"
 import { ApolloClient, NormalizedCacheObject } from "apollo-boost"
-import {
-  AppContextType,
-  AppPropsType,
-  NextComponentType,
-} from "next-server/dist/lib/utils"
+import { NextComponentType } from "next"
 import { AppContext, AppInitialProps, AppProps } from "next/app"
+import { AppContextType, AppPropsType } from "next/dist/next-server/lib/utils"
 import Head from "next/head"
 import React from "react"
 
