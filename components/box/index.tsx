@@ -1,7 +1,5 @@
 import styled from "@emotion/styled"
 import {
-  color,
-  ColorProps,
   display,
   DisplayProps,
   flexWrap,
@@ -16,29 +14,30 @@ import {
 } from "styled-system"
 
 import {
-  fontSize,
+  ColorProps,
   StyledProps,
   TextTransformProps,
-} from "../../lib/styled-system"
+} from "../../@types/styled-system"
+import { color, fontSize } from "../../lib/styled-system"
 import { filterProps } from "../../lib/utils"
 
 export interface BoxProps
-  extends StyledProps,
-    TextTransformProps,
-    ColorProps,
-    FontSizeProps,
-    SpaceProps,
-    WidthProps,
+  extends ColorProps,
     DisplayProps,
     FlexWrapProps,
-    GridProps {}
+    FontSizeProps,
+    GridProps,
+    SpaceProps,
+    TextTransformProps,
+    WidthProps,
+    StyledProps {}
 
 export const Box = styled("div", { shouldForwardProp: filterProps })<BoxProps>`
   ${color}
-  ${fontSize}
-  ${space}
-  ${width}
   ${display}
   ${flexWrap}
+  ${fontSize}
   ${grid}
+  ${space}
+  ${width}
   `

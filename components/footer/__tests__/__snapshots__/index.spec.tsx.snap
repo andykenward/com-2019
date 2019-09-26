@@ -6,10 +6,10 @@ exports[`<Footer /> renders null on loading 1`] = `null`;
 
 exports[`<Footer /> renders with 5 items 1`] = `
 .emotion-22 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
   display: grid;
   grid-template-columns: 32px [center-start] 1fr [center-end] 32px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 @media screen and (min-width:40em) {
@@ -19,18 +19,18 @@ exports[`<Footer /> renders with 5 items 1`] = `
 }
 
 .emotion-20 {
-  margin: 0;
-  padding: 0;
   display: grid;
   grid-row-gap: 1rem;
   grid-column: center-start/center-end;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
 .emotion-2 {
+  display: list-item;
   margin: 0;
   padding: 0;
-  display: list-item;
 }
 
 .emotion-0 {
