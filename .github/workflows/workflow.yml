@@ -5,11 +5,11 @@ jobs:
   checks:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@master
     - name: Setup Node 10.16.x
       uses: actions/setup-node@v1
       with:
-        version: "10.16.x"
+        node-version: "10.16.x"
     - name: install
       run: npm ci
     - name: codegen
