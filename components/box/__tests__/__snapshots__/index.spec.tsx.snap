@@ -1,9 +1,135 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Box /> renders correctly 1`] = `
-<DocumentFragment>
-  <div
-    class="css-3emocq-Box emotion-0"
-  />
-</DocumentFragment>
+exports[`<Box /> should render ColorProps 1`] = `
+.emotion-0 {
+  color: rgb(36,28,21);
+  background-color: rgb(216,234,204);
+  opacity: 1;
+}
+
+<div
+  class="emotion-0 emotion-1"
+/>
+`;
+
+exports[`<Box /> should render ColorProps from array 1`] = `
+.emotion-0 {
+  color: rgb(36,28,21);
+  background-color: rgb(216,234,204);
+  opacity: 1;
+}
+
+@media screen and (min-width:40em) {
+  .emotion-0 {
+    color: rgb(216,234,204);
+    background-color: rgb(36,28,21);
+    opacity: 0;
+  }
+}
+
+<div
+  class="emotion-0 emotion-1"
+/>
+`;
+
+exports[`<Box /> should render DisplayProps 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+<div
+  class="emotion-0 emotion-1"
+/>
+`;
+
+exports[`<Box /> should render DisplayProps from array 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (min-width:40em) {
+  .emotion-0 {
+    display: block;
+  }
+}
+
+<div
+  class="emotion-0 emotion-1"
+/>
+`;
+
+exports[`<Box /> should render FlexWrapProps 1`] = `
+.emotion-0 {
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+<div
+  class="emotion-0 emotion-1"
+/>
+`;
+
+exports[`<Box /> should render FlexWrapProps from array 1`] = `
+.emotion-0 {
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+@media screen and (min-width:40em) {
+  .emotion-0 {
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+  }
+}
+
+<div
+  class="emotion-0 emotion-1"
+/>
+`;
+
+exports[`<Box /> should render FontSizeProps 1`] = `
+.emotion-0 {
+  font-size: 1rem;
+}
+
+<div
+  class="emotion-0 emotion-1"
+/>
+`;
+
+exports[`<Box /> should render FontSizeProps from array 1`] = `
+.emotion-0 {
+  font-size: 1rem;
+}
+
+@media screen and (min-width:40em) {
+  .emotion-0 {
+    font-size: 1.75rem;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .emotion-0 {
+    font-size: 1.25rem;
+  }
+}
+
+<div
+  class="emotion-0 emotion-1"
+/>
+`;
+
+exports[`<Box /> should render correctly 1`] = `
+<div
+  class="css-3emocq-Box emotion-0"
+/>
 `;

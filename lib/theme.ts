@@ -49,7 +49,7 @@ const space = {
 
 const colors = {
   primary: "rgb(216,234,204)",
-  black: "rgb(36, 28, 21)",
+  black: "rgb(36,28,21)",
   oyster: "rgb(64,59,59)",
   white: "#fff",
   green: "#007c89",
