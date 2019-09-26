@@ -22,7 +22,7 @@ describe("<ButtonExternal />", () => {
 
   it("should allow `data-testId` prop to be passed to element", () => {
     const { container, getByTestId } = renderWithTheme(
-      <ButtonExternal href="http://google.com" data-testId="button-test">
+      <ButtonExternal href="http://google.com" data-testid="button-test">
         ButtonExternal
       </ButtonExternal>
     )
