@@ -1,7 +1,7 @@
 import { ApolloProvider } from "@apollo/react-hooks"
 import { ThemeProvider } from "emotion-theming"
-import { AppPropsType } from "next-server/dist/lib/utils"
 import { AppInitialProps } from "next/app"
+import { AppPropsType } from "next/dist/next-server/lib/utils"
 import { Router } from "next/router"
 import * as React from "react"
 

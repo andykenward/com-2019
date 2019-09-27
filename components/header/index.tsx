@@ -29,11 +29,14 @@ export const Header: React.FC = () => {
       )}
       {links && links.length && (
         <Box data-testid="links">
-          {(links || []).map(
+          {links.map(
             item =>
-              item &&
               item.url && (
-                <ButtonExternal key={item.id} href={item.url}>
+                <ButtonExternal
+                  data-testid="link"
+                  key={item.id}
+                  href={item.url}
+                >
                   {item.title}
                 </ButtonExternal>
               )

@@ -6,7 +6,12 @@ interface Props {
   href: string
   fill?: boolean
 }
-export const ButtonExternal: React.FC<Props> = ({ children, fill, href }) => (
+export const ButtonExternal: React.FC<Props> = ({
+  children,
+  fill,
+  href,
+  ...props
+}) => (
   <LinkExternal
     noHover
     px={16}
@@ -31,6 +36,7 @@ export const ButtonExternal: React.FC<Props> = ({ children, fill, href }) => (
         background-color: ${fill ? "transparent" : theme.colors.primary};
       }
     `}
+    {...props}
   >
     {children}
   </LinkExternal>

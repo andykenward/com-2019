@@ -18,18 +18,21 @@ module.exports = {
   // clearMocks: true,
 
   // Indicates whether the coverage information should be collected while executing the test
-  collectCoverage: true,
+  collectCoverage: false,
 
   // An array of glob patterns indicating a set of files for which coverage information should be collected
 
   collectCoverageFrom: [
     "**/*.{ts,tsx}",
+    "!**/*.d.ts",
+    "!**/generated/**",
     "!**/node_modules/**",
-    "!.github",
-    "!.next",
-    "!@types",
-    "!out",
-    "!static",
+    "!.github/**",
+    "!.next/**",
+    "!@types/**",
+    "!out/**",
+    "!static/**",
+    "!**/__fixtures__/**",
   ],
 
   // The directory where Jest should output its coverage files
