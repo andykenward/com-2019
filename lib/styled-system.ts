@@ -1,7 +1,5 @@
 import { is } from "ramda"
 import {
-  background,
-  backgroundColor,
   color as ssColor,
   compose,
   fontFamily,
@@ -9,7 +7,6 @@ import {
   fontWeight,
   letterSpacing,
   lineHeight,
-  opacity,
   style,
   system,
   textAlign,
