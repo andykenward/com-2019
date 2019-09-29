@@ -23,7 +23,7 @@ export const Head: React.FC<Props> = ({
       {`
           html {
             box-sizing: border-box;
-            font-family: "Open Sans", "serif";
+            font-family: 'Open Sans', 'serif';
             -ms-text-size-adjust: 100%;
             -webkit-text-size-adjust: 100%;
           }
