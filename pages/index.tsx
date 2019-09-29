@@ -14,8 +14,8 @@ import { withApollo } from "../lib/apollo"
 const Home: NextPage = () => {
   return (
     <App>
+      <Head />
       <Box display="grid" gridRowGap={[32, 64]}>
-        <Head />
         <Header />
         <ProjectsMenu />
         <Footer />
