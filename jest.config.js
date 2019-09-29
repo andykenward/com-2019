@@ -33,6 +33,8 @@ module.exports = {
     "!out/**",
     "!static/**",
     "!**/__fixtures__/**",
+    "!pages/_document.tsx",
+    "!lib/**",
   ],
 
   // The directory where Jest should output its coverage files
