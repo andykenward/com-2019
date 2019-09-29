@@ -15,7 +15,7 @@ import { ThemeProvider } from "emotion-theming"
 import result from "../generated/introspection-result"
 import { theme } from "./theme"
 
-export const renderWithTheme = (element: React.ReactElement<any>) =>
+export const renderWithTheme = (element: React.ReactElement<{}>) =>
   render(<ThemeProvider theme={theme}>{element}</ThemeProvider>)
 
 const fragmentMatcher = new IntrospectionFragmentMatcher({
@@ -51,3 +51,8 @@ export const getMock = (
 
 export const getMocksError = (query: DocumentNode) =>
   getMock(query, undefined, true)
+
+export const emotionBreakPoints = [
+  { media: "screen and (min-width:40em)" },
+  { media: "screen and (min-width:52em)" },
+]

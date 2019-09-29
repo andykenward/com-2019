@@ -9,22 +9,22 @@ exports[`<Header /> renders null on undefined data 1`] = `null`;
 exports[`<Header /> should render correctly 1`] = `
 .emotion-10 {
   background-color: rgb(216,234,204);
-  padding-top: 4rem;
-  padding-bottom: 4rem;
   display: grid;
   grid-template-columns: 32px [center-start] 1fr [center-end] 32px;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+@media screen and (min-width:40em) {
+  .emotion-10 {
+    grid-template-columns: minmax(32px,15%) [center-start] 1fr [center-end] minmax(32px,15%);
+  }
 }
 
 @media screen and (min-width:40em) {
   .emotion-10 {
     padding-top: 8rem;
     padding-bottom: 8rem;
-  }
-}
-
-@media screen and (min-width:40em) {
-  .emotion-10 {
-    grid-template-columns: minmax(32px,15%) [center-start] 1fr [center-end] minmax(32px,15%);
   }
 }
 
@@ -202,6 +202,7 @@ exports[`<Header /> should render correctly 1`] = `
   >
     <a
       class="emotion-6 emotion-1"
+      data-testid="link"
       href="/link"
       rel="noopener noreferrer"
       target="_blank"
@@ -215,22 +216,22 @@ exports[`<Header /> should render correctly 1`] = `
 exports[`<Header /> should render when \`links\` is \`null\` 1`] = `
 .emotion-6 {
   background-color: rgb(216,234,204);
-  padding-top: 4rem;
-  padding-bottom: 4rem;
   display: grid;
   grid-template-columns: 32px [center-start] 1fr [center-end] 32px;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+@media screen and (min-width:40em) {
+  .emotion-6 {
+    grid-template-columns: minmax(32px,15%) [center-start] 1fr [center-end] minmax(32px,15%);
+  }
 }
 
 @media screen and (min-width:40em) {
   .emotion-6 {
     padding-top: 8rem;
     padding-bottom: 8rem;
-  }
-}
-
-@media screen and (min-width:40em) {
-  .emotion-6 {
-    grid-template-columns: minmax(32px,15%) [center-start] 1fr [center-end] minmax(32px,15%);
   }
 }
 
@@ -343,22 +344,22 @@ exports[`<Header /> should render when \`links\` is \`null\` 1`] = `
 exports[`<Header /> should render when \`name\` is \`null\` 1`] = `
 .emotion-8 {
   background-color: rgb(216,234,204);
-  padding-top: 4rem;
-  padding-bottom: 4rem;
   display: grid;
   grid-template-columns: 32px [center-start] 1fr [center-end] 32px;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+@media screen and (min-width:40em) {
+  .emotion-8 {
+    grid-template-columns: minmax(32px,15%) [center-start] 1fr [center-end] minmax(32px,15%);
+  }
 }
 
 @media screen and (min-width:40em) {
   .emotion-8 {
     padding-top: 8rem;
     padding-bottom: 8rem;
-  }
-}
-
-@media screen and (min-width:40em) {
-  .emotion-8 {
-    grid-template-columns: minmax(32px,15%) [center-start] 1fr [center-end] minmax(32px,15%);
   }
 }
 
@@ -502,6 +503,7 @@ exports[`<Header /> should render when \`name\` is \`null\` 1`] = `
   >
     <a
       class="emotion-4 emotion-1"
+      data-testid="link"
       href="/link"
       rel="noopener noreferrer"
       target="_blank"
@@ -515,22 +517,22 @@ exports[`<Header /> should render when \`name\` is \`null\` 1`] = `
 exports[`<Header /> should render when \`role\` is \`null\` 1`] = `
 .emotion-8 {
   background-color: rgb(216,234,204);
-  padding-top: 4rem;
-  padding-bottom: 4rem;
   display: grid;
   grid-template-columns: 32px [center-start] 1fr [center-end] 32px;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+@media screen and (min-width:40em) {
+  .emotion-8 {
+    grid-template-columns: minmax(32px,15%) [center-start] 1fr [center-end] minmax(32px,15%);
+  }
 }
 
 @media screen and (min-width:40em) {
   .emotion-8 {
     padding-top: 8rem;
     padding-bottom: 8rem;
-  }
-}
-
-@media screen and (min-width:40em) {
-  .emotion-8 {
-    grid-template-columns: minmax(32px,15%) [center-start] 1fr [center-end] minmax(32px,15%);
   }
 }
 
@@ -675,6 +677,7 @@ exports[`<Header /> should render when \`role\` is \`null\` 1`] = `
   >
     <a
       class="emotion-4 emotion-1"
+      data-testid="link"
       href="/link"
       rel="noopener noreferrer"
       target="_blank"
@@ -688,22 +691,22 @@ exports[`<Header /> should render when \`role\` is \`null\` 1`] = `
 exports[`<Header /> should render when \`update\` is \`null\` 1`] = `
 .emotion-8 {
   background-color: rgb(216,234,204);
-  padding-top: 4rem;
-  padding-bottom: 4rem;
   display: grid;
   grid-template-columns: 32px [center-start] 1fr [center-end] 32px;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+@media screen and (min-width:40em) {
+  .emotion-8 {
+    grid-template-columns: minmax(32px,15%) [center-start] 1fr [center-end] minmax(32px,15%);
+  }
 }
 
 @media screen and (min-width:40em) {
   .emotion-8 {
     padding-top: 8rem;
     padding-bottom: 8rem;
-  }
-}
-
-@media screen and (min-width:40em) {
-  .emotion-8 {
-    grid-template-columns: minmax(32px,15%) [center-start] 1fr [center-end] minmax(32px,15%);
   }
 }
 
@@ -848,6 +851,7 @@ exports[`<Header /> should render when \`update\` is \`null\` 1`] = `
   >
     <a
       class="emotion-4 emotion-1"
+      data-testid="link"
       href="/link"
       rel="noopener noreferrer"
       target="_blank"

@@ -19,4 +19,14 @@ describe("<ButtonExternal />", () => {
     )
     expect(container.firstChild).toMatchSnapshot()
   })
+
+  it("should allow `data-testId` prop to be passed to element", () => {
+    const { container, getByTestId } = renderWithTheme(
+      <ButtonExternal href="http://google.com" data-testid="button-test">
+        ButtonExternal
+      </ButtonExternal>
+    )
+    expect(getByTestId("button-test")).not.toBeNull()
+    expect(container.firstChild).toMatchSnapshot()
+  })
 })

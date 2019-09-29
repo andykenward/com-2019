@@ -1,32 +1,19 @@
-import {
-  CSSObject,
-  InterpolationWithTheme,
-  SerializedStyles,
-} from "@emotion/core"
-import * as CSS from "csstype"
 import { is } from "ramda"
 import {
+  background,
+  backgroundColor,
+  color as ssColor,
   compose,
   fontFamily,
   fontStyle,
   fontWeight,
   letterSpacing,
   lineHeight,
+  opacity,
   style,
+  system,
   textAlign,
 } from "styled-system"
-
-/**
- * INTERFACES
- */
-export interface StyledProps {
-  as?: keyof JSX.IntrinsicElements | React.ComponentType<any> // eslint-disable-line
-  css?: CSSObject | SerializedStyles | InterpolationWithTheme<any> // eslint-disable-line @typescript-eslint/no-explicit-any
-}
-
-export interface TextTransformProps {
-  textTransform?: CSS.TextTransformProperty
-}
 
 /**
  *
@@ -53,6 +40,18 @@ export const fontSize = style({
   cssProperty: "fontSize",
   transformValue: convertToRem,
 })
+
+export const textColor = system({
+  textColor: {
+    property: "color",
+    scale: "colors",
+  },
+})
+
+export const color = compose(
+  ssColor,
+  textColor
+)
 
 /**
  * COMPOSED STYLES
