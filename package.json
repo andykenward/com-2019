@@ -51,11 +51,11 @@
     "graphql": "14.5.8",
     "graphql-tag": "2.10.1",
     "isomorphic-unfetch": "3.0.0",
-    "next": "9.0.6",
+    "next": "9.0.7",
     "normalize.css": "8.0.1",
     "ramda": "0.26.1",
-    "react": "16.9.0",
-    "react-dom": "16.9.0",
+    "react": "16.10.1",
+    "react-dom": "16.10.1",
     "styled-system": "5.1.2"
   },
   "devDependencies": {
@@ -70,7 +70,7 @@
     "@testing-library/react": "9.1.4",
     "@types/jest": "24.0.18",
     "@types/node": "10.14.15",
-    "@types/ramda": "0.26.21",
+    "@types/ramda": "0.26.25",
     "@types/react": "16.9.2",
     "@types/react-dom": "16.9.0",
     "@types/styled-system": "5.1.2",
