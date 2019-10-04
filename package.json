@@ -55,7 +55,7 @@
     "normalize.css": "8.0.1",
     "ramda": "0.26.1",
     "react": "16.10.1",
-    "react-dom": "16.10.1",
+    "react-dom": "16.10.2",
     "styled-system": "5.1.2"
   },
   "devDependencies": {
