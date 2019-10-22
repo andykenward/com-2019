@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Work renders error state 1`] = `
+<div>
+  error
+</div>
+`;
+
+exports[`Work renders loading state 1`] = `
+<div>
+  loading
+</div>
+`;

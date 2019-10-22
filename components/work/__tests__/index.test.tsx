@@ -32,8 +32,11 @@ describe("Work", () => {
     })
 
     act(() => {
-      const { container } = root
-      expect(container.firstChild).not.toBeNull()
+      const {
+        container: { firstChild },
+      } = root
+      expect(firstChild).not.toBeNull()
+      expect(firstChild).toMatchSnapshot()
     })
   })
 
@@ -53,7 +56,8 @@ describe("Work", () => {
       const {
         container: { firstChild },
       } = root
-      expect(firstChild).toBeNull()
+      expect(firstChild).not.toBeNull()
+      expect(firstChild).toMatchSnapshot()
     })
   })
 
