@@ -1,4 +1,4 @@
-import { ThemeProvider } from "emotion-theming"
+import { ThemeProvider } from "theme-ui"
 
 import { theme } from "../../lib/theme"
 
