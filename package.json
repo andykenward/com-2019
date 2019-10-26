@@ -1,5 +1,5 @@
 {
-  "name": "com-2019",
+  "name": "andykenward.com",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -31,15 +31,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/andykenward/com-2019.git"
+    "url": "git+https://github.com/andykenward/andykenward.com.git"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/andykenward/com-2019/issues"
+    "url": "https://github.com/andykenward/andykenward.com/issues"
   },
-  "homepage": "https://github.com/andykenward/com-2019#readme",
+  "homepage": "https://github.com/andykenward/andykenward.com#readme",
   "dependencies": {
     "@apollo/react-hooks": "3.1.2",
     "@apollo/react-ssr": "3.1.2",
