@@ -1,5 +1,13 @@
 name: Check Pull Request
-on: [pull_request]
+on:
+  push:
+    branches: 
+      - master
+  pull_request:
+    branches: 
+      - master
+      - test
+      - develop
 
 jobs:
   checks:
@@ -23,8 +31,6 @@ jobs:
     - name: test
       run: npm run test:ci
     - name: coverage
-      run: |
-        npm install codecov -g
-        codecov
-      env:
-        CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+      uses: codecov/codecov-action@v1.0.3
+      with:
+        token: ${{secrets.CODECOV_TOKEN}}
