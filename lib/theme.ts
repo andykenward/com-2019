@@ -1,5 +1,3 @@
-import { Theme } from "theme-ui"
-
 import { convertToRem, fontStack } from "./styled-system"
 
 const fontSizes = [14, 16, 20, 28, 36, 38, 40, 44, 46, 48, 50, 54, 64, 80]
@@ -50,22 +48,22 @@ const space = {
 } as const
 
 const colors = {
-  background: "rgb(216,234,204)",
-  text: "rgb(36,28,21)",
-  primary: "rgb(64,59,59)",
-  // white: "#fff",
-  // green: "#007c89",
-  // squash: "rgb(251,238,202)",
-  // cucumber: "rgb(216,234,204)",
-  // radish: "rgb(249,224,250)",
-  // visited: "#808080",
-}
+  primary: "rgb(216,234,204)",
+  black: "rgb(36,28,21)",
+  oyster: "rgb(64,59,59)",
+  white: "#fff",
+  green: "#007c89",
+  squash: "rgb(251,238,202)",
+  cucumber: "rgb(216,234,204)",
+  radish: "rgb(249,224,250)",
+  visited: "#808080",
+} as const
 
-export const theme: Theme = {
+export const theme = {
   colors: colors,
   fonts: fonts,
   fontSizes: fontSizes,
   fontWeights: fontWeights,
   lineHeights: lineHeights,
   space: space,
-}
+} as const

@@ -46,7 +46,6 @@
     "@emotion/babel-preset-css-prop": "10.0.17",
     "@emotion/core": "10.0.17",
     "@emotion/styled": "10.0.17",
-    "@mdx-js/react": "1.5.1",
     "@styled-system/should-forward-prop": "5.1.2",
     "apollo-boost": "0.4.4",
     "emotion-theming": "10.0.19",
@@ -58,8 +57,7 @@
     "ramda": "0.26.1",
     "react": "16.10.1",
     "react-dom": "16.10.1",
-    "styled-system": "5.1.2",
-    "theme-ui": "0.2.44"
+    "styled-system": "5.1.2"
   },
   "devDependencies": {
     "@apollo/react-testing": "3.1.2",
@@ -77,9 +75,8 @@
     "@types/react": "16.9.4",
     "@types/react-dom": "16.9.1",
     "@types/styled-system": "5.1.2",
-    "@types/theme-ui": "0.2.3",
-    "@typescript-eslint/eslint-plugin": "2.5.0",
-    "@typescript-eslint/parser": "2.5.0",
+    "@typescript-eslint/eslint-plugin": "2.3.2",
+    "@typescript-eslint/parser": "2.3.2",
     "apollo": "2.18.3",
     "babel-jest": "24.9.0",
     "babel-plugin-react-remove-properties": "0.3.0",
