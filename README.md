@@ -1,3 +1,5 @@
+![Actions Status](https://github.com/andykenward/andykenward.com/workflows/Check%20Pull%20Request/badge.svg)
+
 ### Serve static version
 
 - npm run build
