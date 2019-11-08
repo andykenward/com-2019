@@ -68,7 +68,7 @@
     "@graphql-codegen/typescript-operations": "1.8.0",
     "@graphql-codegen/typescript-react-apollo": "1.8.0",
     "@testing-library/jest-dom": "4.1.0",
-    "@testing-library/react": "9.2.0",
+    "@testing-library/react": "9.3.2",
     "@types/jest": "24.0.18",
     "@types/node": "10.14.15",
     "@types/ramda": "0.26.26",
