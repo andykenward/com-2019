@@ -1,5 +1,5 @@
 {
-  "name": "com-2019",
+  "name": "andykenward.com",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -24,21 +24,22 @@
     "lint": "eslint --ext .js,.ts,.tsx .",
     "eslint:fix": "npm run lint -- --fix",
     "test": "jest",
+    "test:watch": "npm test -- --watch",
     "test:ci": "jest --coverage",
     "schema": "apollo service:download --config=./apollo.config.prod.js generated/schema.json",
     "normalizecss": "curl https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css  -o ./static/normalize.css"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/andykenward/com-2019.git"
+    "url": "git+https://github.com/andykenward/andykenward.com.git"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/andykenward/com-2019/issues"
+    "url": "https://github.com/andykenward/andykenward.com/issues"
   },
-  "homepage": "https://github.com/andykenward/com-2019#readme",
+  "homepage": "https://github.com/andykenward/andykenward.com#readme",
   "dependencies": {
     "@apollo/react-hooks": "3.1.2",
     "@apollo/react-ssr": "3.1.2",

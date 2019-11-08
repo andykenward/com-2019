@@ -6,6 +6,7 @@ module.exports = {
   exportPathMap: async function() {
     const paths = {
       "/": { page: "/" },
+      "/work/": { page: "/work/index" },
     }
 
     try {
@@ -28,8 +29,8 @@ module.exports = {
       })
       const resData = await res.json()
       resData.data.projects.forEach(project => {
-        paths[`/project/${project.slug}`] = {
-          page: "/project/[slug]",
+        paths[`/work/${project.slug}/`] = {
+          page: "/work/[slug]",
           query: { slug: project.slug },
         }
       })
