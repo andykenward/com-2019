@@ -80,7 +80,7 @@
     "apollo": "2.21.0",
     "babel-jest": "24.9.0",
     "babel-plugin-react-remove-properties": "0.3.0",
-    "csstype": "2.6.6",
+    "csstype": "2.6.7",
     "dotenv": "8.1.0",
     "eslint": "6.5.1",
     "eslint-config-prettier": "6.3.0",
