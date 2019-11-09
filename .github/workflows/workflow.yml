@@ -32,6 +32,7 @@ jobs:
         run: npm run now-build
         env:
           SCHEMA_PATH: ${{ secrets.SCHEMA_PATH }}
+          ENDPOINT: ${{ secrets.ENDPOINT }}
       - name: deploy prod
         if: github.ref == 'refs/heads/master'
         run: now --prod
