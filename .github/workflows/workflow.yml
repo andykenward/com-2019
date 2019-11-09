@@ -3,16 +3,14 @@ on:
   push:
     branches: 
       - master
-      - test
-      - develop
   pull_request:
     branches: 
       - master
       - test
       - develop
 
-jobs:        
-  main:
+jobs:
+  checks:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
@@ -41,9 +39,27 @@ jobs:
     - name: test
       run: npm run test:ci
 
+  deploy:
+    runs-on: ubuntu-latest
+    needs: checks
+    steps:
+    - uses: actions/checkout@master
+    - name: Setup Node 10.17.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: "10.17.x"    
+    - uses: actions/cache@v1
+      id: cache
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
     - name: deploy production
       if: github.ref == 'refs/heads/master' 
-      run: now --token ${{ secrets.ZEIT_TOKEN }} -m commit=${GITHUB_SHA} -m branch=${GITHUB_REF} --prod
+      run: npx now --token ${{ secrets.ZEIT_TOKEN }} -m commit=${GITHUB_SHA} -m branch=${GITHUB_REF} --prod --force
     - name: deploy
       if: github.ref != 'refs/heads/master' && github.event_name == 'pull_request'
-      run: now --token ${{ secrets.ZEIT_TOKEN }} -m commit=${GITHUB_SHA} -m branch=${GITHUB_REF}
+      run: npx now --token ${{ secrets.ZEIT_TOKEN }} -m commit=${GITHUB_SHA} -m branch=${GITHUB_REF}  
+
+    
