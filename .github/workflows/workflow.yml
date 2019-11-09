@@ -46,14 +46,13 @@ jobs:
         token: ${{secrets.CODECOV_TOKEN}}
     - name: deploy production
       if: github.ref == 'refs/heads/master'
-      run: now --token ${{ secrets.ZEIT_TOKEN }} --target production
+      run: now --token ${{ secrets.ZEIT_TOKEN }} -m commit=${GITHUB_SHA} -m branch=${GITHUB_REF} --target production
     - name: deploy
       if: github.ref != 'refs/heads/master'
-      run: now --token ${{ secrets.ZEIT_TOKEN }} > ${HOME}/deployment-url.txt
-    - name: log
-      run: |
-        echo "event: ${{ github.event }}"
-      
-    - name: alias deploy
-      if: github.ref != 'refs/heads/master'
-      run: now alias --token ${{ secrets.ZEIT_TOKEN }} `cat ${HOME}/deployment-url.txt` ${{ github.event.repository.name }}-${{ github.event.number }}.now.sh
+      run: now --token ${{ secrets.ZEIT_TOKEN }} -m commit=${GITHUB_SHA} -m branch=${GITHUB_REF}
+    - name: post deploy url to pull request
+      if: github.event_name === 'pull_request'
+      uses: iam4x/now-deploy-preview-comment@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        ZEIT_TOKEN: ${{ secrets.ZEIT_TOKEN }}
