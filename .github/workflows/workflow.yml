@@ -21,6 +21,7 @@ jobs:
         with:
           node-version: "10.17.x"
       - uses: actions/cache@v1
+        id: cache
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -50,6 +51,7 @@ jobs:
       with:
         node-version: "10.17.x"        
     - uses: actions/cache@v1
+      id: cache
       with:
         path: ~/.npm
         key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
