@@ -18,7 +18,14 @@ jobs:
     - name: Setup Node 10.17.x
       uses: actions/setup-node@v1
       with:
-        node-version: "10.17.x"
+        node-version: "10.17.x"        
+    - uses: actions/cache@v1
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+
     - name: install
       run: npm ci
     - name: codegen
