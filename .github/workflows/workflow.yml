@@ -42,8 +42,8 @@ jobs:
       run: npm run test:ci
 
     - name: deploy production
-      if: github.ref == 'refs/heads/master'
+      if: github.ref == 'refs/heads/master' 
       run: now --token ${{ secrets.ZEIT_TOKEN }} -m commit=${GITHUB_SHA} -m branch=${GITHUB_REF} --prod
     - name: deploy
-      if: github.ref != 'refs/heads/master'
+      if: github.ref != 'refs/heads/master' && github.event_name == 'pull_request'
       run: now --token ${{ secrets.ZEIT_TOKEN }} -m commit=${GITHUB_SHA} -m branch=${GITHUB_REF}
