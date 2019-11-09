@@ -28,7 +28,6 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
       - name: install
-        if: steps.cache.outputs.cache-hit != 'true'
         run: npm ci
       - name: build
         run: npm run now-build
@@ -59,7 +58,6 @@ jobs:
           ${{ runner.os }}-node-
 
     - name: install
-      if: steps.cache.outputs.cache-hit != 'true'
       run: npm ci
     - name: codegen
       run: npm run codegen
