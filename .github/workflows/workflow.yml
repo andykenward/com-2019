@@ -49,4 +49,11 @@ jobs:
       run: now --token ${{ secrets.ZEIT_TOKEN }} --target production
     - name: deploy
       if: github.ref != 'refs/heads/master'
-      run: now --token ${{ secrets.ZEIT_TOKEN }}
+      run: now --token ${{ secrets.ZEIT_TOKEN }} > ${HOME}/deployment-url.txt
+    - name: log
+      run: |
+        echo "event: ${{ github.event }}"
+      
+    - name: alias deploy
+      if: github.ref != 'refs/heads/master'
+      run: now alias --token ${{ secrets.ZEIT_TOKEN }} `cat ${HOME}/deployment-url.txt` ${{ github.event.repository.name }}-${{ github.event.number }}.now.sh
