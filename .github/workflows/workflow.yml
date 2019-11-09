@@ -59,11 +59,11 @@ jobs:
           ${{ runner.os }}-node-
     - name: deploy production
       if: github.ref == 'refs/heads/master' 
-      run: npx now --token ${{ secrets.ZEIT_TOKEN }} -m githubRepo=${{ github.repository }} -m githubCommitRepo=${{ github.repository }} -m githubCommitSha=${{ github.sha }} -m githubCommitRef=${{ github.ref } --prod --force
+      run: npx now --token ${{ secrets.ZEIT_TOKEN }} -m githubRepo=${{ github.repository }} -m githubCommitRepo=${{ github.repository }} -m githubCommitSha=${{ github.sha }} -m githubCommitRef=${{ github.ref }} --prod --force
       env:
         GITHUB_SHA: G
     - name: deploy
       if: github.ref != 'refs/heads/master' && github.event_name == 'pull_request'
-      run: npx now --token ${{ secrets.ZEIT_TOKEN }} -m githubRepo=${{ github.repository }} -m githubCommitRepo=${{ github.repository }} -m githubCommitSha=${{ github.sha }} -m githubCommitRef=${{ github.ref } 
+      run: npx now --token ${{ secrets.ZEIT_TOKEN }} -m githubRepo=${{ github.repository }} -m githubCommitRepo=${{ github.repository }} -m githubCommitSha=${{ github.sha }} -m githubCommitRef=${{ github.ref }}
 
     
