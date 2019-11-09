@@ -28,6 +28,13 @@ module.exports = {
         body: JSON.stringify({ query }),
       })
       const resData = await res.json()
+
+      if (resData.errors && resData.errors.length) {
+        throw new Error(resData.errors)
+      }
+      if (!resData.data || !resData.data.projects) {
+        throw new Error("no data or projects")
+      }
       resData.data.projects.forEach(project => {
         paths[`/work/${project.slug}/`] = {
           page: "/work/[slug]",
