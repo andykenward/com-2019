@@ -1,14 +1,17 @@
 {
   "version": 2,
-  "name": "com",
-  "alias": "andykenward.com",
+  "name": "andykenward.com",
   "scope": "andykenward",
-  "regions": ["lhr1"],
+  "regions": [
+    "lhr1"
+  ],
   "builds": [
     {
       "src": "package.json",
       "use": "@now/static-build",
-      "config": { "distDir": "out" }
+      "config": {
+        "distDir": "out"
+      }
     }
   ],
   "build": {
@@ -20,13 +23,19 @@
   "routes": [
     {
       "src": "/static/(.*)",
-      "headers": { "cache-control": "public,max-age=31557600,must-revalidate" },
+      "headers": {
+        "cache-control": "public,max-age=31557600,must-revalidate"
+      },
       "dest": "/static/$1"
     },
-    { "handle": "filesystem" },
+    {
+      "handle": "filesystem"
+    },
     {
       "src": "^/(.*).html",
-      "headers": { "cache-control": "public,max-age=0,must-revalidate" },
+      "headers": {
+        "cache-control": "public,max-age=0,must-revalidate"
+      },
       "dest": "$1.html"
     }
   ]
