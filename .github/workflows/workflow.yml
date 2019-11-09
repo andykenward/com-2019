@@ -13,7 +13,7 @@ jobs:
   checks:
     runs-on: ubuntu-latest
     steps:
-    - run: echo ${GITHUB_REF}
+    - run: echo ${{ secrets.GITHUB_REF }}
     - uses: actions/checkout@master
     - name: Setup Node 10.17.x
       uses: actions/setup-node@v1
