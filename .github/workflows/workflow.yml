@@ -3,6 +3,7 @@ on:
   push:
     branches: 
       - master
+      - test
       - develop
   pull_request:
     branches: 
@@ -11,6 +12,37 @@ on:
       - develop
 
 jobs:
+  deploy:
+    needs: checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@v1
+        with:
+          node-version: "10.17.x"
+      - uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: install
+        run: npm ci
+      - name: build
+        run: npm run now-build
+        env:
+          SCHEMA_PATH: ${{ secrets.SCHEMA_PATH }}
+      - name: deploy prod
+        if: github.ref == 'refs/heads/master'
+        run: now --prod
+        env:
+          ZEIT_TOKEN: ${{ secrets.ZEIT_TOKEN }}
+      - name: deploy
+        if: github.ref != 'refs/heads/master'
+        run: now
+        env:
+          ZEIT_TOKEN: ${{ secrets.ZEIT_TOKEN }}
+        
   checks:
     runs-on: ubuntu-latest
     steps:
