@@ -40,16 +40,13 @@ jobs:
       run: npm run lint
     - name: test
       run: npm run test:ci
-    - name: coverage
-      uses: codecov/codecov-action@v1.0.3
-      with:
-        token: ${{secrets.CODECOV_TOKEN}}
+
     - name: deploy production
       if: github.ref == 'refs/heads/master'
-      run: now --token ${{ secrets.ZEIT_TOKEN }} -m commit=${GITHUB_SHA} -m branch=${GITHUB_REF} --target production
+      run: now --token ${{ secrets.ZEIT_TOKEN }} -m commit=${{GITHUB_SHA}} -m branch=${{GITHUB_REF}} --target production
     - name: deploy
       if: github.ref != 'refs/heads/master'
-      run: now --token ${{ secrets.ZEIT_TOKEN }} -m commit=${GITHUB_SHA} -m branch=${GITHUB_REF}
+      run: now --token ${{ secrets.ZEIT_TOKEN }} -m commit=${{GITHUB_SHA}} -m branch=${{GITHUB_REF}}
     - name: post deploy url to pull request
       if: github.event_name == 'pull_request'
       uses: iam4x/now-deploy-preview-comment@v1
