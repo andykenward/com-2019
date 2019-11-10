@@ -45,10 +45,7 @@ export const textColor = system({
   },
 })
 
-export const color = compose(
-  ssColor,
-  textColor
-)
+export const color = compose(ssColor, textColor)
 
 /**
  * COMPOSED STYLES
