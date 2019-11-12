@@ -11,7 +11,7 @@ interface Props {
 }
 
 export const Tags: React.FC<Props> = ({ data }) =>
-  data != null && data.length ? (
+  data?.length ? (
     <Box
       as="ul"
       display="flex"
