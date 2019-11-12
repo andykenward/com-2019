@@ -55,6 +55,22 @@
     "**/.next": true
   },
 
-  "stylelint.enable": false
+  "stylelint.enable": false,
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#0b93ff",
+    "activityBar.activeBorder": "#ffbfe3",
+    "activityBar.foreground": "#e7e7e7",
+    "activityBar.inactiveForeground": "#e7e7e799",
+    "activityBarBadge.background": "#ffbfe3",
+    "activityBarBadge.foreground": "#15202b",
+    "titleBar.activeBackground": "#0078d7",
+    "titleBar.inactiveBackground": "#0078d799",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveForeground": "#e7e7e799",
+    "statusBar.background": "#0078d7",
+    "statusBarItem.hoverBackground": "#0b93ff",
+    "statusBar.foreground": "#e7e7e7"
+  },
+  "peacock.color": "#0078d7"
   // "jest.autoEnable": false
 }
