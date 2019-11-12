@@ -7,7 +7,7 @@ import { HeadingOne, HeadingThree, HeadingTwo } from "../typography"
 export const Header: React.FC = () => {
   const { data } = useMeQuery()
 
-  if (data == null || data.me == null) return null
+  if (data?.me == null) return null
   const { name, role, update, links } = data.me
 
   return (
@@ -27,7 +27,7 @@ export const Header: React.FC = () => {
           {update}
         </HeadingThree>
       )}
-      {links && links.length && (
+      {links?.length && (
         <Box data-testid="links">
           {links.map(
             item =>

@@ -8,7 +8,7 @@ import { LinkExternal } from "../link"
 export const Footer: React.FC = () => {
   const { data } = useFooterQuery()
 
-  if (data == null || data.footer == null) return null
+  if (data?.footer == null) return null
 
   const { links } = data.footer
 
@@ -24,8 +24,8 @@ export const Footer: React.FC = () => {
           list-style: none;
         `}
       >
-        {(links || []).map(item => {
-          return (
+        {(links || []).map(
+          item =>
             item.title &&
             item.url && (
               <Box
@@ -41,8 +41,7 @@ export const Footer: React.FC = () => {
                 </LinkExternal>
               </Box>
             )
-          )
-        })}
+        )}
       </Box>
     </ColumnsCenter>
   )
