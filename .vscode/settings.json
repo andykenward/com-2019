@@ -1,29 +1,7 @@
 {
-  "typescript.tsdk": "node_modules/typescript/lib",
-  "editor.formatOnSave": true,
-  "[javascript]": {
-    "editor.formatOnSave": true
-  },
-  "[javascriptreact]": {
-    "editor.formatOnSave": true
-  },
-  "[typescript]": {
-    "editor.formatOnSave": true
-  },
-  "[typescriptreact]": {
-    "editor.formatOnSave": true
-  },
+  "editor.minimap.enabled": false,
+  "editor.wordWrap": "on",
 
-  "search.exclude": {
-    "**/node_modules": true,
-    "**/bower_components": true,
-    "**/.cache": true,
-    "**/.vscode": true,
-    "**/public": true,
-    "**/storybook-statc": true,
-    "**/.next": true,
-    "**/out": true
-  },
   "files.exclude": {
     "**/.git": true,
     "**/.svn": true,
@@ -35,7 +13,27 @@
     "**/node_modules": true,
     "**/public": true
   },
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true,
+    "**/.cache": true,
+    "**/.next": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/.cache": true,
+    "**/.vscode": true,
+    "**/public": true,
+    "**/storybook-statc": true,
+    "**/.next": true,
+    "**/out": true
+  },
 
+  "typescript.tsdk": "node_modules/typescript/lib",
+
+  // ESLINT
   "eslint.codeAction.disableRuleComment": {
     "enable": true,
     "location": "sameLine"
@@ -47,16 +45,28 @@
     { "language": "typescript", "autoFix": true },
     { "language": "typescriptreact", "autoFix": true }
   ],
-  "editor.wordWrap": "on",
-  "files.watcherExclude": {
-    "**/.git/objects/**": true,
-    "**/.git/subtree-cache/**": true,
-    "**/node_modules/*/**": true,
-    "**/.cache": true,
-    "**/.next": true
-  },
 
   "stylelint.enable": false,
+
+  // LANGUAGES
+  "[javascript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // COLORS
   "peacock.color": "#0078d7",
   "workbench.colorCustomizations": {
     "activityBar.background": "#2f7c47",
