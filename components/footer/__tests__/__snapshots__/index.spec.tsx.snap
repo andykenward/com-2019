@@ -41,10 +41,6 @@ exports[`<Footer /> renders with 5 items 1`] = `
   color: rgb(36,28,21);
   margin: 0;
   word-break: break-word;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
