@@ -30,7 +30,6 @@ const Text = styled("p", { shouldForwardProp: filterProps })<
   ${space}
   ${gridColumn}
   word-break: break-word;
-  hyphens: auto;
 `
 
 interface Props
