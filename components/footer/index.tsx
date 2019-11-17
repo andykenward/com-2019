@@ -25,19 +25,19 @@ export const Footer: React.FC = () => {
         `}
       >
         {(links || []).map(
-          item =>
-            item.title &&
-            item.url && (
+          ({ title, url, id }) =>
+            title &&
+            url && (
               <Box
                 data-testid="footer-item"
                 as="li"
                 m={0}
                 p={0}
                 display="list-item"
-                key={item.id}
+                key={id}
               >
-                <LinkExternal data-testid="footer-item-a" href={item.url}>
-                  {item.title}
+                <LinkExternal data-testid="footer-item-a" href={url}>
+                  {title}
                 </LinkExternal>
               </Box>
             )

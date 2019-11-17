@@ -6,8 +6,10 @@ import { Box } from "../box"
 import { LinkExternal } from "../link"
 import { Body } from "../typography"
 
+type Item = Pick<Tag, "id" | "title" | "url">
+
 interface Props {
-  data: Pick<Tag, "id" | "title" | "url">[]
+  data: Item[]
 }
 
 export const Tags: React.FC<Props> = ({ data }) =>
@@ -23,10 +25,8 @@ export const Tags: React.FC<Props> = ({ data }) =>
         list-style: none;
       `}
     >
-      {data.map((tag, index) => {
-        const title = tag.title
-        const url = tag.url
-        return title != null ? (
+      {data.map(({ url, title }, index: number) =>
+        title != null ? (
           <Body
             textColor="oyster"
             css={css`
@@ -43,13 +43,13 @@ export const Tags: React.FC<Props> = ({ data }) =>
             as="li"
             key={index}
           >
-            {url != null ? (
+            {url ? (
               <LinkExternal href={url}>{title}</LinkExternal>
             ) : (
               <>{title}</>
             )}
           </Body>
         ) : null
-      })}
+      )}
     </Box>
   ) : null

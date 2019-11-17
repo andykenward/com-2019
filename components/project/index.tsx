@@ -1,6 +1,7 @@
 import { isEmpty } from "ramda"
 
 import {
+  FragmentHeroFragment,
   FragmentProjectNavFragment,
   useProjectQuery,
 } from "../../generated/graphql"
@@ -29,7 +30,7 @@ export const Project: React.FC<{ slug: string }> = ({ slug }) => {
   return <ProjectItem {...project} />
 }
 
-type Item = FragmentProjectNavFragment
+type Item = FragmentProjectNavFragment & FragmentHeroFragment
 export const ProjectItem: React.FC<Item> = ({
   clients,
   title,
@@ -39,6 +40,7 @@ export const ProjectItem: React.FC<Item> = ({
   url,
   urlCaseStudy,
   studio,
+  hero,
 }) => (
   <Box as="article">
     <Clients data={clients} />
@@ -59,6 +61,9 @@ export const ProjectItem: React.FC<Item> = ({
           <ButtonExternal href={urlCaseStudy}>Case Study</ButtonExternal>
         )}
       </Box>
+    )}
+    {hero && (
+      <img src={`https://media.graphcms.com/resize=w:600/${hero.handle}`} />
     )}
   </Box>
 )

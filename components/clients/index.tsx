@@ -8,10 +8,11 @@ interface Props {
 export const Clients: React.FC<Props> = ({ data }) => (
   <>
     {(data || []).map(
-      item =>
-        item && (
-          <BodyBold key={item.id} textTransform="uppercase">
-            {item.title}
+      ({ id, title }) =>
+        id &&
+        title && (
+          <BodyBold key={id} textTransform="uppercase">
+            {title}
           </BodyBold>
         )
     )}

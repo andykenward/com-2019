@@ -15,10 +15,6 @@ exports[`<ButtonExternal /> renders \`fill\` correctly 1`] = `
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
   word-break: break-word;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -87,10 +83,6 @@ exports[`<ButtonExternal /> renders correctly 1`] = `
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
   word-break: break-word;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -159,10 +151,6 @@ exports[`<ButtonExternal /> should allow \`data-testId\` prop to be passed to el
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
   word-break: break-word;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
