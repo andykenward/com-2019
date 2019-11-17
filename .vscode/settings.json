@@ -1,0 +1,76 @@
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "editor.formatOnSave": true,
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "[javascriptreact]": {
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": true
+  },
+
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/.cache": true,
+    "**/.vscode": true,
+    "**/public": true,
+    "**/storybook-statc": true
+  },
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/.vscode": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/.cache": true,
+    "**/node_modules": true,
+    "**/public": true,
+    "**/storybook-static": true
+  },
+
+  "eslint.codeAction.disableRuleComment": {
+    "enable": true,
+    "location": "sameLine"
+  },
+  "eslint.autoFixOnSave": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    { "language": "typescript", "autoFix": true },
+    { "language": "typescriptreact", "autoFix": true }
+  ],
+  "editor.wordWrap": "on",
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true,
+    "**/.cache": true,
+    "**/.next": true
+  },
+
+  "stylelint.enable": false,
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#0b93ff",
+    "activityBar.activeBorder": "#ffbfe3",
+    "activityBar.foreground": "#e7e7e7",
+    "activityBar.inactiveForeground": "#e7e7e799",
+    "activityBarBadge.background": "#ffbfe3",
+    "activityBarBadge.foreground": "#15202b",
+    "titleBar.activeBackground": "#0078d7",
+    "titleBar.inactiveBackground": "#0078d799",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveForeground": "#e7e7e799",
+    "statusBar.background": "#0078d7",
+    "statusBarItem.hoverBackground": "#0b93ff",
+    "statusBar.foreground": "#e7e7e7"
+  },
+  "peacock.color": "#0078d7"
+  // "jest.autoEnable": false
+}
