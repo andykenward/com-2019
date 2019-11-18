@@ -27,6 +27,8 @@ export const Project: React.FC<{ slug: string }> = ({ slug }) => {
 
   if (!project) return null
 
+  console.log("project", project)
+
   return <ProjectItem {...project} />
 }
 
