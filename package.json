@@ -91,7 +91,7 @@
     "@types/styled-system": "5.1.4",
     "@typescript-eslint/eslint-plugin": "2.8.0",
     "@typescript-eslint/parser": "2.8.0",
-    "apollo": "2.21.0",
+    "apollo": "2.21.1",
     "babel-jest": "24.9.0",
     "babel-plugin-react-remove-properties": "0.3.0",
     "csstype": "2.6.7",
