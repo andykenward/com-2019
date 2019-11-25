@@ -96,7 +96,7 @@
     "babel-plugin-react-remove-properties": "0.3.0",
     "csstype": "2.6.7",
     "dotenv": "8.2.0",
-    "eslint": "6.6.0",
+    "eslint": "6.7.1",
     "eslint-config-prettier": "6.5.0",
     "eslint-plugin-emotion": "10.0.14",
     "eslint-plugin-import": "2.18.2",
