@@ -1,5 +1,4 @@
 require("dotenv").config()
-const fetch = require("isomorphic-unfetch") // eslint-disable-line @typescript-eslint/no-var-requires
 
 module.exports = {
   exportTrailingSlash: true,

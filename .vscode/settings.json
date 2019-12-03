@@ -11,7 +11,7 @@
     "**/.DS_Store": true,
     "**/.cache": true,
     "**/node_modules": true,
-    "**/public": true
+    "**/public": false
   },
   "files.watcherExclude": {
     "**/.git/objects/**": true,
@@ -25,7 +25,7 @@
     "**/bower_components": true,
     "**/.cache": true,
     "**/.vscode": true,
-    "**/public": true,
+    "**/public": false,
     "**/storybook-statc": true,
     "**/.next": true,
     "**/out": true
@@ -59,7 +59,7 @@
   },
   "[typescript]": {
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescriptreact]": {
     "editor.formatOnSave": true,
