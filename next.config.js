@@ -4,47 +4,8 @@ const fetch = require("isomorphic-unfetch") // eslint-disable-line @typescript-e
 module.exports = {
   exportTrailingSlash: true,
   exportPathMap: async function() {
-    const paths = {
+    return {
       "/": { page: "/" },
-      "/work/": { page: "/work/index" },
-    }
-
-    try {
-      // PROJECT PAGES
-      const query = `
-        query Projects {
-          projects {
-            id
-            slug
-          }
-        }
-      `
-      const res = await fetch(process.env.ENDPOINT, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({ query }),
-      })
-      const resData = await res.json()
-
-      if (resData.errors && resData.errors.length) {
-        throw new Error(resData.errors)
-      }
-      if (!resData.data || !resData.data.projects) {
-        throw new Error("no data or projects")
-      }
-      resData.data.projects.forEach(project => {
-        paths[`/work/${project.slug}/`] = {
-          page: "/work/[slug]",
-          query: { slug: project.slug },
-        }
-      })
-      return paths
-    } catch (error) {
-      console.log("error", error)
-      throw error
     }
   },
   env: {
