@@ -107,7 +107,7 @@
     "husky": "4.0.0-beta.5",
     "jest": "24.9.0",
     "jest-emotion": "10.0.17",
-    "lint-staged": "10.0.0-beta.3",
+    "lint-staged": "10.0.0-1",
     "now": "16.6.0",
     "prettier": "1.19.1",
     "typescript": "3.7.2"
