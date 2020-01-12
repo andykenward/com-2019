@@ -1,6 +1,5 @@
 import { useQuery } from "@apollo/react-hooks"
 import { MockedResponse, wait } from "@apollo/react-testing"
-import { RenderResult } from "@testing-library/react"
 import { act } from "react-dom/test-utils"
 
 import { Footer } from ".."
@@ -28,20 +27,15 @@ describe("<Footer />", () => {
       }
       return null
     }
-    await act(async () => {
+    act(() => {
       renderWithApp(<Component />, MOCKS)
     })
   })
 
   it("renders null on loading", async () => {
-    let root: RenderResult
+    await act(async () => {
+      const { container } = renderWithApp(<Footer />, MOCKS)
 
-    act(() => {
-      root = renderWithApp(<Footer />, MOCKS)
-    })
-
-    act(() => {
-      const { container } = root
       expect(container.firstChild).toBeNull()
       expect(container.firstChild).toMatchSnapshot()
     })
@@ -54,38 +48,26 @@ describe("<Footer />", () => {
         error: new Error("error from server"),
       },
     ]
-    let root: RenderResult
-
-    act(() => {
-      root = renderWithApp(<Footer />, MOCKS)
-    })
 
     await act(async () => {
-      await wait(0)
-    })
+      const { container } = renderWithApp(<Footer />, MOCKS)
 
-    act(() => {
-      const { container } = root
+      await wait(0)
+
       expect(container.firstChild).toBeNull()
       expect(container.firstChild).toMatchSnapshot()
     })
   })
 
   it("renders with 5 items", async () => {
-    let root: RenderResult
     await act(async () => {
-      root = renderWithApp(<Footer />, MOCKS)
-    })
+      const { getAllByTestId, container } = renderWithApp(<Footer />, MOCKS)
 
-    await act(async () => {
       await wait(0)
-    })
 
-    act(() => {
-      const { getAllByTestId } = root
       expect(getAllByTestId("footer-item").length).toEqual(5)
       expect(getAllByTestId("footer-item-a").length).toEqual(5)
-      expect(root.container.firstChild).toMatchSnapshot()
+      expect(container.firstChild).toMatchSnapshot()
     })
   })
 })
