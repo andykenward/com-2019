@@ -1,6 +1,5 @@
 import { useQuery } from "@apollo/react-hooks"
 import { MockedResponse, wait } from "@apollo/react-testing"
-import { RenderResult } from "@testing-library/react"
 import { act } from "react-dom/test-utils"
 
 import { Footer } from ".."
