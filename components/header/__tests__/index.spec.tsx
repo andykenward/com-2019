@@ -23,21 +23,17 @@ describe("<Header />", () => {
       }
       return null
     }
-    await act(async () => {
+    act(() => {
       renderWithApp(<Component />, MOCKS)
     })
   })
 
   it("renders null on loading", async () => {
-    let root: RenderResult
     const MOCKS = getMock(QUERY_ME, HEADER_RESULT_DATA)
 
-    act(() => {
-      root = renderWithApp(<Header />, MOCKS)
-    })
+    await act(async () => {
+      const { container } = renderWithApp(<Header />, MOCKS)
 
-    act(() => {
-      const { container } = root
       expect(container.firstChild).toBeNull()
       expect(container.firstChild).toMatchSnapshot()
     })
@@ -45,18 +41,12 @@ describe("<Header />", () => {
 
   it("renders null on error", async () => {
     const MOCKS = getMocksError(QUERY_ME)
-    let root: RenderResult
-
-    act(() => {
-      root = renderWithApp(<Header />, MOCKS)
-    })
 
     await act(async () => {
-      await wait(0)
-    })
+      const { container } = renderWithApp(<Header />, MOCKS)
 
-    act(() => {
-      const { container } = root
+      await wait(0)
+
       expect(container.firstChild).toBeNull()
       expect(container.firstChild).toMatchSnapshot()
     })
@@ -64,15 +54,11 @@ describe("<Header />", () => {
 
   it("renders null on undefined data", async () => {
     const MOCKS = getMock(QUERY_ME)
-    let root: RenderResult
     await act(async () => {
-      root = renderWithApp(<Header />, MOCKS)
-    })
-    await act(async () => {
+      const { container } = renderWithApp(<Header />, MOCKS)
+
       await wait(0)
-    })
-    act(() => {
-      const { container } = root
+
       expect(container.firstChild).toBeNull()
       expect(container.firstChild).toMatchSnapshot()
     })

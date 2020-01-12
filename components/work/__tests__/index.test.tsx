@@ -18,44 +18,34 @@ describe("Work", () => {
       }
       return null
     }
-    await act(async () => {
+    act(() => {
       renderWithApp(<Component />, MOCKS)
     })
   })
 
   it("renders loading state", async () => {
-    let root: RenderResult
     const MOCKS = getMock(QUERY_WORK, WORK_RESULT_DATA)
 
-    act(() => {
-      root = renderWithApp(<Work />, MOCKS)
-    })
-
-    act(() => {
+    await act(async () => {
       const {
         container: { firstChild },
-      } = root
+      } = renderWithApp(<Work />, MOCKS)
+
       expect(firstChild).not.toBeNull()
       expect(firstChild).toMatchSnapshot()
     })
   })
 
   it("renders error state", async () => {
-    let root: RenderResult
     const MOCKS = getMocksError(QUERY_WORK)
 
-    act(() => {
-      root = renderWithApp(<Work />, MOCKS)
-    })
-
     await act(async () => {
-      await wait(0)
-    })
-
-    act(() => {
       const {
         container: { firstChild },
-      } = root
+      } = renderWithApp(<Work />, MOCKS)
+
+      await wait(0)
+
       expect(firstChild).not.toBeNull()
       expect(firstChild).toMatchSnapshot()
     })
