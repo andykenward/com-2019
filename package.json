@@ -111,6 +111,6 @@
     "lint-staged": "10.0.0-1",
     "now": "16.7.3",
     "prettier": "1.19.1",
-    "typescript": "3.7.2"
+    "typescript": "3.7.4"
   }
 }
