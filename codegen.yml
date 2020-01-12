@@ -1,6 +1,6 @@
 overwrite: true
 schema: ${SCHEMA_PATH}
-documents: "./components/**/query.{ts}"
+documents: "./components/**/*.{ts,tsx}"
 generates:
   generated/graphql.tsx:
     hooks:
