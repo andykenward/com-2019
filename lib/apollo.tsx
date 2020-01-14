@@ -63,7 +63,7 @@ export function withApollo(PageComponent: NextPage, { ssr = true } = {}) {
     apolloClient: ApolloClient<NormalizedCacheObject>
     apolloState: NormalizedCacheObject
   }) => {
-    const client = apolloClient || initApolloClient(apolloState)
+    const client = apolloClient ?? initApolloClient(apolloState)
     return (
       <ApolloProvider client={client}>
         <PageComponent {...pageProps} />
@@ -74,7 +74,7 @@ export function withApollo(PageComponent: NextPage, { ssr = true } = {}) {
   // Set the correct displayName in development
   if (process.env.NODE_ENV !== "production") {
     const displayName =
-      PageComponent.displayName || PageComponent.name || "Component"
+      PageComponent.displayName ?? PageComponent.name ?? "Component"
 
     if (displayName === "App") {
       console.warn("This withApollo HOC only works with PageComponents.")
@@ -83,7 +83,7 @@ export function withApollo(PageComponent: NextPage, { ssr = true } = {}) {
     WithApollo.displayName = `withApollo(${displayName})`
   }
 
-  if (ssr || PageComponent.getInitialProps) {
+  if (ssr ?? PageComponent.getInitialProps) {
     WithApollo.getInitialProps = async (ctx: any) => {
       const { AppTree } = ctx
 

@@ -7,7 +7,7 @@ interface Props {
 
 export const Clients: React.FC<Props> = ({ data }) => (
   <>
-    {(data || []).map(
+    {(data ?? []).map(
       ({ id, title }) =>
         id &&
         title && (

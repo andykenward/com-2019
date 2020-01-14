@@ -8,4 +8,4 @@ export const filterProps: (prop: string) => boolean = (prop: string): boolean =>
 
 export const childrenOnly: (prop: string) => boolean = (
   prop: string
-): boolean => prop === "children" || prop === "data-test-id"
+): boolean => prop === "children" ?? prop === "data-test-id"
