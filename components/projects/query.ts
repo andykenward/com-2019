@@ -46,4 +46,5 @@ export const QUERY_PROJECTS_NAV: DocumentNode = gql`
       ...FragmentProjectNav
     }
   }
+  ${FRAGMENT_PROJECTNAV}
 `

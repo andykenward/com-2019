@@ -24,7 +24,7 @@ export const Footer: React.FC = () => {
           list-style: none;
         `}
       >
-        {(links || []).map(
+        {(links ?? []).map(
           ({ title, url, id }) =>
             title &&
             url && (

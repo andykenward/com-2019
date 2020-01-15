@@ -31,7 +31,7 @@ export const Projects: React.FC = () => {
   return (
     <div>
       <nav>
-        {(projects || []).map(project =>
+        {(projects ?? []).map(project =>
           project ? (
             <Link
               prefetch
@@ -83,13 +83,13 @@ const ProjectsMenuItem: React.FC<FragmentProjectNavFragment> = ({
 export const ProjectsMenu: React.FC = () => {
   const { data } = useProjectsNavQuery()
 
-  const projects = data ? data.projects : []
+  const projects = data?.projects ?? []
 
   return (
     <ColumnsCenter as="section">
       <HeadingOne mb={32}>Projects</HeadingOne>
       <Box display="grid" gridRowGap={56}>
-        {(projects || []).map(project =>
+        {projects.map(project =>
           project ? <ProjectsMenuItem key={project.id} {...project} /> : null
         )}
       </Box>
