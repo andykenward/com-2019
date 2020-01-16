@@ -82,6 +82,7 @@ jobs:
       if: github.ref != 'refs/heads/master' && github.event_name == 'pull_request'
       run: npx now --no-clipboard --token ${{ secrets.ZEIT_TOKEN }} -m commit=${{ github.sha }} -m branch=${{ github.ref }}
     - uses: iam4x/now-deploy-preview-comment@v1.0.2
+      if: github.ref != 'refs/heads/master' && github.event_name == 'pull_request'
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
         ZEIT_TOKEN: ${{secrets.ZEIT_TOKEN}}
