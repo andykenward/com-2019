@@ -49,8 +49,7 @@
     "*.{js,jsx,ts,tsx}": [
       "npm run format",
       "npm run eslint:fix",
-      "git add",
-      "jest --bail --findRelatedTests"
+      "cross-env NODE_ENV=test jest --bail --findRelatedTests"
     ]
   },
   "dependencies": {
@@ -95,6 +94,7 @@
     "apollo": "2.21.3",
     "babel-jest": "24.9.0",
     "babel-plugin-react-remove-properties": "0.3.0",
+    "cross-env": "^6.0.3",
     "csstype": "2.6.7",
     "dotenv": "8.2.0",
     "eslint": "6.8.0",
