@@ -10,6 +10,7 @@ const result: Maybe<{ __typename?: "Me" } & FragmentMeFragment> = {
   name: "Andy Kenward",
   role: "Senior Front-End Engineer",
   update: "Hire Me",
+  available: "2020-04-01T00:00:00.000Z",
   links: [{ __typename: "Link", id: "123", title: "Github", url: "/link" }],
 }
 
@@ -28,6 +29,11 @@ export const HEADER_RESULT_DATA_NO_ROLE: MeQuery = {
 export const HEADER_RESULT_DATA_NO_UPDATE: MeQuery = {
   me: Object.assign({}, result, { update: null }),
 }
+
+export const HEADER_RESULT_DATA_NO_AVAILABLE: MeQuery = {
+  me: Object.assign({}, result, { available: null }),
+}
+
 export const HEADER_RESULT_DATA_NO_LINKS: MeQuery = {
   me: Object.assign({}, result, { links: null }),
 }

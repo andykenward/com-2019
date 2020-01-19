@@ -9,6 +9,7 @@ export const FRAGMENT_ME: FragmentSpreadNode = gql`
     name
     role
     update
+    available
     links {
       ...FragmentLink
     }
