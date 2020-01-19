@@ -7,6 +7,7 @@ import { getMock, getMocksError, renderWithApp } from "../../../lib/test-utils"
 import { QUERY_ME } from "../query"
 import {
   HEADER_RESULT_DATA,
+  HEADER_RESULT_DATA_NO_AVAILABLE,
   HEADER_RESULT_DATA_NO_LINKS,
   HEADER_RESULT_DATA_NO_NAME,
   HEADER_RESULT_DATA_NO_ROLE,
@@ -67,6 +68,7 @@ describe("<Header />", () => {
   const TEST_ID_NAME = "name"
   const TEST_ID_ROLE = "role"
   const TEST_ID_UPDATE = "update"
+  const TEST_ID_AVAILABLE = "available"
   const TEST_ID_LINKS = "links"
   const TEST_ID_LINK = "link"
 
@@ -89,6 +91,11 @@ describe("<Header />", () => {
       )
       expect(getByTestId(TEST_ID_UPDATE).tagName).toEqual("H3")
       expect(getByTestId(TEST_ID_UPDATE)).toHaveTextContent("Hire Me")
+
+      expect(getByTestId(TEST_ID_AVAILABLE).tagName).toEqual("H4")
+      expect(getByTestId(TEST_ID_AVAILABLE)).toHaveTextContent(
+        "Available from April 2020"
+      )
       const links = getByTestId(TEST_ID_LINKS)
       expect(links).not.toBeNull()
       expect(getAllByTestId(TEST_ID_LINK).length).toEqual(1)
@@ -115,6 +122,9 @@ describe("<Header />", () => {
         "Senior Front-End Engineer"
       )
       expect(getByTestId(TEST_ID_UPDATE)).toHaveTextContent("Hire Me")
+      expect(getByTestId(TEST_ID_AVAILABLE)).toHaveTextContent(
+        "Available from April 2020"
+      )
       expect(getByTestId(TEST_ID_LINKS)).not.toBeNull()
       expect(getAllByTestId(TEST_ID_LINK).length).toEqual(1)
 
@@ -136,6 +146,9 @@ describe("<Header />", () => {
       expect(getByTestId(TEST_ID_NAME)).toHaveTextContent("Andy Kenward")
       expect(queryByTestId(TEST_ID_ROLE)).toBeNull()
       expect(getByTestId(TEST_ID_UPDATE)).toHaveTextContent("Hire Me")
+      expect(getByTestId(TEST_ID_AVAILABLE)).toHaveTextContent(
+        "Available from April 2020"
+      )
       expect(getByTestId(TEST_ID_LINKS)).not.toBeNull()
       expect(getAllByTestId(TEST_ID_LINK).length).toEqual(1)
 
@@ -155,6 +168,32 @@ describe("<Header />", () => {
     act(() => {
       const { container, queryByTestId, getByTestId, getAllByTestId } = root
       expect(queryByTestId(TEST_ID_UPDATE)).toBeNull()
+      expect(getByTestId(TEST_ID_NAME)).toHaveTextContent("Andy Kenward")
+      expect(getByTestId(TEST_ID_ROLE)).toHaveTextContent(
+        "Senior Front-End Engineer"
+      )
+      expect(getByTestId(TEST_ID_AVAILABLE)).toHaveTextContent(
+        "Available from April 2020"
+      )
+      expect(getByTestId(TEST_ID_LINKS)).not.toBeNull()
+      expect(getAllByTestId(TEST_ID_LINK).length).toEqual(1)
+
+      expect(container.firstChild).toMatchSnapshot()
+    })
+  })
+
+  it("should render when `available` is `null`", async () => {
+    const MOCKS = getMock(QUERY_ME, HEADER_RESULT_DATA_NO_AVAILABLE)
+    let root: RenderResult
+    await act(async () => {
+      root = renderWithApp(<Header />, MOCKS)
+    })
+    await act(async () => {
+      await wait(0)
+    })
+    act(() => {
+      const { container, queryByTestId, getByTestId, getAllByTestId } = root
+      expect(queryByTestId(TEST_ID_AVAILABLE)).toBeNull()
       expect(getByTestId(TEST_ID_NAME)).toHaveTextContent("Andy Kenward")
       expect(getByTestId(TEST_ID_ROLE)).toHaveTextContent(
         "Senior Front-End Engineer"
@@ -182,6 +221,9 @@ describe("<Header />", () => {
         "Senior Front-End Engineer"
       )
       expect(getByTestId(TEST_ID_UPDATE)).toHaveTextContent("Hire Me")
+      expect(getByTestId(TEST_ID_AVAILABLE)).toHaveTextContent(
+        "Available from April 2020"
+      )
       expect(queryByTestId(TEST_ID_LINKS)).toBeNull()
       expect(queryByTestId(TEST_ID_LINK)).toBeNull()
       expect(container.firstChild).toMatchSnapshot()
