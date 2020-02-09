@@ -1,4 +1,5 @@
 .next
+.now
 out
 .env
 package.json
@@ -7,4 +8,5 @@ package-lock.json
 coverage
 .github
 *.snap
-static/normalize.css
+public
+public/static/normalize.css
