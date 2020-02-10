@@ -92,7 +92,7 @@
     "@types/styled-system": "5.1.4",
     "@types/testing-library__react": "9.1.2",
     "@typescript-eslint/eslint-plugin": "2.15.0",
-    "@typescript-eslint/parser": "2.15.0",
+    "@typescript-eslint/parser": "2.19.0",
     "apollo": "2.21.3",
     "babel-plugin-react-remove-properties": "0.3.0",
     "cross-env": "^6.0.3",
