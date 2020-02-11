@@ -24,7 +24,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default withApollo(Home, {
-  // Disable apollo ssr fetching in favour of automatic static optimization
-  ssr: Boolean(process.env.SSR),
-})
+export default withApollo()(Home)
