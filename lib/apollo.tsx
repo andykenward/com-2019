@@ -85,7 +85,7 @@ export const withApollo = ({ ssr = true } = {}) => (
   // Set the correct displayName in development
   if (process.env.NODE_ENV !== "production") {
     const displayName =
-      PageComponent.displayName || PageComponent.name || "Component"
+      (PageComponent.displayName ?? PageComponent.name) || "Component"
 
     WithApollo.displayName = `withApollo(${displayName})`
   }

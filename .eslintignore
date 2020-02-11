@@ -5,3 +5,5 @@ out
 coverage
 .github
 *.snap
+*.config.js
+*.config.prod.js
