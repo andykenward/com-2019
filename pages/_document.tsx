@@ -3,13 +3,15 @@ import css from "@emotion/css"
 import Document, { Head, Main, NextScript } from "next/document"
 import React from "react"
 
+import { Fonts } from "../components/fonts"
+
 export default class extends Document {
   render() {
     return (
       <html lang="en">
         <Head>
           <link rel="stylesheet" href="/static/normalize.css" />
-          <link rel="stylesheet" href="/static/fonts/index.css" />
+          <Fonts />
           <Global
             styles={css`
               html {
