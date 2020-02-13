@@ -17,6 +17,15 @@
           "value": "cache-control: public, max-age=31536000, immutable"
         }
       ]
+    },
+    {
+      "source": "_next/static/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "cache-control: public, max-age=31536000, immutable"
+        }
+      ]
     }
   ]
 }
