@@ -9,7 +9,6 @@ export default class extends Document {
       <html lang="en">
         <Head>
           <link rel="stylesheet" href="/static/normalize.css" />
-          <link rel="stylesheet" href="/static/fonts/index.css" />
           <Global
             styles={css`
               html {
