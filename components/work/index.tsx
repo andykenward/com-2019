@@ -1,7 +1,7 @@
 import { useWorkQuery } from "../../generated/graphql"
 
 export const Work: React.FC = () => {
-  const { loading, error, data } = useWorkQuery()
+  const { loading, error } = useWorkQuery()
 
   if (error) {
     return <div>error</div>

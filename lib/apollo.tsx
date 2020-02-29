@@ -162,10 +162,9 @@ export const withApollo = ({ ssr = false } = {}) => (
             // we need to modify their props a little.
             let props:
               | (AppInitialProps & {
-                  [name: string]: any
+                  [name: string]: any // eslint-disable-line @typescript-eslint/no-explicit-any
                 })
-              | any
-            console.log("inAppContext", inAppContext)
+              | any // eslint-disable-line @typescript-eslint/no-explicit-any
             if (inAppContext) {
               props = { ...pageProps, apolloClient }
             } else {
