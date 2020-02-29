@@ -30,6 +30,9 @@
     "**/out": true
   },
   "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.implementationsCodeLens.enabled": true,
+  "typescript.suggest.autoImports": true,
+  "typescript.suggest.includeAutomaticOptionalChainCompletions": true,
   // ESLINT
   "eslint.codeAction.disableRuleComment": {
     "enable": true,
