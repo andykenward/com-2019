@@ -1,8 +1,18 @@
-import { InMemoryCache, NormalizedCacheObject } from "apollo-cache-inmemory"
+import {
+  InMemoryCache,
+  IntrospectionFragmentMatcher,
+  NormalizedCacheObject,
+} from "apollo-cache-inmemory"
 import { ApolloClient } from "apollo-client"
 import { HttpLink } from "apollo-link-http"
 import fetch from "isomorphic-unfetch"
 import { NextPageContext } from "next"
+
+import introspectionResult from "../generated/introspection-result"
+
+const fragmentMatcher = new IntrospectionFragmentMatcher({
+  introspectionQueryResultData: introspectionResult,
+})
 
 export default function createApolloClient(
   initialState: NormalizedCacheObject = {},
@@ -17,6 +27,6 @@ export default function createApolloClient(
       credentials: "same-origin", // Additional fetch() options like `credentials` or `headers`
       fetch,
     }),
-    cache: new InMemoryCache().restore(initialState),
+    cache: new InMemoryCache({ fragmentMatcher }).restore(initialState),
   })
 }
