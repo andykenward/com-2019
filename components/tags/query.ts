@@ -1,7 +1,7 @@
-import { FragmentSpreadNode } from "graphql"
+import { DocumentNode } from "graphql"
 import gql from "graphql-tag"
 
-export const FRAGMENT_TAG: FragmentSpreadNode = gql`
+export const FRAGMENT_TAG: DocumentNode = gql`
   fragment FragmentTag on Tag {
     id
     title

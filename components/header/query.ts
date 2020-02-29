@@ -1,9 +1,9 @@
-import { DocumentNode, FragmentSpreadNode } from "graphql"
+import { DocumentNode } from "graphql"
 import gql from "graphql-tag"
 
 import { FRAGMENT_LINK } from "../link/query"
 
-export const FRAGMENT_ME: FragmentSpreadNode = gql`
+export const FRAGMENT_ME: DocumentNode = gql`
   fragment FragmentMe on Me {
     id
     name
