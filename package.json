@@ -27,7 +27,7 @@
     "test:ci": "jest --coverage",
     "schema": "apollo service:download --config=./apollo.config.prod.js generated/schema.json",
     "normalizecss": "curl https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css  -o ./public/static/normalize.css",
-    "local:ci": "npm run codegen && npm run lint && npm run test"
+    "local:ci": "npm run codegen && npm run lint && npm run type-check && npm run test"
   },
   "repository": {
     "type": "git",
