@@ -89,8 +89,8 @@
     "@types/react-dom": "16.9.5",
     "@types/styled-system": "5.1.6",
     "@types/testing-library__react": "9.1.2",
-    "@typescript-eslint/eslint-plugin": "2.19.2",
-    "@typescript-eslint/parser": "2.19.2",
+    "@typescript-eslint/eslint-plugin": "2.21.0",
+    "@typescript-eslint/parser": "2.21.0",
     "apollo": "2.21.3",
     "babel-plugin-react-remove-properties": "0.3.0",
     "cross-env": "^6.0.3",
@@ -111,6 +111,6 @@
     "lint-staged": "10.0.0-1",
     "now": "17.0.3",
     "prettier": "1.19.1",
-    "typescript": "3.7.5"
+    "typescript": "3.8.3"
   }
 }
