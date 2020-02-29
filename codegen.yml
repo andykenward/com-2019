@@ -3,9 +3,6 @@ schema: ${SCHEMA_PATH}
 documents: "./components/**/*.{ts,tsx}"
 generates:
   generated/graphql.tsx:
-    hooks:
-      afterOneFileWrite:
-        - prettier --write
     plugins:
       - "typescript"
       - "typescript-operations"
@@ -16,9 +13,6 @@ generates:
       withComponent: false
       hooksImportFrom: "@apollo/react-hooks"
   generated/introspection-result.ts:
-    hooks:
-      afterOneFileWrite:
-        - prettier --write
     plugins:
       - fragment-matcher
 config:
