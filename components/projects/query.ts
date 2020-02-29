@@ -1,4 +1,4 @@
-import { DocumentNode, FragmentSpreadNode } from "graphql"
+import { DocumentNode } from "graphql"
 import gql from "graphql-tag"
 
 import { FRAGMENT_CLIENT } from "../clients/query"
@@ -14,7 +14,7 @@ export const QUERY_PROJECTS: DocumentNode = gql`
   }
 `
 
-export const FRAGMENT_PROJECTNAV: FragmentSpreadNode = gql`
+export const FRAGMENT_PROJECTNAV: DocumentNode = gql`
   fragment FragmentProjectNav on Project {
     id
     clients {
