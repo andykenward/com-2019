@@ -78,7 +78,7 @@
     "@graphql-codegen/fragment-matcher": "1.12.2",
     "@graphql-codegen/introspection": "1.12.2",
     "@graphql-codegen/typescript": "1.12.2",
-    "@graphql-codegen/typescript-operations": "1.12.2",
+    "@graphql-codegen/typescript-operations": "1.13.0",
     "@graphql-codegen/typescript-react-apollo": "1.13.0",
     "@testing-library/jest-dom": "5.1.1",
     "@testing-library/react": "9.4.1",
