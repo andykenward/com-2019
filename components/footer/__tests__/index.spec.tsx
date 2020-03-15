@@ -36,7 +36,7 @@ describe("<Footer />", () => {
     await act(async () => {
       const { container } = renderWithApp(<Footer />, MOCKS)
 
-      expect(container.firstChild).toBeNull()
+      expect(container).toBeEmpty()
       expect(container.firstChild).toMatchSnapshot()
     })
   })
@@ -54,7 +54,7 @@ describe("<Footer />", () => {
 
       await wait(0)
 
-      expect(container.firstChild).toBeNull()
+      expect(container).toBeEmpty()
       expect(container.firstChild).toMatchSnapshot()
     })
   })

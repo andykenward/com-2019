@@ -35,7 +35,7 @@ describe("<Header />", () => {
     await act(async () => {
       const { container } = renderWithApp(<Header />, MOCKS)
 
-      expect(container.firstChild).toBeNull()
+      expect(container).toBeEmpty()
       expect(container.firstChild).toMatchSnapshot()
     })
   })
@@ -48,7 +48,7 @@ describe("<Header />", () => {
 
       await wait(0)
 
-      expect(container.firstChild).toBeNull()
+      expect(container).toBeEmpty()
       expect(container.firstChild).toMatchSnapshot()
     })
   })
@@ -60,7 +60,7 @@ describe("<Header />", () => {
 
       await wait(0)
 
-      expect(container.firstChild).toBeNull()
+      expect(container).toBeEmpty()
       expect(container.firstChild).toMatchSnapshot()
     })
   })
@@ -99,7 +99,7 @@ describe("<Header />", () => {
       const links = getByTestId(TEST_ID_LINKS)
       expect(links).not.toBeNull()
       expect(getAllByTestId(TEST_ID_LINK).length).toEqual(1)
-      expect(getByTestId(TEST_ID_LINK).getAttribute("href")).toEqual("/link")
+      expect(getByTestId(TEST_ID_LINK)).toHaveAttribute("href", "/link")
       expect(getByTestId(TEST_ID_LINK)).toHaveTextContent("Github")
 
       expect(container.firstChild).toMatchSnapshot()
