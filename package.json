@@ -87,7 +87,7 @@
     "@types/ramda": "0.26.43",
     "@types/react": "16.9.23",
     "@types/react-dom": "16.9.5",
-    "@types/styled-system": "5.1.8",
+    "@types/styled-system": "5.1.9",
     "@typescript-eslint/eslint-plugin": "2.23.0",
     "@typescript-eslint/parser": "2.23.0",
     "apollo": "2.25.0",
