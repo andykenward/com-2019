@@ -107,7 +107,7 @@
     "file-loader": "5.1.0",
     "husky": "4.2.3",
     "jest": "25.1.0",
-    "jest-emotion": "10.0.27",
+    "jest-emotion": "10.0.32",
     "lint-staged": "10.0.8",
     "now": "17.0.4",
     "prettier": "1.19.1",
