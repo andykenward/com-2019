@@ -18,7 +18,7 @@ export const ColumnsCenter: React.FC<ColumnsCenterProps> = ({
   >
     {React.Children.map(
       children,
-      child =>
+      (child) =>
         React.isValidElement(child) &&
         React.cloneElement(child, { gridColumn: "center-start/center-end" })
     )}

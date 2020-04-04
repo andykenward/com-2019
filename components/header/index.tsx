@@ -52,7 +52,7 @@ export const Header: React.FC = () => {
       {links?.length && (
         <Box data-testid="links">
           {links.map(
-            item =>
+            (item) =>
               item.url && (
                 <ButtonExternal
                   data-testid="link"

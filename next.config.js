@@ -2,7 +2,7 @@ require("dotenv").config()
 
 module.exports = {
   exportTrailingSlash: true,
-  exportPathMap: async function() {
+  exportPathMap: async function () {
     return {
       "/": { page: "/" },
     }
