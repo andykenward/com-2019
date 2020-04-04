@@ -106,7 +106,7 @@
     "eslint-plugin-simple-import-sort": "5.0.2",
     "file-loader": "5.1.0",
     "husky": "4.2.3",
-    "jest": "25.1.0",
+    "jest": "25.2.7",
     "jest-emotion": "10.0.32",
     "lint-staged": "10.0.8",
     "now": "17.0.4",
