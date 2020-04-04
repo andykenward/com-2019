@@ -59,7 +59,7 @@ const ProjectsMenuItem: React.FC<FragmentProjectNavFragment> = ({
   studio,
 }) => (
   <Box as="article">
-    <Clients data={clients} />
+    <Clients clients={clients} />
     <HeadingThree mb={!description ? 8 : undefined}>{title}</HeadingThree>
     <Body mb={8}>{description}</Body>
     <HeadingFour mb={!studio ? 8 : undefined}>{role}</HeadingFour>
@@ -68,7 +68,7 @@ const ProjectsMenuItem: React.FC<FragmentProjectNavFragment> = ({
         {studio.title}
       </LinkExternal>
     )}
-    {tags && <Tags data={tags} />}
+    {tags && <Tags tags={tags} />}
     {(url || urlCaseStudy) && (
       <Box>
         {url && <ButtonExternal href={url}>Site</ButtonExternal>}
