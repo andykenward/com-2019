@@ -110,7 +110,7 @@
     "jest-emotion": "10.0.32",
     "lint-staged": "10.0.8",
     "now": "17.0.4",
-    "prettier": "1.19.1",
+    "prettier": "2.0.2",
     "typescript": "3.8.3"
   }
 }
