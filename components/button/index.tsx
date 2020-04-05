@@ -19,7 +19,7 @@ export const ButtonExternal: React.FC<Props> = ({
     mr={8}
     mb={8}
     href={href}
-    css={theme => css`
+    css={(theme) => css`
       display: inline-flex;
       box-shadow: inset 0 0 0 0.0625rem
         ${fill ? theme.colors.primary : `rgba(36, 28, 21, 0.4)`};

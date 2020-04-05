@@ -31,7 +31,7 @@ export const Projects: React.FC = () => {
   return (
     <div>
       <nav>
-        {(projects ?? []).map(project =>
+        {(projects ?? []).map((project) =>
           project ? (
             <Link
               prefetch
@@ -59,7 +59,7 @@ const ProjectsMenuItem: React.FC<FragmentProjectNavFragment> = ({
   studio,
 }) => (
   <Box as="article">
-    <Clients data={clients} />
+    <Clients clients={clients} />
     <HeadingThree mb={!description ? 8 : undefined}>{title}</HeadingThree>
     <Body mb={8}>{description}</Body>
     <HeadingFour mb={!studio ? 8 : undefined}>{role}</HeadingFour>
@@ -68,7 +68,7 @@ const ProjectsMenuItem: React.FC<FragmentProjectNavFragment> = ({
         {studio.title}
       </LinkExternal>
     )}
-    {tags && <Tags data={tags} />}
+    {tags && <Tags tags={tags} />}
     {(url || urlCaseStudy) && (
       <Box>
         {url && <ButtonExternal href={url}>Site</ButtonExternal>}
@@ -89,7 +89,7 @@ export const ProjectsMenu: React.FC = () => {
     <ColumnsCenter as="section">
       <HeadingOne mb={32}>Projects</HeadingOne>
       <Box display="grid" gridRowGap={56}>
-        {projects.map(project =>
+        {projects.map((project) =>
           project ? <ProjectsMenuItem key={project.id} {...project} /> : null
         )}
       </Box>

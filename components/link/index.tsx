@@ -19,7 +19,7 @@ export const LinkExternal: React.FC<LinkExternalProps> = ({
     rel="noopener noreferrer"
     target="_blank"
     as="a"
-    css={theme =>
+    css={(theme) =>
       css`
         display: inline-flex;
         transition: all 0.15s linear;
