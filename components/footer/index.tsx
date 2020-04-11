@@ -25,9 +25,9 @@ export const Footer: React.FC = () => {
         `}
       >
         {(links ?? []).map(
-          ({ title, url, id }) =>
+          ({ title, href, id }) =>
             title &&
-            url && (
+            href && (
               <Box
                 data-testid="footer-item"
                 as="li"
@@ -36,7 +36,7 @@ export const Footer: React.FC = () => {
                 display="list-item"
                 key={id}
               >
-                <LinkExternal data-testid="footer-item-a" href={url}>
+                <LinkExternal data-testid="footer-item-a" href={href}>
                   {title}
                 </LinkExternal>
               </Box>

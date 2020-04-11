@@ -19,7 +19,7 @@ export const FRAGMENT_ME: DocumentNode = gql`
 
 export const QUERY_ME: DocumentNode = gql`
   query Me {
-    me(where: { id: "cjzkx8reiebu10941932j2b3x" }) {
+    me(where: { id: "ck8vv6ync198z0104gjvsnrt8" }) {
       ...FragmentMe
     }
   }

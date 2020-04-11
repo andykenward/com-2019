@@ -5,7 +5,7 @@ import { FRAGMENT_LINK } from "../link/query"
 
 export const QUERY_FOOTER: DocumentNode = gql`
   query Footer {
-    footer(where: { id: "cjzjk2d1gvch50887pxsk6yju" }) {
+    footer(where: { id: "ck8vw5x4w19nc0104oio2p1ml" }) {
       id
       links {
         ...FragmentLink

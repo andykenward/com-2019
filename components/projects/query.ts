@@ -6,7 +6,7 @@ import { FRAGMENT_TAG } from "../tags/query"
 
 export const QUERY_PROJECTS: DocumentNode = gql`
   query Projects {
-    projects(orderBy: sort_ASC) {
+    projects {
       id
       slug
       title
@@ -27,14 +27,13 @@ export const FRAGMENT_PROJECTNAV: DocumentNode = gql`
     studio {
       id
       title
-      url
+      href
     }
     tags {
       ...FragmentTag
     }
-    urlCaseStudy
-    url
-    sort
+    hrefCaseStudy
+    href
   }
   ${FRAGMENT_CLIENT}
   ${FRAGMENT_TAG}
@@ -42,7 +41,7 @@ export const FRAGMENT_PROJECTNAV: DocumentNode = gql`
 
 export const QUERY_PROJECTS_NAV: DocumentNode = gql`
   query ProjectsNav {
-    projects(orderBy: sort_ASC) {
+    projects {
       ...FragmentProjectNav
     }
   }

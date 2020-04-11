@@ -5,6 +5,6 @@ export const FRAGMENT_LINK: DocumentNode = gql`
   fragment FragmentLink on Link {
     id
     title
-    url
+    href
   }
 `

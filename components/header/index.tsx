@@ -52,14 +52,10 @@ export const Header: React.FC = () => {
       {links?.length && (
         <Box data-testid="links">
           {links.map(
-            (item) =>
-              item.url && (
-                <ButtonExternal
-                  data-testid="link"
-                  key={item.id}
-                  href={item.url}
-                >
-                  {item.title}
+            ({ href, id, title }) =>
+              href && (
+                <ButtonExternal data-testid="link" key={id} href={href}>
+                  {title}
                 </ButtonExternal>
               )
           )}
