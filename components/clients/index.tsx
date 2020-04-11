@@ -1,13 +1,11 @@
-import { FragmentClientFragment, Maybe } from "../../generated/graphql"
+import { FragmentProjectNavFragment } from "../../generated/graphql"
 import { BodyBold } from "../typography"
 
-interface Props {
-  data: Maybe<Array<{ __typename?: "Client" } & FragmentClientFragment>>
-}
-
-export const Clients: React.FC<Props> = ({ data }) => (
+export const Clients: React.FC<Pick<FragmentProjectNavFragment, "clients">> = ({
+  clients,
+}) => (
   <>
-    {(data ?? []).map(
+    {(clients ?? []).map(
       ({ id, title }) =>
         id &&
         title && (

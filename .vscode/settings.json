@@ -78,6 +78,7 @@
   "peacock.color": "#0078d7",
   "workbench.colorCustomizations": {
     "activityBar.background": "#0b93ff",
+    "activityBar.activeBackground": "#0b93ff",
     "activityBar.activeBorder": "#ffbfe3",
     "activityBar.foreground": "#e7e7e7",
     "activityBar.inactiveForeground": "#e7e7e799",
@@ -89,7 +90,9 @@
     "titleBar.inactiveForeground": "#e7e7e799",
     "statusBar.background": "#0078d7",
     "statusBarItem.hoverBackground": "#0b93ff",
-    "statusBar.foreground": "#e7e7e7"
+    "statusBar.foreground": "#e7e7e7",
+    "statusBar.border": "#0078d7",
+    "titleBar.border": "#0078d7"
   },
   "peacock.remoteColor": "#215732",
   // "jest.autoEnable": false

@@ -17,7 +17,7 @@ import {
  * UTILS
  */
 export const fontStack = (fonts: string[]): string =>
-  fonts.map(font => (font.includes(" ") ? `"${font}"` : font)).join(", ")
+  fonts.map((font) => (font.includes(" ") ? `"${font}"` : font)).join(", ")
 
 export const convertToRem = (n: number | string): string | number =>
   is(Number, n) ? `${(n as number) / 16}rem` : n

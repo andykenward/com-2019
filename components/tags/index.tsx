@@ -1,18 +1,14 @@
 import css from "@emotion/css"
 
-import { Tag } from "../../generated/graphql"
+import { FragmentProjectNavFragment } from "../../generated/graphql"
 import { convertToRem } from "../../lib/styled-system"
 import { Box } from "../box"
 import { LinkExternal } from "../link"
 import { Body } from "../typography"
 
-type Item = Pick<Tag, "id" | "title" | "url">
-
-interface Props {
-  data: Item[]
-}
-
-export const Tags: React.FC<Props> = ({ data }) =>
+export const Tags: React.FC<Pick<FragmentProjectNavFragment, "tags">> = ({
+  tags: data,
+}) =>
   data?.length ? (
     <Box
       as="ul"
