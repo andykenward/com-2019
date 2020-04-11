@@ -5,6 +5,6 @@ export const FRAGMENT_CLIENT: DocumentNode = gql`
   fragment FragmentClient on Client {
     id
     title
-    url
+    href
   }
 `

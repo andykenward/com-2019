@@ -54,8 +54,8 @@ const ProjectsMenuItem: React.FC<FragmentProjectNavFragment> = ({
   description,
   role,
   tags,
-  url,
-  urlCaseStudy,
+  href,
+  hrefCaseStudy,
   studio,
 }) => (
   <Box as="article">
@@ -63,17 +63,17 @@ const ProjectsMenuItem: React.FC<FragmentProjectNavFragment> = ({
     <HeadingThree mb={!description ? 8 : undefined}>{title}</HeadingThree>
     <Body mb={8}>{description}</Body>
     <HeadingFour mb={!studio ? 8 : undefined}>{role}</HeadingFour>
-    {studio?.url && (
-      <LinkExternal mb={8} href={studio.url}>
+    {studio?.href && (
+      <LinkExternal mb={8} href={studio.href}>
         {studio.title}
       </LinkExternal>
     )}
     {tags && <Tags tags={tags} />}
-    {(url || urlCaseStudy) && (
+    {(href || hrefCaseStudy) && (
       <Box>
-        {url && <ButtonExternal href={url}>Site</ButtonExternal>}
-        {urlCaseStudy && (
-          <ButtonExternal href={urlCaseStudy}>Case Study</ButtonExternal>
+        {href && <ButtonExternal href={href}>Site</ButtonExternal>}
+        {hrefCaseStudy && (
+          <ButtonExternal href={hrefCaseStudy}>Case Study</ButtonExternal>
         )}
       </Box>
     )}

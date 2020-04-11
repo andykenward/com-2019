@@ -5,6 +5,6 @@ export const FRAGMENT_TAG: DocumentNode = gql`
   fragment FragmentTag on Tag {
     id
     title
-    url
+    href
   }
 `

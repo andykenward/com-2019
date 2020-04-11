@@ -21,7 +21,7 @@ export const Tags: React.FC<Pick<FragmentProjectNavFragment, "tags">> = ({
         list-style: none;
       `}
     >
-      {data.map(({ url, title }, index: number) =>
+      {data.map(({ href, title }, index: number) =>
         title != null ? (
           <Body
             textColor="oyster"
@@ -39,8 +39,8 @@ export const Tags: React.FC<Pick<FragmentProjectNavFragment, "tags">> = ({
             as="li"
             key={index}
           >
-            {url ? (
-              <LinkExternal href={url}>{title}</LinkExternal>
+            {href ? (
+              <LinkExternal href={href}>{title}</LinkExternal>
             ) : (
               <>{title}</>
             )}

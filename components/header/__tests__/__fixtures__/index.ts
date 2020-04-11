@@ -11,7 +11,7 @@ const result: Maybe<{ __typename?: "Me" } & FragmentMeFragment> = {
   role: "Senior Front-End Engineer",
   update: "Hire Me",
   available: "2020-04-01T00:00:00.000Z",
-  links: [{ __typename: "Link", id: "123", title: "Github", url: "/link" }],
+  links: [{ __typename: "Link", id: "123", title: "Github", href: "/link" }],
 }
 
 export const HEADER_RESULT_DATA: MeQuery = {
