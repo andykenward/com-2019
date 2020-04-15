@@ -53,7 +53,7 @@
     ]
   },
   "dependencies": {
-    "@apollo/react-hooks": "3.1.4",
+    "@apollo/react-hooks": "3.1.5",
     "@apollo/react-ssr": "3.1.4",
     "@babel/plugin-proposal-optional-chaining": "7.9.0",
     "@emotion/babel-preset-css-prop": "10.0.27",
