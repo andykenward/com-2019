@@ -1,0 +1,10 @@
+fragment FragmentMe on Me {
+  id
+  name
+  role
+  update
+  available
+  links {
+    ...FragmentLink
+  }
+}

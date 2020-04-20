@@ -1,16 +1,16 @@
 import css from "@emotion/css"
 
-import { useFooterQuery } from "../../generated/graphql"
+import { FooterFieldsFragment } from "../../generated/graphql"
 import { Box } from "../box"
 import { ColumnsCenter } from "../columns"
 import { LinkExternal } from "../link"
 
-export const Footer: React.FC = () => {
-  const { data } = useFooterQuery()
+export const Footer: React.FC<{ data?: FooterFieldsFragment | null }> = ({
+  data,
+}) => {
+  if (data == null) return null
 
-  if (data?.footer == null) return null
-
-  const { links } = data.footer
+  const { links } = data
 
   return (
     <ColumnsCenter as="footer" py={32}>

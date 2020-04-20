@@ -1,6 +1,6 @@
 import Maybe from "graphql/tsutils/Maybe"
 
-import { Scalars, useMeQuery } from "../../generated/graphql"
+import { FragmentMeFragment, Scalars } from "../../generated/graphql"
 import { Box } from "../box"
 import { ButtonExternal } from "../button"
 import { ColumnsCenter } from "../columns"
@@ -14,11 +14,11 @@ const getMonthYear = (available?: Maybe<Scalars["DateTime"]>) => {
   })
 }
 
-export const Header: React.FC = () => {
-  const { data } = useMeQuery()
-
-  if (data?.me == null) return null
-  const { name, role, update, links, available } = data.me
+export const Header: React.FC<{ data?: FragmentMeFragment | null }> = ({
+  data,
+}) => {
+  if (data == null) return null
+  const { name, role, update, links, available } = data
 
   const date = getMonthYear(available)
 
