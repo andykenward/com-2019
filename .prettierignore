@@ -8,5 +8,4 @@ package-lock.json
 coverage
 .github
 *.snap
-public
 public/static/normalize.css
