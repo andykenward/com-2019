@@ -7,25 +7,5 @@
       "SCHEMA_PATH": "@andykenward_com_schema_path",
       "ENDPOINT": "@andykenward_com_endpoint"
     }
-  },
-  "headers": [
-    {
-      "source": "/static/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "cache-control: public, max-age=31536000, immutable"
-        }
-      ]
-    },
-    {
-      "source": "/_next/static/assets/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "cache-control: public, max-age=31536000, immutable"
-        }
-      ]
-    }
-  ]
+  }
 }

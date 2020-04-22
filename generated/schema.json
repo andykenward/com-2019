@@ -27716,6 +27716,43 @@
     ],
     "directives": [
       {
+        "name": "permission",
+        "description": null,
+        "locations": [
+          "FIELD_DEFINITION"
+        ],
+        "args": [
+          {
+            "name": "allowed",
+            "description": "is usage of that field allowed if not overwritten will also be set for subfields",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "allowedStages",
+            "description": "stages that are allowed to be used by this subtree",
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "ENUM",
+                  "name": "Locale",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          }
+        ]
+      },
+      {
         "name": "mark",
         "description": null,
         "locations": [
@@ -28184,43 +28221,6 @@
               "kind": "SCALAR",
               "name": "String",
               "ofType": null
-            },
-            "defaultValue": null
-          }
-        ]
-      },
-      {
-        "name": "permission",
-        "description": null,
-        "locations": [
-          "FIELD_DEFINITION"
-        ],
-        "args": [
-          {
-            "name": "allowed",
-            "description": "is usage of that field allowed if not overwritten will also be set for subfields",
-            "type": {
-              "kind": "SCALAR",
-              "name": "Boolean",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
-            "name": "allowedStages",
-            "description": "stages that are allowed to be used by this subtree",
-            "type": {
-              "kind": "LIST",
-              "name": null,
-              "ofType": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "ENUM",
-                  "name": "Locale",
-                  "ofType": null
-                }
-              }
             },
             "defaultValue": null
           }

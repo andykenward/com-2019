@@ -1,0 +1,5 @@
+fragment FragmentLink on Link {
+  id
+  title
+  href
+}

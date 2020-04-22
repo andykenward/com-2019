@@ -4,28 +4,28 @@
   "description": "",
   "main": "index.js",
   "engines": {
-    "node": "^10.19.0"
+    "node": "^12.16.2"
   },
   "scripts": {
     "dev": "next",
     "dev:now": "now dev",
     "prebuild": "npm run codegen",
-    "build": "next build && next export",
+    "build": "next build",
     "export": "next export",
     "start": "next start",
     "now-build": "npm run build",
     "now-dev": "npm run dev",
     "codegen": "graphql-codegen -r dotenv/config --config codegen.yml",
     "codegen:watch": "npm run codegen -- --watch",
-    "format": "prettier --write '**/*.{css,js,jsx,ts,tsx}'",
+    "format": "prettier --write '**/*.{css,js,jsx,ts,tsx,graphql}'",
     "type-check:watch": "npm run type-check -- --watch",
     "type-check": "tsc --noEmit",
     "lint": "eslint --ext .js,.ts,.tsx .",
     "eslint:fix": "npm run lint -- --fix",
-    "test": "jest",
+    "test": "echo \"Error: no test specified\" && exit 0",
     "test:watch": "npm test -- --watch",
-    "test:ci": "jest --coverage",
-    "schema": "apollo service:download --config=./apollo.config.prod.js generated/schema.json",
+    "test:ci": "npm test -- --coverage",
+    "schema": "npx apollo service:download --config=./apollo.config.prod.js generated/schema.json",
     "normalizecss": "curl https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css  -o ./public/static/normalize.css",
     "local:ci": "npm run codegen && npm run lint && npm run type-check && npm run test"
   },
@@ -34,35 +34,22 @@
     "url": "git+https://github.com/andykenward/andykenward.com.git"
   },
   "keywords": [],
-  "author": "",
+  "author": {
+    "name": "Andy Kenward"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/andykenward/andykenward.com/issues"
   },
   "homepage": "https://github.com/andykenward/andykenward.com#readme",
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "npm run format",
-      "npm run eslint:fix",
-      "cross-env NODE_ENV=test jest --bail --findRelatedTests"
-    ]
-  },
   "dependencies": {
-    "@apollo/react-hooks": "3.1.5",
-    "@apollo/react-ssr": "3.1.5",
-    "@babel/plugin-proposal-optional-chaining": "7.9.0",
     "@emotion/babel-preset-css-prop": "10.0.27",
     "@emotion/core": "10.0.28",
     "@emotion/styled": "10.0.27",
     "@styled-system/should-forward-prop": "5.1.5",
-    "apollo-boost": "0.4.7",
     "emotion-theming": "10.0.27",
     "graphql": "14.6.0",
+    "graphql-request": "1.8.2",
     "graphql-tag": "2.10.3",
     "isomorphic-unfetch": "3.0.0",
     "next": "9.3.5",
@@ -73,30 +60,26 @@
     "styled-system": "5.1.5"
   },
   "devDependencies": {
-    "@apollo/react-testing": "3.1.4",
     "@graphql-codegen/cli": "1.13.3",
-    "@graphql-codegen/fragment-matcher": "1.13.3",
-    "@graphql-codegen/introspection": "1.13.3",
     "@graphql-codegen/typescript": "1.13.3",
+    "@graphql-codegen/typescript-graphql-request": "1.13.3",
     "@graphql-codegen/typescript-operations": "1.13.3",
-    "@graphql-codegen/typescript-react-apollo": "1.13.3",
     "@testing-library/jest-dom": "5.5.0",
     "@testing-library/react": "10.0.3",
     "@types/jest": "25.2.1",
-    "@types/node": "10.14.15",
+    "@types/node": "12.12.6",
     "@types/ramda": "0.27.3",
     "@types/react": "16.9.34",
     "@types/react-dom": "16.9.6",
     "@types/styled-system": "5.1.9",
-    "@typescript-eslint/eslint-plugin": "2.27.0",
-    "@typescript-eslint/parser": "2.27.0",
-    "apollo": "2.26.0",
+    "@typescript-eslint/eslint-plugin": "2.29.0",
+    "@typescript-eslint/parser": "2.29.0",
     "babel-plugin-react-remove-properties": "0.3.0",
     "cross-env": "7.0.2",
     "csstype": "2.6.10",
     "dotenv": "8.2.0",
     "eslint": "6.8.0",
-    "eslint-config-prettier": "6.10.1",
+    "eslint-config-prettier": "6.11.0",
     "eslint-plugin-emotion": "10.0.27",
     "eslint-plugin-import": "2.20.2",
     "eslint-plugin-jest": "23.8.2",
@@ -104,12 +87,9 @@
     "eslint-plugin-prettier": "3.1.3",
     "eslint-plugin-react": "7.19.0",
     "eslint-plugin-simple-import-sort": "5.0.2",
-    "file-loader": "6.0.0",
-    "husky": "4.2.5",
-    "jest": "25.3.0",
+    "jest": "25.4.0",
     "jest-emotion": "10.0.32",
-    "lint-staged": "10.1.7",
-    "now": "17.1.1",
+    "now": "18.0.0",
     "prettier": "2.0.5",
     "typescript": "3.8.3"
   }

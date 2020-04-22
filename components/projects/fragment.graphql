@@ -1,0 +1,20 @@
+fragment FragmentProjectNav on Project {
+  id
+  clients {
+    ...FragmentClient
+  }
+  slug
+  title
+  description
+  role
+  studio {
+    id
+    title
+    href
+  }
+  tags {
+    ...FragmentTag
+  }
+  hrefCaseStudy
+  href
+}

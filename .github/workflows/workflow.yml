@@ -13,12 +13,12 @@ jobs:
   checks:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2.0.0
-    - name: Setup Node 10.19.x
-      uses: actions/setup-node@v1.1.0
+    - uses: actions/checkout@v2.1.0
+    - name: Setup Node 12.16.x
+      uses: actions/setup-node@v1.4.2
       with:
-        node-version: "10.19.x"       
-    - uses: actions/cache@v1.1.0
+        node-version: "12.16.x"       
+    - uses: actions/cache@v1.1.2
       id: cache
       with:
         path: ~/.npm
@@ -38,8 +38,3 @@ jobs:
       run: npm run lint
     - name: test
       run: npm run test:ci
-    - name: Archive production artifacts
-      uses: actions/upload-artifact@v1.0.0
-      with:
-        name: coverage
-        path: coverage

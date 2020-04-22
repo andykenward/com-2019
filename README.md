@@ -2,7 +2,7 @@
 
 ## Requirements
 
-- node `^10.19.0`
+- node `^12.16.2`
 - npm `^6.13.4`
 
 ### Node
