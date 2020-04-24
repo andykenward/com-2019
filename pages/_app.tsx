@@ -38,7 +38,7 @@ const MyApp = ({ Component, pageProps, router }: AppProps) => {
         return true
       })
     }
-  }, [])
+  }, [router])
 
   return (
     <ThemeProvider theme={theme}>

@@ -18,11 +18,12 @@ type Props = {
 }
 
 export const Project: NextPage<Props> = ({ data }) => {
+  const { back } = useRouter()
+
   if (data?.project == null) return null
 
   const { project } = data
 
-  const { back } = useRouter()
   return (
     <>
       <Head />
