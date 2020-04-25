@@ -2,12 +2,12 @@ import { GraphQLClient } from "graphql-request"
 import { GetStaticProps, NextPage } from "next"
 import React from "react"
 
+import { getSdk, HomeQuery } from "../../generated/graphql"
 import { Box } from "../components/box"
 import { Footer } from "../components/footer"
 import { Head } from "../components/head"
 import { Header } from "../components/header"
 import { ProjectsMenu } from "../components/projects"
-import { getSdk, HomeQuery } from "../generated/graphql"
 
 const Home: NextPage<{ data: HomeQuery }> = ({ data }) => {
   const { me, projects, footer } = data

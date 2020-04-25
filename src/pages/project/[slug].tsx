@@ -4,10 +4,10 @@ import { GraphQLClient } from "graphql-request"
 import { GetStaticPaths, GetStaticProps, NextPage } from "next"
 import { useRouter } from "next/dist/client/router"
 
+import { getSdk, ProjectQuery } from "../../../generated/graphql"
 import { Box } from "../../components/box"
 import { Head } from "../../components/head"
 import { ProjectsMenuItem } from "../../components/projects"
-import { getSdk, ProjectQuery } from "../../generated/graphql"
 
 type Params = {
   slug: string

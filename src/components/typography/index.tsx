@@ -12,10 +12,10 @@ import {
   ColorProps,
   StyledProps,
   TextTransformProps,
-} from "../../@types/styled-system"
-import { color, convertToRem, typography } from "../../lib/styled-system"
-import { theme } from "../../lib/theme"
-import { filterProps } from "../../lib/utils"
+} from "../../../@types/styled-system"
+import { filterProps } from "../../utils"
+import { color, convertToRem, typography } from "../../utils/styled-system"
+import { theme } from "../../utils/theme"
 
 const Text = styled("p", { shouldForwardProp: filterProps })<
   StyledProps &

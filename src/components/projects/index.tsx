@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-import { FragmentProjectNavFragment } from "../../generated/graphql"
+import { FragmentProjectNavFragment } from "../../../generated/graphql"
 import { Box } from "../box"
 import { ButtonExternal } from "../button"
 import { Clients } from "../clients"

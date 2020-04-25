@@ -1,4 +1,4 @@
-import { FragmentProjectNavFragment } from "../../generated/graphql"
+import { FragmentProjectNavFragment } from "../../../generated/graphql"
 import { BodyBold } from "../typography"
 
 export const Clients: React.FC<Pick<FragmentProjectNavFragment, "clients">> = ({
