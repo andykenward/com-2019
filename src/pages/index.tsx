@@ -1,22 +1,22 @@
-import { GraphQLClient } from "graphql-request"
 import { GetStaticProps, NextPage } from "next"
 import React from "react"
 
-import { getSdk, HomeQuery } from "../../generated/graphql"
+import { HomeQuery } from "../../generated/graphql"
 import { Box } from "../components/box"
 import { Footer } from "../components/footer"
 import { Head } from "../components/head"
 import { Header } from "../components/header"
 import { ProjectsMenu } from "../components/projects"
+import { appSdk } from "../utils/client"
 
 const Home: NextPage<{ data: HomeQuery }> = ({ data }) => {
-  const { me, projects, footer } = data
+  const { me, allProjects, footer } = data
   return (
     <>
       <Head />
       <Box display="grid" gridRowGap={[32, 64]}>
         <Header data={me} />
-        <ProjectsMenu data={projects} />
+        <ProjectsMenu data={allProjects} />
         <Footer data={footer} />
       </Box>
     </>
@@ -25,9 +25,7 @@ const Home: NextPage<{ data: HomeQuery }> = ({ data }) => {
 
 export const getStaticProps: GetStaticProps = async () => {
   try {
-    const client = new GraphQLClient(`${process.env.ENDPOINT}`)
-    const sdk = getSdk(client)
-    const data = await sdk.Home()
+    const data = await appSdk.Home()
 
     return { props: { data } }
   } catch (error) {

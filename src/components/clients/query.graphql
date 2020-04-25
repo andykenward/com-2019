@@ -1,4 +1,4 @@
-fragment FragmentClient on Client {
+fragment FragmentClient on ClientRecord {
   id
   title
   href

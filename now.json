@@ -1,11 +1,5 @@
 {
   "version": 2,
   "scope": "andykenward",
-  "regions": ["lhr1"],
-  "build": {
-    "env": {
-      "SCHEMA_PATH": "@andykenward_com_schema_path",
-      "ENDPOINT": "@andykenward_com_endpoint"
-    }
-  }
+  "regions": ["lhr1"]
 }

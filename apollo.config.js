@@ -1,12 +1,12 @@
-require("dotenv").config()
+require("dotenv-safe").config()
 
 module.exports = {
   client: {
     name: "andykenward.com",
     includes: [
-      "./pages/**/*.graphql",
+      "./src/pages/**/*.graphql",
       "./graphql/**/*.graphql",
-      "./components/**/*.graphql",
+      "./src/components/**/*.graphql",
     ],
     service: {
       localSchemaFile: process.env.SCHEMA_PATH,

@@ -1,4 +1,4 @@
-fragment FragmentLink on Link {
+fragment FragmentLink on LinkRecord {
   id
   title
   href

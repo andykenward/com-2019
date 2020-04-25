@@ -19,17 +19,20 @@ $ nvm use
 
 ### Installation
 
+If you have a [Vercel](https://vercel.com) project already setup with your development environment variables you can download them using [`npx now env pull`](https://vercel.com/docs/v2/build-step#development-environment-variables)
+
+Or you can manually set them up.
+
 ```
 $ cp .env.example .env
 ```
 
-Update the `.env` `ENDPOINT` to the [GraphCMS](https://graphcms.com) GraphQL endpoint.
+Update the `.env` `API_TOKEN` & `API_URL` to the ones from your CMS in our case they are from [DatoCMS](https://datocms.com).
 
 ```
 $ npm i
+$ npm run schema
 ```
-
-There is a `postinstall` cli which downloads the GraphQL schema and generates TypeScripts typings.
 
 ### Development
 
@@ -45,25 +48,14 @@ $ npm run codegen:watch
 ### Serve static version
 
 ```
-$ npm run build; npm run export; cd out && npx serve -p 3000
+$ npm run build; npm start
 ```
 ## Environment Variables
 
-Don't forget to set these up on the CI if changing environments or API.
-
-**There are defaults used in the codebase if not set in the environment**
+Don't forget to set these up on your CI & hosting if changing environments or API.
 
 ```
-ENDPOINT=your-graphql-endpoint-url
-SCHEMA_PATH=path-to-graphql-schema-json-or-graphql
-```
-
-For `now` deployment you need to add secrets to your account via now-cli.
-
-**FYI `now` secrets keys are case sensitive, REACT_APP_API will be react_app_api when using on now-cli**
-[using-environment-variables-and-secrets](https://zeit.co/docs/v2/build-step#using-environment-variables-and-secrets)
-
-```
-npx now secrets add andykenward_com_schema_path https://graphql.endpoint
-npx now secrets add ci true
+SCHEMA_PATH="./generated/schema.json"
+API_TOKEN=YOUR_GRAPHQL_API_TOKEN
+API_URL=YOUR_GRAPHQL_ENDPOINT
 ```

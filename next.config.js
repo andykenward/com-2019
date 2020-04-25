@@ -1,8 +1,8 @@
-require("dotenv").config()
+require("dotenv-safe").config()
 
 module.exports = {
   env: {
-    ENDPOINT: process.env.ENDPOINT,
-    SSR: process.env.SSR | 1,
+    API_TOKEN: process.env.API_TOKEN,
+    API_URL: process.env.API_URL,
   },
 }
