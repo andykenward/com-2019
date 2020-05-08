@@ -1,13 +1,11 @@
-/* eslint-disable @typescript-eslint/no-non-null-assertion */
-
-import { GraphQLClient } from "graphql-request"
 import { GetStaticPaths, GetStaticProps, NextPage } from "next"
 import { useRouter } from "next/dist/client/router"
 
+import { ProjectQuery } from "../../../generated/graphql"
 import { Box } from "../../components/box"
 import { Head } from "../../components/head"
 import { ProjectsMenuItem } from "../../components/projects"
-import { getSdk, ProjectQuery } from "../../generated/graphql"
+import { appSdk } from "../../utils/client"
 
 type Params = {
   slug: string
@@ -18,11 +16,12 @@ type Props = {
 }
 
 export const Project: NextPage<Props> = ({ data }) => {
+  const { back } = useRouter()
+
   if (data?.project == null) return null
 
   const { project } = data
 
-  const { back } = useRouter()
   return (
     <>
       <Head />
@@ -36,12 +35,11 @@ export const Project: NextPage<Props> = ({ data }) => {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   try {
-    const client = new GraphQLClient(`${process.env.ENDPOINT}`)
-    const sdk = getSdk(client)
-    const data = await sdk.Projects()
+    const data = await appSdk.Projects()
 
     return {
-      paths: data.projects?.map((project) => `/project/${project.slug}`) || [],
+      paths:
+        data.allProjects?.map((project) => `/project/${project.slug}`) || [],
       fallback: false,
     }
   } catch (error) {
@@ -54,9 +52,9 @@ export const getStaticProps: GetStaticProps<Props, Params> = async ({
   params,
 }) => {
   try {
-    const client = new GraphQLClient(`${process.env.ENDPOINT}`)
-    const sdk = getSdk(client)
-    const data = params?.slug ? await sdk.Project({ slug: params.slug }) : null
+    const data = params?.slug
+      ? await appSdk.Project({ slug: params.slug })
+      : null
 
     return { props: { data } }
   } catch (error) {

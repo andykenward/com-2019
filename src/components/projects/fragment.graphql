@@ -1,4 +1,4 @@
-fragment FragmentProjectNav on Project {
+fragment FragmentProjectNav on ProjectRecord {
   id
   clients {
     ...FragmentClient
@@ -6,7 +6,10 @@ fragment FragmentProjectNav on Project {
   slug
   title
   description
-  role
+  role {
+    id
+    title
+  }
   studio {
     id
     title
@@ -15,6 +18,10 @@ fragment FragmentProjectNav on Project {
   tags {
     ...FragmentTag
   }
-  hrefCaseStudy
-  href
+  live {
+    href
+  }
+  caseStudy {
+    href
+  }
 }

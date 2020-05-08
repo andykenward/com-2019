@@ -17,9 +17,9 @@ import {
   ColorProps,
   StyledProps,
   TextTransformProps,
-} from "../../@types/styled-system"
-import { color, fontSize } from "../../lib/styled-system"
-import { filterProps } from "../../lib/utils"
+} from "../../../@types/styled-system"
+import { filterProps } from "../../utils"
+import { color, fontSize } from "../../utils/styled-system"
 
 export interface BoxProps
   extends ColorProps,

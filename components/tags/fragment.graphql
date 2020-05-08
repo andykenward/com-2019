@@ -1,5 +1,0 @@
-fragment FragmentTag on Tag {
-  id
-  title
-  href
-}

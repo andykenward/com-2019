@@ -1,11 +1,11 @@
 query Home {
-  me(where: { id: "ck8vv6ync198z0104gjvsnrt8" }) {
+  me {
     ...FragmentMe
   }
-  footer(where: { id: "ck8vw5x4w19nc0104oio2p1ml" }) {
+  footer {
     ...FooterFields
   }
-  projects {
+  allProjects(orderBy: order_ASC) {
     ...FragmentProjectNav
   }
 }

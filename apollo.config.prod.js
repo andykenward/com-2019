@@ -4,13 +4,16 @@ module.exports = {
   client: {
     name: "andykenward.com",
     includes: [
-      "./pages/**/*.graphql",
+      "./src/pages/**/*.graphql",
       "./graphql/**/*.graphql",
-      "./components/**/*.graphql",
+      "./src/components/**/*.graphql",
     ],
     service: {
-      name: "graphcms",
-      url: process.env.ENDPOINT,
+      name: "datocms",
+      url: process.env.API_URL,
+      headers: {
+        authorization: `Bearer ${process.env.API_TOKEN}`,
+      },
     },
   },
 }

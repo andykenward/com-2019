@@ -1,5 +1,0 @@
-fragment FragmentClient on Client {
-  id
-  title
-  href
-}

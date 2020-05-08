@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-import { FragmentProjectNavFragment } from "../../generated/graphql"
+import { FragmentProjectNavFragment } from "../../../generated/graphql"
 import { Box } from "../box"
 import { ButtonExternal } from "../button"
 import { Clients } from "../clients"
@@ -15,8 +15,8 @@ export const ProjectsMenuItem: React.FC<FragmentProjectNavFragment> = ({
   description,
   role,
   tags,
-  href,
-  hrefCaseStudy,
+  live,
+  caseStudy,
   studio,
   slug,
 }) => (
@@ -29,18 +29,18 @@ export const ProjectsMenuItem: React.FC<FragmentProjectNavFragment> = ({
     </HeadingThree>
 
     <Body mb={8}>{description}</Body>
-    <HeadingFour mb={!studio ? 8 : undefined}>{role}</HeadingFour>
+    <HeadingFour mb={!studio ? 8 : undefined}>{role.title}</HeadingFour>
     {studio?.href && (
       <LinkExternal mb={8} href={studio.href}>
         {studio.title}
       </LinkExternal>
     )}
     {tags && <Tags tags={tags} />}
-    {(href || hrefCaseStudy) && (
+    {(live || caseStudy) && (
       <Box>
-        {href && <ButtonExternal href={href}>Site</ButtonExternal>}
-        {hrefCaseStudy && (
-          <ButtonExternal href={hrefCaseStudy}>Case Study</ButtonExternal>
+        {live && <ButtonExternal href={live.href}>Site</ButtonExternal>}
+        {caseStudy && (
+          <ButtonExternal href={caseStudy.href}>Case Study</ButtonExternal>
         )}
       </Box>
     )}

@@ -1,6 +1,6 @@
 import css from "@emotion/css"
 
-import { FooterFieldsFragment } from "../../generated/graphql"
+import { FooterFieldsFragment } from "../../../generated/graphql"
 import { Box } from "../box"
 import { ColumnsCenter } from "../columns"
 import { LinkExternal } from "../link"

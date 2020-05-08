@@ -1,6 +1,6 @@
 import Maybe from "graphql/tsutils/Maybe"
 
-import { FragmentMeFragment, Scalars } from "../../generated/graphql"
+import { FragmentMeFragment, Scalars } from "../../../generated/graphql"
 import { Box } from "../box"
 import { ButtonExternal } from "../button"
 import { ColumnsCenter } from "../columns"

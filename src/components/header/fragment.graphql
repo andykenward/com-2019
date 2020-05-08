@@ -1,4 +1,4 @@
-fragment FragmentMe on Me {
+fragment FragmentMe on MeRecord {
   id
   name
   role

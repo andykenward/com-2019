@@ -1,7 +1,7 @@
 import css from "@emotion/css"
 
-import { FragmentProjectNavFragment } from "../../generated/graphql"
-import { convertToRem } from "../../lib/styled-system"
+import { FragmentProjectNavFragment } from "../../../generated/graphql"
+import { convertToRem } from "../../utils/styled-system"
 import { Box } from "../box"
 import { LinkExternal } from "../link"
 import { Body } from "../typography"
