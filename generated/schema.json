@@ -1775,6 +1775,16 @@
             "defaultValue": null
           },
           {
+            "name": "seo",
+            "description": null,
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "SeoFilter",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
             "name": "hero",
             "description": null,
             "type": {
@@ -1905,6 +1915,27 @@
                 "name": "ProjectModelFilter",
                 "ofType": null
               }
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "SeoFilter",
+        "description": "Specifies how to filter SEO meta tags fields",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "exists",
+            "description": "Filter records with the specified field defined (i.e. with any value) or not",
+            "type": {
+              "kind": "SCALAR",
+              "name": "BooleanType",
+              "ofType": null
             },
             "defaultValue": null
           }
@@ -8798,6 +8829,18 @@
             "type": {
               "kind": "OBJECT",
               "name": "RoleRecord",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "seo",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "SeoField",
               "ofType": null
             },
             "isDeprecated": false,
