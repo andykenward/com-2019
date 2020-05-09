@@ -19,7 +19,7 @@ $ nvm use
 
 ### Installation
 
-If you have a [Vercel](https://vercel.com) project already setup with your development environment variables you can download them using [`npx now env pull`](https://vercel.com/docs/v2/build-step#development-environment-variables)
+If you have a [Vercel](https://vercel.com) project already setup with your development environment variables you can download them using [`npx vercel env pull`](https://vercel.com/docs/v2/build-step#development-environment-variables)
 
 Or you can manually set them up.
 

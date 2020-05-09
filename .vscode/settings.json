@@ -31,6 +31,8 @@
     "**/bower_components": true,
     "**/*.code-search": true,
     "**/.next": true,
-    "generated/schema.json": true
+    "**/.vercel": true,
+    "generated/schema.json": true,
+    "package-lock.json": true,
   }
 }

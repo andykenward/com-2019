@@ -8,13 +8,11 @@
   },
   "scripts": {
     "dev": "next",
-    "dev:now": "now dev",
+    "dev:vercel": "vercel dev",
     "prebuild": "npm run codegen",
     "build": "next build",
     "export": "next export",
     "start": "next start",
-    "now-build": "npm run build",
-    "now-dev": "npm run dev",
     "codegen": "graphql-codegen -r dotenv/config --config codegen.yml",
     "codegen:watch": "npm run codegen -- --watch",
     "format": "prettier --write '**/*.{css,js,jsx,ts,tsx,graphql}'",
@@ -90,7 +88,7 @@
     "eslint-plugin-simple-import-sort": "5.0.3",
     "jest": "26.0.1",
     "jest-emotion": "10.0.32",
-    "now": "19.0.0",
+    "vercel": "19.0.0",
     "prettier": "2.0.5",
     "typescript": "3.8.3"
   }

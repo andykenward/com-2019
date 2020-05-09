@@ -1,10 +1,11 @@
 .next
 .now
+.vercel
 out
 .env
 package.json
 package-lock.json
-/generated
+generated
 coverage
 .github
 *.snap
