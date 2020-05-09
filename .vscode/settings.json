@@ -32,7 +32,7 @@
     "**/*.code-search": true,
     "**/.next": true,
     "**/.vercel": true,
-    "generated/schema.json": true,
-    "package-lock.json": true,
+    "**/generated/schema.json": true,
+    "**/package-lock.json": true,
   }
 }
