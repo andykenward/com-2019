@@ -4,7 +4,7 @@ import { FragmentMeFragment, Scalars } from "../../../generated/graphql"
 import { Box } from "../box"
 import { ButtonExternal } from "../button"
 import { ColumnsCenter } from "../columns"
-import { HeadingOne, HeadingThree, HeadingTwo } from "../typography"
+import { Body, HeadingOne, HeadingThree, HeadingTwo } from "../typography"
 
 const getMonthYear = (available?: Maybe<Scalars["DateTime"]>) => {
   if (available == null) return null
@@ -18,7 +18,7 @@ export const Header: React.FC<{ data?: FragmentMeFragment | null }> = ({
   data,
 }) => {
   if (data == null) return null
-  const { name, role, update, links, available } = data
+  const { name, role, update, links, available, email } = data
 
   const date = getMonthYear(available)
 
@@ -49,6 +49,7 @@ export const Header: React.FC<{ data?: FragmentMeFragment | null }> = ({
           Available from {date}
         </HeadingThree>
       )}
+      {email && <Body mb={16}>{email}</Body>}
       {links?.length && (
         <Box data-testid="links">
           {links.map(

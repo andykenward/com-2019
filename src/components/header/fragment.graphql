@@ -4,6 +4,7 @@ fragment FragmentMe on MeRecord {
   role
   update
   available
+  email
   links {
     ...FragmentLink
   }
