@@ -1,0 +1,6 @@
+fragment FooterFields on FooterRecord {
+  id
+  links {
+    ...FragmentLink
+  }
+}

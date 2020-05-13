@@ -11,6 +11,7 @@ node_modules
 
 # graphql
 /generated/graphql.tsx
+/generated/graphql.ts
 /generated/introspection-result.ts
 
 .DS_Store
@@ -22,3 +23,4 @@ coverage
 
 # now
 .now
+.vercel

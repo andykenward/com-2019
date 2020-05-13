@@ -1,0 +1,11 @@
+query Home {
+  me {
+    ...FragmentMe
+  }
+  footer {
+    ...FooterFields
+  }
+  allProjects(orderBy: order_ASC) {
+    ...FragmentProjectNav
+  }
+}

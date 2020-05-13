@@ -1,6 +1,8 @@
 generated
 out
 .next
+.vercel
+generated
 @types
 coverage
 .github

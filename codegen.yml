@@ -1,20 +1,12 @@
 overwrite: true
 schema: ${SCHEMA_PATH}
-documents: "./components/**/*.{ts,tsx}"
+documents: "./**/*.graphql"
 generates:
-  generated/graphql.tsx:
+  generated/graphql.ts:
     plugins:
       - "typescript"
       - "typescript-operations"
-      - "typescript-react-apollo"
-    config:
-      withHooks: true
-      withHOC: false
-      withComponent: false
-      hooksImportFrom: "@apollo/react-hooks"
-  generated/introspection-result.ts:
-    plugins:
-      - fragment-matcher
+      - "typescript-graphql-request"
 config:
   namingConvention:
     enumValues: keep

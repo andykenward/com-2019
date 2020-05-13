@@ -3,10 +3,17 @@ require("dotenv").config()
 module.exports = {
   client: {
     name: "andykenward.com",
-    includes: ["./components/**/query.ts"],
+    includes: [
+      "./src/pages/**/*.graphql",
+      "./graphql/**/*.graphql",
+      "./src/components/**/*.graphql",
+    ],
     service: {
-      name: "graphcms",
-      url: process.env.ENDPOINT,
+      name: "datocms",
+      url: process.env.API_URL,
+      headers: {
+        authorization: `Bearer ${process.env.API_TOKEN}`,
+      },
     },
   },
 }

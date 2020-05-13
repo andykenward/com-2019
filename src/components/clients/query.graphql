@@ -1,0 +1,5 @@
+fragment FragmentClient on ClientRecord {
+  id
+  title
+  href
+}
