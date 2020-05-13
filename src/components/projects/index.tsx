@@ -1,5 +1,3 @@
-import Link from "next/link"
-
 import { FragmentProjectNavFragment } from "../../../generated/graphql"
 import { Box } from "../box"
 import { ButtonExternal } from "../button"
@@ -18,16 +16,10 @@ export const ProjectsMenuItem: React.FC<FragmentProjectNavFragment> = ({
   live,
   caseStudy,
   studio,
-  slug,
 }) => (
   <Box as="article">
     <Clients clients={clients} />
-    <HeadingThree mb={!description ? 8 : undefined}>
-      <Link href="/project/[slug]" as={`/project/${slug}`} scroll={false}>
-        <a>{title}</a>
-      </Link>
-    </HeadingThree>
-
+    <HeadingThree mb={!description ? 8 : undefined}>{title}</HeadingThree>
     <Body mb={8}>{description}</Body>
     <HeadingFour mb={!studio ? 8 : undefined}>{role.title}</HeadingFour>
     {studio?.href && (
