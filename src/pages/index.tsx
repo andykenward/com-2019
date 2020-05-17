@@ -1,8 +1,8 @@
 import { GetStaticProps, NextPage } from "next"
 import React from "react"
+import { Grid } from "theme-ui"
 
 import { HomeQuery } from "../../generated/graphql"
-import { Box } from "../components/box"
 import { Footer } from "../components/footer"
 import { Head } from "../components/head"
 import { Header } from "../components/header"
@@ -14,11 +14,11 @@ const Home: NextPage<{ data: HomeQuery }> = ({ data }) => {
   return (
     <>
       <Head />
-      <Box display="grid" gridRowGap={[32, 64]}>
+      <Grid gap={[32, 64]}>
         <Header data={me} />
         <ProjectsMenu data={allProjects} />
         <Footer data={footer} />
-      </Box>
+      </Grid>
     </>
   )
 }

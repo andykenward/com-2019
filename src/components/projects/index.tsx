@@ -1,11 +1,10 @@
+import { Box, Grid, Heading, Text } from "theme-ui"
+
 import { FragmentProjectNavFragment } from "../../../generated/graphql"
-import { Box } from "../box"
-import { ButtonExternal } from "../button"
 import { Clients } from "../clients"
 import { ColumnsCenter } from "../columns"
-import { LinkExternal } from "../link"
+import { LinkExternal, LinkOutline } from "../link"
 import { Tags } from "../tags"
-import { Body, HeadingFour, HeadingOne, HeadingThree } from "../typography"
 
 export const ProjectsMenuItem: React.FC<FragmentProjectNavFragment> = ({
   clients,
@@ -19,9 +18,15 @@ export const ProjectsMenuItem: React.FC<FragmentProjectNavFragment> = ({
 }) => (
   <Box as="article">
     <Clients clients={clients} />
-    <HeadingThree mb={!description ? 8 : undefined}>{title}</HeadingThree>
-    <Body mb={8}>{description}</Body>
-    <HeadingFour mb={!studio ? 8 : undefined}>{role.title}</HeadingFour>
+    <Heading as="h3" variant="headingThree" mb={!description ? 8 : undefined}>
+      {title}
+    </Heading>
+    <Text as="p" variant="body" mb={8}>
+      {description}
+    </Text>
+    <Heading as="h4" variant="headingFour" mb={!studio ? 8 : undefined}>
+      {role.title}
+    </Heading>
     {studio?.href && (
       <LinkExternal mb={8} href={studio.href}>
         {studio.title}
@@ -30,9 +35,9 @@ export const ProjectsMenuItem: React.FC<FragmentProjectNavFragment> = ({
     {tags && <Tags tags={tags} />}
     {(live || caseStudy) && (
       <Box>
-        {live && <ButtonExternal href={live.href}>Site</ButtonExternal>}
+        {live && <LinkOutline href={live.href}>Site</LinkOutline>}
         {caseStudy && (
-          <ButtonExternal href={caseStudy.href}>Case Study</ButtonExternal>
+          <LinkOutline href={caseStudy.href}>Case Study</LinkOutline>
         )}
       </Box>
     )}
@@ -46,12 +51,14 @@ export const ProjectsMenu: React.FC<{
 
   return (
     <ColumnsCenter as="section">
-      <HeadingOne mb={32}>Projects</HeadingOne>
-      <Box display="grid" gridRowGap={56}>
+      <Heading variant="headingOne" mb={32}>
+        Projects
+      </Heading>
+      <Grid gap={56}>
         {projects.map((project) =>
           project ? <ProjectsMenuItem key={project.id} {...project} /> : null
         )}
-      </Box>
+      </Grid>
     </ColumnsCenter>
   )
 }

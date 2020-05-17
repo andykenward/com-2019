@@ -1,12 +1,11 @@
 import "../../public/normalize.css"
 import "../../public/fonts/index.css"
-import "../../public/index.css"
 
-import { ThemeProvider } from "emotion-theming"
 import { AppProps } from "next/app"
 import { useEffect } from "react"
+import { ThemeProvider } from "theme-ui"
 
-import { theme } from "../utils/theme"
+import theme from "../theme"
 
 const MyApp = ({ Component, pageProps, router }: AppProps) => {
   useEffect(() => {
