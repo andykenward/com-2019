@@ -1,10 +1,8 @@
 import Maybe from "graphql/tsutils/Maybe"
+import { Box, Heading, Link, Text } from "theme-ui"
 
 import { FragmentMeFragment, Scalars } from "../../../generated/graphql"
-import { Box } from "../box"
-import { ButtonExternal } from "../button"
 import { ColumnsCenter } from "../columns"
-import { Body, HeadingOne, HeadingThree, HeadingTwo } from "../typography"
 
 const getMonthYear = (available?: Maybe<Scalars["DateTime"]>) => {
   if (available == null) return null
@@ -23,41 +21,50 @@ export const Header: React.FC<{ data?: FragmentMeFragment | null }> = ({
   const date = getMonthYear(available)
 
   return (
-    <ColumnsCenter py={[64, 128]} as="header" bg="primary">
+    <ColumnsCenter as="header" py={[64, 128]} bg="primary">
       {name && (
-        <HeadingOne data-testid="name" fontSize={[48, 64, 80]}>
+        <Heading as="h1" variant="headingOne" sx={{ fontSize: [48, 64, 80] }}>
           {name}
-        </HeadingOne>
+        </Heading>
       )}
       {role && (
-        <HeadingTwo data-testid="role" mb={8}>
+        <Heading as="h2" variant="headingTwo" mb={8}>
           {role}
-        </HeadingTwo>
+        </Heading>
       )}
       {update && (
-        <HeadingThree data-testid="update" fontSize={[20, 28]} mb={16}>
+        <Heading
+          as="h3"
+          variant="headingThree"
+          mb={16}
+          sx={{ fontSize: [20, 28] }}
+        >
           {update}
-        </HeadingThree>
+        </Heading>
       )}
       {date && (
-        <HeadingThree
+        <Heading
           as="h4"
-          data-testid="available"
-          fontSize={[20, 28]}
+          variant="headingThree"
           mb={16}
+          sx={{ fontSize: [20, 28] }}
         >
           Available from {date}
-        </HeadingThree>
+        </Heading>
       )}
-      {email && <Body mb={16}>{email}</Body>}
+      {email && (
+        <Text as="p" variant="body" mb={16}>
+          {email}
+        </Text>
+      )}
       {links?.length && (
-        <Box data-testid="links">
+        <Box>
           {links.map(
             ({ href, id, title }) =>
               href && (
-                <ButtonExternal data-testid="link" key={id} href={href}>
+                <Link variant="outline" key={id} href={href}>
                   {title}
-                </ButtonExternal>
+                </Link>
               )
           )}
         </Box>
