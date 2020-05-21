@@ -1,4 +1,3 @@
-import "../../public/normalize.css"
 import "../../public/fonts/index.css"
 
 import { AppProps } from "next/app"
