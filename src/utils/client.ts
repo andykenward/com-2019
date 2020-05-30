@@ -9,5 +9,3 @@ const graphqlClient = new GraphQLClient(process.env.API_URL, {
 })
 
 export const appSdk = (() => getSdk(graphqlClient))()
-
-// Authorization: `Bearer ${API_TOKEN}`,
