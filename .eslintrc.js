@@ -15,7 +15,6 @@ module.exports = {
   plugins: [
     "@typescript-eslint",
     "react",
-    "emotion",
     "jest",
     "jest-dom",
     "simple-import-sort",
@@ -33,15 +32,10 @@ module.exports = {
   rules: {
     // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs
     // e.g. "@typescript-eslint/explicit-function-return-type": "off",
-
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/member-delimiter-style": "off",
     "@typescript-eslint/prefer-optional-chain": "warn",
     "@typescript-eslint/prefer-nullish-coalescing": "warn",
-    // "emotion/jsx-import": "error",
-    "emotion/no-vanilla": "error",
-    "emotion/import-from-emotion": "error",
-    "emotion/styled-import": "error",
     "simple-import-sort/sort": "error",
     "sort-imports": "off",
     "import/order": "off",
