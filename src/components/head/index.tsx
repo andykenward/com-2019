@@ -1,13 +1,14 @@
 import NextHead from "next/head"
 
-interface Props {
-  title?: string
-  description?: string
-}
+import { GlobalSeoField, SeoField } from "../../../generated/graphql"
+
+type Props = Pick<GlobalSeoField, "twitterAccount"> &
+  Pick<SeoField, "description" | "title">
 
 export const Head: React.FC<Props> = ({
-  title = "Andy Kenward - Senior Front-End Engineer",
-  description = "Andy Kenward, Senior Front-End Engineer in London, England",
+  title,
+  description,
+  twitterAccount,
 }) => (
   <NextHead>
     <title>{title}</title>
@@ -15,8 +16,12 @@ export const Head: React.FC<Props> = ({
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     ></meta>
-    <meta name="description" content={description} />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
+    {description && <meta name="description" content={description} />}
+    <meta property="og:type" content="website" />
+    {title && <meta property="og:title" content={title} />}
+    {description && <meta property="og:description" content={description} />}
+    {twitterAccount && (
+      <meta property="twitter:site" content={twitterAccount} />
+    )}
   </NextHead>
 )
