@@ -27,7 +27,7 @@ export const Project: NextPage<Props> = ({ data }) => {
       <Head />
       <button onClick={() => back()}>HOME</button>
       <Grid gap={[32, 64]}>
-        <ProjectsMenuItem key={project.slug} {...project} />
+        {project.slug && <ProjectsMenuItem key={project.slug} {...project} />}
       </Grid>
     </>
   )
