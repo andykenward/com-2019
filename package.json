@@ -41,9 +41,9 @@
   "homepage": "https://github.com/andykenward/andykenward.com#readme",
   "dependencies": {
     "graphql": "14.6.0",
-    "graphql-request": "1.8.2",
+    "graphql-request": "2.0.0",
     "graphql-tag": "2.10.3",
-    "next": "9.4.1",
+    "next": "9.4.4",
     "ramda": "0.27.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
