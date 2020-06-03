@@ -1,0 +1,10 @@
+fragment FragmentHead on Site {
+  globalSeo {
+    twitterAccount
+    fallbackSeo {
+      title
+      description
+      twitterCard
+    }
+  }
+}

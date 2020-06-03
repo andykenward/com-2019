@@ -10,10 +10,14 @@ import { ProjectsMenu } from "../components/projects"
 import { appSdk } from "../utils/client"
 
 const Home: NextPage<{ data: HomeQuery }> = ({ data }) => {
-  const { me, allProjects, footer } = data
+  const { _site, me, allProjects, footer } = data
   return (
     <>
-      <Head />
+      <Head
+        title={_site?.globalSeo?.fallbackSeo?.title}
+        description={_site.globalSeo?.fallbackSeo?.description}
+        twitterAccount={_site.globalSeo?.twitterAccount}
+      />
       <Grid gap={[32, 64]}>
         <Header data={me} />
         <ProjectsMenu data={allProjects} />
