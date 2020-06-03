@@ -25,7 +25,7 @@ export const ProjectsMenuItem: React.FC<FragmentProjectNavFragment> = ({
       {description}
     </Text>
     <Heading as="h4" variant="headingFour" mb={!studio ? 8 : undefined}>
-      {role.title}
+      {role?.title}
     </Heading>
     {studio?.href && (
       <LinkExternal mb={8} href={studio.href}>
@@ -35,8 +35,8 @@ export const ProjectsMenuItem: React.FC<FragmentProjectNavFragment> = ({
     {tags && <Tags tags={tags} />}
     {(live || caseStudy) && (
       <Box>
-        {live && <LinkOutline href={live.href}>Site</LinkOutline>}
-        {caseStudy && (
+        {live?.href && <LinkOutline href={live.href}>Site</LinkOutline>}
+        {caseStudy?.href && (
           <LinkOutline href={caseStudy.href}>Case Study</LinkOutline>
         )}
       </Box>
