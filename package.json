@@ -51,7 +51,7 @@
     "@graphql-codegen/typescript": "1.15.1",
     "@graphql-codegen/typescript-graphql-request": "1.15.1",
     "@graphql-codegen/typescript-operations": "1.15.1",
-    "@types/node": "12.12.43",
+    "@types/node": "12.12.44",
     "@types/ramda": "0.27.6",
     "@types/react": "16.9.35",
     "@types/react-dom": "16.9.8",
