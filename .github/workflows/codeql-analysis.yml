@@ -42,10 +42,14 @@ jobs:
     # ✏️ If the Autobuild fails above, remove it and uncomment the following three lines
     #    and modify them (or add more) to build your code if your project
     #    uses a compiled language
-
-    - run: |
+    - name: build
+      run: |
         npm ci
-        npm build
+        npm run build
+      env:
+        SCHEMA_PATH: ${{ secrets.SCHEMA_PATH }}
+        API_URL: ${{ secrets.API_URL }}
+        API_TOKEN: ${{ secrets.API_TOKEN }}
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
