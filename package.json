@@ -21,7 +21,10 @@
     "lint": "eslint --ext .js,.ts,.tsx .",
     "eslint:fix": "npm run lint -- --fix",
     "schema": "npx apollo service:download --config=./apollo.config.prod.js generated/schema.json",
-    "local:ci": "npm run codegen && npm run lint && npm run type-check"
+    "local:ci": "npm run codegen && npm run lint && npm run type-check && npm run test:ci",
+    "test": "jest --watch",
+    "test:ci": "jest --ci",
+    "test:debug": "node --inspect-brk node_modules/.bin/jest --runInBand"
   },
   "repository": {
     "type": "git",
@@ -51,6 +54,8 @@
     "@graphql-codegen/typescript": "1.15.4",
     "@graphql-codegen/typescript-graphql-request": "1.15.4",
     "@graphql-codegen/typescript-operations": "1.15.4",
+    "@testing-library/jest-dom": "5.11.0",
+    "@testing-library/react": "10.4.5",
     "@types/node": "12.12.47",
     "@types/ramda": "0.27.6",
     "@types/react": "16.9.38",
@@ -58,14 +63,18 @@
     "@types/theme-ui": "0.3.4",
     "@typescript-eslint/eslint-plugin": "2.34.0",
     "@typescript-eslint/parser": "2.34.0",
+    "babel-jest": "26.1.0",
     "dotenv": "8.2.0",
     "eslint": "6.8.0",
     "eslint-config-prettier": "6.11.0",
     "eslint-plugin-import": "2.21.2",
+    "eslint-plugin-jest": "^23.18.0",
     "eslint-plugin-prettier": "3.1.4",
     "eslint-plugin-react": "7.20.0",
     "eslint-plugin-react-hooks": "4.0.4",
     "eslint-plugin-simple-import-sort": "5.0.3",
+    "eslint-plugin-testing-library": "3.3.1",
+    "jest": "26.1.0",
     "prettier": "2.0.5",
     "vercel": "19.1.1"
   }
