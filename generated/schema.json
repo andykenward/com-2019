@@ -1937,31 +1937,11 @@
             "defaultValue": null
           },
           {
-            "name": "date",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "DateFilter",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
             "name": "seo",
             "description": null,
             "type": {
               "kind": "INPUT_OBJECT",
               "name": "SeoFilter",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
-            "name": "order",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "IntegerFilter",
               "ofType": null
             },
             "defaultValue": null
@@ -1977,7 +1957,17 @@
             "defaultValue": null
           },
           {
-            "name": "live",
+            "name": "order",
+            "description": null,
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "IntegerFilter",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "role",
             "description": null,
             "type": {
               "kind": "INPUT_OBJECT",
@@ -1997,31 +1987,11 @@
             "defaultValue": null
           },
           {
-            "name": "title",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringFilter",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
-            "name": "role",
+            "name": "studio",
             "description": null,
             "type": {
               "kind": "INPUT_OBJECT",
               "name": "LinkFilter",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
-            "name": "slug",
-            "description": null,
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "SlugFilter",
               "ofType": null
             },
             "defaultValue": null
@@ -2037,7 +2007,17 @@
             "defaultValue": null
           },
           {
-            "name": "studio",
+            "name": "caseStudy",
+            "description": null,
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "LinkFilter",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "live",
             "description": null,
             "type": {
               "kind": "INPUT_OBJECT",
@@ -2057,11 +2037,31 @@
             "defaultValue": null
           },
           {
-            "name": "caseStudy",
+            "name": "slug",
             "description": null,
             "type": {
               "kind": "INPUT_OBJECT",
-              "name": "LinkFilter",
+              "name": "SlugFilter",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "title",
+            "description": null,
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringFilter",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "date",
+            "description": null,
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "DateFilter",
               "ofType": null
             },
             "defaultValue": null
@@ -2087,97 +2087,6 @@
       },
       {
         "kind": "INPUT_OBJECT",
-        "name": "DateFilter",
-        "description": "Specifies how to filter Date fields",
-        "fields": null,
-        "inputFields": [
-          {
-            "name": "gt",
-            "description": "Filter records with a value that's strictly greater than the one specified",
-            "type": {
-              "kind": "SCALAR",
-              "name": "Date",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
-            "name": "lt",
-            "description": "Filter records with a value that's less than the one specified",
-            "type": {
-              "kind": "SCALAR",
-              "name": "Date",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
-            "name": "gte",
-            "description": "Filter records with a value that's greater than or equal to the one specified",
-            "type": {
-              "kind": "SCALAR",
-              "name": "Date",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
-            "name": "lte",
-            "description": "Filter records with a value that's less or equal than the one specified",
-            "type": {
-              "kind": "SCALAR",
-              "name": "Date",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
-            "name": "exists",
-            "description": "Filter records with the specified field defined (i.e. with any value) or not",
-            "type": {
-              "kind": "SCALAR",
-              "name": "BooleanType",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
-            "name": "eq",
-            "description": "Search for records with an exact match",
-            "type": {
-              "kind": "SCALAR",
-              "name": "Date",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
-            "name": "neq",
-            "description": "Exclude records with an exact match",
-            "type": {
-              "kind": "SCALAR",
-              "name": "Date",
-              "ofType": null
-            },
-            "defaultValue": null
-          }
-        ],
-        "interfaces": null,
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
-        "kind": "SCALAR",
-        "name": "Date",
-        "description": null,
-        "fields": null,
-        "inputFields": null,
-        "interfaces": null,
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
-        "kind": "INPUT_OBJECT",
         "name": "SeoFilter",
         "description": "Specifies how to filter SEO meta tags fields",
         "fields": null,
@@ -2188,87 +2097,6 @@
             "type": {
               "kind": "SCALAR",
               "name": "BooleanType",
-              "ofType": null
-            },
-            "defaultValue": null
-          }
-        ],
-        "interfaces": null,
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
-        "kind": "INPUT_OBJECT",
-        "name": "IntegerFilter",
-        "description": "Specifies how to filter Integer fields",
-        "fields": null,
-        "inputFields": [
-          {
-            "name": "gt",
-            "description": "Filter records with a value that's strictly greater than the one specified",
-            "type": {
-              "kind": "SCALAR",
-              "name": "IntType",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
-            "name": "lt",
-            "description": "Filter records with a value that's less than the one specified",
-            "type": {
-              "kind": "SCALAR",
-              "name": "IntType",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
-            "name": "gte",
-            "description": "Filter records with a value that's greater than or equal to the one specified",
-            "type": {
-              "kind": "SCALAR",
-              "name": "IntType",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
-            "name": "lte",
-            "description": "Filter records with a value that's less or equal than the one specified",
-            "type": {
-              "kind": "SCALAR",
-              "name": "IntType",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
-            "name": "exists",
-            "description": "Filter records with the specified field defined (i.e. with any value) or not",
-            "type": {
-              "kind": "SCALAR",
-              "name": "BooleanType",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
-            "name": "eq",
-            "description": "Search for records with an exact match",
-            "type": {
-              "kind": "SCALAR",
-              "name": "IntType",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
-            "name": "neq",
-            "description": "Exclude records with an exact match",
-            "type": {
-              "kind": "SCALAR",
-              "name": "IntType",
               "ofType": null
             },
             "defaultValue": null
@@ -2353,6 +2181,87 @@
         "description": null,
         "fields": null,
         "inputFields": null,
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "IntegerFilter",
+        "description": "Specifies how to filter Integer fields",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "gt",
+            "description": "Filter records with a value that's strictly greater than the one specified",
+            "type": {
+              "kind": "SCALAR",
+              "name": "IntType",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "lt",
+            "description": "Filter records with a value that's less than the one specified",
+            "type": {
+              "kind": "SCALAR",
+              "name": "IntType",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "gte",
+            "description": "Filter records with a value that's greater than or equal to the one specified",
+            "type": {
+              "kind": "SCALAR",
+              "name": "IntType",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "lte",
+            "description": "Filter records with a value that's less or equal than the one specified",
+            "type": {
+              "kind": "SCALAR",
+              "name": "IntType",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "exists",
+            "description": "Filter records with the specified field defined (i.e. with any value) or not",
+            "type": {
+              "kind": "SCALAR",
+              "name": "BooleanType",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "eq",
+            "description": "Search for records with an exact match",
+            "type": {
+              "kind": "SCALAR",
+              "name": "IntType",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "neq",
+            "description": "Exclude records with an exact match",
+            "type": {
+              "kind": "SCALAR",
+              "name": "IntType",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
         "interfaces": null,
         "enumValues": null,
         "possibleTypes": null
@@ -2505,6 +2414,47 @@
       },
       {
         "kind": "INPUT_OBJECT",
+        "name": "TextFilter",
+        "description": "Specifies how to filter text fields",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "matches",
+            "description": "Filter records based on a regular expression",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringMatchesFilter",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "notMatches",
+            "description": "Exclude records based on a regular expression",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringMatchesFilter",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "exists",
+            "description": "Filter records with the specified field defined (i.e. with any value) or not",
+            "type": {
+              "kind": "SCALAR",
+              "name": "BooleanType",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
         "name": "SlugFilter",
         "description": "Specifies how to filter Slug fields",
         "fields": null,
@@ -2564,26 +2514,46 @@
       },
       {
         "kind": "INPUT_OBJECT",
-        "name": "TextFilter",
-        "description": "Specifies how to filter text fields",
+        "name": "DateFilter",
+        "description": "Specifies how to filter Date fields",
         "fields": null,
         "inputFields": [
           {
-            "name": "matches",
-            "description": "Filter records based on a regular expression",
+            "name": "gt",
+            "description": "Filter records with a value that's strictly greater than the one specified",
             "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringMatchesFilter",
+              "kind": "SCALAR",
+              "name": "Date",
               "ofType": null
             },
             "defaultValue": null
           },
           {
-            "name": "notMatches",
-            "description": "Exclude records based on a regular expression",
+            "name": "lt",
+            "description": "Filter records with a value that's less than the one specified",
             "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringMatchesFilter",
+              "kind": "SCALAR",
+              "name": "Date",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "gte",
+            "description": "Filter records with a value that's greater than or equal to the one specified",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Date",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "lte",
+            "description": "Filter records with a value that's less or equal than the one specified",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Date",
               "ofType": null
             },
             "defaultValue": null
@@ -2597,8 +2567,38 @@
               "ofType": null
             },
             "defaultValue": null
+          },
+          {
+            "name": "eq",
+            "description": "Search for records with an exact match",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Date",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "neq",
+            "description": "Exclude records with an exact match",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Date",
+              "ofType": null
+            },
+            "defaultValue": null
           }
         ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "SCALAR",
+        "name": "Date",
+        "description": null,
+        "fields": null,
+        "inputFields": null,
         "interfaces": null,
         "enumValues": null,
         "possibleTypes": null
@@ -8647,18 +8647,6 @@
             "deprecationReason": null
           },
           {
-            "name": "date_ASC",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "date_DESC",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "order_ASC",
             "description": null,
             "isDeprecated": false,
@@ -8678,6 +8666,18 @@
           },
           {
             "name": "title_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "date_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "date_DESC",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
