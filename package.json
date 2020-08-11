@@ -45,7 +45,7 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "theme-ui": "0.3.1",
-    "typescript": "3.9.6"
+    "typescript": "3.9.7"
   },
   "devDependencies": {
     "@graphql-codegen/cli": "1.17.7",
