@@ -1,10 +1,9 @@
-import Maybe from "graphql/tsutils/Maybe"
 import { Box, Heading, Link, Text } from "theme-ui"
 
-import { FragmentMeFragment, Scalars } from "../../../generated/graphql"
+import { FragmentMeFragment, MeRecord } from "../../../generated/graphql"
 import { ColumnsCenter } from "../columns"
 
-const getMonthYear = (available?: Maybe<Scalars["DateTime"]>) => {
+const getMonthYear = (available?: MeRecord["available"]) => {
   if (available == null) return null
   return new Date(available).toLocaleString("en-GB", {
     month: "long",
