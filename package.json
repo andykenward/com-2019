@@ -68,6 +68,6 @@
     "eslint-plugin-react-hooks": "4.0.6",
     "eslint-plugin-simple-import-sort": "5.0.3",
     "prettier": "2.0.5",
-    "vercel": "19.1.1"
+    "vercel": "19.2.0"
   }
 }
