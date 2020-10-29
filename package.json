@@ -54,7 +54,7 @@
   "devDependencies": {
     "@types/node": "12.12.69",
     "@types/ramda": "0.27.29",
-    "@types/react": "16.9.49",
+    "@types/react": "16.9.55",
     "@types/react-dom": "16.9.8",
     "@types/theme-ui": "0.3.7",
     "@typescript-eslint/eslint-plugin": "4.5.0",
