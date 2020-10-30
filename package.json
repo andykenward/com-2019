@@ -23,8 +23,8 @@
     "schema": "npx apollo service:download --config=./apollo.config.prod.js generated/schema.json",
     "local:ci": "npm run codegen && npm run lint && npm run type-check && npm run test:ci",
     "test": "jest",
-    "test:ci": "jest --ci",
-    "test:watch": "jest --watch"
+    "test:ci": "npm test -- --ci",
+    "test:watch": "npm test -- --watch"
   },
   "repository": {
     "type": "git",
@@ -76,6 +76,7 @@
     "eslint-plugin-simple-import-sort": "5.0.3",
     "eslint-plugin-testing-library": "^3.9.2",
     "jest": "26.6.1",
+    "msw": "^0.21.3",
     "prettier": "2.1.2",
     "vercel": "20.1.2"
   }
