@@ -37,7 +37,7 @@
   },
   "homepage": "https://github.com/andykenward/andykenward.com#readme",
   "dependencies": {
-    "@graphql-codegen/cli": "1.18.0",
+    "@graphql-codegen/cli": "1.19.2",
     "@graphql-codegen/typescript": "1.17.11",
     "@graphql-codegen/typescript-graphql-request": "2.0.2",
     "@graphql-codegen/typescript-operations": "1.17.8",
