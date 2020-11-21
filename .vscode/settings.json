@@ -19,6 +19,7 @@
     "editor.formatOnSave": true
   },
   "typescript.tsdk": "node_modules/typescript/lib",
+  "eslint.packageManager": "npm",
   "eslint.validate": [
     "javascript",
     "javascriptreact",
@@ -33,7 +34,7 @@
     "**/.next": true,
     "**/.vercel": true,
     "**/generated/schema.json": true,
-    "**/package-lock.json": true,
+    "**/package-lock.json": true
   },
   "files.exclude": {
     "**/.git": true,
@@ -41,6 +42,7 @@
     "**/.hg": true,
     "**/CVS": true,
     "**/.DS_Store": true,
-    "**/node_modules": true,
-  }
+    "**/node_modules": true
+  },
+  "jest.autoEnable": false
 }

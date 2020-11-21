@@ -7,7 +7,7 @@ import { LinkExternal } from "../link"
 export const Footer: React.FC<{ data?: FooterFieldsFragment | null }> = ({
   data,
 }) => {
-  if (data == null) return null
+  if (data == null || !data.links.length) return null
 
   const { links } = data
 
