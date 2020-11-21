@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "next",
     "dev:vercel": "vercel dev",
-    "prebuild": "npm run local:ci",
+    "prebuild": "npm run codegen",
     "build": "next build",
     "export": "next export",
     "start": "next start",
