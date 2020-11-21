@@ -1043,6 +1043,18 @@
             "deprecationReason": null
           },
           {
+            "name": "_unpublishingScheduledAt",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "_updatedAt",
             "description": null,
             "args": [],
@@ -1149,7 +1161,7 @@
       {
         "kind": "SCALAR",
         "name": "DateTime",
-        "description": null,
+        "description": "A ISO 8601 compliant datetime value",
         "fields": null,
         "inputFields": null,
         "interfaces": null,
@@ -1341,6 +1353,16 @@
           },
           {
             "name": "_publicationScheduledAt",
+            "description": null,
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "PublishedAtFilter",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_unpublishingScheduledAt",
             "description": null,
             "type": {
               "kind": "INPUT_OBJECT",
@@ -2023,6 +2045,18 @@
             "deprecationReason": null
           },
           {
+            "name": "_unpublishingScheduledAt_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "_unpublishingScheduledAt_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "_publishedAt_ASC",
             "description": null,
             "isDeprecated": false,
@@ -2277,6 +2311,18 @@
             "deprecationReason": null
           },
           {
+            "name": "_unpublishingScheduledAt",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "_updatedAt",
             "description": null,
             "args": [],
@@ -2418,6 +2464,16 @@
           },
           {
             "name": "_publicationScheduledAt",
+            "description": null,
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "PublishedAtFilter",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_unpublishingScheduledAt",
             "description": null,
             "type": {
               "kind": "INPUT_OBJECT",
@@ -2579,6 +2635,18 @@
           },
           {
             "name": "_publicationScheduledAt_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "_unpublishingScheduledAt_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "_unpublishingScheduledAt_DESC",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -2806,6 +2874,18 @@
                 "name": "ItemStatus",
                 "ofType": null
               }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "_unpublishingScheduledAt",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -3045,6 +3125,18 @@
             "deprecationReason": null
           },
           {
+            "name": "_unpublishingScheduledAt",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "_updatedAt",
             "description": null,
             "args": [],
@@ -3222,7 +3314,7 @@
       {
         "kind": "SCALAR",
         "name": "Date",
-        "description": null,
+        "description": "A ISO 8601 compliant date value",
         "fields": null,
         "inputFields": null,
         "interfaces": null,
@@ -3365,6 +3457,18 @@
                 "name": "ItemStatus",
                 "ofType": null
               }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "_unpublishingScheduledAt",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -3926,6 +4030,29 @@
             "deprecationReason": null
           },
           {
+            "name": "focalPoint",
+            "description": null,
+            "args": [
+              {
+                "name": "locale",
+                "description": "The locale to use to fetch the field's content",
+                "type": {
+                  "kind": "ENUM",
+                  "name": "SiteLocale",
+                  "ofType": null
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "focalPoint",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "format",
             "description": null,
             "args": [],
@@ -4278,6 +4405,51 @@
         "possibleTypes": null
       },
       {
+        "kind": "OBJECT",
+        "name": "focalPoint",
+        "description": null,
+        "fields": [
+          {
+            "name": "x",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "FloatType",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "y",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "FloatType",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "SCALAR",
+        "name": "FloatType",
+        "description": "Represents signed double-precision fractional values as specified by [IEEE 754](http://en.wikipedia.org/wiki/IEEE_floating_point).",
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
         "kind": "INPUT_OBJECT",
         "name": "ImgixParams",
         "description": null,
@@ -4345,6 +4517,16 @@
             "type": {
               "kind": "SCALAR",
               "name": "IntType",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "blendColor",
+            "description": "Blend Color\n\nSpecifies a color to use when applying the blend.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/blending/blend-color)",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
               "ofType": null
             },
             "defaultValue": null
@@ -4468,6 +4650,26 @@
             "defaultValue": null
           },
           {
+            "name": "borderBottom",
+            "description": "Border Bottom\n\nSets bottom border of an image.\n\nDepends on: `border`",
+            "type": {
+              "kind": "SCALAR",
+              "name": "IntType",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "borderLeft",
+            "description": "Border Left\n\nSets left border of an image.\n\nDepends on: `border`",
+            "type": {
+              "kind": "SCALAR",
+              "name": "IntType",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
             "name": "borderRadiusInner",
             "description": "Inner Border Radius\n\nSets the inner radius of the image's border in pixels.\n\nDepends on: `border`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/border-and-padding/border-radius-inner)",
             "type": {
@@ -4483,6 +4685,26 @@
             "type": {
               "kind": "SCALAR",
               "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "borderRight",
+            "description": "Border Right\n\nSets right border of an image.\n\nDepends on: `border`",
+            "type": {
+              "kind": "SCALAR",
+              "name": "IntType",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "borderTop",
+            "description": "Border Top\n\nSets top border of an image.\n\nDepends on: `border`",
+            "type": {
+              "kind": "SCALAR",
+              "name": "IntType",
               "ofType": null
             },
             "defaultValue": null
@@ -4804,6 +5026,26 @@
             "defaultValue": null
           },
           {
+            "name": "gridColors",
+            "description": "Grid Colors\n\nSets grid colors for the transparency checkerboard grid.\n\nDepends on: `transparency`",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "gridSize",
+            "description": "Grid Size\n\nSets grid size for the transparency checkerboard grid.\n\nDepends on: `transparency`",
+            "type": {
+              "kind": "SCALAR",
+              "name": "IntType",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
             "name": "h",
             "description": "Image Height\n\nAdjusts the height of the output image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/size/h)",
             "type": {
@@ -4982,8 +5224,8 @@
             "defaultValue": null
           },
           {
-            "name": "mask",
-            "description": "Mask Type\n\nDefines the type of mask and specifies the URL if that type is selected.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/mask)",
+            "name": "maskBg",
+            "description": "Mask Background Color\n\nColors the background of the transparent mask area of images\n\nDepends on: `mask`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/mask/mask-bg)",
             "type": {
               "kind": "SCALAR",
               "name": "String",
@@ -4992,8 +5234,8 @@
             "defaultValue": null
           },
           {
-            "name": "maskbg",
-            "description": "Mask Background Color\n\nColors the background of the transparent mask area of images\n\nDepends on: `mask`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/mask/mask-bg)",
+            "name": "mask",
+            "description": "Mask Type\n\nDefines the type of mask and specifies the URL if that type is selected.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/mask)",
             "type": {
               "kind": "SCALAR",
               "name": "String",
@@ -5074,6 +5316,46 @@
           {
             "name": "orient",
             "description": "Orientation\n\nChanges the image orientation.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/rotation/orient)",
+            "type": {
+              "kind": "SCALAR",
+              "name": "IntType",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "padBottom",
+            "description": "Padding Bottom\n\nSets bottom padding of an image.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "IntType",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "padLeft",
+            "description": "Padding Left\n\nSets left padding of an image.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "IntType",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "padRight",
+            "description": "Padding Right\n\nSets right padding of an image.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "IntType",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "padTop",
+            "description": "Padding Top\n\nSets top padding of an image.",
             "type": {
               "kind": "SCALAR",
               "name": "IntType",
@@ -5197,6 +5479,16 @@
             "type": {
               "kind": "SCALAR",
               "name": "FloatType",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "transparency",
+            "description": "Transparency\n\nAdds checkerboard behind images which support transparency.",
+            "type": {
+              "kind": "ENUM",
+              "name": "ImgixParamsTransparency",
               "ofType": null
             },
             "defaultValue": null
@@ -5634,16 +5926,6 @@
             "deprecationReason": null
           }
         ],
-        "possibleTypes": null
-      },
-      {
-        "kind": "SCALAR",
-        "name": "FloatType",
-        "description": "Represents signed double-precision fractional values as specified by [IEEE 754](http://en.wikipedia.org/wiki/IEEE_floating_point).",
-        "fields": null,
-        "inputFields": null,
-        "interfaces": null,
-        "enumValues": null,
         "possibleTypes": null
       },
       {
@@ -6197,6 +6479,23 @@
           },
           {
             "name": "json",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "possibleTypes": null
+      },
+      {
+        "kind": "ENUM",
+        "name": "ImgixParamsTransparency",
+        "description": null,
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": [
+          {
+            "name": "grid",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -6847,6 +7146,18 @@
             "deprecationReason": null
           },
           {
+            "name": "_unpublishingScheduledAt",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "_updatedAt",
             "description": null,
             "args": [],
@@ -6976,6 +7287,16 @@
           },
           {
             "name": "_publicationScheduledAt",
+            "description": null,
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "PublishedAtFilter",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "_unpublishingScheduledAt",
             "description": null,
             "type": {
               "kind": "INPUT_OBJECT",
@@ -7750,6 +8071,18 @@
             "deprecationReason": null
           },
           {
+            "name": "_unpublishingScheduledAt_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "_unpublishingScheduledAt_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "_publishedAt_ASC",
             "description": null,
             "isDeprecated": false,
@@ -7905,6 +8238,16 @@
             "defaultValue": null
           },
           {
+            "name": "_unpublishingScheduledAt",
+            "description": null,
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "PublishedAtFilter",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
             "name": "_publishedAt",
             "description": null,
             "type": {
@@ -8047,6 +8390,18 @@
           },
           {
             "name": "_publicationScheduledAt_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "_unpublishingScheduledAt_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "_unpublishingScheduledAt_DESC",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -10393,7 +10748,18 @@
           {
             "name": "inputFields",
             "description": null,
-            "args": [],
+            "args": [
+              {
+                "name": "includeDeprecated",
+                "description": null,
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Boolean",
+                  "ofType": null
+                },
+                "defaultValue": "false"
+              }
+            ],
             "type": {
               "kind": "LIST",
               "name": null,
@@ -10523,7 +10889,18 @@
           {
             "name": "args",
             "description": null,
-            "args": [],
+            "args": [
+              {
+                "name": "includeDeprecated",
+                "description": null,
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Boolean",
+                  "ofType": null
+                },
+                "defaultValue": "false"
+              }
+            ],
             "type": {
               "kind": "NON_NULL",
               "name": null,
@@ -10646,6 +11023,34 @@
           {
             "name": "defaultValue",
             "description": "A GraphQL-formatted string representing the default value for this input value.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "isDeprecated",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "deprecationReason",
+            "description": null,
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -10959,32 +11364,6 @@
     ],
     "directives": [
       {
-        "name": "skip",
-        "description": "Directs the executor to skip this field or fragment when the `if` argument is true.",
-        "isRepeatable": false,
-        "locations": [
-          "FIELD",
-          "FRAGMENT_SPREAD",
-          "INLINE_FRAGMENT"
-        ],
-        "args": [
-          {
-            "name": "if",
-            "description": "Skipped when true.",
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "Boolean",
-                "ofType": null
-              }
-            },
-            "defaultValue": null
-          }
-        ]
-      },
-      {
         "name": "include",
         "description": "Directs the executor to include this field or fragment only when the `if` argument is true.",
         "isRepeatable": false,
@@ -11011,11 +11390,39 @@
         ]
       },
       {
+        "name": "skip",
+        "description": "Directs the executor to skip this field or fragment when the `if` argument is true.",
+        "isRepeatable": false,
+        "locations": [
+          "FIELD",
+          "FRAGMENT_SPREAD",
+          "INLINE_FRAGMENT"
+        ],
+        "args": [
+          {
+            "name": "if",
+            "description": "Skipped when true.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }
+        ]
+      },
+      {
         "name": "deprecated",
         "description": "Marks an element of a GraphQL schema as no longer supported.",
         "isRepeatable": false,
         "locations": [
           "FIELD_DEFINITION",
+          "ARGUMENT_DEFINITION",
+          "INPUT_FIELD_DEFINITION",
           "ENUM_VALUE"
         ],
         "args": [
