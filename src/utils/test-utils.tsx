@@ -1,7 +1,7 @@
 import { render, RenderOptions, RenderResult } from "@testing-library/react"
 import { ThemeProvider } from "theme-ui"
 
-import theme from "../theme"
+import { theme } from "../theme"
 
 const AllTheProviders: React.FC = ({ children }) => {
   return <ThemeProvider theme={theme}>{children}</ThemeProvider>

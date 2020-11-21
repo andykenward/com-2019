@@ -4,14 +4,15 @@ import { AppProps } from "next/app"
 import { useEffect } from "react"
 import { ThemeProvider } from "theme-ui"
 
-import theme from "../theme"
+import { theme } from "../theme"
 
 const MyApp = ({ Component, pageProps, router }: AppProps) => {
   useEffect(() => {
     // https://github.com/zeit/next.js/issues/3303
     if ("scrollRestoration" in window.history) {
       window.history.scrollRestoration = "manual"
-      const cachedScrollPositions: number[][] = []
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const cachedScrollPositions: Array<any> = []
       let shouldScrollRestore: { x: number; y: number } | null
 
       router.events.on("routeChangeStart", () => {
