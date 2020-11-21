@@ -18,7 +18,7 @@
     "format": "prettier --write '**/*.{css,js,jsx,ts,tsx,graphql}'",
     "type-check:watch": "npm run type-check -- --watch",
     "type-check": "tsc --noEmit",
-    "lint": "eslint --ext .js,.ts,.tsx .",
+    "lint": "eslint --cache --ext .js,.ts,.tsx .",
     "eslint:fix": "npm run lint -- --fix",
     "schema": "npx apollo service:download --config=./apollo.config.prod.js generated/schema.json",
     "local:ci": "npm run codegen && npm run lint && npm run type-check && npm run test:ci",

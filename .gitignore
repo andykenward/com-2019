@@ -17,6 +17,7 @@ node_modules
 .DS_Store
 
 .cache
+.eslintcache
 
 # testing
 coverage
