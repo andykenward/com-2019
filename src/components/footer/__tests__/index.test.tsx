@@ -1,6 +1,6 @@
-import { Footer } from ".."
 import { FooterFieldsFragment } from "../../../../generated/graphql"
 import { render } from "../../../utils/test-utils"
+import { Footer } from ".."
 
 describe("<Footer />", () => {
   it("handles no data", () => {
