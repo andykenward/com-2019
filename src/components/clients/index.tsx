@@ -1,8 +1,8 @@
 import { Text } from "theme-ui"
 
-import { FragmentProjectNavFragment } from "../../../generated/graphql"
+import { FragmentClientFragment } from "../../../generated/graphql"
 
-export const Clients: React.FC<Pick<FragmentProjectNavFragment, "clients">> = ({
+export const Clients: React.FC<{ clients?: FragmentClientFragment[] }> = ({
   clients,
 }) => (
   <>
