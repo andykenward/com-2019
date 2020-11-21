@@ -1,6 +1,6 @@
-import { Clients } from ".."
 import { FragmentClientFragment } from "../../../../generated/graphql"
 import { render } from "../../../utils/test-utils"
+import { Clients } from ".."
 
 describe("<Clients>", () => {
   it("handles no clients array", () => {
