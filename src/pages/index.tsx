@@ -7,7 +7,7 @@ import { Footer } from "../components/footer"
 import { Head } from "../components/head"
 import { Header } from "../components/header"
 import { ProjectsMenu } from "../components/projects"
-import { appSdk } from "../utils/client"
+import { appSdk, appSdkPreview } from "../lib/api"
 
 const Home: NextPage<{ data: HomeQuery }> = ({ data }) => {
   const { _site, me, allProjects, footer } = data
@@ -27,9 +27,9 @@ const Home: NextPage<{ data: HomeQuery }> = ({ data }) => {
   )
 }
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async ({ preview = false }) => {
   try {
-    const data = await appSdk.Home()
+    const data = preview ? await appSdkPreview.Home() : await appSdk.Home()
 
     return { props: { data } }
   } catch (error) {

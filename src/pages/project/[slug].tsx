@@ -5,7 +5,7 @@ import { Grid } from "theme-ui"
 import { ProjectQuery } from "../../../generated/graphql"
 import { Head } from "../../components/head"
 import { ProjectsMenuItem } from "../../components/projects"
-import { appSdk } from "../../utils/client"
+import { appSdk, appSdkPreview } from "../../lib/api"
 
 type Params = {
   slug: string
@@ -50,10 +50,13 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps<Props, Params> = async ({
   params,
+  preview = false,
 }) => {
   try {
     const data = params?.slug
-      ? await appSdk.Project({ slug: params.slug })
+      ? preview
+        ? await appSdkPreview.Project({ slug: params.slug })
+        : await appSdk.Project({ slug: params.slug })
       : null
 
     return { props: { data } }

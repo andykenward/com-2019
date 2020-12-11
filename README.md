@@ -57,5 +57,18 @@ Don't forget to set these up on your CI & hosting if changing environments or AP
 ```
 SCHEMA_PATH="./generated/schema.json"
 API_TOKEN=YOUR_GRAPHQL_API_TOKEN
+API_PREVIEW_TOKEN=YOUR_GRAPHQL_API_PREVIEW_TOKEN
 API_URL=YOUR_GRAPHQL_ENDPOINT
+```
+
+## Preview url
+
+```
+/api/preview?secret=YOUR_GRAPHQL_API_PREVIEW_TOKEN&slug=a-slug
+```
+
+### Exit preview mode
+
+```
+/api/exit-preview
 ```

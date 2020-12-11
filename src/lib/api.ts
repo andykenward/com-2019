@@ -25,3 +25,12 @@ const graphqlClient = new GraphQLClient(API_URL, {
 })
 
 export const appSdk = (() => getSdk(graphqlClient))()
+
+// TODO: combine this into one client that checks for preview=true .
+const graphqlClientPreview = new GraphQLClient(`${API_URL}preview`, {
+  headers: {
+    authorization: `Bearer ${process.env.API_PREVIEW_TOKEN}`,
+  },
+})
+
+export const appSdkPreview = (() => getSdk(graphqlClientPreview))()
