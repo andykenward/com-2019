@@ -5,10 +5,7 @@ import { appSdk } from "../../lib/api"
 const Preview: NextApiHandler = async (req, res) => {
   // Check the secret and next parameters
   // This secret should only be known to this API route and the CMS
-  if (
-    req.query.secret !== process.env.DATOCMS_PREVIEW_SECRET ||
-    !req.query.slug
-  ) {
+  if (req.query.secret !== process.env.API_PREVIEW_TOKEN || !req.query.slug) {
     return res.status(401).json({ message: "Invalid token" })
   }
   const { slug } = req.query
