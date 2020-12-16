@@ -1,6 +1,6 @@
 import { NextApiHandler } from "next"
 
-import { appSdk } from "../../lib/api"
+import { appSdkToggle } from "../../lib/api"
 
 const Preview: NextApiHandler = async (req, res) => {
   // Check the secret and next parameters
@@ -13,8 +13,7 @@ const Preview: NextApiHandler = async (req, res) => {
     return res.status(401).json({ message: "Invalid slug" })
   }
   // Fetch the headless CMS to check if the provided `slug` exists
-
-  const post = await appSdk.Project({ slug })
+  const post = await appSdkToggle(true).Project({ slug })
 
   // If the slug doesn't exist prevent preview mode from being enabled
   if (!post || !post.project) {
