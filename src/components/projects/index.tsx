@@ -2,7 +2,6 @@ import { Box, Grid, Heading, Text } from "theme-ui"
 
 import { FragmentProjectNavFragment } from "../../../generated/graphql"
 import { Clients } from "../clients"
-import { ColumnsCenter } from "../columns"
 import { LinkExternal, LinkOutline } from "../link"
 import { Tags } from "../tags"
 
@@ -16,7 +15,7 @@ export const ProjectsMenuItem: React.FC<FragmentProjectNavFragment> = ({
   caseStudy,
   studio,
 }) => (
-  <Box as="article">
+  <Box as="article" sx={{ gridColumn: "center-start/center-end" }} mb={56}>
     <Clients clients={clients} />
     <Heading as="h3" variant="headingThree" mb={!description ? 8 : undefined}>
       {title}
@@ -34,7 +33,7 @@ export const ProjectsMenuItem: React.FC<FragmentProjectNavFragment> = ({
     )}
     {tags && <Tags tags={tags} />}
     {(live || caseStudy) && (
-      <Box>
+      <Box as="footer">
         {live?.href && <LinkOutline href={live.href}>Site</LinkOutline>}
         {caseStudy?.href && (
           <LinkOutline href={caseStudy.href}>Case Study</LinkOutline>
@@ -50,15 +49,18 @@ export const ProjectsMenu: React.FC<{
   const projects = data ?? []
 
   return (
-    <ColumnsCenter as="section">
-      <Heading variant="headingOne" mb={32}>
+    <Grid variant="center" as="main" role="main">
+      <Heading
+        variant="headingOne"
+        mb={32}
+        sx={{ gridColumn: "center-start/center-end" }}
+      >
         Projects
       </Heading>
-      <Grid gap={56}>
-        {projects.map((project) =>
-          project ? <ProjectsMenuItem key={project.id} {...project} /> : null
-        )}
-      </Grid>
-    </ColumnsCenter>
+
+      {projects.map((project) =>
+        project ? <ProjectsMenuItem key={project.id} {...project} /> : null
+      )}
+    </Grid>
   )
 }

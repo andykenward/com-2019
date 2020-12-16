@@ -7,7 +7,7 @@
     "node": "12.x"
   },
   "scripts": {
-    "dev": "next",
+    "dev": "next dev",
     "dev:vercel": "vercel dev",
     "prebuild": "npm run codegen",
     "build": "next build",

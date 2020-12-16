@@ -5,7 +5,7 @@ import { Grid } from "theme-ui"
 import { ProjectQuery } from "../../../generated/graphql"
 import { Head } from "../../components/head"
 import { ProjectsMenuItem } from "../../components/projects"
-import { appSdk } from "../../utils/client"
+import { appSdkToggle } from "../../lib/api"
 
 type Params = {
   slug: string
@@ -35,7 +35,7 @@ export const Project: NextPage<Props> = ({ data }) => {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   try {
-    const data = await appSdk.Projects()
+    const data = await appSdkToggle().Projects()
 
     return {
       paths:
@@ -50,10 +50,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps<Props, Params> = async ({
   params,
+  preview = false,
 }) => {
   try {
     const data = params?.slug
-      ? await appSdk.Project({ slug: params.slug })
+      ? await appSdkToggle(preview).Project({ slug: params.slug })
       : null
 
     return { props: { data } }

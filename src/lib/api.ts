@@ -23,5 +23,14 @@ const graphqlClient = new GraphQLClient(API_URL, {
     authorization: `Bearer ${API_TOKEN}`,
   },
 })
+const appSdk = (() => getSdk(graphqlClient))()
 
-export const appSdk = (() => getSdk(graphqlClient))()
+const graphqlClientPreview = new GraphQLClient(`${API_URL}/preview`, {
+  headers: {
+    authorization: `Bearer ${process.env.API_PREVIEW_TOKEN}`,
+  },
+})
+const appSdkPreview = (() => getSdk(graphqlClientPreview))()
+
+export const appSdkToggle = (preview = false) =>
+  preview ? appSdkPreview : appSdk
