@@ -42,7 +42,7 @@
   "dependencies": {
     "@graphql-codegen/cli": "1.19.4",
     "@graphql-codegen/typescript": "1.19.0",
-    "@graphql-codegen/typescript-graphql-request": "2.0.3",
+    "@graphql-codegen/typescript-graphql-request": "3.0.0",
     "@graphql-codegen/typescript-operations": "1.17.12",
     "graphql": "15.4.0",
     "graphql-request": "3.4.0",
