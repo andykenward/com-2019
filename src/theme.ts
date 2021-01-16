@@ -1,5 +1,3 @@
-import { ThemeProviderProps } from "@theme-ui/core"
-
 import { convertToRem } from "./utils/convertToRem"
 const themeObject = (items: number[]): { [k: string]: string | number } => {
   return Object.fromEntries(items.map((item) => [item, convertToRem(item)]))
@@ -12,7 +10,7 @@ const space = [0, 4, 8, 16, 32, 56, 64, 128]
 const spaceObject = themeObject(space)
 
 // Typings are wrong for Theme from theme-ui.
-export const theme: ThemeProviderProps["theme"] = {
+export const theme = {
   fonts: {
     body: 'Graphik, "Helvetica Neue",Helvetica,Arial,Verdana,"sans-serif"',
     heading: '"Cooper Light", Georgia, Times, "Times New Roman", serif',
