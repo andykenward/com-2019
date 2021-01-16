@@ -1,7 +1,8 @@
-import { Box, Heading, Link, Text } from "theme-ui"
+import { Box, Heading, Text } from "theme-ui"
 
 import { FragmentMeFragment, MeRecord } from "../../../generated/graphql"
 import { ColumnsCenter } from "../columns"
+import { LinkExternal } from "../link"
 
 const getMonthYear = (available?: MeRecord["available"]) => {
   if (available == null) return null
@@ -61,9 +62,9 @@ export const Header: React.FC<{ data?: FragmentMeFragment | null }> = ({
           {links.map(
             ({ href, id, title }) =>
               href && (
-                <Link variant="outline" key={id} href={href}>
+                <LinkExternal variant="outline" key={id} href={href}>
                   {title}
-                </Link>
+                </LinkExternal>
               )
           )}
         </Box>
