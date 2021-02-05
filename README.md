@@ -2,8 +2,8 @@
 
 ## Requirements
 
-- node `^12.16.2`
-- npm `^6.13.4`
+- node `^14.15.4`
+- npm `^7.5.2`
 
 ### Node
 
