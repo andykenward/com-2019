@@ -9,7 +9,11 @@ import { Header } from "../components/header"
 import { ProjectsMenu } from "../components/projects"
 import { appSdkToggle } from "../lib/api"
 
-const Home: NextPage<{ data: HomeQuery }> = ({ data }) => {
+type Props = {
+  data: HomeQuery
+}
+
+const Home: NextPage<Props> = ({ data }) => {
   const { _site, me, allProjects, footer } = data
   return (
     <>
@@ -27,7 +31,9 @@ const Home: NextPage<{ data: HomeQuery }> = ({ data }) => {
   )
 }
 
-export const getStaticProps: GetStaticProps = async ({ preview = false }) => {
+export const getStaticProps: GetStaticProps<Props> = async ({
+  preview = false,
+}) => {
   try {
     const data = await appSdkToggle(preview).Home()
 
