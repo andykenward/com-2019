@@ -12,7 +12,8 @@ class CustomHead extends Head {
         node &&
         node.type === "link" &&
         node.props &&
-        node.props.rel === "preload"
+        node.props.rel === "preload" &&
+        node.props.as === "script"
       ) {
         return null
       }
