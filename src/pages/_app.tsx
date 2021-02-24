@@ -1,10 +1,7 @@
-import "../../public/fonts/index.css"
+import "../../styles/globals.css"
 
 import { AppProps } from "next/app"
 import { useEffect } from "react"
-import { ThemeProvider } from "theme-ui"
-
-import { theme } from "../theme"
 
 const MyApp = ({ Component, pageProps, router }: AppProps) => {
   useEffect(() => {
@@ -39,11 +36,7 @@ const MyApp = ({ Component, pageProps, router }: AppProps) => {
     }
   }, [router])
 
-  return (
-    <ThemeProvider theme={theme}>
-      <Component {...pageProps} />
-    </ThemeProvider>
-  )
+  return <Component {...pageProps} />
 }
 
 export default MyApp

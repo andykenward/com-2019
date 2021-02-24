@@ -1,8 +1,5 @@
-import { Box, Heading, Text } from "theme-ui"
-
 import { FragmentMeFragment, MeRecord } from "../../../generated/graphql"
-import { ColumnsCenter } from "../columns"
-import { LinkExternal } from "../link"
+import { LinkOutline } from "../link"
 
 const getMonthYear = (available?: MeRecord["available"]) => {
   if (available == null) return null
@@ -21,54 +18,42 @@ export const Header: React.FC<{ data?: FragmentMeFragment | null }> = ({
   const date = getMonthYear(available)
 
   return (
-    <ColumnsCenter as="header" py={[64, 128]} bg="primary">
-      {name && (
-        <Heading as="h1" variant="headingOne" sx={{ fontSize: [48, 64, 80] }}>
-          {name}
-        </Heading>
-      )}
-      {role && (
-        <Heading as="h2" variant="headingTwo" mb={8}>
-          {role}
-        </Heading>
-      )}
-      {update && (
-        <Heading
-          as="h3"
-          variant="headingThree"
-          mb={16}
-          sx={{ fontSize: [20, 28] }}
-        >
-          {update}
-        </Heading>
-      )}
-      {date && (
-        <Heading
-          as="h4"
-          variant="headingThree"
-          mb={16}
-          sx={{ fontSize: [20, 28] }}
-        >
-          Available from {date}
-        </Heading>
-      )}
-      {email && (
-        <Text as="p" variant="body" mb={16}>
-          {email}
-        </Text>
-      )}
-      {links?.length && (
-        <Box>
-          {links.map(
-            ({ href, id, title }) =>
-              href && (
-                <LinkExternal variant="outline" key={id} href={href}>
-                  {title}
-                </LinkExternal>
-              )
-          )}
-        </Box>
-      )}
-    </ColumnsCenter>
+    <header className="bg-primary py-16 sm:py-32">
+      <div className="sm:max-w-center mx-8 sm:mx-auto">
+        {name && (
+          <h1 className="text-black font-heading text-5xl sm:text-7xl md:text-7xl">
+            {name}
+          </h1>
+        )}
+        {role && (
+          <h2 className="text-black font-body text-4xl leading-tight sm:text-5xl sm:leading-tight tracking-tight mb-2">
+            {role}
+          </h2>
+        )}
+        {update && (
+          <h3 className="text-black font-body text-xl leading-tight sm:text-3xl sm:leading-tight tracking-tight mb-4">
+            {update}
+          </h3>
+        )}
+        {date && (
+          <h4 className="text-black font-body text-xl leading-tight sm:text-3xl sm:leading-tight tracking-tight mb-4">
+            Available from {date}
+          </h4>
+        )}
+        {email && <p className="text-black font-body mb-4">{email}</p>}
+        {links?.length && (
+          <div className="space-x-2">
+            {links.map(
+              ({ href, id, title }) =>
+                href && (
+                  <LinkOutline key={id} href={href}>
+                    {title}
+                  </LinkOutline>
+                )
+            )}
+          </div>
+        )}
+      </div>
+    </header>
   )
 }

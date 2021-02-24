@@ -1,8 +1,5 @@
-import { Box, Grid } from "theme-ui"
-
 import { FooterFieldsFragment } from "../../../generated/graphql"
-import { ColumnsCenter } from "../columns"
-import { LinkExternal } from "../link"
+import { Link } from "../link"
 
 export const Footer: React.FC<{ data?: FooterFieldsFragment | null }> = ({
   data,
@@ -12,26 +9,18 @@ export const Footer: React.FC<{ data?: FooterFieldsFragment | null }> = ({
   const { links } = data
 
   return (
-    <ColumnsCenter as="footer" py={32}>
-      <Grid
-        as="ul"
-        gap={16}
-        m={0}
-        p={0}
-        sx={{
-          listStyle: "none",
-        }}
-      >
+    <footer className="sm:max-w-center sm:w-full mx-8 sm:mx-auto py-8">
+      <ul className="space-y-4">
         {(links ?? []).map(
           ({ title, href, id }) =>
             title &&
             href && (
-              <Box as="li" m={0} p={0} key={id}>
-                <LinkExternal href={href}>{title}</LinkExternal>
-              </Box>
+              <li key={id}>
+                <Link href={href}>{title}</Link>
+              </li>
             )
         )}
-      </Grid>
-    </ColumnsCenter>
+      </ul>
+    </footer>
   )
 }

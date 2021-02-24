@@ -1,0 +1,9 @@
+.divide:last-child:after {
+  display: none;
+}
+.divide:after {
+  content: "•";
+  margin: 0 0.5rem;
+  font-size: 0.75rem;
+  color: #959595;
+}

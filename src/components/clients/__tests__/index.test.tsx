@@ -31,7 +31,7 @@ describe("<Clients>", () => {
     expect(container).toMatchInlineSnapshot(`
       <div>
         <strong
-          class="css-15snz09"
+          class="uppercase font-body font-medium"
         >
           client 1
         </strong>
@@ -52,12 +52,12 @@ describe("<Clients>", () => {
     expect(container).toMatchInlineSnapshot(`
       <div>
         <strong
-          class="css-15snz09"
+          class="uppercase font-body font-medium"
         >
           client 1
         </strong>
         <strong
-          class="css-15snz09"
+          class="uppercase font-body font-medium"
         >
           client 2
         </strong>
