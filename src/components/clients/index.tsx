@@ -1,5 +1,3 @@
-import { Text } from "theme-ui"
-
 import { FragmentClientFragment } from "../../../generated/graphql"
 
 export const Clients: React.FC<{ clients?: FragmentClientFragment[] }> = ({
@@ -10,14 +8,9 @@ export const Clients: React.FC<{ clients?: FragmentClientFragment[] }> = ({
       ({ id, title }) =>
         id &&
         title && (
-          <Text
-            as="strong"
-            variant="bodyBold"
-            key={id}
-            sx={{ textTransform: "uppercase" }}
-          >
+          <strong className="uppercase font-body font-medium" key={id}>
             {title}
-          </Text>
+          </strong>
         )
     )}
   </>

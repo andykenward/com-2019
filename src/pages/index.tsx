@@ -1,6 +1,5 @@
 import { GetStaticProps, NextPage } from "next"
 import React from "react"
-import { Grid } from "theme-ui"
 
 import { HomeQuery } from "../../generated/graphql"
 import { Footer } from "../components/footer"
@@ -22,11 +21,12 @@ const Home: NextPage<Props> = ({ data }) => {
         description={_site.globalSeo?.fallbackSeo?.description}
         twitterAccount={_site.globalSeo?.twitterAccount}
       />
-      <Grid gap={[32, 64]}>
+
+      <div className="grid grid-cols-1 gap-16">
         <Header data={me} />
         <ProjectsMenu data={allProjects} />
         <Footer data={footer} />
-      </Grid>
+      </div>
     </>
   )
 }

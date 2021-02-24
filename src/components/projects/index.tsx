@@ -1,8 +1,6 @@
-import { Box, Grid, Heading, Text } from "theme-ui"
-
 import { FragmentProjectNavFragment } from "../../../generated/graphql"
 import { Clients } from "../clients"
-import { LinkExternal, LinkOutline } from "../link"
+import { Link, LinkOutline } from "../link"
 import { Tags } from "../tags"
 
 export const ProjectsMenuItem: React.FC<FragmentProjectNavFragment> = ({
@@ -15,32 +13,34 @@ export const ProjectsMenuItem: React.FC<FragmentProjectNavFragment> = ({
   caseStudy,
   studio,
 }) => (
-  <Box as="article" sx={{ gridColumn: "center-start/center-end" }} mb={56}>
+  <article>
     <Clients clients={clients} />
-    <Heading as="h3" variant="headingThree" mb={!description ? 8 : undefined}>
+    <h3
+      className={`font-body font-normal tracking-tight text-2xl sm:text-4xl leading-tight sm:leading-tight ${
+        !description ? "mb-2" : ""
+      }`}
+    >
       {title}
-    </Heading>
-    <Text as="p" variant="body" mb={8}>
-      {description}
-    </Text>
-    <Heading as="h4" variant="headingFour" mb={!studio ? 8 : undefined}>
+    </h3>
+    <p className="font-body mb-2">{description}</p>
+    <h4 className={`font-body text-xl leading-5 ${!studio ? "mb-2" : ""}`}>
       {role?.title}
-    </Heading>
+    </h4>
     {studio?.href && (
-      <LinkExternal mb={8} href={studio.href}>
+      <Link className="mb-2" href={studio.href}>
         {studio.title}
-      </LinkExternal>
+      </Link>
     )}
     {tags && <Tags tags={tags} />}
     {(live || caseStudy) && (
-      <Box as="footer">
+      <footer className="space-x-2">
         {live?.href && <LinkOutline href={live.href}>Site</LinkOutline>}
         {caseStudy?.href && (
           <LinkOutline href={caseStudy.href}>Case Study</LinkOutline>
         )}
-      </Box>
+      </footer>
     )}
-  </Box>
+  </article>
 )
 
 export const ProjectsMenu: React.FC<{
@@ -49,18 +49,15 @@ export const ProjectsMenu: React.FC<{
   const projects = data ?? []
 
   return (
-    <Grid variant="center" as="main" role="main">
-      <Heading
-        variant="headingOne"
-        mb={32}
-        sx={{ gridColumn: "center-start/center-end" }}
-      >
+    <main className="sm:max-w-center sm:w-full mx-8 sm:mx-auto" role="main">
+      <h2 className="font-heading font-light text-4xl sm:text-5xl mb-8">
         Projects
-      </Heading>
-
-      {projects.map((project) =>
-        project ? <ProjectsMenuItem key={project.id} {...project} /> : null
-      )}
-    </Grid>
+      </h2>
+      <div className="space-y-20">
+        {projects.map((project) =>
+          project ? <ProjectsMenuItem key={project.id} {...project} /> : null
+        )}
+      </div>
+    </main>
   )
 }

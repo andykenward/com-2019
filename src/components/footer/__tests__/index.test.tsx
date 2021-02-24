@@ -33,16 +33,14 @@ describe("<Footer />", () => {
     expect(container).not.toBeEmptyDOMElement()
     expect(container.firstChild).toMatchInlineSnapshot(`
       <footer
-        class="css-vtffyi"
+        class="sm:max-w-center sm:w-full mx-8 sm:mx-auto py-8"
       >
         <ul
-          class="css-19d52e1"
+          class="space-y-4"
         >
-          <li
-            class="css-1imsoxd"
-          >
+          <li>
             <a
-              class="css-t77bit"
+              class="font-body text-black text-base hover:text-focus focus:text-focus visited:text-visited no-underline inline-flex "
               href="https://google.com"
               rel="noopener noreferrer"
               target="_blank"

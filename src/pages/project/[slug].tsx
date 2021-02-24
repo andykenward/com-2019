@@ -1,6 +1,5 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from "next"
 import { useRouter } from "next/dist/client/router"
-import { Grid } from "theme-ui"
 
 import { ProjectQuery } from "../../../generated/graphql"
 import { Head } from "../../components/head"
@@ -26,9 +25,9 @@ export const Project: NextPage<Props> = ({ data }) => {
     <>
       <Head />
       <button onClick={() => back()}>HOME</button>
-      <Grid gap={[32, 64]}>
+      <div>
         {project.slug && <ProjectsMenuItem key={project.slug} {...project} />}
-      </Grid>
+      </div>
     </>
   )
 }
