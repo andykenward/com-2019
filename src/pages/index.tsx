@@ -1,5 +1,4 @@
 import { GetStaticProps, NextPage } from "next"
-import React from "react"
 
 import { HomeQuery } from "../../generated/graphql"
 import { Footer } from "../components/footer"
