@@ -16,14 +16,14 @@ export const ProjectsMenuItem: React.FC<FragmentProjectNavFragment> = ({
   <article>
     <Clients clients={clients} />
     <h3
-      className={`font-body font-normal tracking-tight text-2xl sm:text-4xl leading-tight sm:leading-tight ${
+      className={`font-sans font-normal tracking-tight text-2xl sm:text-4xl leading-tight sm:leading-tight ${
         !description ? "mb-2" : ""
       }`}
     >
       {title}
     </h3>
-    <p className="font-body mb-2">{description}</p>
-    <h4 className={`font-body text-xl leading-5 ${!studio ? "mb-2" : ""}`}>
+    <p className="font-sans mb-2">{description}</p>
+    <h4 className={`font-sans text-xl leading-5 ${!studio ? "mb-2" : ""}`}>
       {role?.title}
     </h4>
     {studio?.href && (
@@ -50,7 +50,7 @@ export const ProjectsMenu: React.FC<{
 
   return (
     <main className="sm:max-w-center sm:w-full mx-8 sm:mx-auto" role="main">
-      <h2 className="font-heading font-light text-4xl sm:text-5xl mb-8">
+      <h2 className="font-serif font-light text-4xl sm:text-5xl mb-8">
         Projects
       </h2>
       <div className="space-y-20">

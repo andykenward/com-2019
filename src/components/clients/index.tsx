@@ -8,7 +8,7 @@ export const Clients: React.FC<{ clients?: FragmentClientFragment[] }> = ({
       ({ id, title }) =>
         id &&
         title && (
-          <strong className="uppercase font-body font-medium" key={id}>
+          <strong className="uppercase font-sans font-medium" key={id}>
             {title}
           </strong>
         )

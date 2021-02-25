@@ -40,7 +40,7 @@ describe("<Footer />", () => {
         >
           <li>
             <a
-              class="font-body text-black text-base hover:text-focus focus:text-focus visited:text-visited no-underline inline-flex "
+              class="font-sans text-black text-base hover:text-focus focus:text-focus visited:text-visited no-underline inline-flex "
               href="https://google.com"
               rel="noopener noreferrer"
               target="_blank"

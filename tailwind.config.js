@@ -1,4 +1,7 @@
 module.exports = {
+  corePlugins: {
+    animation: false,
+  },
   purge: [
     "./src/pages/**/*.{js,ts,jsx,tsx}",
     "./src/components/**/*.{js,ts,jsx,tsx}",
@@ -7,7 +10,7 @@ module.exports = {
   theme: {
     extend: {},
     fontFamily: {
-      body: [
+      sans: [
         "Graphik",
         "'Helvetica Neue'",
         "Helvetica",
@@ -15,7 +18,7 @@ module.exports = {
         "Verdana",
         "sans-serif",
       ],
-      heading: [
+      serif: [
         "'Cooper Light'",
         "Georgia",
         "Times",

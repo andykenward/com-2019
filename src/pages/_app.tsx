@@ -1,4 +1,3 @@
-import "../../public/fonts/index.css"
 import "../../styles/globals.css"
 
 import { AppProps } from "next/app"
