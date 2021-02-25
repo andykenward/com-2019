@@ -1,6 +1,7 @@
 module.exports = {
   corePlugins: {
     animation: false,
+    container: false,
   },
   purge: [
     "./src/pages/**/*.{js,ts,jsx,tsx}",
