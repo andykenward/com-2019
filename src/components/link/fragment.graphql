@@ -1,5 +1,0 @@
-fragment FragmentLink on LinkRecord {
-  id
-  title
-  href
-}

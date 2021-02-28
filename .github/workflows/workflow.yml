@@ -27,13 +27,7 @@ jobs:
 
     - name: install
       run: npm ci
-    - name: codegen
-      run: npm run codegen
-      env:
-        SCHEMA_PATH: ${{ secrets.SCHEMA_PATH }}
     - name: typecheck
       run: npm run type-check
     - name: lint
       run: npm run lint
-    - name: test
-      run: npm run test:ci
