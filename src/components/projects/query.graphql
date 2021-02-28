@@ -1,6 +1,0 @@
-query Projects {
-  allProjects {
-    id
-    slug
-  }
-}

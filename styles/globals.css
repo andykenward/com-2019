@@ -137,4 +137,12 @@
     @apply font-sans;
     @apply text-black;
   }
+
+  p:last-child {
+    @apply mt-2;
+
+    @screen sm {
+      @apply mt-6;
+    }
+  }
 }

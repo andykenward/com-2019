@@ -26,11 +26,6 @@ jobs:
       run: |
         npm ci
         npm run build
-      env:
-        SCHEMA_PATH: ${{ secrets.SCHEMA_PATH }}
-        API_URL: ${{ secrets.API_URL }}
-        API_TOKEN: ${{ secrets.API_TOKEN }}
-        API_PREVIEW_TOKEN: ${{ secrets.API_PREVIEW_TOKEN }}
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1

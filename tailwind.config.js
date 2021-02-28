@@ -3,10 +3,7 @@ module.exports = {
     animation: false,
     container: false,
   },
-  purge: [
-    "./src/pages/**/*.{js,ts,jsx,tsx}",
-    "./src/components/**/*.{js,ts,jsx,tsx}",
-  ],
+  purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {},
@@ -43,6 +40,7 @@ module.exports = {
   variants: {
     extend: {
       textColor: ["visited"],
+      margin: ["last"],
     },
   },
   plugins: [],

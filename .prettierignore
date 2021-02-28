@@ -1,12 +1,9 @@
 .next
 .now
 .vercel
-out
 .env
 package.json
 package-lock.json
-generated
 coverage
 .github
 *.snap
-public/static/normalize.css

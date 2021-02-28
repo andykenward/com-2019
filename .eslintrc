@@ -2,9 +2,6 @@
   "root": true,
   "parser": "@typescript-eslint/parser", // Specifies the ESLint parser
   "extends": [
-    "plugin:jest/all",
-    "plugin:testing-library/recommended",
-    "plugin:jest-dom/recommended",
     "plugin:react/recommended", // Uses the recommended rules from @eslint-plugin-react
     "plugin:react-hooks/recommended",
     "plugin:prettier/recommended", // Enables eslint-plugin-prettier and displays prettier errors as ESLint errors. Make sure this is always the last configuration in the extends array.
@@ -28,9 +25,6 @@
       "jsx": true // Allows for the parsing of JSX
     },
     "project": "tsconfig.json"
-  },
-  "env": {
-    "jest":true
   },
   "rules": {
     // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs

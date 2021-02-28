@@ -7,12 +7,6 @@ node_modules
 
 # next
 /.next
-/out
-
-# graphql
-/generated/graphql.tsx
-/generated/graphql.ts
-/generated/introspection-result.ts
 
 .DS_Store
 
