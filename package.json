@@ -52,7 +52,7 @@
     "eslint-plugin-react": "7.22.0",
     "eslint-plugin-react-hooks": "4.2.0",
     "eslint-plugin-simple-import-sort": "7.0.0",
-    "postcss": "^8.2.6",
+    "postcss": "^8.2.7",
     "postcss-nested": "^5.0.4",
     "prettier": "2.2.1",
     "tailwindcss": "^2.0.3",
