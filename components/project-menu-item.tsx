@@ -10,8 +10,19 @@ export const ProjectMenuItem: React.FC<{
   tags?: string[]
   site?: string
   caseStudy?: string
+  repo?: string
   studio?: { title?: string; href?: string }
-}> = ({ clients, title, description, role, tags, site, caseStudy, studio }) => (
+}> = ({
+  clients,
+  title,
+  description,
+  role,
+  tags,
+  site,
+  caseStudy,
+  studio,
+  repo,
+}) => (
   <article>
     <Clients clients={clients} />
     {title && (
@@ -35,10 +46,11 @@ export const ProjectMenuItem: React.FC<{
       </Link>
     )}
     {tags?.length && <Tags data={tags} />}
-    {(site || caseStudy) && (
+    {(site || caseStudy || repo) && (
       <footer className="space-x-2">
         {site && <LinkOutline href={site}>Site</LinkOutline>}
         {caseStudy && <LinkOutline href={caseStudy}>Case Study</LinkOutline>}
+        {repo && <LinkOutline href={repo}>Repo</LinkOutline>}
       </footer>
     )}
   </article>
