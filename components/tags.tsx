@@ -1,4 +1,4 @@
-export const Tags: React.FC<{ data: string[] }> = ({ data }) =>
+export const Tags = ({ data }: { data: string[] }) =>
   data?.length ? (
     <ul className="mb-4 flex flex-wrap">
       <style jsx>{`

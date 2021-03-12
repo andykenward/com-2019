@@ -1,9 +1,13 @@
 import NextLink, { LinkProps } from "next/link"
+import { ReactNode } from "react"
 
-export const Link: React.FC<LinkProps & { className?: string }> = ({
+export const Link = ({
   children,
   className = "",
   ...props
+}: LinkProps & {
+  children: ReactNode
+  className?: string
 }) => (
   <NextLink {...props}>
     <a
@@ -16,7 +20,10 @@ export const Link: React.FC<LinkProps & { className?: string }> = ({
   </NextLink>
 )
 
-export const LinkOutline: React.FC<LinkProps> = ({ children, ...props }) => (
+export const LinkOutline = ({
+  children,
+  ...props
+}: LinkProps & { children: ReactNode }) => (
   <NextLink {...props}>
     <a
       rel="noopener noreferrer"

@@ -1,4 +1,4 @@
-export const Clients: React.FC<{ clients?: string[] }> = ({ clients }) => (
+export const Clients = ({ clients }: { clients?: string[] }) => (
   <>
     {(clients ?? []).map((client, index) => (
       <strong className="uppercase font-sans font-medium" key={index}>

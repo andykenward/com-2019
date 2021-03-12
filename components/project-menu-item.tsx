@@ -2,17 +2,7 @@ import { Clients } from "./clients"
 import { Link, LinkOutline } from "./link"
 import { Tags } from "./tags"
 
-export const ProjectMenuItem: React.FC<{
-  clients?: string[]
-  title?: string
-  description?: string
-  role?: string
-  tags?: string[]
-  site?: string
-  caseStudy?: string
-  repo?: string
-  studio?: { title?: string; href?: string }
-}> = ({
+export const ProjectMenuItem = ({
   clients,
   title,
   description,
@@ -22,6 +12,16 @@ export const ProjectMenuItem: React.FC<{
   caseStudy,
   studio,
   repo,
+}: {
+  clients?: string[]
+  title?: string
+  description?: string
+  role?: string
+  tags?: string[]
+  site?: string
+  caseStudy?: string
+  repo?: string
+  studio?: { title?: string; href?: string }
 }) => (
   <article>
     <Clients clients={clients} />

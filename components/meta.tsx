@@ -1,10 +1,14 @@
 import NextHead from "next/head"
 
-export const Meta: React.FC<{
+export const Meta = ({
+  title,
+  description,
+  twitter,
+}: {
   title?: string
   description?: string
   twitter: string
-}> = ({ title, description, twitter }) => (
+}) => (
   <NextHead>
     {title && <title>{title}</title>}
     <meta
