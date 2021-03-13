@@ -34,7 +34,7 @@
   "homepage": "https://github.com/andykenward/andykenward.com#readme",
   "dependencies": {
     "gray-matter": "^4.0.2",
-    "next": "10.0.7",
+    "next": "10.0.8",
     "react": "17.0.1",
     "react-dom": "17.0.1"
   },
