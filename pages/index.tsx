@@ -1,6 +1,6 @@
 import fs from "fs"
 import matter from "gray-matter"
-import { GetStaticProps, NextPage } from "next"
+import { GetStaticProps } from "next"
 import path from "path"
 
 import { Footer } from "../components/footer"
@@ -20,7 +20,7 @@ type Props = {
   }[]
 }
 
-const Index: NextPage<Props> = ({ projects, hero }) => {
+const Index = ({ projects, hero }: Props) => {
   return (
     <>
       <Meta

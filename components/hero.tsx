@@ -1,13 +1,20 @@
 import { LinkOutline } from "./link"
 
-export const Hero: React.FC<{
+export const Hero = ({
+  name,
+  role,
+  update,
+  links,
+  available,
+  email,
+}: {
   name?: string
   role?: string
   update?: string
   available?: string
   email?: string
   links?: { title?: string; href?: string }[]
-}> = ({ name, role, update, links, available, email }) => {
+}) => {
   return (
     <header className="bg-primary py-16 sm:py-32">
       <div className="sm:max-w-center mx-8 sm:mx-auto">

@@ -1,8 +1,10 @@
 import { Link } from "./link"
 
-export const Footer: React.FC<{
+export const Footer = ({
+  data,
+}: {
   data?: { title?: string; href?: string }[]
-}> = ({ data }) => {
+}) => {
   if (data == null || !data.length) return null
 
   return (
