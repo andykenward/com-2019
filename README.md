@@ -1,5 +1,16 @@
 ![Actions Status](https://github.com/andykenward/andykenward.com/workflows/Main/badge.svg)
 
+# Andy Kenward Portfolio website
+
+[andykenward.com](https://andykenward.com)
+
+### Built with
+- [Next.js](https://nextjs.org)
+- [React](https://reactjs.org)
+- [TypeScript](https://www.typescriptlang.org)
+- [MDX](https://mdxjs.com)
+- [Tailwindcss](https://tailwindcss.com)
+
 ## Requirements
 
 - node `^14.15.4`
