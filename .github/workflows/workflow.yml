@@ -15,13 +15,6 @@ jobs:
     - uses: actions/setup-node@v2.1.5
       with:
         node-version: "14"
-    - uses: actions/cache@v2.1.4
-      id: cache
-      with:
-        path: ~/.npm
-        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-node-
     - name: Use npm v7
       run: sudo npm install -g npm@7.x.x
     - name: install
