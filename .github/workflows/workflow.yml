@@ -33,3 +33,5 @@ jobs:
       run: npm run type-check
     - name: lint
       run: npm run lint
+    - name: build
+      run: npm run build
