@@ -1,4 +1,4 @@
-import type { HeroData } from "../pages/types"
+import type { HeroData } from "../types"
 import { Link } from "./link"
 
 export const Footer = ({ data }: { data?: HeroData["footer"] }) => {

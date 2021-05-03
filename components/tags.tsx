@@ -1,4 +1,4 @@
-import type { ProjectData } from "../pages/types"
+import type { ProjectData } from "../types"
 
 export const Tags = ({ data }: { data: ProjectData["tags"] }) =>
   data?.length ? (

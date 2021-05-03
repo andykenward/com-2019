@@ -7,8 +7,8 @@ import { Footer } from "../components/footer"
 import { Hero } from "../components/hero"
 import { Meta } from "../components/meta"
 import { ProjectMenuItem } from "../components/project-menu-item"
+import type { IndexProps } from "../types"
 import { postFilePaths, PROJECTS_PATH } from "../utils/mdx-utils"
-import type { IndexProps } from "./types"
 
 const Index = ({ projects, hero }: IndexProps) => {
   return (

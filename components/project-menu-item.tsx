@@ -1,4 +1,4 @@
-import type { ProjectData } from "../pages/types"
+import type { ProjectData } from "../types"
 import { Clients } from "./clients"
 import { Link, LinkOutline } from "./link"
 import { Tags } from "./tags"

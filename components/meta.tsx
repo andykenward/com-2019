@@ -1,6 +1,6 @@
 import NextHead from "next/head"
 
-import type { HeroData } from "../pages/types"
+import type { HeroData } from "../types"
 
 export const Meta = ({
   title,

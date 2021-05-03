@@ -1,4 +1,4 @@
-import type { HeroData } from "../pages/types"
+import type { HeroData } from "../types"
 import { LinkOutline } from "./link"
 
 export const Hero = ({

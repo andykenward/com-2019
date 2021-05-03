@@ -1,4 +1,4 @@
-import type { ProjectData } from "../pages/types"
+import type { ProjectData } from "../types"
 
 export const Clients = ({ clients }: Pick<ProjectData, "clients">) => (
   <>
