@@ -1,3 +1,4 @@
+import type { HeroData } from "../pages/types"
 import { LinkOutline } from "./link"
 
 export const Hero = ({
@@ -7,14 +8,7 @@ export const Hero = ({
   links,
   available,
   email,
-}: {
-  name?: string
-  role?: string
-  update?: string
-  available?: string
-  email?: string
-  links?: { title?: string; href?: string }[]
-}) => {
+}: HeroData) => {
   return (
     <header className="bg-primary py-16 sm:py-32">
       <div className="sm:max-w-center mx-8 sm:mx-auto">

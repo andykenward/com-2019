@@ -1,10 +1,7 @@
+import type { HeroData } from "../pages/types"
 import { Link } from "./link"
 
-export const Footer = ({
-  data,
-}: {
-  data?: { title?: string; href?: string }[]
-}) => {
+export const Footer = ({ data }: { data?: HeroData["footer"] }) => {
   if (data == null || !data.length) return null
 
   return (

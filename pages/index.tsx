@@ -1,6 +1,6 @@
 import fs from "fs"
 import matter from "gray-matter"
-import { GetStaticProps } from "next"
+import type { GetStaticProps } from "next"
 import path from "path"
 
 import { Footer } from "../components/footer"
@@ -8,19 +8,9 @@ import { Hero } from "../components/hero"
 import { Meta } from "../components/meta"
 import { ProjectMenuItem } from "../components/project-menu-item"
 import { postFilePaths, PROJECTS_PATH } from "../utils/mdx-utils"
-type Props = {
-  hero: {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    data: { [key: string]: any }
-  }
-  projects: {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    data: { [key: string]: any }
-    filePath: string
-  }[]
-}
+import type { IndexProps } from "./types"
 
-const Index = ({ projects, hero }: Props) => {
+const Index = ({ projects, hero }: IndexProps) => {
   return (
     <>
       <Meta
@@ -48,7 +38,7 @@ const Index = ({ projects, hero }: Props) => {
   )
 }
 
-export const getStaticProps: GetStaticProps<Props> = async () => {
+export const getStaticProps: GetStaticProps<IndexProps> = async () => {
   const heroFile = fs.readFileSync(path.join(process.cwd(), "pages/index.mdx"))
   const { data } = matter(heroFile)
 
@@ -65,7 +55,6 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     })
   )
   projects.sort((a, b) => a.data.order - b.data.order)
-
   return { props: { hero: { data }, projects } }
 }
 

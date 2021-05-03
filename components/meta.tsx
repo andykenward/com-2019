@@ -1,14 +1,12 @@
 import NextHead from "next/head"
 
+import type { HeroData } from "../pages/types"
+
 export const Meta = ({
   title,
   description,
   twitter,
-}: {
-  title?: string
-  description?: string
-  twitter: string
-}) => (
+}: Pick<HeroData, "title" | "description" | "twitter">) => (
   <NextHead>
     {title && <title>{title}</title>}
     <meta

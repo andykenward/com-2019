@@ -1,4 +1,6 @@
-export const Tags = ({ data }: { data: string[] }) =>
+import type { ProjectData } from "../pages/types"
+
+export const Tags = ({ data }: { data: ProjectData["tags"] }) =>
   data?.length ? (
     <ul className="mb-4 flex flex-wrap">
       <style jsx>{`

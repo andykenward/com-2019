@@ -1,5 +1,5 @@
 import NextLink, { LinkProps } from "next/link"
-import { ReactNode } from "react"
+import type { ReactNode } from "react"
 
 export const Link = ({
   children,
