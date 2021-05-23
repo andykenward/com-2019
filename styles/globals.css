@@ -141,8 +141,6 @@
   p:last-child {
     @apply mt-2;
 
-    @screen sm {
-      @apply mt-6;
-    }
+    @apply sm:mt-6;
   }
 }
