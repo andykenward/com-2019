@@ -1,4 +1,5 @@
 module.exports = {
+  mode: "jit",
   corePlugins: {
     animation: false,
     container: false,
