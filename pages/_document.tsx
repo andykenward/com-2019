@@ -1,7 +1,8 @@
-import Document, { Head, Html, Main } from "next/document"
+import Document, { Head, Html, Main, NextScript } from "next/document"
 
 // Removes JavaScript files in document <head> in production.
 // For HTML + CSS sites only (no javascript client side).
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 class CustomHead extends Head {
   render() {
     const res = super.render()
@@ -43,10 +44,11 @@ class StaticDocument extends Document {
   render() {
     return (
       <Html>
-        <CustomHead />
+        <Head />
         <body>
           <script>0</script>
           <Main />
+          <NextScript />
         </body>
       </Html>
     )
