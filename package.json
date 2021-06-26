@@ -15,8 +15,7 @@
     "format": "prettier --write '**/*.{css,js,jsx,ts,tsx,mdx}'",
     "type-check:watch": "npm run type-check -- --watch",
     "type-check": "tsc --noEmit",
-    "lint": "eslint --cache --ext .js,.ts,.tsx .",
-    "eslint:fix": "npm run lint -- --fix",
+    "lint": "next lint",
     "local:ci": "npm run lint && npm run type-check"
   },
   "repository": {
@@ -32,10 +31,15 @@
     "url": "https://github.com/andykenward/andykenward.com/issues"
   },
   "homepage": "https://github.com/andykenward/andykenward.com#readme",
-  "browserslist": [">0.3%", "not ie 11", "not dead", "not op_mini all"],
+  "browserslist": [
+    ">0.3%",
+    "not ie 11",
+    "not dead",
+    "not op_mini all"
+  ],
   "dependencies": {
     "gray-matter": "^4.0.3",
-    "next": "10.2.3",
+    "next": "11.0.1",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
@@ -47,6 +51,7 @@
     "@typescript-eslint/parser": "4.25.0",
     "autoprefixer": "^10.2.6",
     "eslint": "7.27.0",
+    "eslint-config-next": "^11.0.1",
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-import": "2.23.3",
     "eslint-plugin-prettier": "3.4.0",
@@ -55,7 +60,7 @@
     "eslint-plugin-simple-import-sort": "7.0.0",
     "postcss": "^8.3.0",
     "postcss-nested": "^5.0.5",
-    "prettier": "2.3.0",
+    "prettier": "2.3.2",
     "tailwindcss": "^2.1.2",
     "typescript": "4.3.2",
     "vercel": "23.0.0"
