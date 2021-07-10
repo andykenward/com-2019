@@ -15,14 +15,9 @@ jobs:
     - uses: actions/setup-node@v2.2.0
       with:
         node-version: "14"
+        cache: 'npm'
     - name: Install npm v7
       run: npm install -g npm@7.x.x
-    - uses: actions/cache@v2.1.6
-      with:
-        path: ~/.npm
-        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-node-
     - uses: actions/cache@v2.1.6
       with:
         path: ${{ github.workspace }}/.next/cache
